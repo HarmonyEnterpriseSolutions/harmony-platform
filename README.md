@@ -1,16 +1,18 @@
 # harmony-platform
 Basic Harmony platform for the development and integration of business solutions
 
-# INSTALLATION
 
-1) Checkout wm
-2) Checkout toolib to wm/src
+# INSTALLATION
+1) Checkout harmony-platform
+
+2) Checkout toolib to harmony-platform/src
+
 3) Install webkit
 
 to Webware\WebKit\Configs\Application.config
 
 add line
-Contexts['wm'] = 'c:\projects\wm\wkroot'
+Contexts['harmony-platform'] = 'c:\projects\harmony-platform\wkroot'
 
 change settings
 SessionStore = 'Memory' # can be File, Dynamic, Memcached, Memory or Shelve
