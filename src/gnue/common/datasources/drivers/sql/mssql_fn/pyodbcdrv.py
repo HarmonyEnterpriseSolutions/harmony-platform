@@ -120,14 +120,14 @@ class Connection(BaseConnection):
 		"""
 
 		# Cant find out why decimal does not work here
-		# wmlib/test/dbapi/test_pyodbc_decimal_insert.py works ok but here same code does not work:
+		# harmlib/test/dbapi/test_pyodbc_decimal_insert.py works ok but here same code does not work:
 		# DataError: ('22018', '[22018] [Microsoft][ODBC SQL Server Driver]Invalid character value for cast specification (0) (SQLExecDirectW)').
 		if isinstance(value, decimal.Decimal):
 			value = str(value)
 		# under ubuntu pyodbc returns sql decimal type as float, http://stackoverflow.com/questions/3371795/freetds-translating-ms-sql-money-type-to-python-float-not-decimal
 		# if passing float as parameter, have strange error on ubuntu
 		# ConnectionError: ProgrammingError: ('42000', "[42000] [FreeTDS][SQL Server]Must pass parameter number 6 and subsequent parameters as '@name = value'. After the form '@name = value' has been used, all subsequent parameters must be passed in the form '@name = value'. (119) (SQLExecDirectW)")
-		# hovever, can't reproduce it in the minimal script wmlib/test/dbapi/test_pyodbc_paramater_6.py
+		# hovever, can't reproduce it in the minimal script harmlib/test/dbapi/test_pyodbc_paramater_6.py
 		elif isinstance(value, float):
 			value = repr(value)
 			# SCOPE_IDENTITY() returns Decimal for _ins functions, have  error since value converted to str before row requery

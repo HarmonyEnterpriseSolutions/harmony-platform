@@ -12,9 +12,9 @@ from django.conf.urls.static import static
 
 urlpatterns = patterns('',
 
-	url(r'^$', 'wmserv.javaui.views.index'),
-	url(r'^javaui/', include('wmserv.javaui.urls')),
-	url(r'^dbi/', include('wmserv.dbi.urls')),
+	url(r'^$', 'harmserv.javaui.views.index'),
+	url(r'^javaui/', include('harmserv.javaui.urls')),
+	url(r'^dbi/', include('harmserv.dbi.urls')),
 
 	# Uncomment the admin/doc line below to enable admin documentation:
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

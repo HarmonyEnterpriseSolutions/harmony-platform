@@ -20,7 +20,7 @@ def main(host=None, port=None):
 		import socket
 		host = socket.gethostbyname(socket.gethostname())
 
-	os.chdir(os.path.abspath('./../src/wmserv'))
+	os.chdir(os.path.abspath('./../src/harmserv'))
 
 	if os.name == 'posix':
 		python_bin = os.path.join(sys.prefix, 'bin')

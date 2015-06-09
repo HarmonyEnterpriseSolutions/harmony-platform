@@ -1,4 +1,4 @@
-from src.wmlib.webkit import BaseServlet
+from src.harmlib.webkit import BaseServlet
 
 
 class Resource(BaseServlet):

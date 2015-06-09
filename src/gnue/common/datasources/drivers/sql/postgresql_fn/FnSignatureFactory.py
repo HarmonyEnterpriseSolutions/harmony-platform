@@ -39,10 +39,10 @@ class FnSignatureFactory(object):
 		"""
 		instance = cls._instances.get(connectionsUrl)
 		if instance is None:
-			# http://localhost/wm/wk.cgi/wm/connections?_SID_=20080208162931-2e6444a8371cf04261e43057f4b1a071
+			# http://localhost/harm/wk.cgi/harm/connections?_SID_=20080208162931-2e6444a8371cf04261e43057f4b1a071
 			loc = {}
 			if re.match('(?i)[A-Z]+://', connectionsUrl):
-				#'/wm/wk.cgi/wm/connections' -> '/wm/wk.cgi/wm/fn_signatures'
+				#'/harm/wk.cgi/harm/connections' -> '/harm/wk.cgi/harm/fn_signatures'
 				scheme, netloc, path, params, query, fragment = urlparse.urlparse(connectionsUrl)
 				path = path.rsplit('/', 1)[0] + '/fn_signatures'
 				url = urlparse.urlunparse((scheme, netloc, path, params, query, fragment))

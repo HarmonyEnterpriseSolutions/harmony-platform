@@ -1,7 +1,7 @@
 /*=========================================================================
 
   Program:   Sula 0.7
-  Source:	 $Source: C:/HOME/cvs/wm/java/src/gnue/forms/rpc/UrlPoster.java,v $
+  Source:	 $Source: C:/HOME/cvs/harm/java/src/gnue/forms/rpc/UrlPoster.java,v $
   Date:		 $Date: 2012/03/01 11:44:45 $
   Version:   $Revision: 1.6 $
 

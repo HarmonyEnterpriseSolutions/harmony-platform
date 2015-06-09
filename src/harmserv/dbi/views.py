@@ -15,7 +15,7 @@ from toolib.web.djangoutils.jsonrpc import JSONRPCService, jsonremote, RPCServic
 from toolib.text.json.json_coerce import json_coerce
 import config
 from UserSession import UserSession
-from src.wmserv.dbi import fetch_metadata
+from src.harmserv.dbi import fetch_metadata
 
 
 jsonservice = JSONRPCService()
@@ -79,7 +79,7 @@ def execute(request):
 	{
 		'application' : 'harm',
 		'connection' : 'db',
-		'function' : 'wmsite_attribute',
+		'function' : 'harmsite_attribute',
 		'parameters' : {
 		}
 	}

@@ -15,63 +15,63 @@ msgstr ""
 "Content-Transfer-Encoding: ENCODING\n"
 "Generated-By: pygettext.py 1.4\n"
 
-#: .\..\src\wmlib\barcode.py:22
-msgid "Штрихкод пустой"
+#: .\..\src\harmlib\barcode.py:22
+msgid "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ"
 msgstr ""
 
-#: .\..\src\wmlib\barcode.py:29
-msgid "Ожидается префикс %s, имеем %s"
+#: .\..\src\harmlib\barcode.py:29
+msgid "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ %s, пїЅпїЅпїЅпїЅпїЅ %s"
 msgstr ""
 
-#: .\..\src\wmlib\files.py:66
-msgid "Выберите файл для загрузки..."
+#: .\..\src\harmlib\files.py:66
+msgid "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ..."
 msgstr ""
 
-#: .\..\src\wmlib\files.py:94
-msgid "Файл %s"
+#: .\..\src\harmlib\files.py:94
+msgid "пїЅпїЅпїЅпїЅ %s"
 msgstr ""
 
-#: .\..\src\wmlib\files.py:95
-msgid "Сохранить файл в..."
+#: .\..\src\harmlib\files.py:95
+msgid "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ..."
 msgstr ""
 
-#: .\..\src\wmlib\report.py:107
+#: .\..\src\harmlib\report.py:107
 msgid ""
-"Очень жаль, максимальная длина запроса к серверу отчетов превышена в %.1f раз\n"
-"Выберите меньшее количество строк"
+"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ %.1f пїЅпїЅпїЅ\n"
+"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ"
 msgstr ""
 
-#: .\..\src\wmlib\report.py:118
+#: .\..\src\harmlib\report.py:118
 msgid ""
-"Сервер отчетов не отвечает\n"
+"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n"
 "%s"
 msgstr ""
 
-#: .\..\src\wmlib\report.py:167
+#: .\..\src\harmlib\report.py:167
 msgid "PDF expected from server, got unrecognized text"
-msgstr "С сервера ожидается PDF, а получен непонятный текст"
+msgstr "пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ PDF, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ"
 
-#: .\..\src\wmlib\report.py:173
+#: .\..\src\harmlib\report.py:173
 msgid "Got error on pdf server"
-msgstr "Ошибка на сервере отчетов"
+msgstr "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
 
-#: .\..\src\wmlib\report.py:179 .\..\src\wmlib\report.py:210
-msgid "Отчет успешно отправлен на печать"
+#: .\..\src\harmlib\report.py:179 .\..\src\harmlib\report.py:210
+msgid "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ"
 msgstr ""
 
-#: .\..\src\wmlib\report.py:204 .\..\src\wmlib\report.py:208
-msgid "Ошибка при печати отчета"
+#: .\..\src\harmlib\report.py:204 .\..\src\harmlib\report.py:208
+msgid "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ"
 msgstr ""
 
-#: .\..\src\wmlib\report.py:238
+#: .\..\src\harmlib\report.py:238
 msgid "%s Files"
-msgstr "Файлы %s"
+msgstr "пїЅпїЅпїЅпїЅпїЅ %s"
 
-#: .\..\src\wmlib\report.py:281
-msgid "Выберите файл чтобы сохранить отчет..."
+#: .\..\src\harmlib\report.py:281
+msgid "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ..."
 msgstr ""
 
-#: .\..\src\wmlib\report.py:289
-msgid "Отчеты"
+#: .\..\src\harmlib\report.py:289
+msgid "пїЅпїЅпїЅпїЅпїЅпїЅ"
 msgstr ""
 

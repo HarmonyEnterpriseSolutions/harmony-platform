@@ -35,7 +35,7 @@
 		<hbox>
 			<button label='Îê'>
 				<trigger type='ON-ACTION'>
-					from wmlib import report
+					from harmlib import report
 
 					format = b.format.get()
 

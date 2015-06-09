@@ -38,9 +38,9 @@
 	</trigger>
 
 	<trigger type='ON-ACTIVATION'>
-		from wmlib import report
-		from wmlib import ini
-		from wmlib import text
+		from harmlib import report
+		from harmlib import ini
+		from harmlib import text
 		from urllib2 import HTTPError
 		from gnue.common.apps.errors import UserError
 
@@ -67,7 +67,7 @@
 	</trigger>
 
 	<trigger name='format_text' type='NAMED'>
-		from wmlib import ini
+		from harmlib import ini
 		from toolib.text.report.TextFormatFactory import TextFormatFactory
 		from toolib.text.report.TextFormatData import TextFormatData
 		from toolib.text.report.config import TEXT_FORMAT_FACTORY_CONFIG
@@ -92,7 +92,7 @@
 
 	<trigger name='get_data' type='NAMED'>
 		import urllib2
-		from wmlib import report
+		from harmlib import report
 		if b_message.format.get() == 'pdf':
 			return form.layout.find_child('attachment').getData()
 		else:
@@ -154,9 +154,9 @@
 			</entry>
 			<button label='Отправить' s:stretch='0'>
 				<trigger type='ON-ACTION'>
-					from wmlib import mail
-					from wmlib import ini
-					from wmlib import text
+					from harmlib import mail
+					from harmlib import ini
+					from harmlib import text
 					from toolib.text.email.EmailMessage import EmailFormatException
 
 					sender = get_global('b_current_org_contact').email.get()

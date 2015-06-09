@@ -6,8 +6,8 @@ DOMAINS = {
 	'gnue-common' : ['..\\src\\gnue\\common'],
 	'gnue-forms'  : ['..\\src\\gnue\\forms'],
 	'toolib'      : ['..\\src\\toolib'],
-	'wmlib'       : ['..\\src\\wmlib'],
-	'wm'          : ['..\\wkroot'],
+	'harmlib'       : ['..\\src\\harmlib'],
+	'harm'          : ['..\\wkroot'],
 	'forms'       : ['..\\forms'],
 }
 

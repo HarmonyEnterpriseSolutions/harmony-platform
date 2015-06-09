@@ -325,7 +325,7 @@ public abstract class FrameAbstract extends Widget {
 	
 	public void uiStartFile(String url, String fileName) {
 		try {
-			File file = File.createTempFile("wm_start_", fileName);
+			File file = File.createTempFile("harm_start_", fileName);
 			uiDownloadFile(url, file.getAbsolutePath(), true);
 			Runtime.getRuntime().exec("rundll32 SHELL32.DLL,ShellExec_RunDLL " + file.getAbsolutePath());
 		} 

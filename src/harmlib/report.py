@@ -145,7 +145,7 @@ def openReportUrl(form, *args, **kwargs):
 
 def openReportPost(form, query, timeout=None, max_reports_per_query = 20):
 	# webkit stream has timeout
-	# http://192.168.2.8/trac/wm/ticket/655
+	# http://192.168.2.8/trac/harm/ticket/655
 	# to workaround this issue, try connect directly
 	
 	report_server_direct_url = form.get_global('report_server_direct_url', None)

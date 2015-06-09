@@ -126,7 +126,7 @@
 				<hbox>
 					<button label="ÎÊ">
 						<trigger type="ON-ACTION">
-							from wmlib.login import encodePassword
+							from harmlib.login import encodePassword
 
 							if b_password.password.get() == b_password.password_confirm.get():
 								password.value = encodePassword(b_password.password.get() or '')

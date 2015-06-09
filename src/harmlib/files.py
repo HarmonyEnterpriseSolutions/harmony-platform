@@ -5,7 +5,7 @@ files client for gnue-forms triggers
 """
 import os
 import tempfile
-from wmlib.webkit.FilesClient import FilesClient
+from harmlib.webkit.FilesClient import FilesClient
 
 BUF_SIZE = 0x10000
 

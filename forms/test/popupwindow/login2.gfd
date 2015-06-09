@@ -8,7 +8,7 @@
 	form.setFeature('GUI:STATUSBAR:SUPPRESS',1)
 </trigger>
 
-<!--parameter name='server_url'  default='http://localhost/wm/wk.cgi/wm'/-->
+<!--parameter name='server_url'  default='http://localhost/harm/wk.cgi/harm'/-->
 
 <trigger type='ON-ACTIVATION'>
 	form.endEditing()
@@ -24,7 +24,7 @@
 
 <action name='ok'>
 	import urllib2
-	from wmlib.login import login
+	from harmlib.login import login
 
 	application = b_login.application.get()
 	server_url  = b_applications.server_url.get()

@@ -23,7 +23,7 @@
 	<block name='b_spr_group' datasource='ds_spr_group' autoNextRecord='Y' startup='full'>
 		<!--field name = 'picture'>
 			<calc>
-				return 'Z:/projects/wm/share/gnue/images/letters/' + (b_spr_group.name.get() or "_")[0] + ".png"
+				return 'Z:/projects/harm/share/gnue/images/letters/' + (b_spr_group.name.get() or "_")[0] + ".png"
 			</calc>
 		</field-->
 		<trigger type='POST-ROWCHANGE'>

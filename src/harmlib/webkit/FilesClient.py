@@ -45,7 +45,7 @@ if __name__ == '__main__':
 	from toolib import startup
 	startup.startup()
 
-	fc = FilesClient('http://localhost:82/wm/wk.cgi/wm/files')
+	fc = FilesClient('http://localhost:82/harm/wk.cgi/harm/files')
 
 	fname = fc.uploadFile(u'C:\\автоекзек.bat')#'F:\photos\me.psd')
 

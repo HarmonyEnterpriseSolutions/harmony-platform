@@ -2,7 +2,7 @@ import simplejson
 import base64
 import zlib
 
-from wmlib.webkit.HttpProxyServlet import HttpProxyServlet
+from harmlib.webkit.HttpProxyServlet import HttpProxyServlet
 
 DEBUG = 0
 

@@ -8,7 +8,7 @@ from weakref import WeakKeyDictionary
 
 from gnue.common.datasources.GConnections import GConnections
 from gnue.common.datasources.GConditions import buildConditionFromDict
-from src.wmlib.webkit import AccessObject
+from src.harmlib.webkit import AccessObject
 
 
 _gConnections_by_thread = WeakKeyDictionary()

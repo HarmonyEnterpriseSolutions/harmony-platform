@@ -45,7 +45,7 @@
 	<attachment mimetype='application/pdf' filename='test.pdf'>
 		<url-resource>
 		<![CDATA[
-			http://192.168.1.2/wm/report
+			http://192.168.1.2/harm/report
 				? __application__ = harm
 				& __connection__  = sales
 				& __name__        = sp_W_OrgSldBtwList

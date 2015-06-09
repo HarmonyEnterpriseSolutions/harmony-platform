@@ -1,8 +1,8 @@
 import os
 import re
-from wmlib.webkit.BaseServlet  import BaseServlet
-from wmlib.webkit.FormDom      import FormDom
-from wmlib.webkit.AccessObject import AccessObject
+from harmlib.webkit.BaseServlet  import BaseServlet
+from harmlib.webkit.FormDom      import FormDom
+from harmlib.webkit.AccessObject import AccessObject
 from toolib import debug
 
 REC_LIBRARY  = re.compile(r"library\s*\=\s*'([^']*)'")

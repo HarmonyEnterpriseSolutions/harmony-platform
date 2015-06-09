@@ -67,7 +67,7 @@ class TestClient(object):
 			return result['result']
 
 
-	def login(self, application='wmsite', username='admin', password='111', connection='db'):
+	def login(self, application='harmsite', username='admin', password='111', connection='db'):
 		user_id = self.execute('login', application, username, encodePassword(password))['user_id']
 
 		positions = self.execute('extjs_call', application, connection, 'get_user_position', {'user_id' : user_id})
@@ -94,7 +94,7 @@ def test(url):
 	client = TestClient(url)
 	client.login()
 
-	print client.execute('call', 'wmsite', 'db', 'ishop_get_contact_price', { 'domain' : 'shop.harm.ua' })
+	print client.execute('call', 'harmsite', 'db', 'ishop_get_contact_price', { 'domain' : 'shop.harm.ua' })
 
 
 

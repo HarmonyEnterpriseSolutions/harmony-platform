@@ -43,7 +43,7 @@ def sendEmailMessage(message):
 	execfile(os.path.join(config, 'smtplib.conf.py'), {}, conf)
 
 	if DEBUG:
-		open(u'C:\\wmlib_mail.eml', 'wt').write(str(message))
+		open(u'C:\\harmlib_mail.eml', 'wt').write(str(message))
 		return
 	
 	smtp = smtplib.SMTP(**conf)

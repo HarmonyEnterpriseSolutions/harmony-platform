@@ -10,19 +10,19 @@
 			<entry field="attachment"           label='Attachment' style='text_with_buttons'>
 				<entry-button name='eb_upload'   label='...'>
 					<trigger type='ON-ACTION'>
-						from wmlib import files
+						from harmlib import files
 						files.uploadFile(form, self.getParent().getField())
 					</trigger>
 				</entry-button>
 				<entry-button name='eb_download' label='V' >
 					<trigger type='ON-ACTION'>
-						from wmlib import files
+						from harmlib import files
 						files.downloadFile(form, self.getParent().getField())
 					</trigger>
 				</entry-button>
 				<entry-button name='eb_preview'  label='>' >
 					<trigger type='ON-ACTION'>
-						from wmlib import files
+						from harmlib import files
 						files.openFile(form, self.getParent().getField())
 					</trigger>
 				</entry-button>

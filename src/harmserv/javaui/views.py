@@ -13,8 +13,8 @@ from toolib.web.djangoutils.jsonrpc import JSONRPCService, jsonremote, RPCServic
 from gnue.forms.uidrivers.java.GFClient import GFClient, InstanceNotFoundError
 from gnue.forms.uidrivers._base.rpc.outconv import outconv
 from gnue.forms.uidrivers.java.config import DEBUG
-from src.wmserv.javaui.models import UserContext
-from wmserv.clientproperty.models import Storage
+from src.harmserv.javaui.models import UserContext
+from harmserv.clientproperty.models import Storage
 
 
 javaui_service = JSONRPCService()
@@ -106,7 +106,7 @@ def staticres(request, path):
 
 
 BUF_SIZE = 0x10000
-from src.wmserv.javaui.utils import is_hop_by_hop
+from src.harmserv.javaui.utils import is_hop_by_hop
 
 def dynamicres(request):
 	"""

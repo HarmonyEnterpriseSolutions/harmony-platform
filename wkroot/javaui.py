@@ -1,5 +1,5 @@
 # -*- coding: Cp1251 -*-
-from wmlib.webkit.BaseServlet  import BaseServlet
+from harmlib.webkit.BaseServlet  import BaseServlet
 
 class javaui(BaseServlet):
 

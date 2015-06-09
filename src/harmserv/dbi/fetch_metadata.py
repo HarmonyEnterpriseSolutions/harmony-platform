@@ -1,10 +1,10 @@
 import os
 
 from gnue.common.datasources.drivers.sql.postgresql_fn.FnSignatureFactory import FnSignatureFactory
-from wmlib.scripts.utils.WmApplication import WmApplication
-from wmlib.webkit.FormDom import FormDom
+from harmlib.scripts.utils.harmApplication import harmApplication
+from harmlib.webkit.FormDom import FormDom
 from toolib.db.simpleconn import NoRecordError
-from src.wmserv.dbi import config
+from src.harmserv.dbi import config
 
 
 """
@@ -362,10 +362,10 @@ class Form(FormDom):
 
 
 
-class Fetcher(WmApplication):
+class Fetcher(harmApplication):
 
 	def __init__(self, app_name):
-		WmApplication.__init__(self, app_name)
+		harmApplication.__init__(self, app_name)
 		self._signature_factory = FnSignatureFactory.getInstance(self.getConfigPath('fn_signatures.conf.py'))
 
 

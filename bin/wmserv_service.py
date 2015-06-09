@@ -9,7 +9,7 @@ import win32service
 
 project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, os.path.join(project_dir, 'src'))
-from bin.wmserv import settings
+from bin.harmserv import settings
 
 
 HOST = None
@@ -19,12 +19,12 @@ PORT = 8888
 class MyService(win32serviceutil.ServiceFramework):
 	"""NT Service."""
     
-	_svc_name_ = "wmserv_service"
-	_svc_display_name_ = "django - wmserv"
+	_svc_name_ = "harmserv_service"
+	_svc_display_name_ = "django - harmserv"
 
 	def SvcDoRun(self):
-		sys.stdout = open(os.path.join(project_dir, 'log', 'wmserv.log'      ), 'at', buffering=0)
-		sys.stderr = open(os.path.join(project_dir, 'log', 'wmserv.error.log'), 'at', buffering=0)
+		sys.stdout = open(os.path.join(project_dir, 'log', 'harmserv.log'      ), 'at', buffering=0)
+		sys.stderr = open(os.path.join(project_dir, 'log', 'harmserv.error.log'), 'at', buffering=0)
 		
 		host = HOST
 		port = PORT

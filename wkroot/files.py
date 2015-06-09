@@ -1,4 +1,4 @@
-from wmlib.webkit.BaseServlet import BaseServlet
+from harmlib.webkit.BaseServlet import BaseServlet
 from toolib._ import *
 from toolib.util import randoms
 from urllib2 import quote

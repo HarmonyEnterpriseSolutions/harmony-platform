@@ -1,4 +1,4 @@
-﻿Установка wm
+﻿Установка harm
 
 1. Установка питона и библиотек
 -------------------------------
@@ -54,9 +54,9 @@ cvs -d :pserver:oleg@212.109.59.18:/cvs checkout apps
 2. Установка клиента
 --------------------
 
-cvs -d :pserver:oleg@212.109.59.18:/cvs checkout wm
+cvs -d :pserver:oleg@212.109.59.18:/cvs checkout harm
 удаляем все кроме
-wm
+harm
 	bin
 	forms
 	scripts
@@ -66,31 +66,31 @@ wm
 cd src
 cvs checkout toolib
 
-редактируем в wm/bin/config.py
-server_url = 'http://serverhost:82/wm/wk.cgi/wm'
+редактируем в harm/bin/config.py
+server_url = 'http://serverhost:82/harm/wk.cgi/harm'
 все
 
 3. Установка сервера
 --------------------
 
-cvs -d :pserver:oleg@212.109.59.18:/cvs checkout wm
+cvs -d :pserver:oleg@212.109.59.18:/cvs checkout harm
 cd src
 cvs checkout toolib
 
-В папке Python25/Lib/site-packages cоздать файл wm.pth
+В папке Python25/Lib/site-packages cоздать файл harm.pth
 	cодержащий абсолютный путь к папке src
 
 3.1 WebKit
 
 Установить и настроить Apache 2:
-	Папка wm/www должна быть доступна как http://server/wm/
-	Скрипты wm/www/*.cgi должны быть доступны на выполнение, остальное на чтение
+	Папка harm/www должна быть доступна как http://server/harm/
+	Скрипты harm/www/*.cgi должны быть доступны на выполнение, остальное на чтение
 
 Добавить в httpd.conf
 -----------------------
-Alias /wm/ "c:/projects/wm/www/"
+Alias /harm/ "c:/projects/harm/www/"
 
-<Directory "c:/projects/wm/www">
+<Directory "c:/projects/harm/www">
     Options ExecCGI Indexes MultiViews FollowSymLinks
     AllowOverride None
     Order allow,deny
@@ -130,7 +130,7 @@ Webware/install.py
 	Изменение порта webkit appserver - в двух местах
 		Webware\WebKit\Configs\AppServer.config
 			AdapterPort = 8086
-		wm\www\webkit.cfg
+		harm\www\webkit.cfg
 			Port = 8086
 	чтоб установить 2 сервиса
 		делаем копию Webware\WebKit\AppServerService.py 
@@ -139,8 +139,8 @@ Webware/install.py
 			serviceDisplayName = 'WebKit Application Server at another port'
 
 Проверка: 
-	http://localhost/wm/wk.cgi/ должен давать страницу вебкита
-	http://localhost/wm/wk.cgi/wm/info/ должен давать страницу
+	http://localhost/harm/wk.cgi/ должен давать страницу вебкита
+	http://localhost/harm/wk.cgi/harm/info/ должен давать страницу
 
 3.2 Postgresql
 	Язык сообщений об ошибках должен быть английским, иначе декоратор ошибок работать не будет
@@ -148,9 +148,9 @@ Webware/install.py
 
 3.3 деплой базы
 	
-сконфигурировать wm/sql/config.py
-Запустить wm/sql/имя приложения/redeploy.py для создания базы.
-wm/etc/имя приложения/connections.conf
+сконфигурировать harm/sql/config.py
+Запустить harm/sql/имя приложения/redeploy.py для создания базы.
+harm/etc/имя приложения/connections.conf
 	настраиваем для всех подключений
 		host = 
 		port = 
@@ -165,7 +165,7 @@ wm/etc/имя приложения/connections.conf
 Установить jre 1.6.0
 Установить Apache Tomcat 6
 
-Скопировать wm.xml в папку "С:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\Catalina\localhost\"
+Скопировать harm.xml в папку "С:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\Catalina\localhost\"
 
 Отредактировать "С:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\server.xml" 
    	В тег <Connector port="8000" > добавить атрибут	useBodyEncodingForURI="true"
@@ -179,8 +179,8 @@ wm/etc/имя приложения/connections.conf
 	under ubuntu
 		/etc/init.d/tomcat6 start
 
-В wm/etc/имя приложения/servers.conf указать путь к томкетовскому приложению wm
-	report_server=http://localhost:8000/wm
+В harm/etc/имя приложения/servers.conf указать путь к томкетовскому приложению harm
+	report_server=http://localhost:8000/harm
 
 Перезапустить вебкит
 
@@ -191,6 +191,6 @@ wm/etc/имя приложения/connections.conf
 ставим jdk 1.5.0		
 ставим ant
 в папках
-	wm/java/
-	wm/reports/WEB-INF/
+	harm/java/
+	harm/reports/WEB-INF/
 	запускаем ant

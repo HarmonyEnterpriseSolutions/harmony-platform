@@ -1,5 +1,5 @@
 from toolib.web.kit.MHttpProxyServlet import MHttpProxyServlet
-from wmlib.webkit.BaseServlet import BaseServlet
+from harmlib.webkit.BaseServlet import BaseServlet
 
 class HttpProxyServlet(MHttpProxyServlet, BaseServlet):
 

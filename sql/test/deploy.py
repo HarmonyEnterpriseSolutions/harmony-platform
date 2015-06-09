@@ -1,4 +1,4 @@
-from wmlib.scripts.deploy import deploy
+from harmlib.scripts.deploy import deploy
 from sql.test import config
 
 if __name__ ==  '__main__':

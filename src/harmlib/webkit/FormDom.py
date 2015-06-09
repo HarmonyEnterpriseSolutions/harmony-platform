@@ -4,7 +4,7 @@ from xml.dom import Node
 import xml.dom.minidom
 
 from gnue.common.datasources.access import *
-from src.wmlib.webkit import AccessObject
+from src.harmlib.webkit import AccessObject
 
 
 def nodeApplyEditable(node, update, insert):
@@ -270,11 +270,11 @@ def EncodeWriter(unicodeOutputStream, encoding, errors='replace'):
 if __name__ == '__main__':
 
 	import os
-	os.chdir(r'Z:\projects\wm\forms\harm')
+	os.chdir(r'Z:\projects\harm\forms\harm')
 
 	import time
 	t = time.time()
-	d = FormDom(r'Z:\projects\wm\forms\harm\spr_prod.gfd')
+	d = FormDom(r'Z:\projects\harm\forms\harm\spr_prod.gfd')
 
 	functionAccess = {
 	#	'FN_PROD_ORG_ART' : (True, True, True),
@@ -283,6 +283,6 @@ if __name__ == '__main__':
 	#             UID
 	d.applyAccess(7)
 	d.applyFunctionAccess(functionAccess)
-	d.writexml(open(r'Z:\projects\wm\src\wmlib\webkit\output.gfd', 'wb'), 'Cp1251', indent='\t')
+	d.writexml(open(r'Z:\projects\harm\src\harmlib\webkit\output.gfd', 'wb'), 'Cp1251', indent='\t')
 	
 	print time.time() - t

@@ -1,4 +1,4 @@
-from wmlib.webkit.BaseServlet import BaseServlet
+from harmlib.webkit.BaseServlet import BaseServlet
 
 class connections(BaseServlet):
 

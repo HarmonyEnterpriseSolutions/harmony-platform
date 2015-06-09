@@ -5,7 +5,7 @@ from cookielib import CookieJar
 
 import simplejson as json
 
-from src.wmserv.dbi.test.test import TestClient
+from src.harmserv.dbi.test.test import TestClient
 
 
 URL = 'http://192.168.1.2:8000/dbi/'

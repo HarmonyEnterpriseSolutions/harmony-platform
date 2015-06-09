@@ -10,4 +10,4 @@ FORMS = (
 	'help.gfd',
 )
 
-ALLOWED_APPLICATIONS = ['dp2', 'wmsite']
+ALLOWED_APPLICATIONS = ['dp2', 'harmsite']
