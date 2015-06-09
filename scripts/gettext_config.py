@@ -25,7 +25,7 @@ FORMS = [
 	"..\\share\\gnue\\forms\\defaults\\default.gfd",
 	"..\\forms\\*.gfd",
 	"..\\forms\\common\\**\\*.gfd",
-	"..\\forms\\wwm\\**\\*.gfd",
+	"..\\forms\\harm\\**\\*.gfd",
 	"..\\forms\\ksbilling\\**\\*.gfd",
 ]
 

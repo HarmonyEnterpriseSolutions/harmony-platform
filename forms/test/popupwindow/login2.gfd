@@ -82,7 +82,7 @@
 <layout xmlns:s="GNUe:Layout:Sizer">
 	<vbox block='b_login' >
 		<entry field='application'   label='Приложение:' style='picker' picker_text_minlength='2'    >
-			<popupwindow form='http://localhost/wm/wk.cgi/wm/forms/testPopupWindow.gfd'/>
+			<popupwindow form='http://localhost/harm/wk.cgi/harm/forms/testPopupWindow.gfd'/>
 		</entry>
 		<entry field='user_login'    label='Имя:'                       />
 		<entry field='user_password' label='Пароль:'     style='password'     />

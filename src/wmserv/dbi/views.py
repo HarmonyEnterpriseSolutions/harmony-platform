@@ -77,7 +77,7 @@ def execute(request):
 	"""
 	POST DATA is json
 	{
-		'application' : 'wwm',
+		'application' : 'harm',
 		'connection' : 'db',
 		'function' : 'wmsite_attribute',
 		'parameters' : {

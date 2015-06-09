@@ -87,14 +87,14 @@ def test(url):
 	urllib2.install_opener(urllib2.build_opener(
 		urllib2.HTTPCookieProcessor(CookieJar()),
 		urllib2.ProxyHandler({
-			"http" : "http://gleb.mironov:123@proxy.local.wwm.com.ua:3128",
+			"http" : "http://gleb.mironov:123@proxy.local.harm.com.ua:3128",
 		}),
 	))
 
 	client = TestClient(url)
 	client.login()
 
-	print client.execute('call', 'wmsite', 'db', 'ishop_get_contact_price', { 'domain' : 'shop.wwm.ua' })
+	print client.execute('call', 'wmsite', 'db', 'ishop_get_contact_price', { 'domain' : 'shop.harm.ua' })
 
 
 

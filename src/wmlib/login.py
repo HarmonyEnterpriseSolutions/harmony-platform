@@ -32,4 +32,4 @@ def encodePassword(password):
 	return md.hexdigest()
 	
 if __name__ == '__main__':
-	print login('http://localhost:82/wm/wk.cgi/wm', 'wwm', 'admin', '111')
+	print login('http://localhost:82/wm/wk.cgi/wm', 'harm', 'admin', '111')

@@ -7,8 +7,8 @@
 -->
 
 <Context 
-	path="/wm" 
-	docBase="c:/projects/wm/reports"
+	path="/harm"
+	docBase="c:/projects/harm/reports"
 	debug="0" 
 	privileged="true"
 />

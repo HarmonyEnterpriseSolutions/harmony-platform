@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='windows-1251'?>
 <email charset='windows-1251'>
-<from>mailer-daemon@wwm.com.ua</from>
+<from>mailer-daemon@harm.com.ua</from>
 <to>
 	<address>%(_msg_to)s</address>
 </to>
@@ -46,7 +46,7 @@
 		<url-resource>
 		<![CDATA[
 			http://192.168.1.2/wm/report
-				? __application__ = wwm
+				? __application__ = harm
 				& __connection__  = sales
 				& __name__        = sp_W_OrgSldBtwList
 				& __format__      = pdf

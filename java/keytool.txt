@@ -1,9 +1,9 @@
-# get old keystore with ptivate b2b key: keystore.wwm
-# import reply to keystore.wwm
-keytool -import -trustcacerts -alias b2b -file reply_for_java.crt -keystore keystore.wwm
+# get old keystore with ptivate b2b key: keystore.harm
+# import reply to keystore.harm
+keytool -import -trustcacerts -alias b2b -file reply_for_java.crt -keystore keystore.harm
 
 # import keystore to local
-keytool -importkeystore -srckeystore keystore.wwm -alias b2b
+keytool -importkeystore -srckeystore keystore.harm -alias b2b
 
 
 

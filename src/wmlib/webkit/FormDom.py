@@ -270,11 +270,11 @@ def EncodeWriter(unicodeOutputStream, encoding, errors='replace'):
 if __name__ == '__main__':
 
 	import os
-	os.chdir(r'Z:\projects\wm\forms\wwm')
+	os.chdir(r'Z:\projects\wm\forms\harm')
 
 	import time
 	t = time.time()
-	d = FormDom(r'Z:\projects\wm\forms\wwm\spr_prod.gfd')
+	d = FormDom(r'Z:\projects\wm\forms\harm\spr_prod.gfd')
 
 	functionAccess = {
 	#	'FN_PROD_ORG_ART' : (True, True, True),

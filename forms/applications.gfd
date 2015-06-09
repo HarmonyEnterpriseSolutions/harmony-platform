@@ -5,7 +5,7 @@
 		<staticsetrow>
 		  <staticsetfield name="id"         value="test" />
 		  <staticsetfield name="name"       value="Test widgets" />
-		  <staticsetfield name="server_url" value="http://127.0.0.1:8080/wm"/>
+		  <staticsetfield name="server_url" value="http://127.0.0.1:8080/harm"/>
 		</staticsetrow>
 	 </staticset>
   </datasource>
