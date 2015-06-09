@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<!--  GFD generator  -->
+
+<form name='popup_acc_plan_id' title="Товар" >
+
+	<parameter name="p_parentform"/>
+	<parameter name="p_popupwindow"/>
+
+	<import-datasource name='ds_applications' library='applications.gfd'/>
+
+	<trigger type="On-Startup">
+		form.setFeature('GUI:MENUBAR:SUPPRESS',1)
+		form.setFeature('GUI:TOOLBAR:SUPPRESS',1)
+		form.setFeature('GUI:STATUSBAR:SUPPRESS',1)
+	</trigger>
+
+	<trigger type="On-Popup">
+		#b_spr_acc_plan.find_record(
+		#	{'id' : p_popupwindow.value.getParent().getField().get()}
+		#)
+	</trigger>
+
+<logic>
+	<block name='b_applications' datasource='ds_applications' editable='N' deletable='N' startup='full'>
+		<field name = 'id'          field = 'id'         editable='N'/>
+		<field name = 'name'     	field = 'name'       />
+		<field name = 'server_url'	field = 'server_url' />
+	</block>
+</logic>
+
+<import-toolbar name='__main_toolbar__' library='common/toolbar.gfd'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<table block='b_applications'>
+		<trigger type='RECORD-ACTIVATED'>
+			p_popupwindow.value.popdown()
+			id = b_applications.id.get()
+
+			if id is not None:
+
+				entry = p_popupwindow.value.getParent()
+				entry.setText("")
+
+				# must call stopEditing after 
+				def f():
+					try:
+						entry.getParent().stopEditing()
+					except:
+						pass
+				
+					p_parentform.value.endEditing()
+					try:
+						entry.getField().set(id)
+					finally:
+						p_parentform.value.beginEditing()
+
+				call_after(f)
+
+		</trigger>
+		<entry field='id'         label='id'/>
+		<entry field='name'       label='name'/>
+		<entry field='server_url' label='server_url'/>
+	</table>
+
+</layout>
+</form>

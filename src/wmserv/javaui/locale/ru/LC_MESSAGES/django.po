@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-05 18:12+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: .\views.py:51
+#, python-format
+msgid ""
+"Sorry, Your session has not been found. Possible reasons:\n"
+"    - session expired (session inactivity timeout is %.f minutes)\n"
+"    - cookies is disabled on Yours web browser (appears when just typing "
+"login)\n"
+"    - server restarted\n"
+"Application will be reset to login"
+msgstr ""
+"Очень жаль, Ваша сессия не найдена. Возможные причины:\n"
+"    - сессия устарела (период неактивности сессии равен %.f мин.)\n"
+"    - в Вашем веб обозревателе запрещены куки (проявляется на этапе ввода "
+"логина)\n"
+"    - сервер был перезапущен\n"
+"Приложение будет сброшено к диалогу логина"
+
+#: .\templates\javaui\applet.html.py:12
+msgid "Can't run java applet. Possible reasons:"
+msgstr "Апплет java не стартовал. Возможные причины:"
+
+#: .\templates\javaui\applet.html.py:15
+msgid ""
+"Java runtime environment (JRE) not installed. This applet needs JRE 1.6 or "
+"later."
+msgstr ""
+"Исполнительная среда java (JRE) не установлена. Этот аплет работает с JRE "
+"1.6 или более поздней версии."
+
+#: .\templates\javaui\applet.html.py:15
+msgid "Check if java installed."
+msgstr "Проверьте, установлена ли JRE."
+
+#: .\templates\javaui\applet.html.py:16
+msgid "JRE installed, but disabled in web browser."
+msgstr "JRE установлена, но не разрешена к использованию в веб обозревателе."
+
+#: .\templates\javaui\applet.html.py:16
+msgid "Try to enable java."
+msgstr "Попробуйте разрешить java."
+
+#: .\templates\javaui\applet.html.py:17
+msgid ""
+"Windows 64 bit platform: installed JRE version is 64 bit while web browser "
+"is 32 bit or vice versa."
+msgstr ""
+"Платформа Windows 64 bit: установлена 64-разрядная JRE тогда как веб "
+"обозреватель 32-разрядный или наоборот."
+
+#: .\templates\javaui\applet.html.py:17
+msgid "Which Java download should I choose?"
+msgstr "Какую версию java выбрать?"
+
+#: .\templates\javaui\index.html.py:4
+msgid "WWM diler portal"
+msgstr "Дилерский портал WWM"
+
+#: .\templates\javaui\index.html.py:6
+msgid "There is two possibilities to start application"
+msgstr "Есть два варианта запуска приложения"
+
+#: .\templates\javaui\index.html.py:8
+msgid "Applet"
+msgstr "Апплет"
+
+#: .\templates\javaui\index.html.py:9
+msgid "Standalone application (java web start)"
+msgstr "Отдельное приложение (java web start)"

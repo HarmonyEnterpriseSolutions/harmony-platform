@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<form title="Parameter Test">
+	<parameter name="one" datatype="text" default="one"/>
+	<parameter name="two" datatype="number" default="2"/>
+
+	<trigger type="ON-ACTIVATION">
+		blk.one = one.value
+		blk.two = two.value
+	</trigger>
+
+	<action name="run_dialog">
+		def on_result(parameters):
+			blk.three = parameters['three']
+		show_dialog('sub', {'three': blk.three}, True, on_result)
+	</action>
+
+<logic>
+	<block name="blk">
+		<field name="one" datatype="text"/>
+		<field name="two" datatype="number"/>
+		<field name="three" datatype="text"/>
+	</block>
+</logic>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox name="box" block="blk">
+		<entry name="one" field="one" label="One:"/>
+		<entry name="two" field="two" label="Two:"/>
+		<entry name="three" field="three" label="Three:"/>
+		<button name="btn" label="Run other form" action="run_dialog"/>
+	</vbox>
+</layout>
+
+	<dialog name="sub">
+		<parameter name="three" datatype="text"/>
+
+		<trigger type="ON-ACTIVATION">
+			blk.three = three.value
+		</trigger>
+
+		<logic>
+		<block name="blk">
+			<field name="three" datatype="text">
+				<trigger type="POST-CHANGE">
+					three.value = blk.three
+				</trigger>
+			</field>
+		</block>
+		</logic>
+
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox name="box" block="blk">
+			<entry name="three" field="three" label="Three:"/>
+			<button label="Close">
+				<trigger type="ON-ACTION">
+					form.close()
+				</trigger>
+			</button>
+		</vbox>
+	</layout>
+	</dialog>
+</form>

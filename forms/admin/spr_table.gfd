@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<!--  GFD generator  -->
+
+<form name="_spr_table__spr_field" title="Таблицы, поля">
+	
+	<parameter name="p_accessobject_id" />
+
+	<datasource name='ds__spr_table' connection='admin'
+		table = '_spr_table'
+		rowid = 'table_id'
+	/>
+
+	<datasource name='ds__spr_field' connection='admin'
+		table = '_spr_field'
+		rowid = 'field_id'
+
+		master="ds__spr_table"
+		masterlink="table_id"
+		detaillink="table_id"
+	/>
+
+	<datasource name='dsref__spr_table' connection='admin'
+		table = '_spr_table'
+		rowid = 'table_id'
+	/>
+
+	<datasource name='dsref__spr_field_master_pkey' connection='admin'
+		table = '_spr_field'
+		rowid = 'field_id'
+	/>
+
+
+<logic>
+
+	<block name='b__spr_table' datasource='ds__spr_table' autoNextRecord='Y' startup='full' deletable='Y'>
+		<field name = 'table_id'           field = 'table_id'          editable='N'/>
+		<field name = 'table_name'         field = 'table_name'        editable='NEW'>
+			<trigger type='POST-CHANGE'>
+				from wmlib.const import table_id
+				b__spr_table.table_id.set(table_id(self.get()) if self.get() else None)
+			</trigger>
+		</field>
+		<field name = 'table_descr'        field = 'table_descr'       />
+		<field name = 'main_table_id'      field = 'main_table_id'     fk_source='dsref__spr_table' fk_key='table_id' fk_description='table_name'/>
+		<field name = 'row_name_pattern'   field = 'row_name_pattern'  />
+		<field name = 'is_log'             field = 'is_log'            datatype='boolean' default='Y'/>
+		<field name = 'table_note'         field = 'table_note'        />
+	</block>
+
+	<block name='b__spr_field' datasource='ds__spr_field' autoNextRecord='Y' startup='full' deletable='Y'>
+		<field name = 'field_id'           field = 'field_id'          editable='N'/>
+		<field name = 'table_id'           field = 'table_id'          />
+		<field name = 'field_name'         field = 'field_name'        editable='NEW'/>
+		<field name = 'field_descr'        field = 'field_descr'       />
+		<field name = 'master_pkey_field_id'  field = 'master_pkey_field_id'  fk_source='dsref__spr_field_master_pkey'  fk_key='field_id' fk_description='field_fullname' fk_refresh='startup'/>
+		<field name = 'is_pkey'            field = 'is_pkey'           datatype='boolean' default='N'/>
+		<field name = 'is_log'             field = 'is_log'            datatype='boolean' default='Y'/>
+		<field name = 'field_note'         field = 'field_note'        />
+	</block>
+</logic>
+<import-toolbar library='../common/toolbar.gfd' name='__main_toolbar__'/>
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<splitter>
+		<table block='b__spr_table'>
+			<import-menu library='../common/menues.gfd' name='table-default'/>
+			
+			<entry field = 'table_id'           label = 'Ключ'/>
+			<entry field = 'table_name'         label = 'Таблица'/>
+			<entry field = 'table_descr'        label = 'Пользовательское наименование'/>
+			<entry field = 'main_table_id'      label = 'Ведущая таблица'/>
+			<entry field = 'row_name_pattern'   label = 'Шаблон имени записи'/>
+			<entry field = 'is_log'             label = 'Лог'/>
+			<entry field = 'table_note'         label = 'Примечание'/>
+		</table>
+		
+		<table block='b__spr_field'>
+			<import-menu library='../common/menues.gfd' name='table-default'/>
+			
+			<entry field = 'field_id'           label = 'Ключ'/>
+			<entry field = 'field_name'         label = 'Поле'/>
+			<entry field = 'field_descr'        label = 'Пользовательское наименование'/>
+			<entry field = 'master_pkey_field_id' label = 'Связь'/>
+			<entry field = 'is_pkey'            label = 'Первичный ключ'/>
+			<entry field = 'is_log'             label = 'Лог'/>
+			<entry field = 'field_note'         label = 'Примечание'/>
+		</table>
+		
+	</splitter>
+</layout>
+</form>

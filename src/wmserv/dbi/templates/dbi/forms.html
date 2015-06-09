@@ -1,0 +1,36 @@
+<H1>Application '{{ application }}' functions by form</H1>
+{% for form in forms %}
+	<H2>Form: {{ form.name }}</H2>
+	{% for function in form.functions %}
+		<H3>{{ function.connection }}::{{ function.name }}</H3>
+		<H4>Parameters:<H4>
+		<table border='1' style='empty-cells:show;'>
+			<tr>
+				<th>Name</th><th>type</th><th>length</th><th>scale</th><th>precision</th>
+			</tr>
+			{% for parameter in function.parameters %}
+				<tr>
+					<td>{{ parameter.name }}</td><td>{{ parameter.type }}</td><td>{{ parameter.character_maximum_length }}</td><td>{{ parameter.numeric_scale }}</td><td>{{ parameter.numeric_precision }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+		{% if function.columns %}
+			<H4>Columns:<H4>
+			<table border='1' style='empty-cells:show;'>
+				<tr>
+					<th>Name</th><th>type</th><th>length</th><th>scale</th><th>precision</th>
+				</tr>
+				{% for columns in function.columns %}
+					<tr>
+						<td>{{ columns.name }}</td><td>{{ columns.type }}</td><td>{{ columns.character_maximum_length }}</td><td>{{ columns.numeric_scale }}</td><td>{{ columns.numeric_precision }}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+	{% endfor %}
+{% endfor %}
+<hr/>
+<form>
+	<input type='hidden' name='refresh'/>
+	<p>Generated on {{ time|date:"d.m.Y H:m:s" }} <input type='submit' value='Regenerate'/></p>
+</form>

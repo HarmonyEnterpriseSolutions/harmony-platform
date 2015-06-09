@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="RadioBox example">
+	<datasource name="ds_store" type="static">
+		<staticset fields="manuf_id,manuf_name">
+			<staticsetrow>
+				<staticsetfield name="manuf_id" value="1" />
+				<staticsetfield name="manuf_name" value="One" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="manuf_id" value="2" />
+				<staticsetfield name="manuf_name" value="Two" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="manuf_id" value="3" />
+				<staticsetfield name="manuf_name" value="Three" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+	<logic>
+		<block name="store_document">
+			<field name="f1" datatype='number' default='2' />
+			<field name="f2" datatype='number' default='2' />
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block="store_document">
+			<entry name="r1" field="f1" label="Button 1" style="radiobutton" activate_value="1" />
+			<entry name="r2" field="f1" label="Button 2" style="radiobutton" activate_value="2" />
+			<entry name="r3" field="f2" label="Button 1" style="radiobutton" activate_value="1" />
+			<entry name="r4" field="f2" label="Button 2" style="radiobutton" activate_value="2" />
+		</vbox>
+	</layout>
+</form>

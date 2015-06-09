@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="vbox/hbox">
+	<logic>
+		<block name="b">
+			<field name="f1" />
+			<field name="f2" />
+
+			<field name="left" default='left'/>
+			<field name="center" default='center'/>
+			<field name="right" default='right'/>
+
+			<field name="center_stretch" default='center stretch'/>
+
+			<field name="multiline" default='multiline'/>
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block="b" >
+			<entry label="Short label"                 field="f1" />
+			<entry label="Loooooooooooooooooong label" field="f2" />
+			<hbox label='normal'>
+				<entry field='left'/>
+				<entry field='center'/>
+				<entry field='right'/>
+			</hbox>
+			<hbox label='center stretch'>
+				<entry field='left'           s:stretch='0'/>
+				<entry field='center_stretch' s:stretch='1'/>
+				<entry field='right'          s:stretch='0'/>
+			</hbox>
+			<hbox>
+				<entry field='multiline' style='multiline'/>
+				<button label='Top anchor'   s:stretch='0' s:anchor='top'/>
+				<button label='Center anchor' s:stretch='0' />
+				<button label='Bottom anchor'  s:stretch='0' s:anchor='bottom'/>
+			</hbox>
+			<hbox>
+				<entry field='left'/>
+				<entry label='center' field='center'/>
+				<entry field='right'/>
+			</hbox>
+			<hbox>
+				<entry label='left' field='left'           s:stretch='0'/>
+				<entry field='center_stretch' s:stretch='1'/>
+				<entry label='right' field='right'          s:stretch='0'/>
+			</hbox>
+		</vbox>
+	</layout>
+</form>

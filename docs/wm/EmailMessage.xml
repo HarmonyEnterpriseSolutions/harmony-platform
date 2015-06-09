@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='windows-1251'?>
+<email charset='windows-1251'>
+<from>mailer-daemon@wwm.com.ua</from>
+<to>
+	<address>%(_msg_to)s</address>
+</to>
+<subject>Напоминание об оплате</subject>
+<body></body>
+<attachments>
+	<attachment mimetype='text/html'>
+		<inline><![CDATA[<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<p>Здравствуйте %(_org_contact_name)s,</p>
+<p>Пожалуйста, почитайте до конца, это очень важно.</p>
+<!-- BLOCK delay -->
+<p>
+	Дата отсрочки %(_delay_date:date)s
+	<table border='1'>
+		<tr>
+			<th align='center'>Номер документа</th>
+			<th align='center'>Дата документа</th>
+			<th align='center'>Сумма документа</th>
+			<th align='center'>Валюта</th>
+		</tr>
+		<!-- BLOCK doc -->
+		<tr>
+			<td align='center'>%(_doc_num)s</td>
+			<td align='center'>%(_doc_date:date)s</td>
+			<td align='right'>%(_doc_sum:decimal)s</td>
+			<td >%(_currency_name)s</td>
+		</tr>
+		<!-- END BLOCK doc -->
+	</table>
+</p>
+<!-- END BLOCK delay -->
+<p>И чтоб Вы были здоровы,<br>
+Искренне Ваш(а), фирма</p>
+</body>
+</html>]]>
+		</inline>
+	</attachment>
+	<attachment mimetype='application/pdf' filename='test.pdf'>
+		<url-resource>
+		<![CDATA[
+			http://192.168.1.2/wm/report
+				? __application__ = wwm
+				& __connection__  = sales
+				& __name__        = sp_W_OrgSldBtwList
+				& __format__      = pdf
+				& __locale__      = uk_UA
+				& s_date          = 2009-11-01
+				& e_date          = 2009-11-24
+				& org_id          = 12937
+				& is_group        = 0
+				& is_f1           = 1
+				& is_f2           = 1
+		]]>
+		</url-resource>
+	</attachment>
+</attachments>
+</email>

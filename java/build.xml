@@ -1,0 +1,69 @@
+<project name="gnue-forms" default="javac" basedir=".">
+
+	<description></description>
+
+	<property name="src"     value="./src"                />
+	<property name="build"   value="./build"              />
+	<property name="www"     value="../www"               />
+	<property name="lib"     value="../www/lib"                />
+	
+	<target name="javac" >
+		<mkdir dir="${build}"/>
+		<mkdir dir="${build}/classes"/>
+		<javac source="1.6" target="1.6" debug="on" srcdir="${src}" destdir="${build}/classes" >
+			<classpath>
+				<!--fileset dir="${lib}">
+					<include name="PDFRenderer.jar"/>
+				</fileset!-->
+			</classpath>
+		</javac>
+		<copy todir="${build}/classes">
+			<fileset dir="${src}">
+				<include name="**/*.jpg"/>
+				<include name="**/*.gif"/>
+				<include name="**/*.txt"/>
+				<include name="**/*.icc"/>
+				<include name="**/*.properties"/>
+				<include name="**/*.pfb"/>
+			</fileset>
+		</copy>
+		<!--copy todir="${build}/classes">
+			<fileset dir="${src}">
+				<include name="**/*.java"/>
+			</fileset>
+		</copy-->
+	</target>
+
+	<target name="jar_gnue_forms" depends="javac">
+		<jar destfile="${lib}/gnue-forms.jar" basedir="${build}/classes" excludes="com/sun/pdfview/**">
+			<manifest>
+				<attribute name="Codebase" value="*.wwm.com.ua" />
+				<attribute name="Permissions" value="all-permissions" />
+				<attribute name="Application-Name" value="GNUe forms java client" />
+				<attribute name="Trusted-Library" value="true" />
+			</manifest>		
+		</jar>
+		<signjar jar="${lib}/gnue-forms.jar" keystore='wwm.jks' alias="b2b" storepass="storepass" keypass='***'/>
+	</target>
+
+	<target name="jar_pdfview" depends="javac">
+		<jar destfile="${lib}/pdfview.jar" basedir="${build}/classes" includes="com/sun/pdfview/**">
+			<manifest>
+				<attribute name="Codebase" value="*.wwm.com.ua" />
+				<attribute name="Permissions" value="all-permissions" />
+				<attribute name="Application-Name" value="PDF View" />
+				<attribute name="Trusted-Library" value="true" />
+			</manifest>	
+		</jar>
+		<signjar jar="${lib}/pdfview.jar" keystore='wwm.jks' alias="b2b" storepass="storepass" keypass='***'/>
+	</target>
+
+	<target name="clean" description="Deletes all the generated files.">
+		<delete>
+			<fileset dir="${build}/classes" includes="**/*" />
+		</delete>
+	</target>
+
+	<target name="all" depends="jar_gnue_forms,jar_pdfview"/>
+
+</project>

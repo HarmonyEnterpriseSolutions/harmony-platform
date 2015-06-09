@@ -1,0 +1,39 @@
+<?xml version="1.0"  encoding='windows-1251'?>
+
+<!--  GFD generator  -->
+
+<form title="Report" windowStyle='maximize'>
+
+<parameter name='p_accessobject_id' />
+<parameter name='p_title'      default="Google"/>
+<parameter name='p_url'        default="http://www.google.com.ua/"/>
+
+<trigger type='ON-ACTIVATION'>
+	from wmlib import report
+	from urllib2 import HTTPError
+	from gnue.common.apps.errors import UserError
+
+	form.title = p_title.value
+	try:
+		b.url = p_url.value
+	except HTTPError, e:
+		if e.code == 502:
+			raise UserError(_("Сервер не отвечает\n%s") % e)
+		else:
+			raise
+</trigger>
+
+
+<logic>
+	<block name='b' editable='N' queryable='N' deletable='N'>
+		<field name = 'url'/>
+	</block>
+</logic>
+
+<import-toolbar library='toolbar.gfd' name='__main_toolbar__'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<url-resource block='b' field='url' content_type='text/html'/>
+</layout>
+
+</form>

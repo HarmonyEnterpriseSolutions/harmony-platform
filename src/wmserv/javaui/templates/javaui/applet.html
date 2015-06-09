@@ -1,0 +1,21 @@
+{% load i18n %}
+
+<html>
+<body leftmargin='0' rightmargin='0' topmargin='0' bottommargin='0' scroll='no'>
+	<applet code="gnue.forms.Applet"
+		width='100%'
+		height='100%'
+		archive="{{ STATIC_URL }}lib/gnue-forms.jar,{{ STATIC_URL }}lib/pdfview.jar"
+	>
+		<param name='debug' value='{{ debug }}'/>
+		<h1>
+			{% trans "Can't run java applet. Possible reasons:" %}
+		</h1>
+		<ul>
+			<li>{% trans "Java runtime environment (JRE) not installed. This applet needs JRE 1.6 or later." %} <a href='http://www.java.com/{{ language }}/download/installed.jsp'>{% trans "Check if java installed." %}</a></li>
+			<li>{% trans "JRE installed, but disabled in web browser." %} <a href="http://www.java.com/{{ language }}/download/help/enable_browser.xml">{% trans "Try to enable java." %}</a></li>
+			<li>{% trans "Windows 64 bit platform: installed JRE version is 64 bit while web browser is 32 bit or vice versa." %} <a href='http://www.java.com/{{ language }}/download/faq/java_win64bit.xml'>{% trans "Which Java download should I choose?" %}</a></li>
+		</ul>
+	</applet>
+</body>
+</html>

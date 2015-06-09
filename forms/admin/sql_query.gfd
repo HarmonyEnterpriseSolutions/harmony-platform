@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding='windows-1251'?>
+
+<form name='sql_query' title="SQL Query">
+
+	<parameter name="p_accessobject_id" />
+
+	<datasource name='ds_dummy' connection='db' table = 'dummy'/>
+
+<logic>
+
+	<block name='b_fields' >
+		<field name = 'sql'       />
+		<field name = 'result'    />
+		<field name = 'globals'   />
+	</block>
+
+
+</logic>
+
+<action name="act_query" label="Выполнить">
+	import sys
+	import traceback
+	import time
+
+	res = []
+
+	conn, context = raw_connection('db')
+	context.update(form.globals)
+
+	t = time.time()
+
+	try:
+		
+		rs = conn.execute(b_fields.sql.get() or '', context)
+		affected = rs.getAffectedRecordCount()
+
+		try:
+		
+			c = 0
+			for row in rs:
+				if c == 0:
+					res.append("COLUMNS: " + ', '.join(rs.columns))
+				c += 1
+				res.append('; '.join(["%s=%s" % (rs.columns[i], unicode(col)) for i, col in enumerate(row)]))
+
+		
+		except Exception, e:
+			if str(e) == 'no results to fetch':
+				res.append('DML query')
+				res.append('Affected rows: %s' % affected)
+			else:
+				rs.close()
+				raise
+		else:
+			res.append("TOTAL %s rows, time: %.3f" % (c, time.time() - t))
+			res.append('Affected rows: %s' % affected)
+
+	except Exception, e:
+		res.append('%s: %s' % (e.__class__.__name__, e))
+		conn.rollback()
+	else:
+		conn.commit()
+
+	b_fields.result = '\n'.join(res)
+
+</action>
+
+<action name="act_open" label="Открыть...">
+	def on_select_file(result):
+		if result is not None:
+			data = open(result[0], 'rb').read()
+			try:
+				data = data.decode('UTF-9')
+			except:
+				data = data.decode('Cp1251')
+			b_fields.sql = data
+
+	form.selectFiles(u"Выберите файл SQL", '', '',
+		wildcard = [
+			(u'Файл SQL', '*.sql'),
+		],
+		fileMustExist = True,
+		resultConsumer  = on_select_file,
+		name = 'sql_query_file',
+	)
+</action>
+
+<trigger type='ON-ACTIVATION'>
+	context = dict(raw_connection('db')[1])
+	context.update(form.globals)
+	keys = context.keys()
+	keys.sort()
+	b_fields.globals = '\n'.join(["%s = %s" % (key, unicode(context[key])) for key in keys if not key.startswith('__') and not key.startswith('b_') and key not in ('main_frame', 'mdi_parent')])
+</trigger>
+
+<import-toolbar name='__main_toolbar__' library='../common/toolbar.gfd'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<splitter align='h'>
+		<hbox>
+		    <entry block='b_fields' field='sql' style='multiline'/>
+			<vbox s:stretch='0' s:anchor='top'>
+				<button action='act_open' s:stretch='0'/>
+				<button action='act_query' s:stretch='0'/>
+			</vbox>
+		</hbox>
+		<notebook>
+			<notepage caption='Data Output'>
+			    <entry block='b_fields' field='result' style='multiline'/>
+			</notepage>
+			<notepage caption='Globals'>
+			    <entry block='b_fields' field='globals' style='multiline'/>
+			</notepage>
+		</notebook>
+	</splitter>
+</layout>
+
+</form>

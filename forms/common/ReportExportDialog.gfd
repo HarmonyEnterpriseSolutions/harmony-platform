@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<form name='ReportExportDialog' title="Экспорт отчета" windowStyle='-MINIMIZE_BOX,-MAXIMIZE_BOX' style='dialog'>
+
+	<parameter name="p_form"/>
+	<parameter name="p_report_name"/>
+	<parameter name="p_report_parameters"/>
+	<parameter name="p_report_connection"/>
+	<parameter name="p_report_accessobject_id"/>
+	<parameter name="p_report_format" default='pdf'/>
+
+	<datasource name="dsref_format" type="static" rowid='id'>
+		<staticset fields="id, name">
+			<staticsetrow><staticsetfield name="id" value="pdf"  /><staticsetfield name="name" value="u'PDF'"  /></staticsetrow>
+			<staticsetrow><staticsetfield name="id" value="xls"  /><staticsetfield name="name" value="u'XLS'"  /></staticsetrow>
+			<staticsetrow><staticsetfield name="id" value="csv"  /><staticsetfield name="name" value="u'CSV'"  /></staticsetrow>
+		</staticset>
+	</datasource>
+
+	<trigger type="On-Activation">
+		b.format.set(p_report_format.value)
+	</trigger>
+
+<logic>
+	
+	<block name='b' >
+		<field name='format' field='format' fk_source='dsref_format' fk_description='name' fk_key='id' required='Y'/>
+	</block>
+
+</logic>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox block='b'>
+		<entry field='format' label='Формат'/>
+		<hbox>
+			<button label='Ок'>
+				<trigger type='ON-ACTION'>
+					from wmlib import report
+
+					format = b.format.get()
+
+					def onShellFolder(reportDir):
+
+						def resultConsumer(files):
+                
+							if not files:
+								return
+                
+							file = files[0]
+                    
+							url = report.getReportUrl(
+								form, 
+								p_report_name.value,
+								format     = format,
+								parameters = p_report_parameters.value,
+								connection = p_report_connection.value,
+								accessobject_id = p_report_accessobject_id.value,
+							)
+							form.downloadFile(url, file)
+    
+						form.close()
+    
+						p_form.value.selectFiles(
+							_("Выберите файл чтобы сохранить отчет..."),
+							reportDir,
+							p_report_name.value,
+							[(_("Файл %s") % format.upper(), '*.' + format)],
+							'save',
+							resultConsumer = resultConsumer
+						)
+
+					form.getShellFolder('PERSONAL', (_('Отчеты'),), create=True, resultConsumer=onShellFolder)
+
+				</trigger>
+			</button>
+			<button label='Отмена'>
+				<trigger type='ON-ACTION'>
+					form.close()
+				</trigger>
+			</button>
+		</hbox>
+	</vbox>
+</layout>
+</form>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--  GFD generator  -->
+<form title="test url resource" windowStyle='MAXIMIZE'>
+	<logic>
+		<block name='b_test'>
+			<field name='f_url_e' />
+			<field name='f_url' default='http://andywibbels.com/files/Movable_Type_Cheatsheet_v1.pdf' />
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block='b_test'>
+			<entry name='f_url_e' field='f_url_e' />
+			<button label='GO!'>
+				<trigger type='ON-ACTION'>b_test.f_url = b_test.f_url_e.get()</trigger>
+			</button>
+			<url-resource block='b_test' field='f_url' content_type='application/pdf' />
+		</vbox>
+	</layout>
+</form>

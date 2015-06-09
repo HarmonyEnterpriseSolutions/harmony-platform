@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Tree example">
+
+	<datasource name="ds_tree" type="static"
+		rowid='id'
+	>
+		<staticset fields="id, parent_id, name">
+			<staticsetrow>
+				<staticsetfield name="id" value="1" />
+				<staticsetfield name="name" value="'Trees'" />
+				<staticsetfield name="style" value="None" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="2" />
+				<staticsetfield name="name" value="'Skis'" />
+				<staticsetfield name="style" value="lack" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="3" />
+				<staticsetfield name="name" value="'Pitchforks'" />
+				<staticsetfield name="style" value="ok" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="4" />
+				<staticsetfield name="name" value="'Spades'" />
+				<staticsetfield name="style" value="overflow" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+
+<logic>
+	<block name="b_tree" datasource="ds_tree" startup='full' editable='N' deletable='N'>
+		<trigger type='record-activated'>
+			print self.id
+		</trigger>
+		<field name="id"        field="id"        />
+		<field name="parent_id" field="parent_id" />
+		<field name="name"      field="name"      />
+		<field name="style"      field="style"     />
+	 </block>
+	</logic>
+	
+<import-toolbar library='../common/toolbar.gfd' name='__main_toolbar__'/>
+<layout>
+	<splitter>
+		<table block='b_tree'>
+			<entry field='name' label='name'/>
+			<entry field='style' label='style'/>
+		</table>
+		<list block = 'b_tree' itemname='Press me %(name)s %(style)s' style='tabs'>
+				<button label='Button1'/>
+		</list>
+	</splitter>
+</layout>
+</form>

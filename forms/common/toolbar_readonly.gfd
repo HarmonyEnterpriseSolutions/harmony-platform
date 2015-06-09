@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<form>
+	<toolbar name="__main_toolbar__">
+		<toolbutton action="block__refresh__"/>
+		<!--
+		<toolbutton action="act__commit__"/>
+		<toolbutton 
+		<toolbutton action="act__new_record__"/>
+		<toolbutton action="act__delete_record__" action_off="act__undelete_record__"/>
+		-->
+		<toolbutton /> 
+		<toolbutton action="act__first_record__"/>
+		<toolbutton action="act__prev_record__"/>
+		<toolbutton action="act__next_record__"/>
+		<toolbutton action="act__last_record__"/>
+		<toolbutton action="act__ask_record__"/>
+		<toolbutton /> 
+		<!--
+		<toolbutton action="act__init_filter__" action_off="act__discard_filter__"/>
+		<toolbutton action="act__apply_filter__"/>
+		-->
+		<!--
+		<toolbutton /> 
+		<toolbutton action="act__printout__"/>
+		<toolbutton /> 
+		<toolbutton action="act__rollback__"/>
+		<toolbutton /> 
+		-->
+		<toolbutton action="act__close__"/>
+	</toolbar>
+</form>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Tree example">
+
+	<datasource name="ds_tree" type="static"
+		rowid='id'
+	>
+		<staticset fields="id, parent_id, name">
+			<staticsetrow>
+				<staticsetfield name="id" value="1" />
+				<staticsetfield name="parent_id" value="0" />
+				<staticsetfield name="name" value="'Root'" />
+				<staticsetfield name="style" value="'root,parkedflag'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="2" />
+				<staticsetfield name="parent_id" value="1" />
+				<staticsetfield name="name" value="'Normal'" />
+				<staticsetfield name="style" value="'leaf,flag'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="3" />
+				<staticsetfield name="parent_id" value="1" />
+				<staticsetfield name="name" value="'Italic-blue'" />
+				<staticsetfield name="style" value="'leaf,park,italic,bluebg'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="4" />
+				<staticsetfield name="parent_id" value="1" />
+				<staticsetfield name="name" value="'Bold as love'" />
+				<staticsetfield name="style" value="'leaf,exclamation,redtext,bold'" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+
+<logic>
+	<block name="b_tree" datasource="ds_tree" startup='full' editable='UPDATE' deletable='N'>
+	    <trigger type='RECORD-ACTIVATED'>
+			print "block: RECORD-ACTIVATED"
+	    </trigger>
+		<field name="id"        field="id"         datatype='number' scale='0'/>
+		<field name="parent_id" field="parent_id"  datatype='number' scale='0'/>
+		<field name="name"      field="name"      />
+		<field name="style"      field="style"     />
+	 </block>
+</logic>
+<import-toolbar library='../common/toolbar.gfd' name='__main_toolbar__'/>
+<layout xmlns:s="GNUe:Layout:Sizer">
+<notebook>
+	<notepage caption='Page'>
+		<vbox>
+			<treelist
+				label      = 'Деревосписок'
+				block      = 'b_tree'
+				fld_id     = 'id'
+				fld_parent = 'parent_id'
+				fld_style  = 'style'
+				expanded   = 'Y'
+				nodename   = '%(name)s'
+			>
+				<trigger type='RECORD-ACTIVATED'>
+					print "treelist: RECORD-ACTIVATED"
+				</trigger>
+			
+				<vbox>
+					<entry field='name'      label='Имя'/>
+					<entry field='id'        label='Ключ'/>
+					<entry field='parent_id' label='Родитель'/>
+					<entry field='style'     label='Стиль'/>
+				</vbox>
+
+				<import-menu library='../common/menues.gfd' name='tree-readonly'/>
+
+				<treenode-styles>
+					<!-- item types -->				
+					<treenode-style name='root'    icon='common/wms/S.gif'/>
+					<treenode-style name='leaf'    icon='common/treenode-default.gif' button='checkbox'/>
+				
+					<!-- text color -->				
+					<treenode-style name='redtext' textcolor='red' checked='Y'/>
+				
+					<!-- background color -->				
+					<treenode-style name='bluebg'  bgcolor='lightblue' />
+				
+					<!-- font -->				
+					<treenode-style name='bold'    bold='Y'/>
+					<treenode-style name='italic'  italic='Y' checked='Y'/>
+
+					<!-- column flags -->
+					<treenode-style name='flag'         flags='flag'/>
+					<treenode-style name='park'         flags='park'/>
+					<treenode-style name='exclamation'  flags='exclamation'/>
+					<treenode-style name='parkedflag'   flags='park,flag'/>
+
+				</treenode-styles>
+				
+			</treelist>
+
+
+			<!--table block='b_tree'>
+				<entry field='id'        label='Ключ'/>
+				<entry field='name'      label='Имя'/>
+				<entry field='parent_id' label='Родитель'/>
+				<entry field='style'     label='Стиль'/>
+			</table-->
+		</vbox>
+	</notepage>
+	<notepage caption='Another page'>
+		<label text='Another page'/>
+	</notepage>
+</notebook>
+</layout>
+</form>
+

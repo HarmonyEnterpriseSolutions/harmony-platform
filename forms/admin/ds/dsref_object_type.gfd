@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding='windows-1251'?>
+<form>
+	<datasource name='dsref_object_type' type='static' rowid='object_type_id'>
+		<staticset fields="object_type_id,object_type_name">
+			<staticsetrow>
+				<staticsetfield name="object_type_id"   value="CN"/>
+				<staticsetfield name="object_type_name" value="Папка"/>
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="object_type_id"   value="F"/>
+				<staticsetfield name="object_type_name" value="Форма"/>
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="object_type_id"   value="R"/>
+				<staticsetfield name="object_type_name" value="Отчет"/>
+			</staticsetrow>
+		</staticset>
+	</datasource>
+</form>

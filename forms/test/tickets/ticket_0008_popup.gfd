@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<!--  GFD generator  -->
+
+<form name='popup' title="Подбор" >
+
+	<parameter name="p_parentform"/>
+	<parameter name="p_popupwindow"/>
+
+	<datasource name="ds" rowid='id' type="static" prequery="Y">
+		<staticset fields="id, parent_id, name">
+			<staticsetrow>
+				<staticsetfield name="id" value="1" />
+				<staticsetfield name="name" value="u'Раз'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="2" />
+				<staticsetfield name="name" value="u'Два'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="3" />
+				<staticsetfield name="name" value="u'Три'" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+
+	<trigger type="On-Startup">
+		form.setFeature('GUI:MENUBAR:SUPPRESS',1)
+		form.setFeature('GUI:TOOLBAR:SUPPRESS',1)
+		form.setFeature('GUI:STATUSBAR:SUPPRESS',1)
+	</trigger>
+
+	<trigger type="On-Popup">
+		b.find_record(
+			{'id' : p_popupwindow.value.getParent().getField().get()}
+		)
+	</trigger>
+
+<logic>
+	<block name='b' datasource='ds' editable='N' deletable='N' startup='full'>
+		<field name = 'id'          field = 'id'        />
+		<field name = 'name'     	field = 'name'      />
+	</block>
+	<block name='b2' >
+		<field name = 'f1'      />
+		<field name = 'f2'     	/>
+	</block>
+</logic>
+
+<import-toolbar name='__main_toolbar__' library='../../common/toolbar.gfd'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<splitter>
+		<table block='b'>
+			<entry field='name' label='Наименование'/>
+			<trigger type='RECORD-ACTIVATED'>
+				p_popupwindow.value.popdown()
+    
+				id = b.id.get()
+    
+				if id is not None:
+					name = b.name.get() or ""
+    
+					entry = p_popupwindow.value.getParent()
+
+					print "ENTRY:", entry
+
+					field = entry.getField()
+    
+					print "FIELD:", field
+
+					field.addLookupPair(id, name)
+
+					print "LOOKUP PAIR:", id, name
+		
+					if entry.isCellEditor():
+						print "IS CELL EDITOR"
+						print "CANCEL EDITING"
+						entry.getParent().cancelEditing()
+						print "FIELD.SET", id
+						field.set(id)
+						print "NEXT ENTRY"
+						p_parentform.value.next_entry()
+					else:
+						entry.setText(name)
+				
+			</trigger>
+		</table>
+		<vbox block='b2'>
+			<entry field='f1' label='Поле 1'/>
+			<entry field='f2' label='Поле 2'/>
+			<button label='Кнопка'/>
+		</vbox>
+	</splitter>
+
+</layout>
+</form>

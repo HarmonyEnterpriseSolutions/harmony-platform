@@ -1,0 +1,124 @@
+Logic refactoring
+-----------------
+
+* Value of field must not be affected until entry begins loosing focus.
+	+ this works in table now
+	+ this is good for java clinet
+
+* Focus handling by gui? GUI only tells logic where to put logical focus.
+	- But what about next-block?
+
+* display handlers is only for text completion
+	text masking?
+
+
+* make platform independent automaton. wx.masked is very bad
+
+* ability to call any server functions with future automatic transaction commit
+	- now creating datasource and block and this block calls function on every refresh
+
+* refresh any block on the form separately
+
+* move checked tree state and selected table state to block level
+
+* actions is logic for toolbars, menues, buttons
+
+
+Rewrite
+-------
+
+	[SQLAlchemy sql]
+
+	|           ^
+	| query     | 
+	|           | ins, update
+	V           |
+	
+	[Datasource]
+		creates [Recordset of Record]
+
+			Record
+				.checked boolean
+				.data tuple
+				.newdata list = None 
+
+
+	[Block of Field]
+		- types
+
+
+
+
+	Triggers:
+	    
+	    Form
+			ON-STARTUP          Form is about to start, logic is not valid, but parameters are
+								used to set datasource parameters
+
+			ON-ACTIVATION		
+		
+			PRE-INSERT
+			PRE-COMMIT
+			POST-COMMIT
+
+			PRE-EXIT			
+
+		Block
+			ON-NEWRECORD		Used to calculate initial values. TODO: must be called after block activated
+
+			
+			POST-FOCUSIN		Row has been changed	(used few times, POST-ROWCHANGE must be used instead)
+			POST-REFRESH		Block data was reloaded
+			POST-ROWCHANGE		Current row or some values of curenct row may changed, (= POST-FOCUSIN + POST-REFRESH)
+
+			POST-FOCUSOUT		Used to save field value in global variable for future form activation
+
+			RECORD-ACTIVATED	Enter or Doubleclick on record
+			RECORD-CHECKED		Record (un)checked
+
+		Field
+
+			POST-CHANGE			Logic value has been changed from gui
+
+		PopupMenu
+			PRE-POPUP
+			ON-POPUP
+
+		Calendar
+			DAY-ACTIVATED
+			GET-CELL-TEXT
+			PERIOD-CHANGED
+
+		Button
+			ON-ACTION			Deprecate it, replace this triggers with form actions.
+
+		Entry
+			ON-CUSTOMEDITOR
+			ON-MENUPOPUP
+			
+
+
+
+Python 3 ready libraries            python 3 ready	URL
+---------------------------------	--------------- ---------------------------------------------------------
+_decimal-0.1-py2.5.egg-info			+ 				http://www.bytereef.org/mpdecimal/download.html
+adodbapi                            +				http://sourceforge.net/projects/adodbapi/files/adodbapi/2.4.2/
+babel								*				http://www.reddit.com/r/Python/comments/hm7cu/python_3_support_for_babel_and_polib/
+comtypes-0.6.1-py2.6.egg-info		+				http://sourceforge.net/projects/comtypes/files/comtypes/0.6.2/
+Django-1.3-py2.5.egg-info			-
+MySQL-python						*				http://stackoverflow.com/questions/384471/mysql-db-lib-for-python-3-0
+numpy-1.3.0-py2.5.egg-info			-				http://stackoverflow.com/questions/2231842/numpy-with-python-3-0
+PIL									-				http://www.pythonware.com/products/pil/
+psycopg2-2.0.12-py2.5.egg-info		beta			http://initd.org/psycopg/articles/2011/02/06/psycopg-24-beta1-released/
+pyodbc-2.1.7-py2.5.egg-info			beta			http://code.google.com/p/pyodbc/downloads/list
+pyserial-2.4-py2.5.egg-info
+PySide-1.0.3qt473-py2.5.egg-info	-				http://developer.qt.nokia.com/wiki/PySide_Python_3_Issues
+pywin32-214-py2.6.egg-info			+				http://sourceforge.net/projects/pywin32/files/pywin32/Build216/
+setuptools-0.6c3-py2.5.egg			*				http://stackoverflow.com/questions/816623/setuptools-on-python3-0
+simplejson-2.0.9-py2.5.egg-info		builtin			http://docs.python.org/release/3.1.3/library/json.html
+wx-2.8-msw-unicode-gridfix			-				http://stackoverflow.com/questions/720806/wxpython-for-python-3
+xlrd-0.7.1-py2.5.egg-info			-
+xlwt-0.7.2-py2.5.egg-info			-
+YDbf-0.3rc1-py2.5.egg-info			-
+
+http://www.python.org/3kpoll

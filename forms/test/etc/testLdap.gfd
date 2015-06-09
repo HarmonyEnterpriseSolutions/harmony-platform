@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<form name='testLdap' title="Test LDAP" windowStyle='MAXIMIZE'>
+
+	<datasource name='ds_ldap_bolivar' connection='ldap_bolivar' prequery='Y'
+		table = 'DC=abrisola,DC=com,DC=ua'
+	/>
+
+
+
+<trigger type="On-Startup"><![CDATA[
+		  
+	#ds_ldap_bolivar.setCondition('')
+
+]]></trigger>
+
+<trigger type='ON-ACTIVATION'>
+</trigger>
+
+<logic>
+	<block name='b_ldap_bolivar' datasource='ds_ldap_bolivar' editable='N' deletable='N'>
+		<field name = 'sAMAccountName' field = 'sAMAccountName'   />
+
+		<field name = 'name'           field = 'name'             />
+		
+		<field name = 'givenName'           field = 'givenName'             />
+		<field name = 'initials'           field = 'initials'             />
+		<field name = 'sn'           field = 'sn'             />
+
+		<field name = 'mail'           field = 'mail'             />
+		<field name = 'streetAddress'           field = 'streetAddress'             />
+		<field name = 'postOfficeBox'           field = 'postOfficeBox'             />
+		<field name = 'physicalDeliveryOfficeName'           field = 'physicalDeliveryOfficeName'             />
+
+		<!--field name = 'objectClass'    field = 'objectClass'      /-->
+	
+		<!--field name = ''           field = ''             /-->
+
+	</block>
+
+</logic>
+
+
+<import-toolbar name='__main_toolbar__' library='../common/toolbar.gfd'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<table block='b_ldap_bolivar'>
+		<import-menu library='../common/menues.gfd' name='table-default'/>
+
+		<entry field = 'sAMAccountName' label = 'sAMAccountName' />
+
+		<entry field = 'name'           label = 'name'           />
+
+		<entry field = 'givenName'           label = 'givenName'           />
+		<entry field = 'initials'           label = 'initials'           />
+		<entry field = 'sn'           label = 'sn'           />
+
+		<entry field = 'mail'           label = 'mail'           />
+		<entry field = 'streetAddress'           label = 'streetAddress'           />
+		<entry field = 'postOfficeBox'           label = 'postOfficeBox'           />
+		<entry field = 'physicalDeliveryOfficeName'           label = 'physicalDeliveryOfficeName'           />
+
+		<!--entry field = 'objectClass'    label = 'objectClass'    /-->
+
+	</table>
+</layout>
+</form>

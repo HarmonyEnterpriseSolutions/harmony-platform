@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="MDINoteBook example">
+	
+	<trigger type='ON-ACTIVATION'>
+		#for i in xrange(5):
+		#	call_after(lambda: form.layout.find_child('mdi').run_form('form.gfd'))
+	</trigger>
+
+	<action name='act_run_form' label='Run form'>
+		form.layout.find_child('mdi').run_form('form.gfd')
+	</action>
+
+	<action name='act_run_form_lazy' label='Run form lazy'>
+		form.layout.find_child('mdi').run_form_lazy('Lazy page', 'form.gfd')
+	</action>
+
+	<logic />
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox>
+			<hbox>
+				<button action='act_run_form' s:stretch='0'/>
+				<button action='act_run_form_lazy' s:stretch='0'/>
+			</hbox>
+			<mdi-notebook name='mdi'/>
+		</vbox>
+	</layout>
+</form>

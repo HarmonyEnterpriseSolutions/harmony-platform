@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Number example">
+	<action name='a' label='set small number'>
+		store_document.number = 1
+	</action>
+	<action name='b' label='set big number'>
+		store_document.number = 12345.678
+	</action>
+
+	<logic>
+		<block name="store_document">
+			<field name="number" datatype="number" scale='3' length='8' editable='N'>
+				<trigger type="post-change">print self.value</trigger>
+			</field>
+		</block>
+	</logic>
+	<trigger type="on-activation">store_document.number = "45678.23"</trigger>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox>
+			<entry name="store" block="store_document" field="number" label="Number" />
+			<button action='a'/>
+			<button action='b'/>
+		</vbox>
+	</layout>
+</form>

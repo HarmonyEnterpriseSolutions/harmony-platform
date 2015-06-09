@@ -1,0 +1,2146 @@
+<HTML>
+<LINK href="../css/Report.css" type=text/css rel=stylesheet>
+<TITLE>GFD XML schema</TITLE>
+<BODY>
+<H1>GFD XML schema</H1>
+
+<H2>Tag: form</H2><br>
+BaseClass: <b>GFForm</b><br>
+
+Child tags: <b>dialog, action, connection, datasource, import, layout, logic, menu, options, parameter, timer, toolbar, trigger</b><br>
+Description: Top-level element that encloses all the logic and visuals that the user interface will show to the user.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>A unique name or ID for the form.</TD></TR>
+<TR>
+<TD>style</TD><TD>name</TD><TD>'normal'</TD><TD><TABLE>
+<TR><TD><b>dialog</b></TD><TD>Диалог</TD></TR>
+<TR><TD><b>normal</b></TD><TD>Нормальный</TD></TR>
+</TABLE></TD><TD>Display as normal or dialog-style window.</TD></TR>
+<TR>
+<TD>title</TD><TD>text</TD><TD>''</TD><TD>&nbsp;</TD><TD>The title of the form.</TD></TR>
+<TR>
+<TD>windowStyle</TD><TD>names</TD><TD>''</TD><TD>&nbsp;</TD><TD>Window style. String is combination of comma delimited<br>
+&nbsp;&nbsp;&nbsp;&nbsp;MINIMIZE_BOX<br>
+&nbsp;&nbsp;&nbsp;&nbsp;MAXIMIZE_BOX<br>
+&nbsp;&nbsp;&nbsp;&nbsp;CLOSE_BOX<br>
+&nbsp;&nbsp;&nbsp;&nbsp;RESIZEABLE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;CAPTION<br>
+&nbsp;&nbsp;&nbsp;&nbsp;MAXIMIZE<br>
+<br>
+Default for style &quot;normal&quot;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;CAPTION, MINIMIZE_BOX, MAXIMIZE_BOX, CLOSE_BOX, RESIZE&quot;<br>
+Default for style &quot;dialog&quot;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;CAPTION, CLOSE_BOX, RESIZE<br>
+</TD></TR>
+</TABLE>
+<H2>Tag: dialog</H2><br>
+BaseClass: <b>GFForm</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>form, dialog</b><br>
+Child tags: <b>dialog, action, connection, datasource, layout, logic, menu, options, parameter, timer, toolbar, trigger</b><br>
+Description: Top-level element that encloses all the logic and visuals that the user interface will show to the user.
+<br><b>Note: Attributes are similar to form tag attributes</b>
+<H2>Tag: action</H2><br>
+BaseClass: <b>GAction</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>form, dialog</b><br>
+Description: A piece of code that can be bound to a button, a menu item, a toolbar button or a trigger.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>description</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Long text to use for this action</TD></TR>
+<TR>
+<TD>enabled</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Determines whether this action can be run</TD></TR>
+<TR>
+<TD>file</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>External file containing the source code</TD></TR>
+<TR>
+<TD>icon</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Icon assigned with this action</TD></TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Short text to use for this action</TD></TR>
+<TR>
+<TD>language</TD><TD>name</TD><TD>'python'</TD><TD><TABLE>
+<TR><TD><b>python</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Programming language the code is written in</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of this element</TD></TR>
+</TABLE>
+<H2>Tag: and</H2><br>
+BaseClass: <b>GCand</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>and, exist, not, or, between, eq, ge, gt, le, like, lt, ne, notbetween, notlike, notnull, null</b><br>
+Description: Implements logical AND relation.
+<H2>Tag: author</H2><br>
+BaseClass: <b>GFOption</b><br>
+
+Parent tags: <b>options</b><br>
+Description: TODO
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>'author'</TD><TD><TABLE>
+<TR><TD><b>author</b></TD><TD></TD></TR>
+</TABLE></TD><TD>TODO</TD></TR>
+<TR>
+<TD>value</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+</TABLE>
+<H2>Tag: cfield</H2><br>
+BaseClass: <b>GCField</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, like, lt, ne, notbetween, add, div, lower, mul, negate, notlike, notnull, null, sub, upper</b><br>
+Description: Defines a database table's field in a condition.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: entry</H2><br>
+BaseClass: <b>GFEntry</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, table, vbox</b><br>
+Child tags: <b>popupwindow</b><br>
+Description: An {entry} is the visual counterpart to a {field}, it defines how the data in a field will be displayed and how it can be edited.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>activate_value</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>For radiobutton style only.</TD></TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the block that this ties to.</TD></TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>description</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Text to display in a tooltip window</TD></TR>
+<TR>
+<TD>displaymask</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Defines how the field data will be formatted for display.</TD></TR>
+<TR>
+<TD>field</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the field that this ties to.</TD></TR>
+<TR>
+<TD>focusorder</TD><TD>whole</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Defines what order the focus moves through entries.</TD></TR>
+<TR>
+<TD>formatmask</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>inputmask</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Defines how the user will edit a field's value.</TD></TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The optional label displayed next to checkbox.</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxitems</TD><TD>whole</TD><TD>2</TD><TD>&nbsp;</TD><TD>For radiobox style only.Because max item count is static</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The unique ID of the entry.</TD></TR>
+<TR>
+<TD>navigable</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>If false, the user will be unable to navigate to this entry. Triggers can still alter the value though.</TD></TR>
+<TR>
+<TD>picker_text_minlength</TD><TD>whole</TD><TD>'0'</TD><TD>&nbsp;</TD><TD>For picker* styles only</TD></TR>
+<TR>
+<TD>style</TD><TD>name</TD><TD>'auto'</TD><TD><TABLE>
+<TR><TD><b>auto</b></TD><TD>Автосохранение</TD></TR>
+<TR><TD><b>bitcheckbox</b></TD><TD>Checkbox bound to bit field</TD></TR>
+<TR><TD><b>checkbox</b></TD><TD></TD></TR>
+<TR><TD><b>datepicker</b></TD><TD>Date picker</TD></TR>
+<TR><TD><b>default</b></TD><TD></TD></TR>
+<TR><TD><b>dropdown</b></TD><TD>Выпадающий список</TD></TR>
+<TR><TD><b>label</b></TD><TD>Label (non-editable)</TD></TR>
+<TR><TD><b>listbox</b></TD><TD>Список</TD></TR>
+<TR><TD><b>multiline</b></TD><TD>Multiline-Edit</TD></TR>
+<TR><TD><b>password</b></TD><TD>Password/Hidden</TD></TR>
+<TR><TD><b>picker</b></TD><TD>User defined picker</TD></TR>
+<TR><TD><b>picker_with_editor</b></TD><TD>User defined picker with custom editor buton</TD></TR>
+<TR><TD><b>radiobox</b></TD><TD>Radio box</TD></TR>
+<TR><TD><b>radiobutton</b></TD><TD>Radio button</TD></TR>
+<TR><TD><b>text</b></TD><TD>Text Field</TD></TR>
+</TABLE></TD><TD>The style of entry widget requested. Currently either {text}, {label}, {checkbox}, {listbox}, or {dropdown}. To use {listbox} or {dropdown} you are required to use both the {fk_source}, {fk_key}, and {fk_description} attributes. The {label} style implies the {readonly} attribute.</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: dyn-menu</H2><br>
+BaseClass: <b>GFDynMenu</b><br>
+
+Parent tags: <b>button, menu</b><br>
+Description: Menu-View of a blcok
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the block the menu ties to.</TD></TR>
+<TR>
+<TD>fld_id</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The field containing the TreeViewItem ID</TD></TR>
+<TR>
+<TD>fld_parent</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The field containing the TreeViewItem parent</TD></TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Text to use if this is a submenu</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the menu</TD></TR>
+<TR>
+<TD>nodename</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Menu node name pattern. Use %(field) to reference field</TD></TR>
+<TR>
+<TD>rootid</TD><TD>name</TD><TD>'0'</TD><TD>&nbsp;</TD><TD>Root id, default is 0</TD></TR>
+</TABLE>
+<H2>Tag: condition</H2><br>
+BaseClass: <b>GCondition</b><br>
+
+Parent tags: <b>datasource</b><br>
+Child tags: <b>and, exist, not, or, between, eq, ge, gt, le, like, lt, ne, notbetween, notlike, notnull, null</b><br>
+<H2>Tag: logic</H2><br>
+BaseClass: <b>GFLogic</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>form, dialog</b><br>
+Child tags: <b>block</b><br>
+Description: Separation layer that contains &quot;Business logic&quot;: blocks, fields, block-level and field-level triggers.
+<H2>Tag: block</H2><br>
+BaseClass: <b>GFBlock</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>logic</b><br>
+Child tags: <b>field</b><br>
+Description: A block contains instructions on how Forms should interact with a datasource.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>autoClear</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>If set, then the block is cleared/emptied on a commit.</TD></TR>
+<TR>
+<TD>autoCommit</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>If set, then the datasource will automatically commit changes when trying to navigate out of the current record.</TD></TR>
+<TR>
+<TD>autoCreate</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>If set, then if you attempt to go to the next record while at the last record, a new record is created.</TD></TR>
+<TR>
+<TD>autoNextRecord</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>If set, then if you tab at the end of a block, you will be taken to the next record. If the current record is empty and transparent is true, then you will be taken to the next block</TD></TR>
+<TR>
+<TD>datasource</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of a datasource (defined in by a {&lt;datasource&gt;} tag) that provides this block with it's data.</TD></TR>
+<TR>
+<TD>deletable</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Can records be deleted?</TD></TR>
+<TR>
+<TD>editable</TD><TD>text</TD><TD>'Y'</TD><TD><TABLE>
+<TR><TD><b>N</b></TD><TD>Нет</TD></TR>
+<TR><TD><b>Y</b></TD><TD>Да</TD></TR>
+<TR><TD><b>new</b></TD><TD>Только новые записи</TD></TR>
+<TR><TD><b>update</b></TD><TD>Только обновления</TD></TR>
+</TABLE></TD><TD>Can records be edited/created?</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>A unique ID (name) for the widget. No blocks can share the same name without causing namespace collisions in user triggers.</TD></TR>
+<TR>
+<TD>navigable</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Can this block be navigated?</TD></TR>
+<TR>
+<TD>queryable</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Can records be queried?</TD></TR>
+<TR>
+<TD>startup</TD><TD>name</TD><TD>'empty'</TD><TD><TABLE>
+<TR><TD><b>empty</b></TD><TD></TD></TR>
+<TR><TD><b>full</b></TD><TD></TD></TR>
+</TABLE></TD><TD>State in which the block will be on form startup. 'Empty' means the block is filled with a single empty record, 'full' means the block is populated with the result of a full query.</TD></TR>
+<TR>
+<TD>transparent</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>If set, then you can tab out of the block via next- or previous-field events. Makes navigation in multiblock forms easier. If false, focus stays within a block until user explicitly moves to another block. Note that a block's {autoNextRecord}setting affects {transparent} behavior</TD></TR>
+</TABLE>
+<H2>Tag: calc</H2><br>
+BaseClass: <b>GFCalc</b><br>
+
+Parent tags: <b>field</b><br>
+Description: Automatically updates parent field value with calculated one. Listens for all source fields changes
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>language</TD><TD>name</TD><TD>'python'</TD><TD><TABLE>
+<TR><TD><b>python</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Programming language the code is written in</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+</TABLE>
+<H2>Tag: description</H2><br>
+BaseClass: <b>GFOption</b><br>
+
+Parent tags: <b>options</b><br>
+Description: TODO
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>'description'</TD><TD><TABLE>
+<TR><TD><b>description</b></TD><TD></TD></TR>
+</TABLE></TD><TD>TODO</TD></TR>
+<TR>
+<TD>value</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+</TABLE>
+<H2>Tag: exist</H2><br>
+BaseClass: <b>GCexist</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>and, exist, not, or, between, eq, ge, gt, le, like, lt, ne, notbetween, notlike, notnull, null</b><br>
+Description: Implements an exist condition.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>detaillink</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>masterlink</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>table</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: image</H2><br>
+BaseClass: <b>GFImage</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, table, vbox</b><br>
+Description: Displays an image.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the block that this ties to.</TD></TR>
+<TR>
+<TD>editable</TD><TD>text</TD><TD>'Y'</TD><TD><TABLE>
+<TR><TD><b>N</b></TD><TD>Нет</TD></TR>
+<TR><TD><b>Y</b></TD><TD>Да</TD></TR>
+<TR><TD><b>new</b></TD><TD>Только новые записи</TD></TR>
+<TR><TD><b>null</b></TD><TD>Null Only</TD></TR>
+<TR><TD><b>update</b></TD><TD>Только обновления</TD></TR>
+</TABLE></TD><TD>Only allow this object to be edited if it is currently empty.</TD></TR>
+<TR>
+<TD>field</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the field that this ties to.</TD></TR>
+<TR>
+<TD>fit</TD><TD>name</TD><TD>'none'</TD><TD><TABLE>
+<TR><TD><b>auto</b></TD><TD>Use a best-fit algorithm</TD></TR>
+<TR><TD><b>both</b></TD><TD>Scale width and height (may distort image)</TD></TR>
+<TR><TD><b>height</b></TD><TD>Scale to height</TD></TR>
+<TR><TD><b>none</b></TD><TD>Full-size image (no scaling)</TD></TR>
+<TR><TD><b>width</b></TD><TD>Scale to width</TD></TR>
+</TABLE></TD><TD>Defines how the image will fill the space provided for it (crop parts outside borders, or stretch width/height/both to fit into given boundaries).</TD></TR>
+<TR>
+<TD>focusorder</TD><TD>whole</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Defines what order the focus moves through entries.</TD></TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Label displayed next or above to the image</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The unique name of the image.</TD></TR>
+<TR>
+<TD>type</TD><TD>name</TD><TD>'URL'</TD><TD><TABLE>
+<TR><TD><b>PIL</b></TD><TD>Field contains a PIL encoding of the image</TD></TR>
+<TR><TD><b>URL</b></TD><TD>Поле включает адрес изображения</TD></TR>
+</TABLE></TD><TD>The type of image reference. Can be {URL} for a url reference, or {PIL} for an embedded image.</TD></TR>
+</TABLE>
+<H2>Tag: not</H2><br>
+BaseClass: <b>GCnot</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>and, exist, not, or, between, eq, ge, gt, le, like, lt, ne, notbetween, notlike, notnull, null</b><br>
+Description: Implements logical NOT relation.
+<H2>Tag: or</H2><br>
+BaseClass: <b>GCor</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>and, exist, not, or, between, eq, ge, gt, le, like, lt, ne, notbetween, notlike, notnull, null</b><br>
+Description: Implements logical OR relation.
+<H2>Tag: between</H2><br>
+BaseClass: <b>GCbetween</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>add, div, lower, mul, negate, sub, cconst, cfield, cparam, upper</b><br>
+Description: Implements a {field} BETWEEN {value1} {value2} condition.
+<H2>Tag: add</H2><br>
+BaseClass: <b>GCadd</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, lt, ne, notbetween, add, div, mul, negate, sub</b><br>
+Child tags: <b>add, div, mul, negate, sub, cconst, cfield, cparam</b><br>
+Description: Implements addition.
+<H2>Tag: connection</H2><br>
+BaseClass: <b>GConnection</b><br>
+
+Parent tags: <b>form, dialog</b><br>
+Description: TODO
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>comment</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>dbname</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>host</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>provider</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>service</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+</TABLE>
+<H2>Tag: datasource</H2><br>
+BaseClass: <b>GFDataSource</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>form, dialog</b><br>
+Child tags: <b>condition, sortorder, sql, staticset</b><br>
+Description: A datasource provides a link to a database table or some similar data store.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>cache</TD><TD>whole</TD><TD>5</TD><TD>&nbsp;</TD><TD>Cache this number of records</TD></TR>
+<TR>
+<TD>connection</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the connection as in connections.conf that points to a valid database.</TD></TR>
+<TR>
+<TD>detaillink</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>If this datasource is the child in a master/detail relationship, this property contains a comma-separated list of the this (child's) datasource's field(s) used for linking.</TD></TR>
+<TR>
+<TD>detailmax</TD><TD>whole</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>If this datasource is the child in a master/detail relationship, this property specifies the maximum number of child records that can be created. Usually, this is either omitted (for one-to-many relationships) or 1 (for one-to-one relationships).</TD></TR>
+<TR>
+<TD>detailmin</TD><TD>whole</TD><TD>0</TD><TD>&nbsp;</TD><TD>If this datasource is the child in a master/detail relationship, this property specifies the minimum number of child records that must be present for a commit to be valid. Usually, this is 0 (for one-to-many relationships) or 1 (for one-to-one relationships).</TD></TR>
+<TR>
+<TD>distinct</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>explicitfields</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>master</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>If this datasource is the child in a master/detail relationship, this property contains the name of the master datasource.</TD></TR>
+<TR>
+<TD>masterlink</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>If this datasource is the child in a master/detail relationship, this property contains a comma-separated list of the master datasource's field(s) used for linking.</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the datasource.</TD></TR>
+<TR>
+<TD>prequery</TD><TD>boolean</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>If true, the datasource is populated on form startup. If false (default), the form starts out with an empty record until the user or a trigger queries the database.</TD></TR>
+<TR>
+<TD>primarykey</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Comma-separated list of the fields that make up the primary key.</TD></TR>
+<TR>
+<TD>primarykeyseq</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of the sequence used to populate a primary key (only applies to relational backends that support sequences; requires a single {primarykey} value.</TD></TR>
+<TR>
+<TD>requery</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Requery a record after posting it; requires {primarykey} support and a non-null primary key value at the time of update (whether via a trigger or by the use of {primarykeyseq}.</TD></TR>
+<TR>
+<TD>rowid</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of the field to use as Row-ID if the connection does not support row ids.</TD></TR>
+<TR>
+<TD>table</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>The table in the database this datasource will point to.</TD></TR>
+<TR>
+<TD>type</TD><TD>name</TD><TD>'object'</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: eq</H2><br>
+BaseClass: <b>GCeq</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>add, div, lower, mul, negate, sub, cconst, cfield, cparam, upper</b><br>
+Description: Implements a {field} = {value} condition.
+<H2>Tag: ge</H2><br>
+BaseClass: <b>GCge</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>add, div, lower, mul, negate, sub, cconst, cfield, cparam, upper</b><br>
+Description: Implements a {field} &gt;= {value} condition.
+<H2>Tag: gt</H2><br>
+BaseClass: <b>GCgt</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>add, div, lower, mul, negate, sub, cconst, cfield, cparam, upper</b><br>
+Description: Implements a {field} &gt; {value} condition.
+<H2>Tag: div</H2><br>
+BaseClass: <b>GCdiv</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, lt, ne, notbetween, add, div, mul, negate, sub</b><br>
+Child tags: <b>add, div, mul, negate, sub, cconst, cfield, cparam</b><br>
+Description: Implements division.
+<H2>Tag: import</H2><br>
+BaseClass: <b>GImport</b><br>
+
+Parent tags: <b>form</b><br>
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>action</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>button</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>datasource</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>dialog</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>field</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>layout</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>library</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>logic</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>menu</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>notepage</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>popupwindow</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>table-row-styles</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>toolbar</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>tree-columns</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>treenode-styles</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>trigger</TD><TD>name</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: layout</H2><br>
+BaseClass: <b>GFLayout</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>form, dialog</b><br>
+Child tags: <b>entry, hbox, notebook, splitter, table, vbox, button, component, image, label, mdi-notebook, tree, url-resource</b><br>
+Description: Separation layer that contains all the visual elements on the form.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>'layout'</TD><TD>&nbsp;</TD><TD>A unique name or ID for the form.</TD></TR>
+</TABLE>
+<H2>Tag: hbox</H2><br>
+BaseClass: <b>GFHBox</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, vbox</b><br>
+Child tags: <b>entry, hbox, notebook, splitter, table, vbox, button, component, image, label, mdi-notebook, tree, url-resource</b><br>
+Description: A box is a visual element that draws a box around other visual elements, thus providing logical separation for them.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The {block}</TD></TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>An optional text label that will be displayed on the border.</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The unique name of the box.</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: button</H2><br>
+BaseClass: <b>GFButton</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, table, vbox</b><br>
+Child tags: <b>menu, dyn-menu</b><br>
+Description: A visual element with text placed on it, that the user can push or click, and that event can run a bound trigger.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>action</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Action to be executed when the button is fired</TD></TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The (optional) name of the block that this ties to. If a button is associated with a block, then the button honors the block's rows= value.</TD></TR>
+<TR>
+<TD>default</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>Is this button default?</TD></TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>enabled</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Is this button enabled</TD></TR>
+<TR>
+<TD>focusorder</TD><TD>whole</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Defines what order the focus moves through entries.</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>image</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Path to image that should appear on the button</TD></TR>
+<TR>
+<TD>imagemask</TD><TD>color</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Mask color for image</TD></TR>
+<TR>
+<TD>label</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The text that should appear on the button</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>A unique ID for the widget. Useful for importable buttons. </TD></TR>
+<TR>
+<TD>navigable</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Can this button be navigated?</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: component</H2><br>
+BaseClass: <b>GFComponent</b><br>
+
+Parent tags: <b>layout, hbox, vbox</b><br>
+Description: TODO
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the block that this ties to.</TD></TR>
+<TR>
+<TD>field</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the field that this ties to.</TD></TR>
+<TR>
+<TD>focusorder</TD><TD>whole</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Defines what order the focus moves through entries.</TD></TR>
+<TR>
+<TD>mimetype</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The unique name of the component.</TD></TR>
+<TR>
+<TD>type</TD><TD>name</TD><TD>'URL'</TD><TD><TABLE>
+<TR><TD><b>Base64</b></TD><TD>Поле содержит данные компонента в кодировке Base64</TD></TR>
+<TR><TD><b>URL</b></TD><TD>Поле содержит адрес помпонента</TD></TR>
+</TABLE></TD><TD>TODO</TD></TR>
+</TABLE>
+<H2>Tag: label</H2><br>
+BaseClass: <b>GFLabel</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, vbox</b><br>
+Description: Displays static text
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>alignment</TD><TD>name</TD><TD>'left'</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD>По центру</TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>The justification of the label. Can be one of the following: {left}, {right}, or {center}. Requires that the {width} attribute be set.</TD></TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>for</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>If this label is for a specific object, name it here.</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The unique ID of the label.</TD></TR>
+<TR>
+<TD>text</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The text to be displayed.</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: le</H2><br>
+BaseClass: <b>GCle</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>add, div, lower, mul, negate, sub, cconst, cfield, cparam, upper</b><br>
+Description: Implements a {field} &lt;= {value} condition.
+<H2>Tag: like</H2><br>
+BaseClass: <b>GClike</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>cconst, cparam, lower, upper, cfield</b><br>
+Description: Implements a {field} LIKE {value} condition.
+<H2>Tag: lt</H2><br>
+BaseClass: <b>GClt</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>add, div, lower, mul, negate, sub, cconst, cfield, cparam, upper</b><br>
+Description: Implements a {field} &lt; {value} condition.
+<H2>Tag: vbox</H2><br>
+BaseClass: <b>GFVBox</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, vbox</b><br>
+Child tags: <b>entry, hbox, notebook, splitter, table, vbox, button, component, image, label, mdi-notebook, tree, url-resource</b><br>
+Description: A box is a visual element that draws a box around other visual elements, thus providing logical separation for them.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The {block}</TD></TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>An optional text label that will be displayed on the border.</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The unique name of the box.</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: menu</H2><br>
+BaseClass: <b>GFMenu</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>form, dialog, table, button, tree, menu</b><br>
+Child tags: <b>menu, dyn-menu, menuitem</b><br>
+Description: A menu or submenu containing menu items and/or submenus
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Text to use if this is a submenu</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of this element</TD></TR>
+</TABLE>
+<H2>Tag: menuitem</H2><br>
+BaseClass: <b>GFMenuItem</b><br>
+
+Parent tags: <b>menu</b><br>
+Description: A menu item that fires a trigger when selected
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>action</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of the trigger to run whenever this menu item is selected</TD></TR>
+<TR>
+<TD>action_off</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of the trigger to run whenever this menu item is switched to off</TD></TR>
+<TR>
+<TD>description</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Text to display in the status bar for this menu item</TD></TR>
+<TR>
+<TD>enabled</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Determines whether this menu item will be enabled by default</TD></TR>
+<TR>
+<TD>hotkey</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Hotkey to assign to this menu item</TD></TR>
+<TR>
+<TD>icon</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Icon to display besides this menu item</TD></TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Text to use for this menu item</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of this element</TD></TR>
+<TR>
+<TD>state</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>Determines whether this menu item will be switched on by default</TD></TR>
+</TABLE>
+<H2>Tag: mul</H2><br>
+BaseClass: <b>GCmul</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, lt, ne, notbetween, add, div, mul, negate, sub</b><br>
+Child tags: <b>add, div, mul, negate, sub, cconst, cfield, cparam</b><br>
+Description: Implements multiplication.
+<H2>Tag: name</H2><br>
+BaseClass: <b>GFOption</b><br>
+
+Parent tags: <b>options</b><br>
+Description: TODO
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>'name'</TD><TD><TABLE>
+<TR><TD><b>name</b></TD><TD></TD></TR>
+</TABLE></TD><TD>TODO</TD></TR>
+<TR>
+<TD>value</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+</TABLE>
+<H2>Tag: splitter</H2><br>
+BaseClass: <b>GFSplitter</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, vbox</b><br>
+Child tags: <b>entry, hbox, notebook, splitter, table, vbox, button, image, label, mdi-notebook, tree, url-resource</b><br>
+Description: Mouse draggable splitter for two windows
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>align</TD><TD>name</TD><TD>'vertical'</TD><TD><TABLE>
+<TR><TD><b>h</b></TD><TD>Horizontal align</TD></TR>
+<TR><TD><b>horizontal</b></TD><TD>Horizontal align</TD></TR>
+<TR><TD><b>v</b></TD><TD>Vertical align</TD></TR>
+<TR><TD><b>vertical</b></TD><TD>Vertical align</TD></TR>
+</TABLE></TD><TD>Align</TD></TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the tree</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: mdi-notebook</H2><br>
+BaseClass: <b>GFMDINotebook</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, vbox</b><br>
+Description: MDI Notebook, opens forms
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the notebook</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: negate</H2><br>
+BaseClass: <b>GCnegate</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, lt, ne, notbetween, add, div, mul, sub</b><br>
+Child tags: <b>add, div, mul, sub, cconst, cfield, cparam</b><br>
+Description: Implements numerical negation.
+<H2>Tag: cconst</H2><br>
+BaseClass: <b>GCConst</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, like, lt, ne, notbetween, add, div, mul, negate, notlike, sub</b><br>
+Description: Defines a constant value in a condition.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>type</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>value</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: cparam</H2><br>
+BaseClass: <b>GFCParam</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, like, lt, ne, notbetween, add, div, mul, negate, notlike, sub</b><br>
+Description: Defines a parameter value in a condition.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: field</H2><br>
+BaseClass: <b>GFField</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>block</b><br>
+Child tags: <b>calc, total</b><br>
+Description: A field represents a column in the database table designated by the block.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>autoquery</TD><TD>text</TD><TD>'N'</TD><TD><TABLE>
+<TR><TD><b>N</b></TD><TD>Нет</TD></TR>
+<TR><TD><b>Y</b></TD><TD>Да</TD></TR>
+<TR><TD><b>new</b></TD><TD>Empty forms only</TD></TR>
+</TABLE></TD><TD>If {Y} then any changes in this field will cause the form to automatically query and populate itself with matching records.  If {New} it will only automatically query if the form is currenly completely empty.  If {N} then no automatic query will be performed.</TD></TR>
+<TR>
+<TD>case</TD><TD>name</TD><TD>'mixed'</TD><TD><TABLE>
+<TR><TD><b>lower</b></TD><TD>Нижний регистр</TD></TR>
+<TR><TD><b>mixed</b></TD><TD>Нижний регистр</TD></TR>
+<TR><TD><b>upper</b></TD><TD>Верхний регистр</TD></TR>
+</TABLE></TD><TD>Convert the value to uppercase/lowercase or leave it as it is. Applies only to fields with a datatype of 'string'.</TD></TR>
+<TR>
+<TD>datatype</TD><TD>name</TD><TD>'raw'</TD><TD><TABLE>
+<TR><TD><b>boolean</b></TD><TD></TD></TR>
+<TR><TD><b>date</b></TD><TD>Тип данных</TD></TR>
+<TR><TD><b>datetime</b></TD><TD>Дата/Время</TD></TR>
+<TR><TD><b>number</b></TD><TD>Числовой</TD></TR>
+<TR><TD><b>raw</b></TD><TD>Raw data</TD></TR>
+<TR><TD><b>text</b></TD><TD>Текст</TD></TR>
+<TR><TD><b>time</b></TD><TD>Заголовок</TD></TR>
+</TABLE></TD><TD>The type of data stored in this field.</TD></TR>
+<TR>
+<TD>default</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The default value for this field when a new record is created. If the field is visible the user can override the value.</TD></TR>
+<TR>
+<TD>defaultToLast</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>If {Y}, then new records will default to the last value the user entered for this field. If no new values have been entered, then defaults back to the normal {default} setting.</TD></TR>
+<TR>
+<TD>description</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Text to display in a tooltip window</TD></TR>
+<TR>
+<TD>disableAutoCompletion</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>Disable auto completion</TD></TR>
+<TR>
+<TD>editable</TD><TD>text</TD><TD>'Y'</TD><TD><TABLE>
+<TR><TD><b>N</b></TD><TD>Нет</TD></TR>
+<TR><TD><b>Y</b></TD><TD>Да</TD></TR>
+<TR><TD><b>new</b></TD><TD>Только новые записи</TD></TR>
+<TR><TD><b>null</b></TD><TD>Null Only</TD></TR>
+<TR><TD><b>update</b></TD><TD>Только обновления</TD></TR>
+</TABLE></TD><TD>Only allow this object to be edited if it is currently empty.</TD></TR>
+<TR>
+<TD>field</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the field in the datasource to which this widget is tied.</TD></TR>
+<TR>
+<TD>fk_description</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The description used if a style of dropdown is selected. This field's value is displayed in the dropdown but the foreign_key value is actually stored in the field. This allows you to display something like the full name of a US state but only store it's 2 character abbreviation.</TD></TR>
+<TR>
+<TD>fk_key</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The table column (field) in the foreign key source table that the foreign key links to.</TD></TR>
+<TR>
+<TD>fk_refresh</TD><TD>name</TD><TD>'activate'</TD><TD><TABLE>
+<TR><TD><b>activate</b></TD><TD>On datasource activate</TD></TR>
+<TR><TD><b>never</b></TD><TD>При запуске формы</TD></TR>
+<TR><TD><b>startup</b></TD><TD>При запуске формы</TD></TR>
+</TABLE></TD><TD>Decides when the foreign key should be refreshed.</TD></TR>
+<TR>
+<TD>fk_resolved_description</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Parent block field name containing fk_description for this row key.</TD></TR>
+<TR>
+<TD>fk_source</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Source table that the foreign key links to.</TD></TR>
+<TR>
+<TD>inputmask</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Defines how the user will edit a field's value.</TD></TR>
+<TR>
+<TD>length</TD><TD>whole</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Maximum length of data stored in this field. Applies only to fields with a datatype of 'string' or 'number'. For numbers, this is the total number of digits, including the fractional digits.</TD></TR>
+<TR>
+<TD>ltrim</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>Trim extraneous space at beginning of user input.</TD></TR>
+<TR>
+<TD>max</TD><TD>text</TD><TD>'None'</TD><TD>&nbsp;</TD><TD>Maximum value, value must be &lt;= max</TD></TR>
+<TR>
+<TD>min</TD><TD>text</TD><TD>'None'</TD><TD>&nbsp;</TD><TD>Minimum value, value must be &gt;= min</TD></TR>
+<TR>
+<TD>minLength</TD><TD>whole</TD><TD>0</TD><TD>&nbsp;</TD><TD>The minimum number of characters the user must enter into the entry.</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The unique ID of the entry. Referenced in master/detail setups as well as triggers.</TD></TR>
+<TR>
+<TD>queryDefault</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The field will be populated with this value automatically when a query is requested. If the field is visible the user can still override the value.</TD></TR>
+<TR>
+<TD>query_casesensitive</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>If &quot;N&quot;, the entry widget ignores the case of the information entered into the query mask.</TD></TR>
+<TR>
+<TD>queryable</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Is this object queryable?</TD></TR>
+<TR>
+<TD>required</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>If set, empty values can not be stored in this field.</TD></TR>
+<TR>
+<TD>rtrim</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Trim extraneous space at end of user input.</TD></TR>
+<TR>
+<TD>scale</TD><TD>whole</TD><TD>'0'</TD><TD>&nbsp;</TD><TD>Number of fractional digits. Applies only to fields with a datatype of 'number'.</TD></TR>
+</TABLE>
+<H2>Tag: ne</H2><br>
+BaseClass: <b>GCne</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>add, div, lower, mul, negate, sub, cconst, cfield, cparam, upper</b><br>
+Description: Implements a {field} &lt;&gt; {value} condition.
+<H2>Tag: notbetween</H2><br>
+BaseClass: <b>GCnotbetween</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>add, div, lower, mul, negate, sub, cconst, cfield, cparam, upper</b><br>
+Description: Implements a {field} NOT BETWEEN {value1} {value2} condition.
+<H2>Tag: notebook</H2><br>
+BaseClass: <b>GFNotebook</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, vbox</b><br>
+Child tags: <b>notepage</b><br>
+Description: Container widget with a tabbar, allows to switch between contained components
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the notebook</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: notepage</H2><br>
+BaseClass: <b>GFNotepage</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>notebook</b><br>
+Child tags: <b>entry, hbox, notebook, splitter, table, vbox, button, image, label, mdi-notebook, tree, url-resource</b><br>
+Description: Page of notebook, container
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>caption</TD><TD>text</TD><TD>'Untitled'</TD><TD>&nbsp;</TD><TD>Title of a page</TD></TR>
+<TR>
+<TD>icon</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Icon</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the page</TD></TR>
+</TABLE>
+<H2>Tag: notlike</H2><br>
+BaseClass: <b>GCnotlike</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>cconst, cparam, lower, upper, cfield</b><br>
+Description: Implements a {field} NOT LIKE {value} condition.
+<H2>Tag: lower</H2><br>
+BaseClass: <b>GClower</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, like, lt, ne, notbetween, notlike</b><br>
+Child tags: <b>cfield</b><br>
+Description: Implements lower({value}).
+<H2>Tag: notnull</H2><br>
+BaseClass: <b>GCnotnull</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>cfield</b><br>
+Description: Implements a {field} IS NOT NULL condition.
+<H2>Tag: null</H2><br>
+BaseClass: <b>GCnull</b><br>
+
+Parent tags: <b>condition, and, exist, not, or</b><br>
+Child tags: <b>cfield</b><br>
+Description: Implements a {field} IS NULL condition.
+<H2>Tag: options</H2><br>
+BaseClass: <b>GFOptions</b><br>
+
+Parent tags: <b>form, dialog</b><br>
+Child tags: <b>author, description, name, option, tip, title, version</b><br>
+Description: TODO
+<H2>Tag: option</H2><br>
+BaseClass: <b>GFOption</b><br>
+
+Parent tags: <b>options</b><br>
+Description: TODO
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+<TR>
+<TD>value</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+</TABLE>
+<H2>Tag: parameter</H2><br>
+BaseClass: <b>GFParameter</b><br>
+
+Parent tags: <b>form, dialog</b><br>
+Description: A form can get parameters from the outer world or a calling form, and can pass values back too in these parameters.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>datatype</TD><TD>name</TD><TD>'raw'</TD><TD><TABLE>
+<TR><TD><b>boolean</b></TD><TD></TD></TR>
+<TR><TD><b>date</b></TD><TD>Тип данных</TD></TR>
+<TR><TD><b>datetime</b></TD><TD>Дата/Время</TD></TR>
+<TR><TD><b>number</b></TD><TD>Числовой</TD></TR>
+<TR><TD><b>raw</b></TD><TD>Raw data</TD></TR>
+<TR><TD><b>text</b></TD><TD>Текст</TD></TR>
+<TR><TD><b>time</b></TD><TD>Заголовок</TD></TR>
+</TABLE></TD><TD>The type of data for this parameter.</TD></TR>
+<TR>
+<TD>default</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Default value for the parameter, if the user does not provide a value for it.</TD></TR>
+<TR>
+<TD>description</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Description of the parameter for the help text.</TD></TR>
+<TR>
+<TD>length</TD><TD>whole</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Maximum length of data stored in this parameter. Applies only to parameters with a datatype of 'string' or 'number'. For numbers, this is the total number of digits, including the fractional digits.</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the parameter.</TD></TR>
+<TR>
+<TD>required</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>If set, it is obligatory to provide this parameter to run the form.</TD></TR>
+<TR>
+<TD>scale</TD><TD>whole</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Number of fractional digits. Applies only to parameters with a datatype of 'number'.</TD></TR>
+</TABLE>
+<H2>Tag: popupwindow</H2><br>
+BaseClass: <b>GFPopupWindow</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>entry</b><br>
+Child tags: <b>entry, hbox, notebook, splitter, table, vbox, button, image, label, mdi-notebook, tree, url-resource</b><br>
+Description: Custom popup window, container for widgets
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>form</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Form definition name to show in</TD></TR>
+<TR>
+<TD>modal</TD><TD>boolean</TD><TD>'N'</TD><TD>&nbsp;</TD><TD>Modal or not</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The unique ID of the object</TD></TR>
+<TR>
+<TD>title</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Window title optional</TD></TR>
+</TABLE>
+<H2>Tag: sortorder</H2><br>
+BaseClass: <b>GCSortOrder</b><br>
+
+Parent tags: <b>datasource</b><br>
+Child tags: <b>sortfield</b><br>
+<H2>Tag: sortfield</H2><br>
+BaseClass: <b>GCSortField</b><br>
+
+Parent tags: <b>sortorder</b><br>
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>descending</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>Selects if the ordering is done in ascending (default) or in descending order.</TD></TR>
+<TR>
+<TD>ignorecase</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>Selects wether the ordering is case-sensitive or not.</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the field by which the datasource will be ordered.</TD></TR>
+</TABLE>
+<H2>Tag: sql</H2><br>
+BaseClass: <b>GSql</b><br>
+
+Parent tags: <b>datasource</b><br>
+<H2>Tag: staticset</H2><br>
+BaseClass: <b>GStaticSet</b><br>
+
+Parent tags: <b>datasource</b><br>
+Child tags: <b>staticsetrow</b><br>
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>fields</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: staticsetrow</H2><br>
+BaseClass: <b>GStaticSetRow</b><br>
+
+Parent tags: <b>staticset</b><br>
+Child tags: <b>staticsetfield</b><br>
+<H2>Tag: staticsetfield</H2><br>
+BaseClass: <b>GStaticSetField</b><br>
+
+Parent tags: <b>staticsetrow</b><br>
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>value</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: sub</H2><br>
+BaseClass: <b>GCsub</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, lt, ne, notbetween, add, div, mul, negate, sub</b><br>
+Child tags: <b>add, div, mul, negate, sub, cconst, cfield, cparam</b><br>
+Description: Implements subtraction.
+<H2>Tag: table</H2><br>
+BaseClass: <b>GFTable</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, vbox</b><br>
+Child tags: <b>entry, button, image, menu, table-row-styles, url-resource</b><br>
+Description: The table component with cell renderers, entries used for data editing
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The block that provides data for this table</TD></TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>fld_style</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Field with style list</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+<TR>
+<TD>rowCount</TD><TD>whole</TD><TD>'2'</TD><TD>&nbsp;</TD><TD>Number of row to be visible (to calculate best size)</TD></TR>
+<TR>
+<TD>selectionMode</TD><TD>name</TD><TD>'cells'</TD><TD><TABLE>
+<TR><TD><b>cells</b></TD><TD>Select cells</TD></TR>
+<TR><TD><b>columns</b></TD><TD>Select columns</TD></TR>
+<TR><TD><b>rows</b></TD><TD>Select rows</TD></TR>
+</TABLE></TD><TD>How table selects content</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: table-row-styles</H2><br>
+BaseClass: <b>GFStyles</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>table</b><br>
+Child tags: <b>table-row-style</b><br>
+Description: Table row styles
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+</TABLE>
+<H2>Tag: table-row-style</H2><br>
+BaseClass: <b>GFTableRowStyle</b><br>
+
+Parent tags: <b>table-row-styles</b><br>
+Description: Tree node style
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>bgcolor</TD><TD>color</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+<TR>
+<TD>textcolor</TD><TD>color</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: timer</H2><br>
+BaseClass: <b>GFTimer</b><br>
+
+Parent tags: <b>form, dialog</b><br>
+Description: Runs user code on timer
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>autostart</TD><TD>boolean</TD><TD>'Y'</TD><TD>&nbsp;</TD><TD>If starts automatically</TD></TR>
+<TR>
+<TD>language</TD><TD>name</TD><TD>'python'</TD><TD><TABLE>
+<TR><TD><b>python</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Programming language the code is written in</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+<TR>
+<TD>oneshot</TD><TD>boolean</TD><TD>'N'</TD><TD>&nbsp;</TD><TD>Time to repeat</TD></TR>
+<TR>
+<TD>time</TD><TD>whole</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Time to repeat</TD></TR>
+</TABLE>
+<H2>Tag: tip</H2><br>
+BaseClass: <b>GFOption</b><br>
+
+Parent tags: <b>options</b><br>
+Description: TODO
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>'tip'</TD><TD><TABLE>
+<TR><TD><b>tip</b></TD><TD></TD></TR>
+</TABLE></TD><TD>TODO</TD></TR>
+<TR>
+<TD>value</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+</TABLE>
+<H2>Tag: toolbar</H2><br>
+BaseClass: <b>GFToolbar</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>form, dialog</b><br>
+Child tags: <b>toolbutton</b><br>
+Description: A toolbar containing tool buttons
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of this element</TD></TR>
+</TABLE>
+<H2>Tag: toolbutton</H2><br>
+BaseClass: <b>GFToolButton</b><br>
+
+Parent tags: <b>toolbar</b><br>
+Description: A button on a toolbar
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>action</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of the trigger to run whenever this button is clicked</TD></TR>
+<TR>
+<TD>action_off</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of the trigger to run whenever this button is switched to off</TD></TR>
+<TR>
+<TD>description</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Text to display in a tooltip window</TD></TR>
+<TR>
+<TD>enabled</TD><TD>boolean</TD><TD>True</TD><TD>&nbsp;</TD><TD>Determines whether this button will be enabled by default</TD></TR>
+<TR>
+<TD>icon</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Icon to display on the button</TD></TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Text to display on the button</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of this element</TD></TR>
+<TR>
+<TD>state</TD><TD>boolean</TD><TD>False</TD><TD>&nbsp;</TD><TD>Determines whether this button will be switched on by default</TD></TR>
+</TABLE>
+<H2>Tag: total</H2><br>
+BaseClass: <b>GFTotal</b><br>
+
+Parent tags: <b>field</b><br>
+Description: Updates parent field with total value of the source column
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>function</TD><TD>name</TD><TD>'sum'</TD><TD><TABLE>
+<TR><TD><b>count</b></TD><TD></TD></TR>
+<TR><TD><b>max</b></TD><TD>Maximum</TD></TR>
+<TR><TD><b>min</b></TD><TD>Minimum</TD></TR>
+<TR><TD><b>sum</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Function used to calculate total</TD></TR>
+<TR>
+<TD>language</TD><TD>name</TD><TD>'python'</TD><TD><TABLE>
+<TR><TD><b>python</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Programming language the code is written in</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+<TR>
+<TD>source</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Source block and field, dot separated</TD></TR>
+</TABLE>
+<H2>Tag: tree</H2><br>
+BaseClass: <b>GFTree</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, vbox</b><br>
+Child tags: <b>menu, tree-columns, treenode-styles</b><br>
+Description: Tree-View of a block
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the block the tree ties to</TD></TR>
+<TR>
+<TD>defheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default height of the widget</TD></TR>
+<TR>
+<TD>defwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Default width of the widget</TD></TR>
+<TR>
+<TD>expanded</TD><TD>boolean</TD><TD>'N'</TD><TD>&nbsp;</TD><TD>Is tree expanded</TD></TR>
+<TR>
+<TD>fld_id</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The field containing tree node id</TD></TR>
+<TR>
+<TD>fld_parent</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The field containing tree node parent</TD></TR>
+<TR>
+<TD>fld_style</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Node style name</TD></TR>
+<TR>
+<TD>halign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>center</b></TD><TD></TD></TR>
+<TR><TD><b>expand</b></TD><TD></TD></TR>
+<TR><TD><b>left</b></TD><TD>Слева</TD></TR>
+<TR><TD><b>right</b></TD><TD>Справа</TD></TR>
+</TABLE></TD><TD>Horizontal alignment of the widget</TD></TR>
+<TR>
+<TD>labelEdit</TD><TD>boolean</TD><TD>'Y'</TD><TD>&nbsp;</TD><TD>Is tree labels editable</TD></TR>
+<TR>
+<TD>maxheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal height of the widget</TD></TR>
+<TR>
+<TD>maxwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Maximal width of the widget</TD></TR>
+<TR>
+<TD>minheight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal height of the widget</TD></TR>
+<TR>
+<TD>minwidth</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Minimal width of the widget</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+<TR>
+<TD>nodename</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Tree node name pattern. Use &quot;%(field)s&quot; to reference field</TD></TR>
+<TR>
+<TD>rootid</TD><TD>text</TD><TD>'0'</TD><TD>&nbsp;</TD><TD>Root id, default is 0</TD></TR>
+<TR>
+<TD>rootname</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Root name</TD></TR>
+<TR>
+<TD>valign</TD><TD>name</TD><TD>None</TD><TD><TABLE>
+<TR><TD><b>bottom</b></TD><TD></TD></TR>
+<TR><TD><b>grow</b></TD><TD></TD></TR>
+<TR><TD><b>middle</b></TD><TD></TD></TR>
+<TR><TD><b>top</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Vertical alignment of the widget</TD></TR>
+<TR>
+<TD>weight</TD><TD>integer</TD><TD>None</TD><TD>&nbsp;</TD><TD>Cell weight of the widget in a container</TD></TR>
+</TABLE>
+<H2>Tag: tree-columns</H2><br>
+BaseClass: <b>GFObj</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>tree</b><br>
+Child tags: <b>tree-column</b><br>
+Description: Tree columns
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+</TABLE>
+<H2>Tag: tree-column</H2><br>
+BaseClass: <b>GFTreeColumn</b><br>
+
+Parent tags: <b>tree-columns</b><br>
+Description: Tree column
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>icon</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Column true icon name</TD></TR>
+<TR>
+<TD>icon_description</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Column true icon description</TD></TR>
+<TR>
+<TD>icon_off</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Column false icon name</TD></TR>
+<TR>
+<TD>icon_off_description</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Column false icon description</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+<TR>
+<TD>width</TD><TD>whole</TD><TD>'24'</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: treenode-styles</H2><br>
+BaseClass: <b>GFStyles</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>tree</b><br>
+Child tags: <b>treenode-style</b><br>
+Description: Tree node style
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+</TABLE>
+<H2>Tag: treenode-style</H2><br>
+BaseClass: <b>GFTreeNodeStyle</b><br>
+
+Parent tags: <b>treenode-styles</b><br>
+Description: Tree node style
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>bgcolor</TD><TD>color</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>bold</TD><TD>boolean</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Is tree node text bold</TD></TR>
+<TR>
+<TD>button</TD><TD>name</TD><TD>&nbsp;</TD><TD><TABLE>
+<TR><TD><b>checkbox</b></TD><TD>Node with checkbox</TD></TR>
+<TR><TD><b>radiobox</b></TD><TD>Node with radiobox</TD></TR>
+</TABLE></TD><TD>Kind of button with this node</TD></TR>
+<TR>
+<TD>checked</TD><TD>boolean</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Is tree node initially checked</TD></TR>
+<TR>
+<TD>expanded</TD><TD>boolean</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Is tree node expanded</TD></TR>
+<TR>
+<TD>flags</TD><TD>names</TD><TD>''</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+<TR>
+<TD>icon</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Tree node icon name</TD></TR>
+<TR>
+<TD>italic</TD><TD>boolean</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Is tree node text italic</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Unique name of the object</TD></TR>
+<TR>
+<TD>textcolor</TD><TD>color</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD></TR>
+</TABLE>
+<H2>Tag: trigger</H2><br>
+BaseClass: <b>GTrigger</b><br>
+
+Importable: <b>True</b><br>
+Parent tags: <b>form, dialog</b><br>
+Description: A piece of code that can be bound to a specific event.
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>file</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>External file containing the source code</TD></TR>
+<TR>
+<TD>language</TD><TD>name</TD><TD>'python'</TD><TD><TABLE>
+<TR><TD><b>python</b></TD><TD></TD></TR>
+</TABLE></TD><TD>Programming language the code is written in</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of this element</TD></TR>
+<TR>
+<TD>src</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Name of a named trigger that contains the program code</TD></TR>
+<TR>
+<TD>type</TD><TD>uppername</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>Type of the trigger. Can be either the name of the event that should fire this trigger, or 'NAMED' for named triggers</TD></TR>
+</TABLE>
+<H2>Tag: upper</H2><br>
+BaseClass: <b>GCupper</b><br>
+
+Parent tags: <b>between, eq, ge, gt, le, like, lt, ne, notbetween, notlike</b><br>
+Child tags: <b>cfield</b><br>
+Description: Implements upper({value}).
+<H2>Tag: url-resource</H2><br>
+BaseClass: <b>GFUrlResource</b><br>
+
+Parent tags: <b>layout, hbox, notepage, popupwindow, splitter, table, vbox</b><br>
+Description: Url browser
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>block</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the block that this ties to.</TD></TR>
+<TR>
+<TD>content_type</TD><TD>text</TD><TD>'*/*'</TD><TD>&nbsp;</TD><TD>The content-type of url resource</TD></TR>
+<TR>
+<TD>field</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The name of the field that this ties to.</TD></TR>
+<TR>
+<TD>label</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The optional label</TD></TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>The unique name of the component</TD></TR>
+</TABLE>
+<H2>Tag: version</H2><br>
+BaseClass: <b>GFOption</b><br>
+
+Parent tags: <b>options</b><br>
+Description: TODO
+<TABLE border=1>
+<TR>
+<TH><b>Attribute name</b>
+</TH>
+<TH><b>Type</b>
+</TH>
+<TH><b>Default</b>
+</TH>
+<TH><b>Values</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>name</TD><TD>name</TD><TD>'version'</TD><TD><TABLE>
+<TR><TD><b>version</b></TD><TD></TD></TR>
+</TABLE></TD><TD>TODO</TD></TR>
+<TR>
+<TD>value</TD><TD>text</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>TODO</TD></TR>
+</TABLE>
+</BODY>
+</HTML>
+

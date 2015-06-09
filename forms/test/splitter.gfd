@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Splitter example">
+	<logic>
+		<block name="b">
+			<field name="f" />
+		</block>
+	</logic>
+	<layout>
+		<splitter align="h">
+			
+				<label text="Label1" />
+			
+			
+				<vbox>
+					<entry label="Label" block="b" field="f" />
+				</vbox>
+			
+		</splitter>
+	</layout>
+</form>

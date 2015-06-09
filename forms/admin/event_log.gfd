@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<!--  GFD generator  -->
+
+<form name="_event_log" title="Журнал доступа">
+
+	<parameter name="p_accessobject_id" />
+
+	<datasource name='ds__session' connection='db'
+		table = '_session'
+		rowid = 'session_id'
+	/>
+
+	<datasource name='ds__event_log' connection='admin'
+		table = '_event_log'
+		rowid = 'event_log_id'
+
+		master="ds__session"
+		masterlink="session_id"
+		detaillink="session_id"
+	/>
+
+	<datasource name='ds_spr_user' connection='admin'
+		table = '_spr_user'
+		rowid = 'user_id'
+	/>
+
+	<datasource name='ds_spr_object' connection='admin'
+		table = '_spr_object'
+		rowid = 'object_id'
+	/>
+
+	<trigger type='ON-STARTUP'>
+		ds_spr_object.setParameter('user_id', get_global('user_id', 1))
+	</trigger>
+
+	<trigger type="On-Activation">
+		import datetime
+
+		s_time = get_global('b__event_log_filters_s_time', None)
+		e_time = get_global('b__event_log_filters_e_time', None)
+
+		if not s_time or not e_time:
+			e_time = datetime.date.today()
+			s_time = e_time - datetime.timedelta(e_time.day-1)
+			e_time = None
+
+		b__event_log_filters.s_time = s_time
+		b__event_log_filters.e_time = e_time
+
+		form.apply_filters()
+	</trigger>
+
+	<trigger name='get_parameters' type='NAMED'>
+		return {
+			's_time' : b__event_log_filters.s_time.get(),
+			'e_time' : b__event_log_filters.e_time.get(),
+		}
+	</trigger>
+
+	<trigger name="apply_filters" type='NAMED'>
+		for key, value in form.get_parameters().iteritems():
+			ds__session.setParameter(key, value)
+			ds__event_log.setParameter(key, value)
+		b__event_log.refresh()
+	</trigger>
+
+<logic>
+
+	<block name='b__event_log_filters'>
+		<field name='s_time' datatype='datetime'>
+			<trigger type='Post-FocusOut'>
+				set_global('b__event_log_filters_s_time', self.get())
+			</trigger>
+		</field>
+		<field name='e_time' datatype='datetime'>
+			<trigger type='Post-FocusOut'>
+				set_global('b__event_log_filters_e_time', self.get())
+			</trigger>
+		</field>
+	</block>
+
+	<block name='b__session' datasource='ds__session' autoNextRecord='Y' startup='empty' editable='N' deletable='N'>
+		<field name = 'session_id'         field = 'session_id'        />
+		<field name = 'session_key'        field = 'session_key'       />
+		<field name = 'login_time'         field = 'login_time'        datatype='datetime'/>
+		<field name = 'last_query_time'    field = 'last_query_time'   datatype='datetime'/>
+		<field name = 'logout_time'        field = 'logout_time'       datatype='datetime'/>
+		<field name = 'expiration_period'  field = 'expiration_period' />
+		<field name = 'user_id'            field = 'user_id'           fk_source='ds_spr_user' fk_key='user_id' fk_description='user_login,user_name'/>
+		<field name = 'application'        field = 'application'       />
+		<field name = 'client_ip'          field = 'client_ip'         />
+		<field name = 'webkit_sid'         field = 'webkit_sid'        />
+	</block>
+
+
+	<block name='b__event_log' datasource='ds__event_log' startup='empty' editable='N' deletable='N'>
+		<field name = 'event_log_id'       field = 'event_log_id'      />
+		<field name = 'event_name'         field = 'event_name'        />
+		<field name = 'event_time'         field = 'event_time'        datatype='datetime'/>
+		<!--field name = 'sid'                field = 'sid'               />
+		<field name = 'application'        field = 'application'               />
+		<field name = 'user_id'            field = 'user_id'           fk_source='ds_spr_user' fk_key='user_id' fk_description='user_login,user_name'/>
+		<field name = 'ip'                 field = 'ip'                /-->
+		<field name = 'access_object_id'   field = 'access_object_id'  fk_source='ds_spr_object' fk_key='object_id' fk_description='object_name'/>
+		<field name = 'access'             field = 'access'            />
+		<field name = 'event_note'         field = 'event_note'        />
+		<field name = 'session_id'         field = 'session_id'        />
+	</block>
+</logic>
+<import-toolbar library='../common/toolbar.gfd' name='__main_toolbar__'/>
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox>
+		<vbox block='b__event_log_filters'>
+			<hbox label = 'С'											s:stretch='0' > 
+				<entry name='e_s_time' field='s_time' 					s:stretch='0' s:def_width='20'/>
+				<label text='по'										s:stretch='0' /> 
+				<entry name='e_e_time' field='e_time' 					s:stretch='0' s:def_width='20'/>
+				<button label='Поиск'									s:stretch='0' >
+					<trigger type='ON-ACTION' src='apply_filters'/>
+				</button>
+			</hbox>
+		</vbox>
+
+		<splitter align='h'>
+			
+			<table block='b__session'>
+				<import-menu library='../common/menues.gfd' name='table-default'/>
+				
+				<entry field = 'login_time'         label = 'Время входа'/>
+				<entry field = 'last_query_time'    label = 'Время последнего запроса'/>
+				<entry field = 'logout_time'        label = 'Время выхода'/>
+				<entry field = 'expiration_period'  label = 'Expiration period'/>
+				<entry field = 'user_id'            label = 'Пользователь'/>
+				<entry field = 'application'        label = 'Приложение'/>
+				<entry field = 'client_ip'          label = 'IP'/>
+				<entry field = 'webkit_sid'         label = 'SID'/>
+			</table>
+    
+			<table block='b__event_log'>
+				<import-menu library='../common/menues.gfd' name='table-default'/>
+				<entry field = 'event_name'         label = 'Событие'/>
+				<entry field = 'event_time'         label = 'Время'/>
+				<!--entry field = 'sid'                label = 'SID'/>
+				<entry field = 'application'        label = 'Приложение'/>
+				<entry field = 'user_id'            label = 'Пользователь'/>
+				<entry field = 'ip'                 label = 'IP'/-->
+				<entry field = 'access_object_id'   label = 'Объект доступа'/>
+				<entry field = 'access'             label = 'Права'/>
+				<entry field = 'event_note'         label = 'Примечание'/>
+			</table>
+
+		</splitter>
+		
+	</vbox>
+</layout>
+</form>

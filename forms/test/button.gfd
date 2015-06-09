@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Button example">
+	<logic />
+	<layout>
+		<vbox>
+			<button label="Just Button on the Form" description='Bebeeeeeeeeeee-eeeeeeeeeeeeeeeeee'>
+				<trigger type='ON-ACTION'>
+					1/0
+				</trigger>
+			</button>
+			<button label="Just Button 2 on the Form" />
+		</vbox>
+	</layout>
+</form>

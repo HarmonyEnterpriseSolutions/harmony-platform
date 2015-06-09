@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Page example">
+	<logic>
+		<block name="b_doc">
+			<field name="org_id_my" />
+			<field name="acc_id_my" />
+			<field name="store_id_my" />
+			<field name="org_id" />
+			<field name="acc_id" />
+			<field name="store_id" />
+			<field name="doc_note" />
+			<field name="store_id" />
+			<field name="doc_num" />
+			<field name="doc_date" />
+			<field name="currency_id" />
+			<field name="currency_course" />
+			<field name="nds" />
+			<field name="doc_off" />
+			<field name="doc_payed" />
+			<field name="doveren_date" />
+			<field name="doveren_num" />
+			<field name="doveren_who" />
+			<field name="author_empl_id" />
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox>
+			<hbox block='b_doc' label='Фирма' s:stretch='0'>
+				<entry field='org_id_my' focusorder='1' />
+				<entry field='org_id_my' focusorder='1' />
+				<label text='Наш рассчетный счет' s:stretch='0' />
+				<entry field='acc_id_my' focusorder='2' />
+			</hbox>
+			<hbox block='b_doc' label='Склад'>
+				<entry field='store_id_my' focusorder='3' />
+			</hbox>
+			<hbox block='b_doc' label='Номер'>
+				<entry field='doc_num' focusorder='4' s:stretch='0' />
+				<label text='Дата' s:stretch='0' />
+				<entry field='doc_date' focusorder='5' s:stretch='0' s:def_width='14' />
+				<label text='Валюта' s:stretch='0' />
+				<entry field='currency_id' focusorder='6' s:stretch='0' />
+				<label text='Курс' s:stretch='0' />
+				<entry field='currency_course' focusorder='7' s:stretch='0' />
+				<label text='НДС' s:stretch='0' />
+				<entry field='nds' focusorder='8' s:stretch='0' />
+				<entry field='doc_off' label='Снят' focusorder='8' s:stretch='0' />
+				<entry field='doc_payed' label='Оплачен' focusorder='9' s:stretch='0' />
+			</hbox>
+			<hbox label='' block='b_doc'>
+				<entry label='Номер' field='doc_num' focusorder='4' s:stretch='0' />
+				<entry label='Дата' field='doc_date' focusorder='5' s:stretch='0' s:def_width='14' />
+				<entry label='Валюта' field='currency_id' focusorder='6' s:stretch='0' />
+				<entry label='Курс' field='currency_course' focusorder='7' s:stretch='0' />
+				<entry label='НДС'  field='nds' focusorder='8' s:stretch='0' />
+				<entry field='doc_off' label='Снят' focusorder='8' s:stretch='0' />
+				<entry field='doc_payed' label='Оплачен' focusorder='9' s:stretch='0' />
+			</hbox>
+			<hbox block='b_doc' label='Контрагент'>
+				<entry field='org_id' focusorder='10' style='picker'>
+					<popupwindow name='popup_org_id' form='popup_org_id.gfd' />
+				</entry>
+				<label text='Рассчетный счет' s:stretch='0' />
+				<entry field='acc_id' focusorder='11' />
+			</hbox>
+			<hbox block='b_doc' label='Склад'>
+				<entry field='store_id' focusorder='12' />
+			</hbox>
+			<hbox block='b_doc' label='Примечание'>
+				<entry field='doc_note' style='multiline' focusorder='16' />
+			</hbox>
+			<button label='Left anchor'   s:stretch='0' s:anchor='left'/>
+			<button label='Center anchor' s:stretch='0' s:anchor='center'/>
+			<button label='Right anchor'  s:stretch='0' s:anchor='right'/>
+			<hbox block='b_doc' label='Доверенность №'>
+				<entry field='doveren_num' focusorder='13' s:stretch='0' />
+				<label text='от' s:stretch='0' />
+				<entry field='doveren_date' focusorder='14' s:stretch='0' s:def_width='14' />
+				<label text='на' s:stretch='0' />
+				<entry field='doveren_who' focusorder='15' s:stretch='0' />
+			</hbox>
+			<hbox block='b_doc'>
+				<label text='' />
+				<vbox s:stretch='0'>
+					<entry field='author_empl_id' label='Автор документа' style='label' s:stretch='0' s:def_width='14' navigable='N' />
+				</vbox>
+			</hbox>
+			<hbox block='b_doc' label='Другая Фирма' s:stretch='0'>
+				<entry field='org_id_my' focusorder='1' />
+				<entry field='org_id_my' focusorder='1' />
+			</hbox>
+		</vbox>
+	</layout>
+</form>

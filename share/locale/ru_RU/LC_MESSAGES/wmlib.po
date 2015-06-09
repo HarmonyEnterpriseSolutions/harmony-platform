@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Rata\n"
+"POT-Creation-Date: Wed Apr 02 18:03:12 2003\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Oleg Noga <noga@abrisola.com.ua>\n"
+"Language-Team: RUSSIAN <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=Cp1251\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.4\n"
+
+#: .\..\src\wmlib\barcode.py:22
+msgid "Штрихкод пустой"
+msgstr ""
+
+#: .\..\src\wmlib\barcode.py:29
+msgid "Ожидается префикс %s, имеем %s"
+msgstr ""
+
+#: .\..\src\wmlib\files.py:66
+msgid "Выберите файл для загрузки..."
+msgstr ""
+
+#: .\..\src\wmlib\files.py:94
+msgid "Файл %s"
+msgstr ""
+
+#: .\..\src\wmlib\files.py:95
+msgid "Сохранить файл в..."
+msgstr ""
+
+#: .\..\src\wmlib\report.py:107
+msgid ""
+"Очень жаль, максимальная длина запроса к серверу отчетов превышена в %.1f раз\n"
+"Выберите меньшее количество строк"
+msgstr ""
+
+#: .\..\src\wmlib\report.py:118
+msgid ""
+"Сервер отчетов не отвечает\n"
+"%s"
+msgstr ""
+
+#: .\..\src\wmlib\report.py:167
+msgid "PDF expected from server, got unrecognized text"
+msgstr "С сервера ожидается PDF, а получен непонятный текст"
+
+#: .\..\src\wmlib\report.py:173
+msgid "Got error on pdf server"
+msgstr "Ошибка на сервере отчетов"
+
+#: .\..\src\wmlib\report.py:179 .\..\src\wmlib\report.py:210
+msgid "Отчет успешно отправлен на печать"
+msgstr ""
+
+#: .\..\src\wmlib\report.py:204 .\..\src\wmlib\report.py:208
+msgid "Ошибка при печати отчета"
+msgstr ""
+
+#: .\..\src\wmlib\report.py:238
+msgid "%s Files"
+msgstr "Файлы %s"
+
+#: .\..\src\wmlib\report.py:281
+msgid "Выберите файл чтобы сохранить отчет..."
+msgstr ""
+
+#: .\..\src\wmlib\report.py:289
+msgid "Отчеты"
+msgstr ""
+

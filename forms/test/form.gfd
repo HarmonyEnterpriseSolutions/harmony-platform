@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Form example" description='form tip'>
+	<logic />
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox>
+		<label text="Just Label on the Form"/>
+		</vbox>
+	</layout>
+</form>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<form name='main' title="GNUe forms test" windowStyle='MAXIMIZE'>
+
+<datasource name="ds_widgets" type="static">
+<staticset fields="id">
+	<staticsetrow><staticsetfield name="id" value="'attachment            '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'selectFiles           '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'selectDir             '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'button                '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'list_buttons          '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'list_tabs             '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'buttonsWithImages     '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'buttonWithDynMenu     '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'buttonWithMenu        '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'checkbox              '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'checkboxbit           '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'colors                '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'datepicker            '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'entry                 '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'form                  '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'hbox                  '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'mdinotebook           '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'menubar               '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'multiline             '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'notebook              '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'number                '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'picker                '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'popup_entry           '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'popup_table           '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'radiobox              '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'radiobutton           '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'radiobutton_workaround'" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'splitter              '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'table                 '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'tree                  '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'tree_nostyles         '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'url_resource          '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'url_resource_pdf      '" /></staticsetrow>
+	<staticsetrow><staticsetfield name="id" value="'vbox                  '" /></staticsetrow>
+</staticset>                                       
+</datasource>                                      
+
+<logic>
+	<block datasource='ds_widgets' name='b_widgets' editable='N' deletable='N' startup='full'>
+		<field name='id' field='id' />
+		<field name='form' >
+			<calc>
+				return "./" + (self.id.get() or '').strip() + ".gfd"
+			</calc>
+		</field>
+		<field name='parent_id' />
+		<trigger type='RECORD-ACTIVATED'>
+			form.layout.mdi.run_form(self.form.get())
+		</trigger>
+	</block>
+</logic>
+
+<menu name="__extra_menu__">
+	<dyn-menu 
+		block="b_widgets" 
+		label = "widgets" 
+		nodename='%(id)s'
+		fld_id='id'
+		fld_parent='parent_id'
+		rootid='None'
+		>
+	</dyn-menu>
+</menu>
+
+<import-toolbar name='__main_toolbar__' library='../common/toolbar.gfd'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<!--table block='b_widgets'>
+		<entry field='id'   label='id' />
+		<entry field='form' label='form' />
+		<entry field='parent_id' label='parent_id' />
+	</table-->
+    <mdi-notebook name='mdi'/>
+
+</layout>
+</form>

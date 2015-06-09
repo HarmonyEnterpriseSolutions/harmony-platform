@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<form name='FindDialog' title="Поиск" windowStyle='-MINIMIZE_BOX,-MAXIMIZE_BOX' style='normal'>
+
+	<parameter name="p_table"/>
+	<parameter name="p_pos"/>
+
+	<datasource name="dsref_format" type="static" rowid='id'>
+		<staticset fields="id, name">
+			<staticsetrow><staticsetfield name="id" value="pdf"  /><staticsetfield name="name" value="u'PDF'"  /></staticsetrow>
+			<staticsetrow><staticsetfield name="id" value="xls"  /><staticsetfield name="name" value="u'XLS'"  /></staticsetrow>
+			<staticsetrow><staticsetfield name="id" value="csv"  /><staticsetfield name="name" value="u'CSV'"  /></staticsetrow>
+		</staticset>
+	</datasource>
+
+	<trigger type="On-Startup">
+		form.setFeature('GUI:MENUBAR:SUPPRESS',1)
+		form.setFeature('GUI:TOOLBAR:SUPPRESS',1)
+		form.setFeature('GUI:STATUSBAR:SUPPRESS',1)
+	</trigger>
+	<trigger type="On-Activation">
+	</trigger>
+
+<logic>
+	
+	<block name='b' >
+		<field name='text'   >
+			<trigger type='POST-CHANGE'>
+				layout.find_child('btn_find').enabled = bool(self.get())
+			</trigger>
+		</field>
+		<field name='wholeCell'       datatype='boolean' />
+		<field name='searchSelection' datatype='boolean' />
+		<field name='reverseSearch'         datatype='boolean' />
+	</block>
+
+</logic>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox block='b'>
+		<hbox>
+			<label text='Искать' s:stretch='0'/>
+			<entry field='text' />
+			<button name='btn_find' label='Найти' default='Y' enabled='N' s:stretch='0'>
+				<trigger type='ON-ACTION'>
+					if self.enabled:
+						p_pos.value = p_table.value.findText(
+							b.text.get(), 
+							b.wholeCell.get(), 
+							b.searchSelection.get(), 
+							b.reverseSearch.get(), 
+							prevPos=p_pos.value
+						)
+						if p_pos.value is None:
+							raise error(_('Could not find the string:\n"%s"') % b.text.get())
+				</trigger>
+			</button>
+			<!--button label='Отмена' s:stretch='0'>
+				<trigger type='ON-ACTION'>
+					form.close()
+				</trigger>
+			</button-->
+		</hbox>
+		<entry field='wholeCell'       label='Ячейка целиком'/>
+		<entry field='searchSelection' label='Икать в выделенном'/>
+		<entry field='reverseSearch'   label='Искать снизу вверх'/>
+		
+	</vbox>
+</layout>
+</form>

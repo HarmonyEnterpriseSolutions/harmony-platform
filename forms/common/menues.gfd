@@ -1,0 +1,311 @@
+<?xml version="1.0" ?>
+<form>
+
+	<menu name='table-default'>
+		<trigger type='On-MenuPopup'>
+			possibleOperations = self.getParent().getPossibleOperations()
+
+			for operation, action in (
+				('deleteRecords',		form.table__delete_records__),
+				('undeleteRecords',		form.table__undelete_records__ ),
+                           
+				('find',				form.table__find__             ),
+				('filterIncludeCell',	form.table__filterIncludeCell__),
+				('filterExcludeCell',	form.table__filterExcludeCell__),
+				('cancelFilters',		form.table__cancelFilters__    ),
+                           
+				('orderAscending',		form.table__orderAscending__   ),
+				('orderDescending',		form.table__orderDescending__  ),
+				('orderNone',			form.table__orderNone__        ),
+				('disableOrders',		form.table__disableOrders__    ),
+                           
+				('cut',					form.table__cut__              ),
+				('copy',				form.table__copy__             ),
+				('paste',				form.table__paste__            ),
+			):
+				action.enabled = operation in possibleOperations
+
+		</trigger>
+
+		<menuitem action='block__refresh__'           hotkey='Ctrl-R'/>
+		<menuitem action='act__commit__'              hotkey='Ctrl-S'/>
+		<menuitem />
+		<menuitem action='act__new_record__'/>
+		<menuitem action='table__delete_records__'    hotkey='Ctrl-Delete'/>
+		<menuitem action='table__undelete_records__'  />
+		<menuitem />
+		<menuitem action='table__find__'              hotkey='Ctrl-F'/>
+		<menuitem action='table__filterIncludeCell__' />
+		<menuitem action='table__filterExcludeCell__'       />
+		<menuitem action='table__cancelFilters__'     />
+		<menuitem />
+		<menuitem action='table__orderAscending__'    />
+		<menuitem action='table__orderDescending__'   />
+		<menuitem action='table__orderNone__'         />
+		<menuitem action='table__disableOrders__'     />
+		<menuitem />
+		<menuitem action='table__cut__'               hotkey='Shift-Delete'/>
+		<menuitem action='table__copy__'              hotkey='Ctrl-Insert'/>
+		<menuitem action='table__paste__'             hotkey='Shift-Insert'/>
+	</menu>
+
+	<menu name='table-readonly'>
+		<trigger type='On-MenuPopup'>
+			# DEPRECATED
+
+			possibleOperations = self.getParent().getPossibleOperations()
+
+			for operation, action in (
+				('find',				form.table__find__             ),
+				('filterIncludeCell',	form.table__filterIncludeCell__),
+				('filterExcludeCell',	form.table__filterExcludeCell__),
+				('cancelFilters',		form.table__cancelFilters__    ),
+                           
+				('orderAscending',		form.table__orderAscending__   ),
+				('orderDescending',		form.table__orderDescending__  ),
+				('orderNone',			form.table__orderNone__        ),
+				('disableOrders',		form.table__disableOrders__    ),
+                           
+				('copy',				form.table__copy__             ),
+			):
+				action.enabled = operation in possibleOperations
+
+		</trigger>
+
+		<menuitem action='block__refresh__'           hotkey='Ctrl-R'/>
+		<menuitem />
+		<menuitem action='table__find__'              hotkey='Ctrl-F'/>
+		<menuitem action='table__filterIncludeCell__' />
+		<menuitem action='table__filterExcludeCell__' />
+		<menuitem action='table__cancelFilters__'     />
+		<menuitem />
+		<menuitem action='table__orderAscending__'    />
+		<menuitem action='table__orderDescending__'   />
+		<menuitem action='table__orderNone__'         />
+		<menuitem action='table__disableOrders__'     />
+		<menuitem />
+		<menuitem action='table__copy__'              hotkey='Ctrl-Insert'/>
+	</menu>
+
+	
+	<menu name='tree-default'>
+		<trigger type='On-MenuPopup'>
+			possibleOperations = self.getParent().getPossibleOperations()
+
+			for operation, action in (
+				('newNode',		form.tree__newNode__    ),
+				('renameNode',	form.tree__renameNode__ ),
+				                             
+				('cutNode',		form.tree__cutNode__    ),
+				('copyNode',	form.tree__copyNode__   ),
+				('pasteNode',	form.tree__pasteNode__  ),
+				                             
+				('deleteNode',	form.tree__deleteNode__ ),
+
+				('expand',		form.tree__expand__     ),
+				('collapse',	form.tree__collapse__   ),
+			):
+				action.enabled = operation in possibleOperations
+
+		</trigger>
+
+		<menuitem action='block__refresh__'/>
+		<menuitem />
+		<menuitem action='tree__expand__'/>
+		<menuitem action='tree__collapse__'/>
+		<menuitem />
+		<menuitem action='tree__newNode__'/>
+		<menuitem action='tree__renameNode__'/>
+		<menuitem />
+		<menuitem action='tree__cutNode__'   hotkey='Shift-Delete' />
+		<menuitem action='tree__copyNode__'  hotkey='Ctrl-Insert'  />
+		<menuitem action='tree__pasteNode__' hotkey='Shift-Insert' />
+		<menuitem />
+		<menuitem action='tree__deleteNode__'/>
+	</menu>
+
+	<menu name='tree-norename'>
+		<trigger name='tree-norename-on-menupopup' type='On-MenuPopup'>
+			possibleOperations = self.getParent().getPossibleOperations()
+
+			for operation, action in (
+				('newNode',		form.tree__newNode__    ),
+				                             
+				('cutNode',		form.tree__cutNode__    ),
+				('copyNode',	form.tree__copyNode__   ),
+				('pasteNode',	form.tree__pasteNode__  ),
+				                             
+				('deleteNode',	form.tree__deleteNode__ ),
+
+				('expand',		form.tree__expand__     ),
+				('collapse',	form.tree__collapse__   ),
+			):
+				action.enabled = operation in possibleOperations
+
+		</trigger>
+
+		<menuitem action='block__refresh__'/>
+		<menuitem />
+		<menuitem action='tree__expand__'/>
+		<menuitem action='tree__collapse__'/>
+		<menuitem />
+		<menuitem action='tree__newNode__'/>
+		<menuitem />
+		<menuitem action='tree__cutNode__'   hotkey='Shift-Delete'/>
+		<menuitem action='tree__copyNode__'  hotkey='Ctrl-Insert' />
+		<menuitem action='tree__pasteNode__' hotkey='Shift-Insert'/>
+		<menuitem />
+		<menuitem action='tree__deleteNode__'/>
+	</menu>
+
+	<menu name='tree-nocopy'>
+		<trigger type='On-MenuPopup'>
+			possibleOperations = self.getParent().getPossibleOperations()
+
+			for operation, action in (
+				('newNode',		form.tree__newNode__    ),
+				('renameNode',	form.tree__renameNode__ ),
+				                             
+				('cutNode',		form.tree__cutNode__    ),
+				('pasteNode',	form.tree__pasteNode__  ),
+				                             
+				('deleteNode',	form.tree__deleteNode__ ),
+
+				('expand',		form.tree__expand__     ),
+				('collapse',	form.tree__collapse__   ),
+			):
+				action.enabled = operation in possibleOperations
+
+		</trigger>
+		<menuitem action='block__refresh__'/>
+		<menuitem />
+		<menuitem action='tree__expand__'/>
+		<menuitem action='tree__collapse__'/>
+		<menuitem />
+		<menuitem action='tree__newNode__'/>
+		<menuitem action='tree__renameNode__'/>
+		<menuitem />
+		<menuitem action='tree__cutNode__'   hotkey='Shift-Delete'/>
+		<menuitem action='tree__pasteNode__' hotkey='Shift-Insert'/>
+		<menuitem />
+		<menuitem action='tree__deleteNode__'/>
+	</menu>
+
+	<menu name='tree-nocopypaste'>
+		<trigger type='On-MenuPopup'>
+			possibleOperations = self.getParent().getPossibleOperations()
+
+			for operation, action in (
+				('newNode',		form.tree__newNode__    ),
+				('renameNode',	form.tree__renameNode__ ),
+				                             
+				('deleteNode',	form.tree__deleteNode__ ),
+
+				('expand',		form.tree__expand__     ),
+				('collapse',	form.tree__collapse__   ),
+			):
+				action.enabled = operation in possibleOperations
+
+		</trigger>
+		<menuitem action='block__refresh__'/>
+		<menuitem />
+		<menuitem action='tree__expand__'/>
+		<menuitem action='tree__collapse__'/>
+		<menuitem />
+		<menuitem action='tree__newNode__'/>
+		<menuitem action='tree__renameNode__'/>
+		<menuitem />
+		<menuitem action='tree__deleteNode__'/>
+	</menu>
+
+	<menu name='tree-readonly'>
+		<trigger type='On-MenuPopup'>
+			possibleOperations = self.getParent().getPossibleOperations()
+
+			for operation, action in (
+				('expand',		form.tree__expand__     ),
+				('collapse',	form.tree__collapse__   ),
+			):
+				action.enabled = operation in possibleOperations
+
+		</trigger>
+		<menuitem action='block__refresh__'/>
+		<menuitem />
+		<menuitem action='tree__expand__'/>
+		<menuitem action='tree__collapse__'/>
+	</menu>
+
+	<toolbar name="main-toolbar-default">
+		<toolbutton name="__refresh__" action="block__refresh__"/>
+		<toolbutton name="__commit__" action="act__commit__"/>
+		<toolbutton name="__sep1__"/>
+		<toolbutton name="__new_record__" action="act__new_record__"/>
+		<toolbutton name="__delete_record__" action="act__delete_record__" action_off="act__undelete_record__"/>
+		<toolbutton name="__sep2__"/>
+		<toolbutton name="__first_record__" action="act__first_record__"/>
+		<toolbutton name="__prev_record__" action="act__prev_record__"/>
+		<toolbutton name="__next_record__" action="act__next_record__"/>
+		<toolbutton name="__last_record__" action="act__last_record__"/>
+		<toolbutton name="__ask_record__" action="act__ask_record__"/>
+		<toolbutton name="__sep3__"/>
+		<toolbutton name="__init_filter__" action="act__init_filter__" action_off="act__discard_filter__"/>
+		<toolbutton name="__apply_filter__" action="act__apply_filter__"/>
+		<!--
+		<toolbutton name="__sep4__"/>
+		<toolbutton name="__printout__" action="act__printout__"/>
+		<toolbutton name="__sep5__"/>
+		<toolbutton name="__rollback__" action="act__rollback__"/>
+		-->
+		<toolbutton name="__sep6__"/>
+		<toolbutton name="__close__" action="act__close__"/>
+	</toolbar>
+
+	<toolbar name="main-toolbar-default-readonly">
+		<toolbutton name="__refresh__" action="block__refresh__"/>
+		<toolbutton name="__sep2__"/>
+		<toolbutton name="__first_record__" action="act__first_record__"/>
+		<toolbutton name="__prev_record__" action="act__prev_record__"/>
+		<toolbutton name="__next_record__" action="act__next_record__"/>
+		<toolbutton name="__last_record__" action="act__last_record__"/>
+		<toolbutton name="__ask_record__" action="act__ask_record__"/>
+		<toolbutton name="__sep3__"/>
+		<toolbutton name="__init_filter__" action="act__init_filter__" action_off="act__discard_filter__"/>
+		<toolbutton name="__apply_filter__" action="act__apply_filter__"/>
+		<!--
+		<toolbutton name="__sep4__"/>
+		<toolbutton name="__printout__" action="act__printout__"/>
+		-->
+		<toolbutton name="__sep6__"/>
+		<toolbutton name="__close__" action="act__close__"/>
+	</toolbar>
+
+	<menu name='treelist-default'>
+		<trigger type='On-MenuPopup'>
+			possibleOperations = self.getParent().getPossibleOperations()
+
+			for operation, action in (
+				('cutNode',		form.tree__cutNode__    ),
+				('copyNode',	form.tree__copyNode__   ),
+				('pasteNode',	form.tree__pasteNode__  ),
+				                             
+				('expand',		form.tree__expand__     ),
+				('collapse',	form.tree__collapse__   ),
+			):
+				action.enabled = operation in possibleOperations
+
+		</trigger>
+
+		<menuitem action='block__refresh__'/>
+		<menuitem />
+		<menuitem action='tree__expand__'/>
+		<menuitem action='tree__collapse__'/>
+		<menuitem />
+		<menuitem action='act__new_record__'/>
+		<menuitem />
+		<menuitem action='tree__cutNode__'   hotkey='Shift-Delete' />
+		<menuitem action='tree__copyNode__'  hotkey='Ctrl-Insert'  />
+		<menuitem action='tree__pasteNode__' hotkey='Shift-Insert' />
+		<menuitem />
+		<menuitem action='act__delete_record__'/>
+	</menu>
+</form>

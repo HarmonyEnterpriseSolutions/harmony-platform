@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding='windows-1251'?>
+
+<!--  GFD generator  -->
+
+<form name='_spr_object' title="Объекты доступа">
+
+	<parameter name="p_accessobject_id" />
+
+	<trigger type='ON-ACTIVATION'>
+		ds_spr_object.setParameter('user_id', get_global('user_id', 1))
+		b_spr_object.refresh()
+	</trigger>
+
+	<datasource name='ds_spr_object' connection='admin'
+		table = '_spr_object'
+		rowid = 'object_id'
+	/>
+
+	<datasource name='ds_spr_objectaccess' connection='admin'
+		table = '_spr_objectaccess'
+		rowid = 'objectaccess_id'
+
+		master="ds_spr_object"
+		masterlink="object_id"
+		detaillink="objectaccess_object_id"
+	/>
+
+	<datasource name='dsref_spr_group' connection='admin'
+		table = '_spr_group'
+		rowid = 'group_id'
+	/>
+
+	<import-datasource name='dsref_object_type' library='ds/dsref_object_type.gfd'/>
+
+<import-toolbar name='__main_toolbar__' library='../common/toolbar.gfd'/>
+
+<logic>
+
+	<block name='b_spr_object' datasource='ds_spr_object' queryable='N' deletable='N' editable='UPDATE' autoCommit='N' startup='full'>
+		<field name = 'id'         	field = 'object_id'         editable='N'/>
+		<field name = 'parent_id'  	field = 'object_parent_id'  />
+		<field name = 'type_id'    	field = 'object_type_id'    fk_source='dsref_object_type' fk_description='object_type_name' fk_key='object_type_id' default='F'/>
+		<field name = 'name'       	field = 'object_name'       />
+		<field name = 'url'        	field = 'object_url'        />
+		<field name = 'params'     	field = 'object_params'     />
+	</block>
+
+	<block name='b_spr_objectaccess' datasource='ds_spr_objectaccess' autoNextRecord='Y'>
+		<field name = 'object_id'	field = 'objectaccess_object_id' editable='N'/>
+		<field name = 'group_id'	field = 'objectaccess_group_id'  fk_source='dsref_spr_group'   fk_description="group_name" fk_key="group_id"/>
+		<field name = 'is_view'		field = 'objectaccess_is_view'   datatype='boolean'  default='Y'>
+			<trigger type='POST-CHANGE'>
+				if b_spr_objectaccess.is_view.get():
+					pass
+				else:
+					b_spr_objectaccess.is_edit = False
+			</trigger>
+		</field>
+		<field name = 'is_edit'		field = 'objectaccess_is_edit'   datatype='boolean' default='Y'>
+			<!--trigger type='POST-CHANGE'>
+				if b_spr_objectaccess.is_edit.get():
+					b_spr_objectaccess.is_view = True
+				else:
+					b_spr_objectaccess.is_ins  = False
+					b_spr_objectaccess.is_del  = False
+			</trigger-->
+		</field>
+		<field name = 'is_ins'		field = 'objectaccess_is_ins'    datatype='boolean' default='Y'>
+			<!--trigger type='POST-CHANGE'>
+				if b_spr_objectaccess.is_ins.get():
+					b_spr_objectaccess.is_edit = True
+			</trigger-->
+		</field>
+		<field name = 'is_del'		field = 'objectaccess_is_del'    datatype='boolean' default='Y'>
+			<!--trigger type='POST-CHANGE'>
+				if b_spr_objectaccess.is_del.get():
+					b_spr_objectaccess.is_edit = True
+			</trigger-->
+		</field>
+		<field name = 'is_print'	field = 'objectaccess_is_print'  datatype='boolean' default='Y'/>
+
+		<field name = 'id'   		field = 'objectaccess_id'                         />
+	</block>
+
+</logic>
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<splitter>
+	
+		<tree 
+				block      = 'b_spr_object'
+				nodename   = '%(name)s'
+				fld_id     = 'id'
+				fld_parent = 'parent_id'
+				rootid     = '0'
+			>
+			<import-menu library='../common/menues.gfd' name='tree-default'/>
+		<import-treenode-styles library='../common/styles.gfd' name='default'/>
+		</tree>
+	
+	
+		<splitter align='horizontal'>
+		
+			<vbox block='b_spr_object' >	<!-- label = 'Объект доступа'-->
+				<entry field = 'id'          label = 'Ключ'    />
+				<entry field = 'type_id'     label = 'Тип'/>
+				<entry field = 'name'        label = 'Имя'/>
+				<entry field = 'url'         label = 'Ресурс'/>
+				<!--entry field = 'parent_id'   label = 'Ключ родителя'/-->
+				<entry field = 'params'      label = 'Параметры' style='multiline'/>
+			</vbox>
+		
+		
+			<table block='b_spr_objectaccess'>
+				<import-menu library='../common/menues.gfd' name='table-default'/>
+			
+				<!--entry field = 'id'    		label = 'id'           /-->
+
+				<entry field = 'group_id' 	label = 'group_id'/>
+				<entry field = 'is_view' 	label = 'is_view'/>
+				<entry field = 'is_edit' 	label = 'is_edit'/>
+				<entry field = 'is_ins' 	label = 'is_ins'/>
+				<entry field = 'is_del' 	label = 'is_del'/>
+				<entry field = 'is_print' 	label = 'is_print'/>
+			</table>
+		
+		</splitter>
+	
+	</splitter>
+</layout>
+</form>

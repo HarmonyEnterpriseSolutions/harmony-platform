@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Tree example">
+
+	<datasource name="ds_tree" type="static"
+		rowid='id'
+	>
+		<staticset fields="id, parent_id, name">
+			<staticsetrow>
+				<staticsetfield name="id" value="1" />
+				<staticsetfield name="parent_id" value="0" />
+				<staticsetfield name="name" value="'Root'" />
+				<staticsetfield name="style" value="'root,parkedflag'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="2" />
+				<staticsetfield name="parent_id" value="1" />
+				<staticsetfield name="name" value="'Normal'" />
+				<staticsetfield name="style" value="'leaf,flag'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="3" />
+				<staticsetfield name="parent_id" value="1" />
+				<staticsetfield name="name" value="'Italic-blue'" />
+				<staticsetfield name="style" value="'leaf,park,italic,bluebg'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="4" />
+				<staticsetfield name="parent_id" value="1" />
+				<staticsetfield name="name" value="'Bold as love'" />
+				<staticsetfield name="style" value="'leaf,exclamation,redtext,bold'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="5" />
+				<staticsetfield name="parent_id" value="3" />
+				<staticsetfield name="name" value="'Second level 1'" />
+				<staticsetfield name="style" value="'leaf'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="6" />
+				<staticsetfield name="parent_id" value="3" />
+				<staticsetfield name="name" value="'Second level 2'" />
+				<staticsetfield name="style" value="'leaf,redtext'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="7" />
+				<staticsetfield name="parent_id" value="3" />
+				<staticsetfield name="name" value="'Second level 3'" />
+				<staticsetfield name="style" value="'leaf'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="8" />
+				<staticsetfield name="parent_id" value="6" />
+				<staticsetfield name="name" value="'Third level 1'" />
+				<staticsetfield name="style" value="'leaf'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="9" />
+				<staticsetfield name="parent_id" value="6" />
+				<staticsetfield name="name" value="'Third level 2'" />
+				<staticsetfield name="style" value="'leaf'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="10" />
+				<staticsetfield name="parent_id" value="6" />
+				<staticsetfield name="name" value="'Third level 3'" />
+				<staticsetfield name="style" value="'leaf'" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+
+<logic>
+	<block name="b_tree" datasource="ds_tree" startup='full'>
+		<field name="id"        field="id"        />
+		<field name="parent_id" field="parent_id" />
+		<field name="name"      field="name"      />
+		<field name="style"      field="style"     />
+	 </block>
+	</logic>
+	
+	<layout>
+		<vbox>
+		<tree
+			label='Tree with styles'
+			block      = 'b_tree'
+			fld_id     = 'id'
+			fld_parent = 'parent_id'
+			fld_style  = 'style'
+			nodename   = '%(name)s'
+		>
+		    <trigger type='RECORD-ACTIVATED'>
+				print "treelist: RECORD-ACTIVATED"
+		    </trigger>
+			<import-menu library='../common/menues.gfd' name='tree-readonly'/>
+			<treenode-styles>
+				<!-- item types -->				
+				<treenode-style name='root'    icon='common/wms/S.gif'/>
+				<treenode-style name='leaf'    icon='common/treenode-default.gif' button='checkbox'/>
+				
+				<!-- text color -->				
+				<treenode-style name='redtext' textcolor='red' checked='Y'/>
+				
+				<!-- background color -->				
+				<treenode-style name='bluebg'  bgcolor='lightblue' />
+				
+				<!-- font -->				
+				<treenode-style name='bold'    bold='Y'/>
+				<treenode-style name='italic'  italic='Y' checked='Y'/>
+
+				<!-- column flags -->
+				<treenode-style name='flag'         flags='flag'/>
+				<treenode-style name='park'         flags='park'/>
+				<treenode-style name='exclamation'  flags='exclamation'/>
+				<treenode-style name='parkedflag'   flags='park,flag'/>
+
+			</treenode-styles>
+				
+			<tree-columns>
+				<tree-column name='flag'        icon='common/wms/redflag.gif' icon_off='common/wms/reddot.gif' icon_description='common/wms/redflag.gif' icon_off_description='common/wms/reddot.gif'/>
+				<tree-column name='park'        icon='common/wms/parked.gif'  icon_off='common/wms/bluedot.gif'/>
+				<tree-column name='exclamation' icon='common/wms/yellow!.gif' icon_off='common/wms/yellowdot.gif' />
+			</tree-columns>
+		</tree>
+		</vbox>
+	</layout>
+</form>

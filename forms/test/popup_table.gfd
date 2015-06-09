@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<form name="popup_table" title="Подбор" >
+	<parameter name="p_parentform"/>
+	<parameter name="p_popupwindow"/>
+
+	<import-datasource name='ds' as='ds1' library='popup.gfd'/>
+	<import-datasource name='ds' as='ds2' library='popup.gfd'/>
+	<import-datasource name='ds' as='ds3' library='popup.gfd'/>
+
+	<datasource name="ds" rowid='id1' type="static" >
+		<staticset fields="id1,id2,id3,text4,number5">
+			<staticsetrow>
+				<staticsetfield name="id1"  value="1" />
+				<staticsetfield name="id2"  value="2" />
+				<staticsetfield name="id3"  value="3" />
+				<staticsetfield name="text4"  value="u'hello'" />
+				<staticsetfield name="number5"  value="123.456" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id1"  value="1" />
+				<staticsetfield name="id2"  value="2" />
+				<staticsetfield name="id3"  value="3" />
+				<staticsetfield name="text4"  value="u'hello'" />
+				<staticsetfield name="number5"  value="123.456" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+
+	<trigger type="On-Startup">
+		if not get_global('__form_server_url__', None):
+			set_global('__form_server_url__', 'http://localhost:82/wm/wk.cgi/wm/forms/test')
+	</trigger>
+
+	<trigger type="On-Activation">
+	</trigger>
+
+<logic>
+	
+	<block name='b' datasource='ds' startup='full' autoNextRecord='Y'>
+		<field name='id1' field='id1' fk_source='ds1' fk_key='id' fk_description='name'/>
+		<field name='id2' field='id2' fk_source='ds2' fk_key='id' fk_description='name'/>
+		<field name='id3' field='id3' fk_source='ds3' fk_key='id' fk_description='name'/>
+		<field name='text4' field='text4' />
+		<field name='number5' field='number5' datatype='number' scale='3'/>
+	</block>
+
+</logic>
+
+<import-toolbar library='../common/toolbar.gfd' name='__main_toolbar__'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<!--vbox block='b'-->
+	<table block='b'>
+		<entry field='id1' label='Поле 1' style='picker'  picker_text_minlength='2'>
+			<popupwindow form='popup.gfd' title='Попап 1' >
+				<trigger type='PRE-POPUP'>
+					print "PRE-POPUP"
+				</trigger>
+				<trigger type='POST-POPUP'>
+					print "POST-POPUP"
+				</trigger>
+			</popupwindow>
+		</entry>
+		<entry field='id2' label='Поле 2' style='picker'  picker_text_minlength='2' navigable='N'>
+			<popupwindow form='popup.gfd' title='Попап 2'/>
+		</entry>
+		<entry field='id3' label='Поле 3'/>
+		<entry field='text4' label='Текст'/>
+		<entry field='number5' label='Число'/>
+	</table>
+		<!--entry field='text4' label='Текст'/>
+	</vbox-->
+</layout>
+</form>

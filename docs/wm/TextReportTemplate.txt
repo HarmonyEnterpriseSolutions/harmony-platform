@@ -1,0 +1,311 @@
+Шаблон текстового отчета
+
+Представляет собой текст с полями и разметкой группировки.
+О полях читайте в TextFormat.txt.
+
+Источник данных для заполнения шаблона представляет собой последовательность словарей.
+
+Разметка группировки:
+
+<!-- BLOCK <name> -->
+<хотя бы одно поле>
+<!-- END BLOCK <name> -->
+
+Все поля что вне блока, будут групироваться по равенству.
+Содержимое блока будет повторяться.
+
+Блоки могут быть вложенными сколько угодно раз.
+Весь шаблон это тоже блок, хоть и не размеченный.
+Блоки не могут быть не вложенными.
+
+Пример:
+	Тут у нас 3 блока
+		BLOCK root, внешний, неразмеченный, группирует по  _org_contact_name
+		BLOCK delay, группирует по _delay_date
+		BLOCK doc, группирует по _doc_num, _doc_date, _doc_sum, _currency_name
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<p>Здравствуйте %(_org_contact_name)s,</p>
+<p>Пожалуйста, почитайте до конца, это очень важно.</p>
+<!-- BLOCK delay -->
+<p>
+	Дата отсрочки %(_delay_date:date)s
+	<table border='1'>
+		<tr>
+			<th align='center'>Номер документа</th>
+			<th align='center'>Дата документа</th>
+			<th align='center'>Сумма документа</th>
+			<th align='center'>Валюта</th>
+		</tr>
+		<!-- BLOCK doc -->
+		<tr>
+			<td align='center'>%(_doc_num)s</td>
+			<td align='center'>%(_doc_date:date)s</td>
+			<td align='right'>%(_doc_sum:decimal)s</td>
+			<td >%(_currency_name)s</td>
+		</tr>
+		<!-- END BLOCK doc -->
+	</table>
+</p>
+<!-- END BLOCK delay -->
+<p>И чтоб Вы были здоровы,<br>
+Искренне Ваш(а), фирма</p>
+</body>
+</html>
+
+
+
+Пример данных для заполнения
+
+Валерий Петрович	2009-11-25	1	2009-11-25	26795.47	тонн
+Валерий Петрович	2009-11-25	2	2009-11-26	33451.01	штук
+Валерий Петрович	2009-11-25	3	2009-11-27	79869.91	тонн
+Валерий Петрович	2009-11-25	4	2009-11-28	78063.87	штук
+
+Валерий Петрович	2009-11-26	5	2009-11-29	92288.4	тонн
+Валерий Петрович	2009-11-26	6	2009-11-30	51159.14	тонн
+Валерий Петрович	2009-11-26	7	2009-12-01	96349.07	штук
+Валерий Петрович	2009-11-26	8	2009-12-02	48137.03	тонн
+
+Валерий Петрович	2009-11-27	9	2009-12-03	74534.5	штук
+Валерий Петрович	2009-11-27	10	2009-12-04	49891.58	метров
+Валерий Петрович	2009-11-27	11	2009-12-05	44244.46	штук
+Валерий Петрович	2009-11-27	12	2009-12-06	64660.41	штук
+
+Валерий Петрович	2009-11-28	13	2009-12-07	61034.68	штук
+Валерий Петрович	2009-11-28	14	2009-12-08	9931.92	штук
+Валерий Петрович	2009-11-28	15	2009-12-09	33912.86	метров
+Валерий Петрович	2009-11-28	16	2009-12-10	96858.74	метров
+
+Валерий Петрович	2009-11-29	17	2009-12-11	52191.06	штук
+Валерий Петрович	2009-11-29	18	2009-12-12	74631.05	штук
+Валерий Петрович	2009-11-29	19	2009-12-13	54083.18	тонн
+Валерий Петрович	2009-11-29	20	2009-12-14	99857.95	метров
+
+
+
+Результат заполнения
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<p>Здравствуйте Валерий Петрович,</p>
+<p>Пожалуйста, почитайте до конца, это очень важно.</p>
+
+<p>
+	Дата отсрочки 25.11.2009
+	<table border='1'>
+		<tr>
+			<th align='center'>Номер документа</th>
+			<th align='center'>Дата документа</th>
+			<th align='center'>Сумма документа</th>
+			<th align='center'>Валюта</th>
+		</tr>
+		
+		<tr>
+			<td align='center'>1</td>
+			<td align='center'>25.11.2009</td>
+			<td align='right'>26 795,47</td>
+			<td >тонн</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>2</td>
+			<td align='center'>26.11.2009</td>
+			<td align='right'>33 451,01</td>
+			<td >штук</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>3</td>
+			<td align='center'>27.11.2009</td>
+			<td align='right'>79 869,91</td>
+			<td >тонн</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>4</td>
+			<td align='center'>28.11.2009</td>
+			<td align='right'>78 063,87</td>
+			<td >штук</td>
+		</tr>
+		
+	</table>
+</p>
+
+<p>
+	Дата отсрочки 26.11.2009
+	<table border='1'>
+		<tr>
+			<th align='center'>Номер документа</th>
+			<th align='center'>Дата документа</th>
+			<th align='center'>Сумма документа</th>
+			<th align='center'>Валюта</th>
+		</tr>
+		
+		<tr>
+			<td align='center'>5</td>
+			<td align='center'>29.11.2009</td>
+			<td align='right'>92 288,40</td>
+			<td >тонн</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>6</td>
+			<td align='center'>30.11.2009</td>
+			<td align='right'>51 159,14</td>
+			<td >тонн</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>7</td>
+			<td align='center'>01.12.2009</td>
+			<td align='right'>96 349,07</td>
+			<td >штук</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>8</td>
+			<td align='center'>02.12.2009</td>
+			<td align='right'>48 137,03</td>
+			<td >тонн</td>
+		</tr>
+		
+	</table>
+</p>
+
+<p>
+	Дата отсрочки 27.11.2009
+	<table border='1'>
+		<tr>
+			<th align='center'>Номер документа</th>
+			<th align='center'>Дата документа</th>
+			<th align='center'>Сумма документа</th>
+			<th align='center'>Валюта</th>
+		</tr>
+		
+		<tr>
+			<td align='center'>9</td>
+			<td align='center'>03.12.2009</td>
+			<td align='right'>74 534,50</td>
+			<td >штук</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>10</td>
+			<td align='center'>04.12.2009</td>
+			<td align='right'>49 891,58</td>
+			<td >метров</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>11</td>
+			<td align='center'>05.12.2009</td>
+			<td align='right'>44 244,46</td>
+			<td >штук</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>12</td>
+			<td align='center'>06.12.2009</td>
+			<td align='right'>64 660,41</td>
+			<td >штук</td>
+		</tr>
+		
+	</table>
+</p>
+
+<p>
+	Дата отсрочки 28.11.2009
+	<table border='1'>
+		<tr>
+			<th align='center'>Номер документа</th>
+			<th align='center'>Дата документа</th>
+			<th align='center'>Сумма документа</th>
+			<th align='center'>Валюта</th>
+		</tr>
+		
+		<tr>
+			<td align='center'>13</td>
+			<td align='center'>07.12.2009</td>
+			<td align='right'>61 034,68</td>
+			<td >штук</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>14</td>
+			<td align='center'>08.12.2009</td>
+			<td align='right'>9 931,92</td>
+			<td >штук</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>15</td>
+			<td align='center'>09.12.2009</td>
+			<td align='right'>33 912,86</td>
+			<td >метров</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>16</td>
+			<td align='center'>10.12.2009</td>
+			<td align='right'>96 858,74</td>
+			<td >метров</td>
+		</tr>
+		
+	</table>
+</p>
+
+<p>
+	Дата отсрочки 29.11.2009
+	<table border='1'>
+		<tr>
+			<th align='center'>Номер документа</th>
+			<th align='center'>Дата документа</th>
+			<th align='center'>Сумма документа</th>
+			<th align='center'>Валюта</th>
+		</tr>
+		
+		<tr>
+			<td align='center'>17</td>
+			<td align='center'>11.12.2009</td>
+			<td align='right'>52 191,06</td>
+			<td >штук</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>18</td>
+			<td align='center'>12.12.2009</td>
+			<td align='right'>74 631,05</td>
+			<td >штук</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>19</td>
+			<td align='center'>13.12.2009</td>
+			<td align='right'>54 083,18</td>
+			<td >тонн</td>
+		</tr>
+		
+		<tr>
+			<td align='center'>20</td>
+			<td align='center'>14.12.2009</td>
+			<td align='right'>99 857,95</td>
+			<td >метров</td>
+		</tr>
+		
+	</table>
+</p>
+
+<p>И чтоб Вы были здоровы,<br>
+Искренне Ваш(а), фирма</p>
+</body>
+</html>
+

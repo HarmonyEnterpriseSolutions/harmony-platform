@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Entry example">
+	<datasource name="ds_store" type="static">
+		<staticset fields="id,name">
+			<staticsetrow>
+				<staticsetfield name="id" value="1" />
+				<staticsetfield name="name" value="Hello World" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="2" />
+				<staticsetfield name="name" value="Hello" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="3" />
+				<staticsetfield name="name" value="Hell" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+	<logic>
+		<block name="b">
+			<field name="c" fk_source="ds_store" fk_key="name" />
+			<field name="f" />
+		</block>
+	</logic>
+	<layout xmlns:d="GNUe:Driver:HTMLex">
+		<vbox>
+			<entry field='c' block='b' label='Производитель' d:class="entry1" />
+			<entry field='f' block='b' label='Товар' d:class="entry2" />
+			<entry field='f' block='b' label='Товар' d:class="entry2" style="label" />
+			<!--entry field = 'f' block = 'b' label = 'Товар' style='picker' d:class="entry2"/-->
+		</vbox>
+	</layout>
+</form>

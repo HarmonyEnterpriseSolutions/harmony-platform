@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding='windows-1251'?>
+
+<!--
+	GNU Enterprise default menu definition
+
+	Copyright 2001-2007 Free Software Foundation
+
+	This file is part of GNU Enterprise
+
+	GNU Enterprise is free software; you can redistribute it
+	and/or modify it under the terms of the GNU General Public
+	License as published by the Free Software Foundation; either
+	version 2, or (at your option) any later version.
+
+	GNU Enterprise is distributed in the hope that it will be
+	useful, but WITHOUT ANY WARRANTY; without even the implied
+	warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+	PURPOSE. See the GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public
+	License along with program; see the file COPYING. If not,
+	write to the Free Software Foundation, Inc., 59 Temple Place
+	- Suite 330, Boston, MA 02111-1307, USA.
+
+	$Id: default.gfd,v 1.38 2013/12/27 23:02:58 Oleg Exp $
+-->
+
+<form xmlns:a="GNUe:Forms:Access">
+	<!-- Clipboard and selection -->
+	<action name="act__cut__" label="C&amp;ut"
+		description="Cut the selected text">
+		form.cut()
+	</action>
+	<action name="act__copy__" label="&amp;Copy"
+		description="Copy the selected text to the clipboard">
+		form.copy()
+	</action>
+	<action name="act__paste__" label="&amp;Paste"
+		description="Paste the content of the clipboard to the current position">
+		form.paste()
+	</action>
+	<action name="act__select_all__" label="Select &amp;All"
+		description="Select the whole field">
+		form.select_all()
+	</action>
+
+	<!-- Focus management -->
+	<action name="act__next_block__" label="Next &amp;Block"
+		description="Jump to the next block">
+		form.next_block()
+	</action>
+	<action name="act__previous_block__" label="Previous Bl&amp;ock"
+		description="Jump to the previous block">
+		form.previous_block()
+	</action>
+
+	<!-- Record navigation -->
+	<action name="act__first_record__" icon="firstrecord" label="&amp;First Record"
+		description="Navigate the current block to the first record">
+		form.first_record()
+	</action>
+	<action name="act__prev_record__" icon="prevrecord" label="Previous R&amp;ecord"
+		description="Navigate the current block to the previous record">
+		form.prev_record()
+	</action>
+	<action name="act__next_record__" icon="nextrecord" label="Next &amp;Record"
+		description="Navigate the current block to the next record">
+		form.next_record()
+	</action>
+	<action name="act__last_record__" icon="lastrecord" label="&amp;Last Record"
+		description="Navigate the current block to the last record">
+		form.last_record()
+	</action>
+	<action name="act__ask_record__" icon="jumpprompt" label="&amp;Jump to Record"
+		description="Ask for a record number and then navigate to that record">
+		form.ask_record()
+	</action>
+
+	<!-- Record insertion and deletion -->
+	<action name="act__new_record__" icon="newrecord" label="&amp;New Record"
+		description="Insert a new record in the current block">
+		form.new_record()
+	</action>
+	<action name="act__delete_record__" icon="deleterecord"
+		label="&amp;Delete Record"
+		description="Mark the current record for deletion">
+		form.delete_record()
+	</action>
+	<action name="act__undelete_record__" label="&amp;Undelete Record"
+		description="Unmark the current record for deletion">
+		form.undelete_record()
+	</action>
+
+	<!-- Filter -->
+	<action name="act__init_filter__" icon="init_filter" label="Define Filter"
+		description="Define new filter criteria">
+		form.init_filter()
+	</action>
+	<action name="act__change_filter__" label="Change Filter"
+		description="Change filter criteria">
+		form.change_filter()
+	</action>
+	<action name="act__discard_filter__" label="Discard Filter Changes"
+		description="Discard changes to filter criteria and restore previous filter state">
+		form.discard_filter()
+	</action>
+	<action name="act__apply_filter__" icon="apply_filter" label="Apply Filter"
+		description="Apply the filter">
+		form.apply_filter()
+	</action>
+
+	<!-- Transactions -->
+	<action name="act__commit__" icon="commit" label="&amp;Save changes"
+		description="Save all changes to the database">
+		form.commit()
+	</action>
+	<action name="act__rollback__" icon="rollback" label="Disca&amp;rd changes"
+		description="Discard all changes and reset the form">
+		form.rollback()
+	</action>
+	<action name="act__unmodify_record__" icon="rollback" label="Disca&amp;rd record changes"
+		description="Discard record changes">
+		form.get_focus_block().unmodify_record()
+	</action>
+
+	<!-- Other stuff -->
+	<action name="act__show_about__" label="About"
+		description="Show info about this form">
+		form.show_about()
+	</action>
+	<action name="act__test__" label="Test"
+		description="Test">
+		form.test()
+	</action>
+	<action name="act__printout__" icon="printout" label="&amp;Print" description="Print the contents of this form">
+		form.t_printout()
+	</action>
+	<action name="act__export__" icon="export" label="&amp;Export..." description="Export the contents of this form">
+		form.t_export()
+	</action>
+	<action name="act__email__" icon="email" label="&amp;Email" description="Email the contents of this form">
+		form.t_email()
+	</action>
+
+	<action name="act__open_doc__" label="Open document" description="Open document with barcode">
+		form.run_form('dlg_open_doc.gfd')
+	</action>
+
+	<action name="act__close_window__" label="&amp;Close window" description="Close this window">
+		form = get_global('mdi_parent').getCurrentForm()
+		if form:
+			form.close()
+	</action>
+	<action name="act__close_all__" label="Close all windows" description="Close all windows">
+		while True:
+			form = get_global('mdi_parent').getCurrentForm()
+			if form:
+				form.close()
+			else:
+				break
+	</action>
+	<action name="act__exit__" icon="exit" label="E&amp;xit app" description="Exit">
+		get_global('main_frame', form).close()
+	</action>
+	<action name="act__close__" icon="exit" label="&amp;Close window" description="Close this window">
+		form.close()
+	</action>
+
+	<action name="act__help__" icon="help" label="Help"	description="Help">
+		form_name = 'help.gfd'
+
+		parent = get_global('mdi_parent', form)
+		opened = parent.selectForm(form_name)
+		if not opened:
+			parent.run_form(form_name)
+	</action>
+
+	<trigger name="trg__update_status__" type="ON-STATUSCHANGE">
+		current_block = form.get_focus_block()
+		if current_block is not None:
+			record_status = current_block.get_record_status()
+			possible_operations = current_block.get_possible_operations()
+		else:
+			record_status = None
+			possible_operations = []
+
+		for operation, action in (
+				('first_record',    form.act__first_record__),
+				('prev_record',     form.act__prev_record__),
+				('next_record',     form.act__next_record__),
+				('last_record',     form.act__last_record__),
+				('goto_record',     form.act__ask_record__),
+				('new_record',      form.act__new_record__),
+				('delete_record',   form.act__delete_record__),
+				('undelete_record', form.act__undelete_record__),
+				('refresh',         form.block__refresh__),
+				('unmodify_record', form.act__unmodify_record__),
+			):
+			action.enabled = (operation in possible_operations)
+
+		if form.in_filter_mode():
+			form.act__init_filter__.enabled = False
+			form.act__change_filter__.enabled = False
+			form.act__discard_filter__.enabled = True
+			form.act__apply_filter__.enabled = True
+			form.act__commit__.enabled = False
+			form.act__rollback__.enabled = False
+		else:
+			form.act__init_filter__.enabled = True
+			form.act__change_filter__.enabled = True
+			form.act__discard_filter__.enabled = False
+			form.act__apply_filter__.enabled = False
+			form.act__commit__.enabled = not form.is_saved()
+			form.act__rollback__.enabled = True
+
+		form.act__printout__.enabled = hasattr(form, 't_printout')
+		form.act__export__.enabled   = hasattr(form, 't_export')
+		form.act__email__.enabled    = hasattr(form, 't_email')
+
+		# log row
+		log_row_enabled = False
+		block = form.get_focus_block()
+		if block is not None:
+			ds = block.getDataSource()
+			if ds is not None and ds.table is not None and ds.rowid is not None:
+				field = block.getFieldByDataSourceField(ds.rowid)
+				if field is not None:
+					log_row_enabled = True
+		form.act__log_row__.enabled = log_row_enabled
+
+		count = get_global('calls_count', 0)
+		#form.act__my_calls__.enabled = count > 0
+		try:
+			form.toolbar.get_toolbutton('tb_my_calls').overtext = str(count) if count > 0 else None
+		except:
+			pass
+	</trigger>
+
+
+	<menu name="__main_menu__" label="Main Menu">
+		<menu label="&amp;File">
+			<!--menuitem action="act__commit__" hotkey="ALT+ENTER"/>
+			<menuitem action="act__rollback__" hotkey="ALT+BACK"/>
+			<menuitem />
+			<menuitem action="act__printout__"
+				hotkey="CTRL+P"/>
+			<menuitem /-->
+			<menuitem action="act__open_doc__" hotkey="CTRL+O" a:fn='FN_OPEN_DOC'/>
+			<menuitem a:fn='FN_OPEN_DOC'/>
+			<menuitem action="act__close_window__" hotkey="CTRL+Q"/>
+			<menuitem action="act__close_all__" />
+			<menuitem />
+			<menuitem action="act__exit__" hotkey="ALT+X"/>
+		</menu>
+		<!--menu label="&amp;Edit">
+			<menuitem action="act__cut__"            hotkey="CTRL+X"/>
+			<menuitem action="act__copy__"           hotkey="CTRL+C"/>
+			<menuitem action="act__paste__"          hotkey="CTRL+V"/>
+			<menuitem action="act__select_all__"     hotkey="CTRL+A"/>
+			<menuitem />
+			<menuitem action="act__new_record__"     hotkey="ALT+INS"/>
+			<menuitem />
+			<menuitem action="act__delete_record__"	action_off="act__undelete_record__" hotkey="ALT+DEL"/>
+		</menu-->
+		<!--menu label="&amp;Navigation">
+			<menuitem action="act__previous_block__" hotkey="CTRL+SHIFT+TAB"/>
+			<menuitem action="act__next_block__"     hotkey="CTRL+TAB"/>
+			<menuitem action="act__previous_page__"  hotkey="ALT+PGUP"/>
+			<menuitem action="act__next_page__"      hotkey="ALT+PGDN"/>
+			<menuitem />
+			<menuitem action="act__first_record__"   hotkey="ALT+HOME"/>
+			<menuitem action="act__prev_record__"    hotkey="ALT+LEFT"/>
+			<menuitem action="act__next_record__"    hotkey="ALT+RIGHT"/>
+			<menuitem action="act__last_record__"    hotkey="ALT+END"/>
+			<menuitem action="act__ask_record__"     hotkey="F3"/>
+		</menu-->
+		<!--menu label="F&amp;ilter">
+			<menuitem action="act__init_filter__"    hotkey="F8"/>
+			<menuitem action="act__change_filter__"  hotkey="SHIFT+F8"/>
+			<menuitem action="act__discard_filter__" hotkey="SHIFT+F9"/>
+			<menuitem action="act__apply_filter__"   hotkey="F9"/>
+		</menu-->
+	</menu>
+	<menu name="__help_menu__">
+		<menu name="__help__" label="&amp;Help">
+			<!--menuitem action="act__test__"/-->
+			<menuitem action="act__show_about__"/>
+		</menu>
+	</menu>
+
+	<toolbar name="__main_toolbar__">
+	</toolbar>
+
+	<!--toolbar name="__main_toolbar__">
+		<toolbutton action="block__refresh__"/>
+		<toolbutton action="act__commit__"/>
+		<toolbutton />
+		<toolbutton action="act__new_record__"/>
+		<toolbutton action="act__delete_record__" action_off="act__undelete_record__"/>
+		<toolbutton />
+		<toolbutton action="act__first_record__"/>
+		<toolbutton action="act__prev_record__"/>
+		<toolbutton action="act__next_record__"/>
+		<toolbutton action="act__last_record__"/>
+		<toolbutton action="act__ask_record__"/>
+		<toolbutton />
+		<toolbutton action="act__init_filter__" action_off="act__discard_filter__"/>
+		<toolbutton action="act__apply_filter__"/>
+		<toolbutton />
+		<toolbutton action="act__printout__"/>
+		<toolbutton />
+		<toolbutton action="act__rollback__"/>
+		<toolbutton />
+		<toolbutton action="act__close__"/>
+	</toolbar-->
+
+<!-- Block actions -->
+
+<action name='block__refresh__'           label="Обновить" icon='refresh'>
+	try:
+		self.getBlock().refresh()
+	except NameError: # 'getBlock'
+		form.refresh()
+</action>
+
+<!-- Table actions -->
+
+<action name='table__filterIncludeCell__' label="Фильтр по значеню ячейки - включить" icon='filterIncludeCell'>
+	self.filterIncludeCell()
+</action>
+
+<action name='table__filterExcludeCell__'       label="Фильтр по значеню ячейки - исключить" icon='filterExcludeCell'>
+	self.filterExcludeCell()
+</action>
+
+<action name='table__cancelFilters__'    label="Отменить все фильтры" icon='cancelFilters'>
+	self.cancelFilters()
+</action>
+
+<action name='table__find__'              label="Поиск..." icon='find'>
+	self.find()
+</action>
+
+<action name='table__orderAscending__'    label="Сортировка по возрастанию" icon='orderAscending'>
+	field = self.getSelectedField()
+	if field:
+		field.applySortOrder(True)
+	else:
+		raise error(_('Колонка не выбрана'))
+</action>
+
+<action name='table__orderDescending__'   label="Сортировка по убыванию" icon='orderDescending'>
+	field = self.getSelectedField()
+	if field:
+		field.applySortOrder(False)
+	else:
+		raise error(_('Колонка не выбрана'))
+</action>
+
+<action name='table__orderNone__'         label="Отменить сортировку">
+	field = self.getSelectedField()
+	if field:
+		field.applySortOrder(None)
+	else:
+		raise error(_('Колонка не выбрана'))
+</action>
+
+<action name='table__disableOrders__'     label="Отменить все сортировки">
+	change = False
+	for field in self.getBlock().getFields():
+		if field.setSortOrder(None):
+			change = True
+	if change:
+		self.getBlock().refresh()
+</action>
+
+<action name='table__cut__'               label="Вырезать" icon="cut">
+	self.cut()
+</action>
+
+<action name='table__copy__'              label="Копировать" icon="copy">
+	self.copy()
+</action>
+
+<action name='table__paste__'             label="Вставить" icon="paste">
+	self.paste()
+</action>
+
+<action name="table__delete_records__" icon="deleterecord"
+	label="&amp;Delete Records"
+	description="Mark selected records for deletion">
+	self.deleteRecords(True)
+</action>
+
+<action name="table__undelete_records__" label="&amp;Undelete Records"
+	description="Unmark selected records for deletion">
+	self.deleteRecords(False)
+</action>
+
+<action name="act__log_row__" label="История изменений" icon='history'>
+	block = form.get_focus_block()
+	if block is None:
+		raise error(_('No block focused'))
+
+	ds = block.getDataSource()
+	if ds is None:
+		raise error(_('Block has no datasource'))
+		
+	if ds.table is None:
+		raise error(_('Datasource is static'))
+
+	if ds.rowid is None:
+		raise error(_('Datasource has no rowid'))
+
+	field = block.getFieldByDataSourceField(ds.rowid)
+	if field is None:
+		raise error(_('No primary field'))
+
+	get_global('mdi_parent', form).run_form('admin/log_row.gfd', {
+		'p_fnsig_name' : ds.table,
+		'p_row_id' : field.get(),
+	})
+</action>
+
+<action name="act__my_calls__" label="Мои звонки" icon='call'>
+	mdi = get_global('mdi_parent', form)
+	if not mdi.selectForm('comsyslogger_org_staff_call.gfd'):
+		mdi.run_form('comsyslogger_org_staff_call.gfd')
+</action>
+
+<!-- Tree actions -->
+
+<action name='tree__renameNode__'         label="Переименовать..." icon="rename" >
+	self.renameNode()
+</action>
+
+<action name='tree__newNode__'            label="Создать..." icon="newrecord" >
+	self.newNode()
+</action>
+
+<action name='tree__cutNode__'            label="Вырезать"   icon="cut">
+	self.cutNode()
+</action>
+
+<action name='tree__copyNode__'           label="Копировать" icon="copy">
+	self.copyNode()
+</action>
+
+<action name='tree__pasteNode__'          label="Вставить"   icon="paste">
+	self.pasteNode()
+</action>
+
+<action name='tree__deleteNode__'         label="Удалить"    icon="deleterecord">
+	self.deleteNode()
+</action>
+
+<action name='tree__expand__'             label="Развернуть все" icon="expand">
+	self.expand(True)
+</action>
+
+<action name='tree__collapse__'           label="Свернуть все"   icon="collapse">
+	self.expand(False)
+</action>
+
+</form>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" 
+	codebase="{{ codebase }}" 
+	href="{{ href }}">
+	<information>
+		<title>GNUe forms java client</title>
+		<vendor>Abrisola</vendor>
+	</information>
+	<resources>
+		<property name='gnue.forms.codebase' value='{{ gnue_forms_codebase }}'/>
+		<property name='gnue.forms.debug' value='{{ gnue_forms_debug }}'/>
+		<j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+		<jar href="lib/gnue-forms.jar" main="true" />
+		<jar href="lib/pdfview.jar" />
+	</resources>
+	<application-desc
+		name="GNUe forms java client"
+		main-class="gnue.forms.Applet"
+		width="300"
+		height="300">
+	</application-desc>
+	<update check="background"/>
+	<security>
+		<all-permissions/>
+	</security>
+</jnlp>				

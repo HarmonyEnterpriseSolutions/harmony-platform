@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="RadioBox example">
+	<datasource name="ds_store" type="static" prequery="Y">
+		<staticset fields="manuf_id,manuf_name">
+			<staticsetrow>
+				<staticsetfield name="manuf_id" value="1" />
+				<staticsetfield name="manuf_name" value="One" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="manuf_id" value="2" />
+				<staticsetfield name="manuf_name" value="Two" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="manuf_id" value="3" />
+				<staticsetfield name="manuf_name" value="Three" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+	<logic>
+		<block name="store_document">
+			<field name="fk_store" field="fk_store" fk_description="manuf_name" fk_key="manuf_id" fk_source="ds_store" required="true">
+				<trigger type="post-change">
+					print self.value
+				</trigger>
+			</field>
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox>
+			<entry name="store" block="store_document" field="fk_store" label="Store" style="radiobox" />
+		</vbox>
+	</layout>
+</form>

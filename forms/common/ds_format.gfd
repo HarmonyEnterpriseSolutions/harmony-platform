@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form>
+	<datasource name="dsref_format" type="static" rowid='id'>
+		<staticset fields="id, name">
+			<staticsetrow><staticsetfield name="id" value="pdf" /><staticsetfield name="name" value="u'PDF'" /></staticsetrow>
+			<staticsetrow><staticsetfield name="id" value="xls" /><staticsetfield name="name" value="u'XLS'" /></staticsetrow>
+			<staticsetrow><staticsetfield name="id" value="csv" /><staticsetfield name="name" value="u'CSV'" /></staticsetrow>
+		</staticset>
+	</datasource>
+</form>

@@ -1,0 +1,414 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Rata\n"
+"POT-Creation-Date: Wed Apr 02 18:03:12 2003\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Oleg Noga <noga@abrisola.com.ua>\n"
+"Language-Team: RUSSIAN <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=Cp1251\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.4\n"
+
+#: .\..\src\toolib\startup.py:101
+msgid "Incorrect Python version: %s. Version required: %s or later. Please, install new version of Python."
+msgstr "Неправильная версия Python: %s. Необходима версия не ниже %s. Пожалуйста, установите новую версию Python."
+
+#: .\..\src\toolib\startup.py:110
+msgid "Package not found: '%s'. Please, install %s"
+msgstr "Пакет не найден: '%s'. Пожалуйста, установите %s"
+
+#: .\..\src\toolib\startup.py:126
+msgid "Required software not installed"
+msgstr "Необходимое программное обеспечение не установлено"
+
+#: .\..\src\toolib\text\email\EmailMessage.py:15
+msgid "EmailFormatException"
+msgstr "Неверный формат письма"
+
+#: .\..\src\toolib\text\email\EmailMessage.py:59
+msgid "From"
+msgstr "От кого"
+
+#: .\..\src\toolib\text\email\EmailMessage.py:63
+msgid "To is empty"
+msgstr "Поле получателя пусто"
+
+#: .\..\src\toolib\text\email\EmailMessage.py:64
+msgid "To"
+msgstr "Кому"
+
+#: .\..\src\toolib\text\email\EmailMessage.py:70
+msgid "Reply-To"
+msgstr "Ответить"
+
+#: .\..\src\toolib\text\email\EmailMessage.py:74
+msgid "Sender"
+msgstr "Отправитель"
+
+#: .\..\src\toolib\text\email\EmailMessage.py:86
+msgid "Cc"
+msgstr "Скрытая копия"
+
+#: .\..\src\toolib\text\email\EmailMessage.py:94
+msgid "Bcc"
+msgstr ""
+
+#: .\..\src\toolib\text\email\EmailMessage.py:261
+msgid "%s E-Mail is empty"
+msgstr "%s E-Mail пуст"
+
+#: .\..\src\toolib\text\email\EmailMessage.py:264
+msgid "%s E-Mail is not valid: %s"
+msgstr "E-Mail `%s` неверный: %s"
+
+#: .\..\src\toolib\text\humantext\phones2.py:100
+msgid "phone number must start with %s"
+msgstr "телефонный номер должен начинаться с %s"
+
+#: .\..\src\toolib\text\humantext\phones2.py:104
+msgid "unknown phone number code %s"
+msgstr "неизвесный телефонный код %s"
+
+#: .\..\src\toolib\text\humantext\phones2.py:112
+msgid "phone number is not valid"
+msgstr "неверный телефонный номер"
+
+#: .\..\src\toolib\text\report\config.py:8
+msgid " or "
+msgstr " или "
+
+#: .\..\src\toolib\text\report\config.py:8
+msgid "Expected type %s, got %s"
+msgstr ""
+
+#: .\..\src\toolib\util\DateTimePattern.py:116
+msgid "YYYY"
+msgstr "ГГГГ"
+
+#: .\..\src\toolib\util\DateTimePattern.py:117
+msgid "YY"
+msgstr "ГГ"
+
+#: .\..\src\toolib\util\DateTimePattern.py:118
+msgid "MM"
+msgstr "ММ"
+
+#: .\..\src\toolib\util\DateTimePattern.py:119
+msgid "DD"
+msgstr "ДД"
+
+#: .\..\src\toolib\util\DateTimePattern.py:120
+msgid "M"
+msgstr "М"
+
+#: .\..\src\toolib\util\DateTimePattern.py:121
+msgid "D"
+msgstr "Д"
+
+#: .\..\src\toolib\util\DateTimePattern.py:123
+#: .\..\src\toolib\util\DateTimePattern.py:131
+msgid "hh"
+msgstr "чч"
+
+#: .\..\src\toolib\util\DateTimePattern.py:124
+msgid "mm"
+msgstr "mm"
+
+#: .\..\src\toolib\util\DateTimePattern.py:125
+msgid "ss"
+msgstr "сс"
+
+#: .\..\src\toolib\util\DateTimePattern.py:127
+#: .\..\src\toolib\util\DateTimePattern.py:132
+msgid "h"
+msgstr "ч"
+
+#: .\..\src\toolib\util\DateTimePattern.py:128
+msgid "m"
+msgstr "м"
+
+#: .\..\src\toolib\util\DateTimePattern.py:129
+msgid "s"
+msgstr "с"
+
+#: .\..\src\toolib\util\DateTimePattern.py:133
+msgid "AM/PM"
+msgstr ""
+
+#: .\..\src\toolib\util\DateTimePattern.py:171
+msgid "Do not know how to format %s"
+msgstr "Не знаю как отформатировать %s"
+
+#: .\..\src\toolib\util\DateTimePattern.py:180
+msgid "Invalid date: '%s'. Expected format is %s"
+msgstr "Дата неверна: '%s'. Ожидается формат %s"
+
+#: .\..\src\toolib\win32\COM_Error.py:67
+msgid "COM error 0x%8X in %s: %s"
+msgstr "Ошибка COM 0x%8X в %s: %s"
+
+#: .\..\src\toolib\win32\COM_Error.py:69
+msgid "COM error 0x%8X: %s"
+msgstr "Ошибка COM 0x%8X: %s"
+
+#: .\..\src\toolib\win32\excel.py:102
+msgid "Can't hide Excel, ensure that no dialogs opened in Excel and press ok."
+msgstr "Не получается спрятать Excel, убедитесь в том, что в Excel нет открытых диалогов и нажмите ок."
+
+#: .\..\src\toolib\win32\excel.py:102
+msgid "Problem with Excel"
+msgstr "Проблема с Excel"
+
+#: .\..\src\toolib\win32\excel.py:343
+msgid "Excel supports only 256 columns"
+msgstr "Excel поддерживает только 256 колонок"
+
+#: .\..\src\toolib\win32\excel.py:354 .\..\src\toolib\win32\excel.py:362
+msgid "Last column is IV"
+msgstr "Последняя колонка IV"
+
+#: .\..\src\toolib\wx\Document.py:26 .\..\src\toolib\wx\wxutils.py:95
+msgid "All files"
+msgstr "Разрешены удаления"
+
+#: .\..\src\toolib\wx\Document.py:46
+msgid "Can't open document: "
+msgstr "Не могу открыть документ: "
+
+#: .\..\src\toolib\wx\Document.py:67
+msgid "Error saving document: "
+msgstr "Ошибка при сохранении документа: "
+
+#: .\..\src\toolib\wx\Document.py:80
+msgid "Document"
+msgstr "Документ"
+
+#: .\..\src\toolib\wx\Document.py:92
+msgid "%s was modified. Save changes?"
+msgstr "%s был изменен. Сохранить изменения?"
+
+#: .\..\src\toolib\wx\Document.py:163
+msgid "Save file"
+msgstr "Сохранение файла"
+
+#: .\..\src\toolib\wx\Document.py:165
+msgid "ExcelBookmarksDoc1"
+msgstr ""
+
+#: .\..\src\toolib\wx\Document.py:188
+msgid "Open file"
+msgstr "Открытие файла"
+
+#: .\..\src\toolib\wx\controls\CheckListBoxWithButons.py:14
+#: .\..\src\toolib\wx\controls\ObjectCheckListBox.py:73
+msgid "Check all"
+msgstr "Пометить все"
+
+#: .\..\src\toolib\wx\controls\CheckListBoxWithButons.py:21
+#: .\..\src\toolib\wx\controls\ObjectCheckListBox.py:77
+msgid "Uncheck all"
+msgstr "Снять все пометки"
+
+#: .\..\src\toolib\wx\controls\calendar\CalendarDrawing.py:22
+msgid "Fr"
+msgstr "Пт"
+
+#: .\..\src\toolib\wx\controls\calendar\CalendarDrawing.py:22
+msgid "Mo"
+msgstr "Пн"
+
+#: .\..\src\toolib\wx\controls\calendar\CalendarDrawing.py:22
+msgid "Sa"
+msgstr "Сб"
+
+#: .\..\src\toolib\wx\controls\calendar\CalendarDrawing.py:22
+msgid "Su"
+msgstr "Вс"
+
+#: .\..\src\toolib\wx\controls\calendar\CalendarDrawing.py:22
+msgid "Th"
+msgstr "Чт"
+
+#: .\..\src\toolib\wx\controls\calendar\CalendarDrawing.py:22
+msgid "Tu"
+msgstr "Вт"
+
+#: .\..\src\toolib\wx\controls\calendar\CalendarDrawing.py:22
+msgid "We"
+msgstr "Ср"
+
+#: .\..\src\toolib\wx\controls\calendar\CalendarDrawing.py:52
+msgid "Week #"
+msgstr "№ недели"
+
+#: .\..\src\toolib\wx\dialogs\OkCancelDialog.py:23
+#: .\..\src\toolib\wx\errorhandling.py:188
+msgid "Ok"
+msgstr "Ок"
+
+#: .\..\src\toolib\wx\dialogs\OkCancelDialog.py:27
+msgid "Cancel"
+msgstr "Отмена"
+
+#: .\..\src\toolib\wx\errorhandling.py:152
+msgid "Details >>"
+msgstr "Подробности >>"
+
+#: .\..\src\toolib\wx\errorhandling.py:153
+msgid "Details <<"
+msgstr "Подробности <<"
+
+#: .\..\src\toolib\wx\errorhandling.py:248
+msgid "."
+msgstr ""
+
+#: .\..\src\toolib\wx\errorhandling.py:248
+msgid "Unhandled exception: %s"
+msgstr "Необработанное исключение: %s"
+
+#: .\..\src\toolib\wx\errorhandling.py:254
+msgid "Error message"
+msgstr "Сообщение об ошибке"
+
+#: .\..\src\toolib\wx\grid\MFindReplace.py:17
+msgid "Whole &cell"
+msgstr "Ячейка полностью"
+
+#: .\..\src\toolib\wx\grid\MFindReplace.py:18
+msgid "Search &selection"
+msgstr "Искать в выделенном"
+
+#: .\..\src\toolib\wx\grid\MFindReplace.py:164
+msgid ""
+"Could not find the string:\n"
+"\"%s\""
+msgstr ""
+"Строка не найдена:\n"
+"\"%s\""
+
+#: .\..\src\toolib\wx\grid\MFindReplace.py:164
+#: .\..\src\toolib\wx\grid\MFindReplace.py:201
+msgid "Search"
+msgstr "Поиск"
+
+#: .\..\src\toolib\wx\grid\TSelectedRect.py:46
+msgid "Rectangular selection expected"
+msgstr "Выделите прямоугольную область, пожалуйста"
+
+#: .\..\src\toolib\wx\grid\TSelection.py:12
+msgid "SelectionError"
+msgstr "Ошибка выделения"
+
+#: .\..\src\toolib\wx\grid\TSelection.py:202
+msgid "Single cell selection expected"
+msgstr "Выделите одну ячейку, пожалуйста"
+
+#: .\..\src\toolib\wx\grid\TSelection.py:252
+msgid "Single row selection expected"
+msgstr "Выделите одну запись, пожалуйста"
+
+#: .\..\src\toolib\wx\grid\TSelection.py:253
+msgid "Single column selection expected"
+msgstr "Выделите одну колонку, пожалуйста"
+
+#: .\..\src\toolib\wx\grid\TSelection.py:261
+msgid "Pure row selection expected"
+msgstr "Выделите чисто одну запись, пожалуйста"
+
+#: .\..\src\toolib\wx\grid\TSelection.py:262
+msgid "Pure column selection expected"
+msgstr "Выделите чисто одну колонку, пожалуйста"
+
+#: .\..\src\toolib\wx\grid\TSelection.py:273
+msgid "Single row or cell selection expected"
+msgstr "Выделите чисто одну запись или одну ячейку, пожалуйста"
+
+#: .\..\src\toolib\wx\grid\TSelection.py:274
+msgid "Single column or cell selection expected"
+msgstr "Выделите чисто одну колонку или одну ячейку, пожалуйста"
+
+#: .\..\src\toolib\wx\grid\editors\AbstractCellEditor.py:158
+#: .\..\src\toolib\wx\grid\editors\AbstractSimpleCellEditor.py:133
+#: .\..\src\toolib\wx\grid\renderers\TextCellRenderer.py:35
+msgid "Error"
+msgstr "Ошибка"
+
+#: .\..\src\toolib\wx\grid\table\TTableClipboard.py:14
+msgid "ClipboardPasteError"
+msgstr "Ошибка вставки из клипборда"
+
+#: .\..\src\toolib\wx\grid\table\TTableClipboard.py:18
+msgid "ClipboardCopyError"
+msgstr "Ошибка копирования в клипборд"
+
+#: .\..\src\toolib\wx\grid\table\TTableClipboard.py:48
+msgid "column '%s', row '%s'"
+msgstr "колонка '%s', ряд '%s'"
+
+#: .\..\src\toolib\wx\grid\table\TTableClipboard.py:99
+msgid "Please, select single cell or column if table is empty"
+msgstr "Выделите, пожалуйста, одну ячеку или колонку, если таблица пуста"
+
+#: .\..\src\toolib\wx\grid\table\TTableClipboard.py:108
+msgid "Nothing to paste"
+msgstr "Нечего вставлять"
+
+#: .\..\src\toolib\wx\grid\table\TTableClipboard.py:117
+msgid "Data with %s rows does not fits in %s rows"
+msgstr "Данные с %s рядами не помещаются в %s рядов"
+
+#: .\..\src\toolib\wx\grid\table\TTableClipboard.py:120
+msgid "Data with %s columns does not fits in %s columns"
+msgstr "Данные с %s колонками не помещаются в %s колонок"
+
+#: .\..\src\toolib\wx\mixin\TWindowUtils.py:35
+#: .\..\src\toolib\wx\wxutils.py:108
+msgid "Message"
+msgstr "Сообщение"
+
+#: .\..\src\toolib\wx\tree\MManageCustomTree.py:94
+msgid "Can't paste item into self or child"
+msgstr "Нельзя вставить узел в себя или дочерний узел"
+
+#: .\..\src\toolib\wx\tree\MManageCustomTree.py:119
+#: .\..\src\toolib\wx\tree\MManageNodes.py:102
+#: .\..\src\toolib\wx\tree\MutableTree.py:123
+msgid "Paste operation failed"
+msgstr "Операция вставки потерпела неудачу"
+
+#: .\..\src\toolib\wx\tree\MManageNodes.py:78
+#: .\..\src\toolib\wx\tree\MutableTree.py:99
+msgid "Can't paste node into self or child"
+msgstr "Нельзя вставить узел в себя или дочерний узел"
+
+#: .\..\src\toolib\wx\util\clipboard.py:6
+msgid "ClipboardError"
+msgstr "Ошибка клипборда"
+
+#: .\..\src\toolib\wx\util\clipboard.py:21
+#: .\..\src\toolib\wx\util\clipboard.py:30
+msgid "Can't open clipboard"
+msgstr "Не могу открыть клипборд"
+
+#: .\..\src\toolib\wx\wxutils.py:86
+msgid ""
+"File not found: %s\n"
+"Would You like to find it manually?"
+msgstr ""
+"Не найден файл: %s\n"
+"Хотите найти его самостоятельно?"
+
+#: .\..\src\toolib\wx\wxutils.py:87
+msgid "File is missing"
+msgstr "Файл отсутствует"
+
+#: .\..\src\toolib\wx\wxutils.py:92
+msgid "Find the file"
+msgstr "Найдите файл"
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<form>
+	<toolbar name="__main_toolbar__">
+		<toolbutton action="act__close__"/>
+		<toolbutton/>
+		<toolbutton action="block__refresh__"/>
+		<toolbutton action="act__commit__"/>
+		<toolbutton/>
+		<toolbutton action="act__new_record__"/>
+		<toolbutton action="act__delete_record__" action_off="act__undelete_record__"/>
+		<toolbutton action="act__unmodify_record__"/>
+		<toolbutton/>
+		<toolbutton action="act__first_record__"/>
+		<toolbutton action="act__prev_record__"/>
+		<toolbutton action="act__next_record__"/>
+		<toolbutton action="act__last_record__"/>
+		<toolbutton action="act__ask_record__"/>
+		<!--toolbutton/>
+		<toolbutton action="act__init_filter__" action_off="act__discard_filter__"/>
+		<toolbutton action="act__apply_filter__"/-->
+		<!--
+		<toolbutton/>
+		<toolbutton name="__printout__" action="act__printout__"/>
+		<toolbutton/>
+		<toolbutton name="__rollback__" action="act__rollback__"/>
+		<toolbutton/>
+		-->
+		<toolbutton/>
+		<toolbutton action="act__printout__"/>
+		<toolbutton action="act__export__"/>
+		<toolbutton action="act__email__"/>
+		<toolbutton/>
+		<toolbutton action="act__log_row__"/>
+		<toolbutton/>
+		<toolbutton action="act__my_calls__" name='tb_my_calls'/>
+	</toolbar>
+</form>

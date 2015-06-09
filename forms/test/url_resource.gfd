@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--  GFD generator  -->
+<form title="test url resource">
+	<logic>
+		<block name='b_test'>
+			<field name='f_url_e' default='http://google.com/'/>
+			<field name='f_url'  />
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block='b_test'>
+			<hbox>
+				<entry name='f_url_e' field='f_url_e' />
+				<button label='GO!' s:stretch='0' default='True'>
+					<trigger type='ON-ACTION'>
+						b_test.f_url = b_test.f_url_e.get()
+					</trigger>
+				</button>
+			</hbox>
+			<url-resource block='b_test' field='f_url' />
+		</vbox>
+	</layout>
+</form>

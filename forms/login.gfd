@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding='windows-1251'?>
+
+<form name='login' title="Вход" windowStyle='-MINIMIZE_BOX,-MAXIMIZE_BOX'>
+
+<trigger type="On-Startup">
+	form.setFeature('GUI:MENUBAR:SUPPRESS',1)
+	form.setFeature('GUI:TOOLBAR:SUPPRESS',1)
+	form.setFeature('GUI:STATUSBAR:SUPPRESS',1)
+</trigger>
+
+<!--parameter name='server_url'  default='http://localhost/wm/wk.cgi/wm'/-->
+
+<trigger type='ON-ACTIVATION'>
+	form.endEditing()
+	try:
+		b_login.application = b_applications.id.get()
+	finally:
+		form.beginEditing()
+	form.next_entry()
+</trigger>
+
+<import-datasource name='ds_applications' library='applications.gfd'/>
+<!--import-toolbar name='__main_toolbar__' library='common/toolbar.gfd'/-->
+
+<action name='ok'>
+	import urllib2
+	from wmlib.login import login
+
+	application = b_login.application.get()
+	server_url  = b_applications.server_url.get()
+	assert server_url, 'Server url is not defined in applications.gfd'
+
+	user_login  = (b_login.user_login.get() or '').lower()
+	try:
+		user_id, sessionKey, sid = login(server_url, application, user_login, b_login.user_password.get() or '')
+	except urllib2.HTTPError, e:
+		form.show_message(_("User name or password is incorrect") if e.code == 401 else str(e))
+	except IOError, e:
+		form.show_message(_("Ошибка соединения с сервером: %s") % e)
+	else:
+		set_global('server_url',  server_url)
+		set_global('application', application)
+		set_global('sid',         sid)
+		set_global('user_id',     user_id)
+
+		# key used by driver to access database
+		#set_global('__session_key__', sessionKey)
+
+		# let's start main form with sid
+		set_global('__form_server_url__',           server_url + '/forms')
+		set_global('__form_server_query_string__',  '_SID_=' + sid)
+
+		from gnue.common.datasources.GConnections import GConnections
+		form._object._instance.connections = GConnections('%s/connections?%s' % (server_url, get_global('__form_server_query_string__')))
+		form._object._instance.connections.setSessionKey(sessionKey)
+
+		try:
+			set_global('radicale_url', form._object._instance.connections.getConnectionParameters('radicale')['url'])
+		except:
+			pass
+
+		try:
+			set_global('report_server_direct_url', form._object._instance.connections.getConnectionParameters('reports')['report_server'])
+		except:
+			pass
+			
+		form.run_form('main.gfd')
+		form.close()
+</action>
+
+<action name='cancel'>
+	form.close()
+</action>
+
+<logic>
+	<block name='b_login'>
+		<field name='application' fk_source='ds_applications' fk_key="id" fk_description="name" required='Y' editable='NEW'>
+		  <trigger type='POST-CHANGE'>
+			from gnue.forms.GFObjects.GFField import InvalidFieldValueError
+			try:
+				form.layout.find_child('ok', 'GFButton').enabled = bool(self.get())
+			except InvalidFieldValueError:
+				pass
+		  </trigger>
+		</field>
+		<field name='user_login'/>
+		<field name='user_password'/>
+	</block>
+	<block name='b_applications' datasource='ds_applications' editable='N' deletable='N'>
+		<field name='id'         field='id' />
+		<field name='name'       field='name'/>
+		<field name='server_url' field='server_url' />
+	</block>
+</logic>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox block='b_login' >
+		<entry field='application'   label='Приложение:' style='dropdown'     />
+		<entry field='user_login'    label='Имя:'                       />
+		<entry field='user_password' label='Пароль:'     style='password'     />
+		<hbox>
+			<label text=''/>
+			<button label='Ок'     action='ok'     default='true' name='ok' s:stretch='0'/>
+			<button label='Отмена' action='cancel'                          s:stretch='0'/>
+			<label text=''/>
+		</hbox>
+	</vbox>
+	<!--table block='b_applications' >
+		<entry field='id'         label='Id:' />
+		<entry field='name'       label='Application:'/>
+		<entry field='server_url' label='Server URL:' />
+	</table-->
+</layout>
+</form>

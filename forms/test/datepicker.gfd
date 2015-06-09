@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="DatePicker example" >
+	<logic>
+		<block name="b">
+			<field name="date" datatype="date">
+				<trigger type="POST-FOCUSOUT">
+					if self.isValueValid():
+						print self.get()
+					else:
+						print "invalid value"
+				</trigger>
+			</field>
+			<field name="date2" datatype="date"/>
+			<field name="date3" datatype="datetime"/>
+		</block>
+	</logic>
+	<trigger type="on-activation">
+		import datetime
+		b.date = datetime.date.today()
+	</trigger>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block="b">
+			<hbox label='Date'>
+				<entry name='e_date' field="date"  s:stretch='0' s:def_width='14'  />
+			</hbox>
+			<hbox label='Date'>
+				<entry name='e_date2' field="date2" s:stretch='0' s:def_width='28' />
+			</hbox>
+			<hbox label='Datetime'>
+				<entry name='e_date3' field="date3" s:stretch='0' s:def_width='28' />
+			</hbox>
+			<button label='test'>
+				<trigger type='ON-ACTION'>
+					from toolib.wx.debug.dump import dumpWindowSizes
+
+					for i in ('e_date','e_date2','e_date3'):
+						print
+						print i
+
+						entry = form.layout.find_child(i)
+
+						widget = entry._object.uiWidget.widget
+
+						dumpWindowSizes(widget)
+				</trigger>
+			</button>
+		</vbox>
+	</layout>
+</form>

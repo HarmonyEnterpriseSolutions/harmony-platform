@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="vbox/hbox">
+	<logic>
+		<block name="b">
+			<field name="f" />
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block="b" >
+			<entry field='f' style='richedit'/>
+			<entry field='f' style='multiline'/>
+		</vbox>
+	</layout>
+</form>

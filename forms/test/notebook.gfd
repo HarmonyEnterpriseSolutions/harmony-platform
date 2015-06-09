@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="NoteBook example">
+	<logic />
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<notebook>
+			<trigger type='Pre-PageChange'>
+				print 'Pre-PageChange', self.getSelectedPage()
+				if self.getSelectedPage().name == 'page2':
+					abort('No return from second page, sorry')
+			</trigger>
+			<trigger type='Post-PageChange'>
+				print 'Post-PageChange', self.getSelectedPage()
+			</trigger>
+			<notepage name='page1' caption="Page 1">
+				<label text="Page 1" />
+			</notepage>
+			<notepage name='page2' caption="Page 2">
+				<label text="Page 2" />
+			</notepage>
+		</notebook>
+	</layout>
+</form>

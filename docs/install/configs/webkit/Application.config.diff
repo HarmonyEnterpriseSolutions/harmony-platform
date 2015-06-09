@@ -1,0 +1,41 @@
+*** Application.config.default	Fri Sep 28 17:29:29 2007
+--- Application.config	Mon Oct 08 19:30:26 2007
+***************
+*** 42,50 ****
+  Contexts['MKBrowser'] = WebwarePath + '/MiddleKit/WebBrowser'
+  Contexts['Testing'] = WebKitPath + '/Testing'
+  Contexts['default'] = Contexts['Examples']
+  
+  # Sessions:
+! SessionStore = 'Dynamic' # can be File or Dynamic or Memory
+  SessionStoreDir = 'Sessions'
+  SessionTimeout = 60 # minutes
+  SessionPrefix = None # no prefix for session IDs
+--- 42,51 ----
+  Contexts['MKBrowser'] = WebwarePath + '/MiddleKit/WebBrowser'
+  Contexts['Testing'] = WebKitPath + '/Testing'
+  Contexts['default'] = Contexts['Examples']
++ Contexts['wm'] = 'z:\\projects\\wm\\wkroot'
+  
+  # Sessions:
+! SessionStore = 'Memory' # can be File or Dynamic or Memory
+  SessionStoreDir = 'Sessions'
+  SessionTimeout = 60 # minutes
+  SessionPrefix = None # no prefix for session IDs
+***************
+*** 63,69 ****
+  SecureSessionCookie = True # use a secure cookie for HTTPS connections
+  
+  # Set this to True to allow extra path info to be attached to URLs
+! ExtraPathInfo = False # no extra path info
+  
+  # Caching:
+  CacheServletClasses = True # set to False for debugging
+--- 64,70 ----
+  SecureSessionCookie = True # use a secure cookie for HTTPS connections
+  
+  # Set this to True to allow extra path info to be attached to URLs
+! ExtraPathInfo = True # no extra path info
+  
+  # Caching:
+  CacheServletClasses = True # set to False for debugging

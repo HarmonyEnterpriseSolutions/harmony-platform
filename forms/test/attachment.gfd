@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Attachment">
+	<logic>
+		<block name="b">
+			<field name="attachment"            editable='N'/>
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block='b'>
+			<entry field="attachment"           label='Attachment' style='text_with_buttons'>
+				<entry-button name='eb_upload'   label='...'>
+					<trigger type='ON-ACTION'>
+						from wmlib import files
+						files.uploadFile(form, self.getParent().getField())
+					</trigger>
+				</entry-button>
+				<entry-button name='eb_download' label='V' >
+					<trigger type='ON-ACTION'>
+						from wmlib import files
+						files.downloadFile(form, self.getParent().getField())
+					</trigger>
+				</entry-button>
+				<entry-button name='eb_preview'  label='>' >
+					<trigger type='ON-ACTION'>
+						from wmlib import files
+						files.openFile(form, self.getParent().getField())
+					</trigger>
+				</entry-button>
+			</entry>
+				
+		</vbox>
+		<table block='b'>
+			<entry field="attachment"           label='Attachment' style='text_with_buttons'/>
+		</table>
+	</layout>
+</form>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Form example" description='form tip'>
+	<timer name='readFromScales' time='5000' oneshot='N'>
+		print "TIMER!"
+		return
+	</timer>
+
+	<logic />
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox>
+		<label text="Just Label on the Form"/>
+		</vbox>
+	</layout>
+</form>

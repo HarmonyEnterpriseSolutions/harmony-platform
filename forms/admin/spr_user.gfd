@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding='windows-1251'?>
+
+<!--  GFD generator  -->
+
+<form name='_spr_user' title="Пользователи">
+
+	<parameter name="p_accessobject_id" />
+
+	<datasource name='ds_spr_user' connection='admin' 
+		table = '_spr_user'
+		rowid = 'user_id'
+	/>
+
+	<datasource name='ds_spr_usergroup' connection='admin' 
+		table = '_spr_usergroup'
+		rowid = 'usergroup_id'
+
+		master="ds_spr_user"
+		masterlink="user_id"
+		detaillink="usergroup_user_id"
+
+	/>
+
+	<datasource name='ds_spr_userconfig' connection='db'
+		table = '_spr_userconfig'
+		rowid = 'userconfig_id'
+
+		master="ds_spr_user"
+		masterlink="user_id"
+		detaillink="user_id"
+	/>
+
+	<datasource name='dsref_spr_group' connection='admin' 
+		table = '_spr_group'
+		rowid = 'group_id'
+	/>
+
+
+<logic>
+
+	<block name='b_spr_user' datasource='ds_spr_user' autoNextRecord='Y' startup='full'>
+		<field name = 'id'        field = 'user_id'           />
+		<field name = 'name'      field = 'user_name'         />
+		<field name = 'login'     field = 'user_login'        case='lower'/>
+		<field name = 'sign'      field = 'user_sign'         />
+		<field name = 'password'  field = 'user_password'     />
+	</block>
+
+
+	<block name='b_spr_usergroup' datasource='ds_spr_usergroup' autoNextRecord='Y' startup='full'>
+		<field name = 'id'     	  field = 'usergroup_id'      editable='N'/>
+		<field name = 'user_id'   field = 'usergroup_user_id'           />
+		<field name = 'group_id'  field = 'usergroup_group_id'                fk_source='dsref_spr_group'   fk_description="group_name" fk_key="group_id" />
+	</block>
+
+	<block name='b_spr_userconfig' datasource='ds_spr_userconfig' autoNextRecord='Y' startup='full'>
+		<field name = 'userconfig_id'      field = 'userconfig_id'     />
+		<field name = 'user_id'            field = 'user_id'           />
+		<field name = 'key'     field = 'userconfig_key'    editable='NEW'/>
+		<field name = 'value'   field = 'userconfig_value'  />
+	</block>
+</logic>
+
+<action name="setPassword" label="Задать пароль">
+	params = { 'password' : None }
+	form.show_dialog('SetPasswordDialog', params, True)
+	if params['password'] is not None:
+		b_spr_user.password = params['password']
+	
+</action>
+
+<import-toolbar name='__main_toolbar__' library='../common/toolbar.gfd'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox>
+		<splitter>
+		
+			<table block='b_spr_user'>
+				<import-menu library='../common/menues.gfd' name='table-default'>
+					<menuitem/>
+					<menuitem action='setPassword'/>
+				</import-menu>
+
+				<entry field = 'id'            label = 'id'      />
+				<entry field = 'name'          label = 'Имя'     />
+				<entry field = 'login'         label = 'Логин'   />
+				<entry field = 'sign'          label = 'Подпись' />
+			</table>
+		
+		
+			<notebook>
+				<notepage caption='Участие в группах'>
+					<table block='b_spr_usergroup'>
+						<import-menu library='../common/menues.gfd' name='table-default'/>
+
+						<entry field = 'group_id'           label = 'Участник групп'/>
+						<!--entry field = 'user_id'            label = 'user_id'/-->
+					</table>
+				</notepage>
+				<notepage caption='Системные настройки пользователя'>
+					<table block='b_spr_userconfig'>
+						<import-menu library='../common/menues.gfd' name='table-default'/>
+				
+						<entry field = 'key'     label = 'Ключ'/>
+						<entry field = 'value'   label = 'Значение'/>
+					</table>
+				</notepage>
+			</notebook>
+		</splitter>
+		
+	</vbox>
+</layout>
+
+<dialog name="SetPasswordDialog" title='Пароль'>
+	<parameter name="password" datatype="text"/>
+	<logic>
+		<block name="b_password">
+			<field name="password"         datatype="text"/>
+			<field name="password_confirm" datatype="text"/>
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+			<vbox name="box" block="b_password">
+				<entry field="password"         label="Пароль:"         style='password'/>
+				<entry field="password_confirm" label="Подтверждение:"  style='password'/>
+				<hbox>
+					<button label="ОК">
+						<trigger type="ON-ACTION">
+							from wmlib.login import encodePassword
+
+							if b_password.password.get() == b_password.password_confirm.get():
+								password.value = encodePassword(b_password.password.get() or '')
+								b_password.password = None
+								b_password.password_confirm = None
+								form.close()
+							else:
+								form.show_message(u"Пароли не совпадают")
+								form.next_entry()
+								form.next_entry()
+						</trigger>
+					</button>
+					<button label="Отмена">
+						<trigger type="ON-ACTION">
+							password.value = None
+							b_password.password = None
+							b_password.password_confirm = None
+							form.close()
+						</trigger>
+					</button>
+				</hbox>
+			</vbox>
+	</layout>
+</dialog>
+
+</form>

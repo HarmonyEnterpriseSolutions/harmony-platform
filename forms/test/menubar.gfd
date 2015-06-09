@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Main Menu example">
+	<datasource name="ds_menu" type="static">
+		<staticset fields="id, parent_id, name">
+			<staticsetrow>
+				<staticsetfield name="id" value="1" />
+				<staticsetfield name="parent_id" value="0" />
+				<staticsetfield name="name" value="Root" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="2" />
+				<staticsetfield name="parent_id" value="1" />
+				<staticsetfield name="name" value="One" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="3" />
+				<staticsetfield name="parent_id" value="1" />
+				<staticsetfield name="name" value="Two" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="4" />
+				<staticsetfield name="parent_id" value="1" />
+				<staticsetfield name="name" value="Three" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+	<logic>
+		<block name='b_menu' datasource='ds_menu' editable='N' deletable='N'>
+			<field name='id' field='id' />
+			<field name='parent_id' field='parent_id' />
+			<field name='name' field='name' />
+		</block>
+	</logic>
+	<menu name="__extra_menu__">
+		<menu label="Static">
+			<menu label="Subtest 1">
+				<menuitem label="SubSubtest 1" />
+				<menuitem />
+				<menuitem label="SubSubtest 2" />
+			</menu>
+			<menuitem label="Subtest 2" />
+		</menu>
+		<dyn-menu label="Dynamic" block='b_menu' nodename='%(name)s' fld_id='id' fld_parent='parent_id' />
+	</menu>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<tree block="b_menu" fld_id="id" fld_parent="parent_id" nodename="%(name)s" >
+			<menu>
+				<menuitem label="Test" />
+			</menu>
+		</tree>
+	</layout>
+</form>

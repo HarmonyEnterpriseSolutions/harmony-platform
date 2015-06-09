@@ -1,0 +1,193 @@
+<?xml version="1.0"  encoding='windows-1251'?>
+<form name='EmailReport'>
+
+	<parameter name='p_title'      />
+	<parameter name='p_name'       />
+	<parameter name='p_parameters' />
+	<parameter name='p_connection' />
+
+	<parameter name='p_org_id'     />
+
+	<parameter name='p_filename'   />
+	<parameter name='p_subject'    />
+	<parameter name='p_text'       />
+
+	<parameter name='p_accessobject_id' />
+
+	<parameter name='p_popup_form_email' />
+
+
+	<datasource name='ds_spr_org_my' connection='db'
+		table = 'spr_org_my'
+		rowid = 'org_my_id'
+	/>
+
+	<datasource name='ds_spr_org_staff' connection='db'
+		table = 'spr_org_staff'
+		rowid = 'org_staff_id'
+	/>
+
+	<import-datasource name='dsref_format' library='ds_format.gfd'/>
+
+	<trigger type='ON-STARTUP'>
+		if p_popup_form_email.value:
+			form.layout.find_child('popupwindow_org_contact_email').form = p_popup_form_email.value
+
+		ds_spr_org_my.setParameter('org_id', get_global('current_org_id'))
+		ds_spr_org_staff.setParameter('org_staff_id', get_global('current_org_staff_id'))
+	</trigger>
+
+	<trigger type='ON-ACTIVATION'>
+		from wmlib import report
+		from wmlib import ini
+		from wmlib import text
+		from urllib2 import HTTPError
+		from gnue.common.apps.errors import UserError
+
+		form.title = _('Отчет по почте: %s') % p_title.value
+
+
+		url = report.getReportUrl(form,
+			p_name.value,
+			parameters = p_parameters.value,
+			format     = 'pdf',
+			connection = p_connection.value,
+			accessobject_id = p_accessobject_id.value,
+		)
+
+		try:
+			b_message.attachment = url
+		except HTTPError, e:
+			if e.code == 502:
+				raise UserError(_("Сервер отчетов не отвечает\n%s") % e)
+			else:
+				raise
+
+		form.format_text()
+	</trigger>
+
+	<trigger name='format_text' type='NAMED'>
+		from wmlib import ini
+		from toolib.text.report.TextFormatFactory import TextFormatFactory
+		from toolib.text.report.TextFormatData import TextFormatData
+		from toolib.text.report.config import TEXT_FORMAT_FACTORY_CONFIG
+
+		b_message.subject = p_subject.value or _('Отчет по почте: %s') % p_title.value
+		text = p_text.value or _('Пожалуйста, смотрите вложение')
+
+		template = ini.getValue(b_spr_org_my.org_params.get(), 'mail', 'template', '')
+		if template:
+
+			TEXT_FORMAT_FACTORY_CONFIG['converters'] = dict(TEXT_FORMAT_FACTORY_CONFIG['converters'])
+			TEXT_FORMAT_FACTORY_CONFIG['converters']['get'] = lambda field, value: value.get()
+
+			text = TextFormatFactory(**TEXT_FORMAT_FACTORY_CONFIG).format(template, TextFormatData({
+				'org_contact' : get_global('b_current_org_contact'),
+				'org_staff' : b_spr_org_staff,
+				'content' : text,
+			}))
+
+		b_message.text = text
+	</trigger>
+
+	<trigger name='get_data' type='NAMED'>
+		import urllib2
+		from wmlib import report
+		if b_message.format.get() == 'pdf':
+			return form.layout.find_child('attachment').getData()
+		else:
+			return urllib2.urlopen(report.getReportUrl(form,
+				p_name.value,
+				parameters = p_parameters.value,
+				format     = b_message.format.get(),
+				connection = p_connection.value,
+				accessobject_id = p_accessobject_id.value,
+			)).read()
+	</trigger>
+
+<logic>
+	<block name='b_message' editable='Y' queryable='N' deletable='N'>
+		<field name = 'to'      >
+			<!--trigger type='POST-CHANGE'>
+				if self.isValueValid():
+					form.format_text()
+			</trigger-->
+		</field>
+		<field name = 'format' fk_source='dsref_format' fk_key='id' fk_description='name' default='pdf'>
+			<!--trigger type='POST-CHANGE'>
+				if self.isValueValid():
+					form.format_text()
+			</trigger-->
+		</field>
+		<field name = 'subject' />
+		<field name = 'text'    />
+		<field name = 'attachment' />
+	</block>
+
+	<block name='b_spr_org_my' datasource='ds_spr_org_my' startup='full'>
+		<field name = 'org_my_id'      	field = 'org_my_id'    />
+		<field name = 'org_params'    	field = 'org_params'   />
+	</block>
+
+	<block name='b_spr_org_staff' datasource='ds_spr_org_staff' startup='full'>
+		<field name = 'id'               field = 'org_staff_id'           />
+		<field name = 'name'             field = 'org_staff_name'         />
+		<field name = 'address'          field = 'org_staff_address'      />
+		<field name = 'email'            field = 'org_staff_email'        />
+		<field name = 'phone'            field = 'org_staff_phone'        />
+		<field name = 'note'             field = 'org_staff_note'         />
+		<field name = 'mail_footer'      field = 'org_staff_mail_footer'  />
+	</block>
+
+</logic>
+
+
+
+<import-toolbar library='toolbar.gfd' name='__main_toolbar__'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+    <splitter align='h'>
+	<vbox block='b_message' >
+		<hbox label='Кому'>
+			<entry field='to' style='picker'>
+				<popupwindow name='popupwindow_org_contact_email' form='popup_org_contact_email.gfd'/>
+			</entry>
+			<button label='Отправить' s:stretch='0'>
+				<trigger type='ON-ACTION'>
+					from wmlib import mail
+					from wmlib import ini
+					from wmlib import text
+					from toolib.text.email.EmailMessage import EmailFormatException
+
+					sender = get_global('b_current_org_contact').email.get()
+					try:
+						mail.sendMessage(
+							sender,
+							b_message.to.get(),
+							bcc        = [sender],
+							subject    = b_message.subject.get(),
+							text       = b_message.text.get(),
+							data       = form.get_data(),
+							mimetype   = "application/" + b_message.format.get(),
+							filename   = '.'.join((p_filename.value or p_title.value, b_message.format.get())),
+						)
+					except EmailFormatException, e:
+						form.show_message(str(e), kind='Error')
+					else:
+						form.show_message(_("Письмо отправлено"))
+				</trigger>
+			</button>
+		</hbox>
+
+		<entry field='format'  label='Формат'/>
+		<entry field='subject' label='Тема'/>
+		<entry field='text'    label='Текст' style='multiline'/>
+	</vbox>
+	
+		<url-resource name='attachment' block='b_message' field='attachment' content_type='application/pdf'/>
+	
+	</splitter>
+
+</layout>
+
+</form>

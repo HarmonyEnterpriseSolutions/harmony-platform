@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding ='Cp866'?>
+
+<form title="Parameter Test">
+
+<logic>
+	<block name="blk">
+		<field name="one" datatype="text"/>
+		<field name="two" datatype="text"/>
+		<field name="three" datatype="text"/>
+	</block>
+</logic>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<hbox block='blk'>
+		<entry field="one" label="One:"     style='multiline'
+			s:def_width      = '20'
+			s:def_height     = '5'
+			s:max_width      = '22' 
+			s:max_height     = '7'
+			s:stretch        = '1'
+		/>
+		<entry field="two" label="Two:"
+			s:def_width      = '20'
+			s:def_height     = '2'
+			s:max_width      = '22' 
+			s:max_height     = '3'
+			s:stretch        = '1'
+		/>
+		<entry field="three" label="Three:" s:stretch='0'/>
+
+		<button name="btn" label="Button"   s:stretch='0'/>
+	</hbox>
+</layout>
+
+</form>

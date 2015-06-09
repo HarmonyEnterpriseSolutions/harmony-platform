@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Tree example">
+
+	<datasource name="ds_tree" type="static"
+		rowid='id'
+	>
+		<staticset fields="id, name_id, style">
+			<staticsetrow>
+				<staticsetfield name="id" value="1" />
+				<staticsetfield name="name_id" value="4" />
+				<staticsetfield name="style" value="None" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="2" />
+				<staticsetfield name="name_id" value="3" />
+				<staticsetfield name="style" value="lack" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="3" />
+				<staticsetfield name="name_id" value="2" />
+				<staticsetfield name="style" value="ok" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="4" />
+				<staticsetfield name="name_id" value="1" />
+				<staticsetfield name="style" value="overflow" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+
+	<datasource name="dsref_name" type="static"
+		rowid='id'
+	>
+		<staticset fields="id, name">
+			<staticsetrow>
+				<staticsetfield name="id" value="1" />
+				<staticsetfield name="name" value="'Trees'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="2" />
+				<staticsetfield name="name" value="'Skis'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="3" />
+				<staticsetfield name="name" value="'Pitchforks'" />
+			</staticsetrow>
+			<staticsetrow>
+				<staticsetfield name="id" value="4" />
+				<staticsetfield name="name" value="'Spades'" />
+			</staticsetrow>
+		</staticset>
+	</datasource>
+
+	<trigger type='ON-ACTIVATION'>
+		b_tree.name_id.editable = False
+		b_tree.style.editable = False
+	</trigger>
+<logic>
+	<block name="b_tree" datasource="ds_tree" startup='full'>
+		<field name="id"        field="id"        />
+		<field name="parent_id" field="parent_id" />
+		<field name="name_id"    field="name_id"  fk_source='dsref_name' fk_key='id' fk_description='name'/>
+		<field name="style"      field="style"     />
+	 </block>
+	</logic>
+	
+<import-toolbar library='../common/toolbar.gfd' name='__main_toolbar__'/>
+<layout>
+	<vbox>
+		<notebook>
+			<notepage caption='page'>
+				<table name='table' block = 'b_tree' ><!--fld_style='style'-->
+					<import-menu library='../common/menues.gfd' name='table-default'/>
+
+					<entry field="id"        label="id"        />
+					<entry field="name_id"   label="name_id"      />
+					<entry field="style"     label="style"     />
+
+					<table-row-styles>
+						<table-row-style name='lack'     bgcolor='red'/>
+						<table-row-style name='ok'       bgcolor='darkgreen' textcolor='white'/>
+						<table-row-style name='overflow' bgcolor='lightblue'/>
+					</table-row-styles>
+				</table>
+			</notepage>
+		</notebook>
+		<button label='b' >
+			<trigger type='ON-ACTION'>
+				from toolib.wx.debug.dump import dumpWindowSizes
+				dumpWindowSizes(form.layout.find_child('table')._object.uiWidget.widget)
+			</trigger>
+			
+		</button>
+	</vbox>
+</layout>
+</form>

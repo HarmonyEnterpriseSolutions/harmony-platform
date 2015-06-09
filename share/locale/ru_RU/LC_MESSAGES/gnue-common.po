@@ -1,0 +1,1213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Rata\n"
+"POT-Creation-Date: Wed Apr 02 18:03:12 2003\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Oleg Noga <noga@abrisola.com.ua>\n"
+"Language-Team: RUSSIAN <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=Cp1251\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.4\n"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:121
+msgid "Displays the version information for this program."
+msgstr "Отображает информацию о версии данной программы."
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:124
+msgid "level"
+msgstr "уровень"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:125
+msgid "Enables debugging messages.  Argument specifies the level of messages to display (e.g., \"--debug-level 5\" displays all debugging messages at level 5 or below.)"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:129
+#: .\..\src\gnue\common\apps\GBaseApp.py:168
+#: .\..\src\gnue\common\datasources\readgsd.py:142
+msgid "filename"
+msgstr "имя файла"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:130
+msgid "Sends all debugging messages to a specified file (e.g., \"--debug-file trace.log\" sends all output to \"trace.log\")"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:137
+msgid "All python imports are logged to stdout"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:140
+msgid "Displays no output at all."
+msgstr "Блокирует вывод на экран"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:143
+msgid "Displays this help screen."
+msgstr "Отображает данный экран помощи"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:147
+msgid "Displays a list of valid configuration file entries, their purpose, and their default values."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:155
+msgid "Display all options of interest to core developers. "
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:158
+msgid "type[,subtype]"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:159
+msgid "Generates self-documentation."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:162
+msgid "format"
+msgstr "формат"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:163
+msgid "Format to output the self-documentation in. Supported formats are dependent on the type of selfdoc being created."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:169
+msgid "Specifies the filename that selfdoc should write to. If not provided, output is sent to stdout."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:173
+msgid "options"
+msgstr "опции"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:174
+msgid "Options specific to individual selfdoc types."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:177
+msgid "Run Python's built-in profiler and display the resulting run statistics."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:181
+msgid "Run the app inside Python's built-in debugger "
+msgstr "Запускает приложение внутри встроенного отладчика Python"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:185
+msgid "Debug Python's garbage collection on a SIGUSR1. If the argument is empty 'garbage.log' will be used as logfile."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:196
+#: .\..\src\gnue\common\utils\tree.py:713
+msgid "name"
+msgstr "имя файла"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:197
+msgid "Username used to log into the database.  Note that if specified, this will be used for all databases.  If not supplied, the program will prompt for username."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:202
+msgid "passwd"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:203
+msgid ""
+"Password used to log into the database.  Note that if specified, this will be used for all databases.  If not supplied, the program will prompt for password if needed.\n"
+"NOTE: SUPPLYING A PASSWORD VIA THE COMMAND LINE MAY BE CONSIDERED A SECURITY RISK AND IS NOT RECOMMENDED."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:213
+msgid "Display help information related to database connections, including a list of available drivers."
+msgstr "Отображает информацию относительно подключений к базам данных, включая список доступных драйверов."
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:217
+msgid "location"
+msgstr "опции"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:218
+msgid "Specifies the location of the connection definition file. <location> may specify a file name (/usr/local/gnue/etc/connections.conf),or a URL location (http://localhost/connections.conf).If this option is not specified, the environent variable GNUE_CONNECTIONS is checked.If neither of them is set, \"%s\" is used as a default."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:230
+msgid "This application requires Python 2.3 or greater."
+msgstr "Приложение требует установки Python 2.1 и выше."
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:232
+msgid "This application requires Python 2.3 or greater. You are running Python %s"
+msgstr "Приложение требует установки Python 2.1 и выше. Вы используете Python %s"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:336
+msgid "The debug_level option (\"-d\") expects numerical values."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:350
+msgid ""
+"The gnue.conf file is incomplete:\n"
+"   %s"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:394
+msgid ""
+"Unable to load the connections definition file.\n"
+"\n"
+"The connections file is in an invalid format.\n"
+"%s"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:399
+msgid "Unable to load the connections definition file: %s."
+msgstr "Не удалось загрузить файл определения соединений: %s."
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:440
+msgid ""
+"\n"
+"%(name)s\n"
+"Version %(version)s\n"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:442
+msgid ""
+"GNUe Common Version %s\n"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:527
+msgid "Usage:  "
+msgstr "Использование:  "
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:558
+msgid "Available command line options:"
+msgstr "Доступные опции командной строки:"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:577
+msgid "The following options are mainly of interest to GNUe developers."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:579
+#: .\..\src\gnue\common\apps\GBaseApp.py:602
+msgid "To view general help, run this command with the --help option."
+msgstr "Для просмотра подсказки, запустите данную команду с опцией --help"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:582
+msgid "Developer-specific command line options:"
+msgstr "Опции командной строки для разработчиков."
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:600
+msgid "The following connection/database-related options are available."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:605
+msgid "Database/connection command line options:"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:608
+msgid "The following database drivers are installed on your system:"
+msgstr "Следующие драйвера к базам данный доступны на вашей системе:"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:683
+msgid "Error: %s"
+msgstr "Ошибка: %s"
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:687
+msgid ""
+"\n"
+"For help, type:\n"
+"   %s --help\n"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GBaseApp.py:822
+msgid "For help, type: %s --help"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GConfig.py:116
+msgid "Configuration file has duplicate sections."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GConfig.py:119
+msgid "Configuration file has no sections."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GConfig.py:122
+msgid ""
+"Configuration file cannot be parsed:\n"
+"%s"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GConfig.py:220
+msgid "Config option %(field)s is of wrong type in [%(section)s]"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GServerApp.py:44
+msgid "The server is already running on pid %s"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GServerApp.py:54
+msgid "Do not send the server into the background. For a POSIX system, this option keeps the server process from forking and detaching from its controlling terminal."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GServerApp.py:61
+msgid "pid-file"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\GServerApp.py:62
+msgid "Filename to store the server's process id."
+msgstr ""
+
+#: .\..\src\gnue\common\apps\RuntimeSettings.py:94
+msgid "Warning: Unable to save all session data to %s"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\RuntimeSettings.py:107
+msgid ""
+"\n"
+"Warning: Unable to save session data to %s\n"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\checktype.py:77
+msgid "\"%(varname)s\" is expected to be of %(expected)s but is of %(actual)s and has value %(value)s"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\manpage.py:130
+msgid "value"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\plugin.py:91
+msgid "Cannot load plugin '%s'"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\plugin.py:92
+msgid ""
+"The following plugins failed:\n"
+msgstr ""
+
+#: .\..\src\gnue\common\apps\plugin.py:99
+msgid "Cannot find plugin '%s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:82
+msgid "Cannot insert a new record into a read only datasource"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:92
+msgid "Cannot modify data of a read only datasource"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:102
+msgid "Cannot delete a record from a read only datasource"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:123
+msgid "Datasource %s is of type 'sql', but has no <sql> definition."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:134
+msgid "Datasource %s is not of type 'sql', but has an <sql> definition."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:145
+msgid "Detail datasource '%(name)s' references non-existant master '%(master)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:156
+msgid "Datasource '%s' contains a 'master' attribute, but no 'masterlink' attribute"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:167
+msgid "Datasource '%s' contains a 'master' attribute, but no 'detaillink' attribute"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:179
+msgid "Number of fields in 'masterlink' and 'detaillink' attributes does not match for datasource '%s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:193
+msgid "Cannot use 'update' and 'call' functions on this datasource"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:206
+msgid "Cannot call a function on an empty record"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\Exceptions.py:219
+msgid "Record not found on attempt to requery changed record"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConditions.py:71
+msgid "Conditionelement '%(element)s' was expected to have '%(wanted)d'arguments, but only has %(real)d'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConditions.py:89
+msgid "The field '%(field)s' has no entry in the given lookup-table"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConditions.py:111
+msgid "No unification rule for combination '%(type1)s' and '%(type2)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConditions.py:124
+msgid "Value '%(value1)s' of type '%(type1)s' cannot be converted into type '%(type2)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConnections.py:47
+msgid ""
+"The connections file does not contain a definition for \"%(connection)s\".\n"
+"\n"
+"File: %(file)s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConnections.py:64
+msgid "Module '%s' is not installed."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConnections.py:66
+msgid "  You can download it from %s."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConnections.py:136
+msgid ""
+"The connections file has duplicate source definitions.\n"
+"\n"
+"File: %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConnections.py:140
+msgid ""
+"The connections file has no source definitions.\n"
+"\n"
+"File: %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConnections.py:144
+msgid ""
+"The connections file cannot be parsed.\n"
+"\n"
+"File: %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConnections.py:430
+msgid "Login required for %(newline)s\"%(description)s\""
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConnections.py:434
+msgid "GNU Enterprise: Login to %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GConnections.py:469
+msgid ""
+"Unable to log in after 4 attempts.\n"
+"\n"
+"Error: %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:938
+msgid "Unknown type/format of 'order-by' attribute"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1157
+msgid "A datasource provides a link to a database table or some similar data store."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1164
+msgid "Unique name of the datasource."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1166
+msgid "Data Object Type"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1170
+msgid "Connection Name"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1172
+msgid "The name of the connection as in connections.conf that points to a valid database."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1179
+msgid "Table Name"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1182
+msgid "The table in the database this datasource will point to."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1185
+msgid "Cache Size"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1186
+msgid "Cache this number of records"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1190
+msgid "Query on Startup"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1191
+msgid "If true, the datasource is populated on form startup. If false (default), the form starts out with an empty record until the user or a trigger queries the database."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1204
+msgid "M/D Master DataSource"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1205
+msgid "If this datasource is the child in a master/detail relationship, this property contains the name of the master datasource."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1210
+msgid "M/D Master Field(s)"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1211
+msgid "If this datasource is the child in a master/detail relationship, this property contains a comma-separated list of the master datasource's field(s) used for linking."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1218
+msgid "M/D Detail Field(s)"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1219
+msgid "If this datasource is the child in a master/detail relationship, this property contains a comma-separated list of the this (child's) datasource's field(s) used for linking."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1227
+msgid "Explicit Fields"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1231
+msgid "Primary Key Field(s)"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1232
+msgid "Comma-separated list of the fields that make up the primary key."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1236
+msgid "Primary Key Sequence"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1237
+msgid "Name of the sequence used to populate a primary key (only applies to relational backends that support sequences; requires a single {primarykey} value."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1244
+msgid "Row-ID field"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1245
+msgid "Name of the field to use as Row-ID if the connection does not support row ids."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1249
+msgid "Re-query on commit?"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1251
+msgid "Requery a record after posting it; requires {primarykey} support and a non-null primary key value at the time of update (whether via a trigger or by the use of {primarykeyseq}."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1271
+msgid "The name of the field by which the datasource will be ordered."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1276
+msgid "Selects if the ordering is done in ascending (default) or in descending order."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1284
+msgid "Selects wether the ordering is case-sensitive or not."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1430
+msgid "The URL '%s' is not a valid application server resource locator"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1441
+msgid "Resource type '%s' is not supported"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GDataSource.py:1451
+msgid "Resource '%(name)s' of type '%(type)s' not found"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\GLoginHandler.py:44
+msgid "User canceled the login request."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\Base\Behavior.py:44
+msgid "No type transformation for '%s' found"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\Base\Behavior.py:190
+msgid "DB-Export of %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\Base\Behavior.py:258
+msgid "Cannot merge triples of different length"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\DBSIG2\Connection.py:112
+#: .\..\src\gnue\common\datasources\drivers\ldap\Connection.py:64
+#: .\..\src\gnue\common\datasources\drivers\other\appserver.py:333
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:94
+msgid "User Name"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\DBSIG2\Connection.py:113
+#: .\..\src\gnue\common\datasources\drivers\ldap\Connection.py:65
+#: .\..\src\gnue\common\datasources\drivers\other\appserver.py:334
+#: .\..\src\gnue\common\datasources\drivers\sql\interbase\Behavior.py:93
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:95
+msgid "Password"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\DBSIG2\ResultSet.py:45
+msgid "The driver '%(driver)s' returned an invalid row count '%(count)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\file\Base.py:240
+#: .\..\src\gnue\common\datasources\drivers\sql\interbase\Behavior.py:57
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:55
+#: .\..\src\gnue\common\datasources\drivers\sql\msado\Behavior.py:51
+#: .\..\src\gnue\common\datasources\drivers\sql\mysql\Behavior.py:171
+#: .\..\src\gnue\common\datasources\drivers\sql\postgresql\Behavior.py:55
+#: .\..\src\gnue\common\datasources\drivers\sql\sqlite2\Behavior.py:104
+msgid "Tables"
+msgstr "Таблицы"
+
+#: .\..\src\gnue\common\datasources\drivers\file\inifile.py:86
+msgid "Duplicate section name %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\file\inifile.py:93
+msgid "Missing section name"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\other\appserver.py:116
+msgid "Business Object Class"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\other\appserver.py:426
+msgid "'%(value)s' is not a valid filter-value for '%(filter)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\interbase\Behavior.py:58
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:56
+#: .\..\src\gnue\common\datasources\drivers\sql\msado\Behavior.py:52
+#: .\..\src\gnue\common\datasources\drivers\sql\postgresql\Behavior.py:54
+#: .\..\src\gnue\common\datasources\drivers\sql\sqlite2\Behavior.py:105
+msgid "Views"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\interbase\Behavior.py:94
+msgid "Logon for SYSDBA into Security Database"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\interbase\Behavior.py:101
+msgid "Please specify a password"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:93
+msgid "OS User for host %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:104
+msgid "Unable to establish session: %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:113
+msgid "Creating database instance %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:117
+msgid "Setting up parameters ..."
+msgstr "Установка параметров ..."
+
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:126
+msgid "Adding log- and data-volumes ..."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:130
+msgid "Entering administration mode"
+msgstr "Переключение в административный режим"
+
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:133
+msgid "Activating instance with initial user %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:136
+msgid "Loading system tables ..."
+msgstr "Загрузка системных таблиц ..."
+
+#: .\..\src\gnue\common\datasources\drivers\sql\maxdb\Behavior.py:139
+msgid "Database instance created."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\mssql\ErrorDecorators.py:15
+#: .\..\src\gnue\common\datasources\drivers\sql\postgresql\ErrorDecorators.py:9
+msgid "The field '%s' is required. Please fill the field and try again"
+msgstr "Поле '%s' обязательное для заполнения. Заполните, пожалуйста, и повторите попытку"
+
+#: .\..\src\gnue\common\datasources\drivers\sql\mssql\ErrorDecorators.py:19
+msgid "Violation of UNIQUE KEY constraint '%s'. Cannot insert duplicate key in object '%s'."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\mysql\Behavior.py:304
+msgid "WARNING: changing column type of '%(table)s.%(column)s' to 'timestamp'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\oracle\Behavior.py:52
+msgid "User Tables"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\oracle\Behavior.py:53
+msgid "User Views"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\oracle\Behavior.py:54
+msgid "User Synonyms"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\oracle\Behavior.py:55
+msgid "System Tables"
+msgstr "Системные Таблицы"
+
+#: .\..\src\gnue\common\datasources\drivers\sql\oracle\Behavior.py:56
+msgid "System Views"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\oracle\Behavior.py:57
+msgid "System Synonyms"
+msgstr ""
+
+#:
+#: .\..\src\gnue\common\datasources\drivers\sql\postgresql\ErrorDecorators.py:27
+msgid "Value already exists. Duplicate key value violates unique constraint '%s'"
+msgstr "Данное значение уже существует. Ограничение на уникальность '%s'"
+
+#: .\..\src\gnue\common\datasources\drivers\sql\sqlite2\Behavior.py:67
+msgid "Cannot find table '%s' anymore"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\drivers\sql\sqlite2\Behavior.py:75
+msgid "Cannot split SQL command: '%s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:45
+msgid "Table '%(table)s' not found in the schema"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:50
+msgid "Key field(s) '%(fields)s' missing in row '%(row)s' of table '%(table)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:58
+msgid "Table '%(table)s' has no field '%(fields)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:64
+msgid "Tables have circular or unresolveable references"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:69
+msgid "Table '%s' contains circular/unresolvable record references"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:75
+msgid "The value '%(value)s' is not a valid number (%(length)s.%(scale)s)"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:82
+msgid "The value '%(value)s' is out of range (%(length)s.%(scale)s)"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:89
+msgid "'%(value)s' is not a valid boolean value"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:94
+msgid "'%s' is not a vaild date, use 'YYYY-MM-DD' (ISO)"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:99
+msgid "'%s' is not a vaild time, use 'HH[:MM[:SS[.ss]]]' (ISO)"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:105
+msgid "'%s' is not a vaild date/time, use 'YYYY-MM-DD HH[:MM[:SS[.ss]]]' (ISO)"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:111
+msgid "'%s' is not a recognized field type"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:128
+msgid "Import GNUe Schema Definition files into a given connection"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:137
+msgid "connectionname"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:139
+msgid "Use the connection <connectionname> for creating the schema"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:143
+msgid "Also send the code for creating the schema to this file."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:147
+msgid "If this flag is set, only code is sent to the output file and the schema is not created automatically."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:152
+msgid "Mode of operation. If mode is 'schema', only schema creation is done. If mode is 'data' only data integration is done."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:156
+msgid "user"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:157
+msgid "Set the username to connect to the database. If the database is to be created and no owner (--owner) is specified, this username will be it's owner."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:161
+msgid "password"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:162
+msgid "Set the password to connect to the database."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:164
+msgid "owner"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:165
+msgid "If the database is to be created this will be its owner."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:168
+msgid "ownerpwd"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:169
+msgid "If the database is to be created this will be the password used for the database owner."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:173
+msgid "If this option is set, the database will be created before any schema creation is done. There must be an owner or a username either from the given connection-configuration or from the command line. This user becomes the owner of the database and will be implicitly created."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:181
+msgid "If this option is set, the program runs in batch-mode, which means all questions are answered with 'yes' automatically."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:223
+msgid "No input file specified."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:234
+msgid "Unable to open input file: %s"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:242
+msgid "Output to file only requested, but no filename specified."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:253
+msgid "Mode of operation must be one of 'both', 'schema' or 'data'."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:313
+msgid "You are about to create the new database '%s'. Continue"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:315
+#: .\..\src\gnue\common\datasources\readgsd.py:325
+#: .\..\src\gnue\common\datasources\readgsd.py:382
+msgid "n"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:315
+#: .\..\src\gnue\common\datasources\readgsd.py:325
+#: .\..\src\gnue\common\datasources\readgsd.py:382
+#: .\..\src\gnue\common\datasources\readgsd.py:773
+msgid "y"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:323
+msgid "You are about to change the database '%s'. Continue"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:330
+msgid "Updating schema ..."
+msgstr "Обновление схемы ..."
+
+#: .\..\src\gnue\common\datasources\readgsd.py:356
+msgid "Updating data ..."
+msgstr "Обновление данных ..."
+
+#: .\..\src\gnue\common\datasources\readgsd.py:380
+msgid "The table '%s' has no key defined. Shall i insert all rows"
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:517
+msgid "  updating table '%s' ..."
+msgstr "  обновление таблицы '%s' ..."
+
+#: .\..\src\gnue\common\datasources\readgsd.py:544
+msgid "    Rows: %(ins)d inserted, %(upd)d updated, %(kept)d unchanged."
+msgstr ""
+
+#: .\..\src\gnue\common\datasources\readgsd.py:583
+msgid "  inserting into table '%s' ..."
+msgstr "  обновление таблицы '%s' ..."
+
+#: .\..\src\gnue\common\datasources\readgsd.py:593
+msgid "    Rows: %(ins)d inserted"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GBinary.py:42
+msgid "Unsupported binary format: '%(format)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:70
+msgid "XML markup error in '%(url)s' at line %(line)s:"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:73
+msgid "XML markup error in '%(url)s':"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:83
+msgid "'%(value)s' is not valid for %(attr)s-attribute which allows these values only: %(allowed)s"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:158
+msgid "Error loading %s: empty definition file"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:162
+msgid "Error loading %(filetype)s: not a valid %(filetype)s definition (expected: %(expected)s, got: %(got)s)"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:311
+msgid "File is missing required tag <%s>"
+msgstr "Отсутствует обязательный тэг <%s>"
+
+#: .\..\src\gnue\common\definitions\GParser.py:360
+msgid "Error processing <%(tagname)s> tag [I do not know what a <%(tagname)s> tag does]"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:382
+msgid "Error processing <%(tagname)s> tag [tag not allowed at this position]"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:396
+msgid "Unexpected namespace on attribute"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:413
+msgid "Error processing <%(tagname)s> tag [I do not recognize the \"%(attribute)s\" attribute]"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:434
+msgid "Error processing <%(tag)s> tag [\"%(attribute)s\" attribute should be unique; duplicate value is \"%(duplicate)s\"]"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:458
+msgid "Error processing <%(tagname)s> tag [required attribute \"%(attribute)s\" not present]"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:465
+msgid ""
+"Error in GParser xmlElement definition for %(tag)s/%(attr)s\n"
+"%(message)s"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:504
+msgid "Error processing <%(namespace)s:%(name)s> tag: root element needs to be in default namespace"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:524
+msgid "WARNING: Markup includes unsupported namespace '%s'."
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParser.py:756
+msgid "Unable to find an importable object named %(name)s in %(library)s"
+msgstr ""
+
+#: .\..\src\gnue\common\definitions\GParserHelpers.py:43
+msgid "Cannot assign class '%(source)s' to class '%(dest)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\BaseMask.py:142
+msgid "The requested format mask \"%(mask)s\" is not defined for %(type)s fields"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\BaseMask.py:159
+msgid "Unexpected character \"%(char)s\" in %(type)s mask."
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\DateMask.py:139
+msgid "inputMaskPos=%s"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\DateMask.py:140
+msgid "inputMaskLen=%s"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\GTypecast.py:40
+msgid "Type cast error"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\GTypecast.py:161
+msgid "Whole numbers must be positive or 0"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\NumberMask.py:203
+#: .\..\src\gnue\common\formatting\TextMask.py:192
+msgid "Invalid Entry"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\masks\GMask.py:66
+msgid "Mask Type"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\masks\GMask.py:69
+msgid "Display/Output"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\masks\GMask.py:70
+msgid "Input Validation/Reformatting"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\masks\GMask.py:71
+msgid "Storage"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\masks\GMask.py:72
+msgid "Validation"
+msgstr ""
+
+#: .\..\src\gnue\common\formatting\masks\InputMask.py:157
+msgid ""
+"input error:\n"
+"%(exType)s\n"
+"%(exMessage)s"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:45
+msgid "Invalid trigger type '%s'"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:58
+msgid "Invalid trigger type '%s' fired by %s"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:256
+msgid "A piece of code that can be bound to a specific event."
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:266
+#: .\..\src\gnue\common\logic\usercode.py:264
+msgid "Name"
+msgstr "Название"
+
+#: .\..\src\gnue\common\logic\GTrigger.py:267
+#: .\..\src\gnue\common\logic\usercode.py:265
+#: .\..\src\gnue\common\utils\tree.py:714
+msgid "Name of this element"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:271
+msgid "Type"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:272
+msgid "Type of the trigger. Can be either the name of the event that should fire this trigger, or 'NAMED' for named triggers"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:278
+#: .\..\src\gnue\common\logic\usercode.py:282
+msgid "Language"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:279
+#: .\..\src\gnue\common\logic\usercode.py:283
+msgid "Programming language the code is written in"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:286
+#: .\..\src\gnue\common\logic\usercode.py:290
+msgid "Source file"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:287
+#: .\..\src\gnue\common\logic\usercode.py:291
+msgid "External file containing the source code"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:291
+msgid "Source Trigger"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTrigger.py:292
+msgid "Name of a named trigger that contains the program code"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTriggerCore.py:226
+msgid "Cannot set value of object '%s'"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\GTriggerCore.py:236
+msgid "Cannot set readonly property '%s'"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\adapters\python.py:110
+msgid "Space indented sourcecode contains tab character at row %d position %d"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\adapters\python.py:118
+msgid "Tab indented sourcecode contains space character at row %d position %d"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\adapters\python.py:132
+msgid "Unindent does not match any outer indentation level at row %d"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\language.py:60
+msgid "No adapter available for language '%s'"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\language.py:70
+msgid "The class '%(class)s' has no implementation for '%(method)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\usercode.py:254
+msgid "A piece of code that can be bound to a button, a menu item, a toolbar button or a trigger."
+msgstr ""
+
+#: .\..\src\gnue\common\logic\usercode.py:270
+msgid "Icon"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\usercode.py:271
+msgid "Icon assigned with this action"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\usercode.py:274
+msgid "Label"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\usercode.py:275
+msgid "Short text to use for this action"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\usercode.py:278
+msgid "Description"
+msgstr "Описание"
+
+#: .\..\src\gnue\common\logic\usercode.py:279
+msgid "Long text to use for this action"
+msgstr ""
+
+#: .\..\src\gnue\common\logic\usercode.py:295
+msgid "Enabled"
+msgstr "Таблицы"
+
+#: .\..\src\gnue\common\logic\usercode.py:296
+msgid "Determines whether this action can be run"
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\RpcDoc.py:43
+msgid "GNUe RPC Documentation Generator"
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\RpcDoc.py:45
+msgid "Error: the module %s does not exist or cannot be loaded"
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\client.py:112
+msgid "Access to services at '%s' denied"
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\drivers\Base.py:362
+msgid "Required parameter 'port' not supplied"
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\drivers\hessian\ServerAdapter.py:43
+#: .\..\src\gnue\common\rpc\drivers\xmlrpc\ServerAdapter.py:43
+msgid "Element of type '%(type)s' with id '%(id)s' not found in store"
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\drivers\pyro\ClientAdapter.py:38
+#: .\..\src\gnue\common\rpc\drivers\pyro\ServerAdapter.py:41
+msgid "Unable to load Pyro. To use the Pyro interface, please install pyro from http://pyro.sf.net"
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\drivers\xmlrpc\RpcDoc.py:69
+#: .\..\src\gnue\common\rpc\drivers\xmlrpc\RpcDoc.py:80
+#: .\..\src\gnue\common\rpc\drivers\xmlrpc\RpcDoc.py:91
+msgid "'doc' command expects a .grpc file as its argument."
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\drivers\xmlrpc\RpcDoc.py:102
+msgid "'doc-php' command expects a .grpc file as its argument."
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\drivers\xmlrpc\RpcDoc.py:113
+msgid "'js-stub' command expects a .grpc file as its argument."
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\drivers\xmlrpc\RpcDoc.py:119
+msgid "Unrecognized XML-RPC doc command: %s"
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\drivers\xmlrpc\RpcDoc.py:411
+msgid "RpcDoc.py has to be called with an command argument. "
+msgstr ""
+
+#: .\..\src\gnue\common\rpc\drivers\xmlrpc\RpcDoc.py:412
+msgid "call 'RpcDoc.py help' for more information."
+msgstr ""
+
+#: .\..\src\gnue\common\utils\GDateTime.py:156
+msgid "Dates before 0001/01/01 are not supported by datetime library"
+msgstr ""
+
+#: .\..\src\gnue\common\utils\GDateTime.py:392
+msgid "Not a valid date"
+msgstr "Не верная дата"
+
+#: .\..\src\gnue\common\utils\tree.py:53
+msgid "Setting parent would create a circular reference"
+msgstr ""
+
+#: .\..\src\gnue\common\utils\tree.py:70
+msgid "Duplicate child name '%(child_name)s' for parent node '%(parent_node)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\utils\tree.py:93
+msgid "Duplicate node name '%(descendant_name)s' in descendants of node type %(descendant_type)s of node '%(ancestor_node)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\utils\tree.py:111
+msgid "Node '%(node_name)s' of class '%(node_class)s' does not maintain a node dictionary for node type '%(node_type)s'"
+msgstr ""
+
+#: .\..\src\gnue\common\utils\uuid.py:69
+msgid "The version '%s' is not a valid UUID version"
+msgstr ""
+
+#: .\..\src\gnue\common\utils\uuid.py:84
+msgid "'%s' is not recognized as valid namespace argument"
+msgstr ""
+
+#: .\..\src\gnue\common\utils\uuid.py:98
+msgid "No namespace given for namebased UUID generation"
+msgstr ""
+

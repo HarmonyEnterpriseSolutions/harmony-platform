@@ -1,0 +1,1324 @@
+<HTML>
+<LINK href="../css/Report.css" type=text/css rel=stylesheet>
+<TITLE>Trigger namespace API</TITLE>
+<BODY>
+<H1>Trigger namespace API</H1>
+
+<H2>Tag: form</H3>
+
+Trigger global: <b>True</b><br>
+<H3>Tag form trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD>global <b>activateDialog</b><br>(show_dialog)</TD><TD>name, parameters = None, modal = False</TD><TD><pre>Launches a standard or a custom dialog.<br>
+@param name: name of the dialog to be displayed<br>
+@param parameters: dictionary of parameters used to pass values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;back and forth<br>
+@param modal: whether the dialog should be modal or not<br>
+@return: None</pre>
+</TD></TR>
+<TR>
+<TD>global <b>activateTrigger</b><br>(fire_trigger)</TD><TD>name</TD><TD><pre>Launches a trigger.<br>
+<br>
+@param name: name of the trigger to be launched.</pre>
+</TD></TR>
+<TR>
+<TD><b>apply_filter</b></TD><TD></TD><TD><pre>Applies the filter.</pre>
+</TD></TR>
+<TR>
+<TD><b>ask_record</b></TD><TD></TD><TD><pre>Ask the user for a record number to jump to in the current block.</pre>
+</TD></TR>
+<TR>
+<TD>global <b>beep</b></TD><TD></TD><TD><pre>Makes a noise.</pre>
+</TD></TR>
+<TR>
+<TD>global <b>beginEditing</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD>global <b>call_after</b><br>(__call_after)</TD><TD>f, *args, **kwargs</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>cancel_query</b><br>(discard_filter)</TD><TD></TD><TD><pre>Cancels Query mode.</pre>
+</TD></TR>
+<TR>
+<TD><b>change_filter</b></TD><TD></TD><TD><pre>Copies the Query, ie brings back conditions from the last filter.</pre>
+</TD></TR>
+<TR>
+<TD>global <b>close</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD>global <b>commit</b></TD><TD></TD><TD><pre>Commit all pending changes.</pre>
+</TD></TR>
+<TR>
+<TD><b>copy</b></TD><TD></TD><TD><pre>Copy the selected portion of the current entry into the clipboard</pre>
+</TD></TR>
+<TR>
+<TD><b>copy_query</b><br>(change_filter)</TD><TD></TD><TD><pre>Copies the Query, ie brings back conditions from the last filter.</pre>
+</TD></TR>
+<TR>
+<TD><b>cut</b></TD><TD></TD><TD><pre>Cut the selected portion of the current entry into the clipboard.</pre>
+</TD></TR>
+<TR>
+<TD><b>delete_record</b></TD><TD></TD><TD><pre>Deletes the current record.</pre>
+</TD></TR>
+<TR>
+<TD><b>discard_filter</b></TD><TD></TD><TD><pre>Cancels Query mode.</pre>
+</TD></TR>
+<TR>
+<TD>global <b>endEditing</b></TD><TD></TD><TD><pre>Signals the current entry to stop editing mode and<br>
+save it's value to the virtual form.<br>
+@return: Boolean, True if succeeded, False if failed.</pre>
+</TD></TR>
+<TR>
+<TD><b>execute_query</b><br>(apply_filter)</TD><TD></TD><TD><pre>Applies the filter.</pre>
+</TD></TR>
+<TR>
+<TD><b>fire_trigger</b></TD><TD>name</TD><TD><pre>Launches a trigger.<br>
+<br>
+@param name: name of the trigger to be launched.</pre>
+</TD></TR>
+<TR>
+<TD><b>first_record</b></TD><TD></TD><TD><pre>Jumps to the first record in the current block.</pre>
+</TD></TR>
+<TR>
+<TD>global <b>getAuthenticatedUser</b><br>(get_username)</TD><TD>connection = None</TD><TD><pre>Return the authenticated user.</pre>
+</TD></TR>
+<TR>
+<TD>global <b>getFeature</b><br>(__trigger_get_feature)</TD><TD>feature</TD><TD><pre>Gets feature values.<br>
+Features are things like toolbars, menubars and statusbar.<br>
+@param feature: 'GUI:MENUBAR:SUPPRESS' or 'GUI:TOOLBAR:SUPPRESS' or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'GUI:STATUSBAR:SUPPRESS'<br>
+@return:&nbsp;&nbsp;&nbsp;&nbsp;Boolean</pre>
+</TD></TR>
+<TR>
+<TD>global <b>getParameter</b><br>(__trigger_get_parameter)</TD><TD>parameter</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>get_focus_block</b><br>(__trigger_get_focus_block)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD>global <b>get_global</b><br>(__get_global)</TD><TD>key, default = gnue.forms.GFForm.NoDefault</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>get_uidriver_name</b></TD><TD></TD><TD><pre>Return the driver name</pre>
+</TD></TR>
+<TR>
+<TD><b>get_username</b></TD><TD>connection = None</TD><TD><pre>Return the authenticated user.</pre>
+</TD></TR>
+<TR>
+<TD><b>in_filter_mode</b></TD><TD></TD><TD><pre>Return True if the form is in filter mode.</pre>
+</TD></TR>
+<TR>
+<TD><b>in_query_mode</b><br>(in_filter_mode)</TD><TD></TD><TD><pre>Return True if the form is in filter mode.</pre>
+</TD></TR>
+<TR>
+<TD><b>init_filter</b></TD><TD></TD><TD><pre>Enters the form into Query mode.</pre>
+</TD></TR>
+<TR>
+<TD><b>init_query</b><br>(init_filter)</TD><TD></TD><TD><pre>Enters the form into Query mode.</pre>
+</TD></TR>
+<TR>
+<TD><b>is_saved</b></TD><TD></TD><TD><pre>Checks all block in the form whether they are saved (committed) or not.<br>
+@return: boolean, True if all the blocks are committed.</pre>
+</TD></TR>
+<TR>
+<TD><b>last_record</b></TD><TD></TD><TD><pre>Jumps to the last record in the current block.</pre>
+</TD></TR>
+<TR>
+<TD>global <b>messageBox</b><br>(__trigger_message_box)</TD><TD>message, kind = None, title = None, cancel = False</TD><TD><pre>This function brings up a message box of a given kind.<br>
+@param message: text to be displayed<br>
+@param kind: 'Question', 'Info', 'Warning', or 'Error'<br>
+@param cancel: Boolean flag indicating wether a cancel button will be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;included or not.<br>
+@return: True for &lt;Yes&gt; or &lt;Ok&gt; button, False for &lt;No&gt; button, None for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Cancel&gt; button.</pre>
+</TD></TR>
+<TR>
+<TD><b>new_record</b></TD><TD></TD><TD><pre>Create a new, empty record in the current block.</pre>
+</TD></TR>
+<TR>
+<TD><b>next_block</b></TD><TD></TD><TD><pre>Change focus to the next data entry block.<br>
+@return: None</pre>
+</TD></TR>
+<TR>
+<TD><b>next_entry</b></TD><TD>reverse = False</TD><TD><pre>Called whenever an event source has requested that the focus change<br>
+to the next data entry object.<br>
+@param reverse: boolean, step focus in reverse direction?</pre>
+</TD></TR>
+<TR>
+<TD><b>next_record</b></TD><TD></TD><TD><pre>Steps to the next record in the current block.</pre>
+</TD></TR>
+<TR>
+<TD><b>paste</b></TD><TD></TD><TD><pre>Paste the content of the clipboard into the current entry.</pre>
+</TD></TR>
+<TR>
+<TD><b>prev_record</b></TD><TD></TD><TD><pre>Steps to the previous record in the current block.</pre>
+</TD></TR>
+<TR>
+<TD><b>previous_block</b></TD><TD></TD><TD><pre>Change focus to the previous data entry block.<br>
+@return: None</pre>
+</TD></TR>
+<TR>
+<TD><b>previous_entry</b></TD><TD></TD><TD><pre>Called whenever an event source has requested that the focus change<br>
+to the previous data entry object.</pre>
+</TD></TR>
+<TR>
+<TD><b>printout</b></TD><TD></TD><TD><pre>Print the form.<br>
+<br>
+If the form has a trigger named &quot;process-printout&quot;, fire it. Otherwise,<br>
+print a screen dump of the form.</pre>
+</TD></TR>
+<TR>
+<TD><b>refresh</b></TD><TD>canCancel = True, message = None</TD><TD><pre>refresh all master bound blocks unless cancelled</pre>
+</TD></TR>
+<TR>
+<TD>global <b>rollback</b></TD><TD></TD><TD><pre>Roll back any uncommitted transaction.</pre>
+</TD></TR>
+<TR>
+<TD>global <b>runForm</b><br>(run_form)</TD><TD>filename, parameters = None, gfContainer = None</TD><TD><pre>Loads and activates a new form from a file.<br>
+<br>
+@param fileName: the name of the .gfd file to be displayed<br>
+@param parameters: dictionary of parameters to be passed to the newly<br>
+&nbsp;&nbsp;&nbsp;&nbsp;run form</pre>
+</TD></TR>
+<TR>
+<TD>global <b>runReport</b><br>(run_report)</TD><TD>reportFile, parameters = {}, **parms</TD><TD><pre>Launches a new instance of GNUe-Reports, running a new report.<br>
+@param reportFile: the name of the .grd file to be processed<br>
+@param parameters: dictionary of parameters to be passed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to the newly run report<br>
+@param **params:<br>
+  These roughly correspond to the ./gnue-reports options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  destination<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  destinationType<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  destinationOptions (dict)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  filter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  filterOptions (dict)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  sortoption<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  includeStructuralComments<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  omitGNUeXML<br>
+@return: None</pre>
+</TD></TR>
+<TR>
+<TD><b>run_form</b><br>(__trigger_run_form)</TD><TD>*args, **kwargs</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD>global <b>run_job</b></TD><TD>job, *args, **kwargs</TD><TD><pre>Starts a thread, job(*args, **kwargs)<br>
+job can use call_after to update gui</pre>
+</TD></TR>
+<TR>
+<TD><b>run_report</b></TD><TD>reportFile, parameters = {}, **parms</TD><TD><pre>Launches a new instance of GNUe-Reports, running a new report.<br>
+@param reportFile: the name of the .grd file to be processed<br>
+@param parameters: dictionary of parameters to be passed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to the newly run report<br>
+@param **params:<br>
+  These roughly correspond to the ./gnue-reports options<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  destination<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  destinationType<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  destinationOptions (dict)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  filter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  filterOptions (dict)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  sortoption<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  includeStructuralComments<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  omitGNUeXML<br>
+@return: None</pre>
+</TD></TR>
+<TR>
+<TD><b>select_all</b></TD><TD></TD><TD><pre>Select all text on the current entry.</pre>
+</TD></TR>
+<TR>
+<TD><b>select_dir</b></TD><TD>title, default_dir, new_dir = False</TD><TD><pre>Bring up a dialog for selecting a directory path.<br>
+<br>
+@param title: Message to show on the dialog<br>
+@param default_dir: the default directory, or the empty string<br>
+@param new_dir: If true, add &quot;Create new directory&quot; button and allow<br>
+&nbsp;&nbsp;&nbsp;&nbsp;directory names to be editable. On Windows the new directory button<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is only available with recent versions of the common dialogs.<br>
+<br>
+@returns: a path or None if the dialog has been cancelled.</pre>
+</TD></TR>
+<TR>
+<TD><b>select_files</b></TD><TD>title, default_dir, default_file, wildcard = [], mode = open, multiple = False, overwrite_prompt = True, file_must_exist = False</TD><TD><pre>Bring up a dialog for selecting filenames.<br>
+<br>
+@param title: Message to show on the dialog<br>
+@param default_dir: the default directory, or the empty string<br>
+@param default_file: the default filename, or the empty string<br>
+@param wildcard: a list of tuples describing the filters used by the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dialog.  Such a tuple constists of a description and a fileter.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Example: [('PNG Files', '*.png'), ('JPEG Files', '*.jpg')]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If no wildcard is given, all files will match (*.*)<br>
+@param mode: Is this dialog an open- or a save-dialog.  If mode is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'save' it is a save dialog, everything else would be an<br>
+&nbsp;&nbsp;&nbsp;&nbsp;open-dialog.<br>
+@param multiple: for open-dialog only: if True, allows selecting<br>
+&nbsp;&nbsp;&nbsp;&nbsp;multiple files<br>
+@param overwrite_prompt: for save-dialog only: if True, prompt for a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;confirmation if a file will be overwritten<br>
+@param file_must_exist: if True, the user may only select files that<br>
+&nbsp;&nbsp;&nbsp;&nbsp;actually exist<br>
+<br>
+@returns: a sequence of filenames or None if the dialog has been<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cancelled.</pre>
+</TD></TR>
+<TR>
+<TD>global <b>setFeature</b><br>(__trigger_set_feature)</TD><TD>feature, value</TD><TD><pre>Sets feature values.<br>
+Features are things like toolbars, menubars and statusbar.<br>
+@param feature: 'GUI:MENUBAR:SUPPRESS' or 'GUI:TOOLBAR:SUPPRESS' or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'GUI:STATUSBAR:SUPPRESS'<br>
+@param value: True or False<br>
+@return: None</pre>
+</TD></TR>
+<TR>
+<TD>global <b>setFocus</b><br>(__trigger_set_focus)</TD><TD>object</TD><TD><pre>Switch input focus to a specific widget.<br>
+<br>
+@param object: the widget that should get the focus</pre>
+</TD></TR>
+<TR>
+<TD>global <b>setParameter</b><br>(__trigger_set_parameter)</TD><TD>parameter, value</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD>global <b>setStatusText</b><br>(status_message)</TD><TD>message</TD><TD><pre>Displays a custom message on the form's status bar.<br>
+@param message: message to be displayed</pre>
+</TD></TR>
+<TR>
+<TD>global <b>setTitle</b><br>(set_title)</TD><TD>title</TD><TD><pre>Sets and displays the title of the form.<br>
+<br>
+@param title: new title</pre>
+</TD></TR>
+<TR>
+<TD>global <b>set_global</b><br>(__set_global)</TD><TD>key, value</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>set_title</b></TD><TD>title</TD><TD><pre>Sets and displays the title of the form.<br>
+<br>
+@param title: new title</pre>
+</TD></TR>
+<TR>
+<TD>global <b>showMessage</b><br>(__trigger_show_message)</TD><TD>msgtxt, caption = GNUe Message, title = Information, kind = Info, cancel = False</TD><TD><pre>Displays a standard message box.<br>
+@param msgtxt: text to be displayed<br>
+@param caption: caption to be displayed, default='GNUe Message'<br>
+@param title: title of messagebox, default='Information'<br>
+@param kind: 'Question', 'Info', 'Warning', or 'Error', default='Info'<br>
+@param cancel: Flag whether to include a Cancel button, default='False'<br>
+@return: True for &lt;Yes&gt; or &lt;Ok&gt; button, False for &lt;No&gt; button, None for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Cancel&gt; button.</pre>
+</TD></TR>
+<TR>
+<TD><b>show_about</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>show_dialog</b></TD><TD>name, parameters = None, modal = False</TD><TD><pre>Launches a standard or a custom dialog.<br>
+@param name: name of the dialog to be displayed<br>
+@param parameters: dictionary of parameters used to pass values<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;back and forth<br>
+@param modal: whether the dialog should be modal or not<br>
+@return: None</pre>
+</TD></TR>
+<TR>
+<TD><b>show_message</b></TD><TD>message, kind = Info, title = None, cancel = False</TD><TD><pre>This function brings up a message box of a given kind.<br>
+@param message: text to be displayed<br>
+@param kind: 'Question', 'Info', 'Warning', or 'Error'<br>
+@param cancel: Boolean flag indicating wether a cancel button will be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;included or not.<br>
+@return: True for &lt;Yes&gt; or &lt;Ok&gt; button, False for &lt;No&gt; button, None for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Cancel&gt; button.</pre>
+</TD></TR>
+<TR>
+<TD><b>status_message</b></TD><TD>message</TD><TD><pre>Displays a custom message on the form's status bar.<br>
+@param message: message to be displayed</pre>
+</TD></TR>
+<TR>
+<TD><b>test</b><br>(__test)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>toggle_insert_mode</b></TD><TD></TD><TD><pre>Toggles insert mode.</pre>
+</TD></TR>
+<TR>
+<TD><b>undelete_record</b></TD><TD></TD><TD><pre>Undeletes the current record.</pre>
+</TD></TR>
+</TABLE>
+<H3>Tag form trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>logic</b></TD><TD><pre>Calls &lt;lambda&gt;<br>
+<br>
+</pre>
+</TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: action</H3>
+
+Trigger global: <b>True</b><br>
+<H3>Tag action trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>run</b><br>(__trigger_run)</TD><TD>*args, **params</TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H3>Tag action trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>enabled</b></TD><TD><pre>Calls __trigger_get_enabled<br>
+<br>
+</pre>
+</TD><TD><pre>Calls __trigger_set_enabled<br>
+<br>
+</pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: entry</H3>
+
+<H3>Tag entry trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>* str(object)</b><br>(getValue)</TD><TD>*args, **parms</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>** parent.object assignment</b><br>(triggerSetValue)</TD><TD>*args, **parms</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>get</b><br>(getValue)</TD><TD>*args, **parms</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getField</b><br>(<lambda>)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getText</b></TD><TD></TD><TD><pre>returns text directly from displayHandler from currently edited entry</pre>
+</TD></TR>
+<TR>
+<TD><b>set</b><br>(triggerSetValue)</TD><TD>*args, **parms</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>setText</b></TD><TD>text</TD><TD><pre>sets text to currently edited entry</pre>
+</TD></TR>
+</TABLE>
+<H3>Tag entry trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>hidden</b></TD><TD><pre>Calls triggerGetHidden<br>
+<br>
+</pre>
+</TD><TD><pre>Calls triggerSetHidden<br>
+<br>
+</pre>
+</TD></TR>
+<TR>
+<TD><b>navigable</b></TD><TD><pre>Calls triggerGetNavigable<br>
+<br>
+</pre>
+</TD><TD><pre>Calls triggerSetNavigable<br>
+<br>
+</pre>
+</TD></TR>
+<TR>
+<TD><b>value</b></TD><TD><pre>Calls getValue<br>
+<br>
+</pre>
+</TD><TD><pre>Calls triggerSetValue<br>
+<br>
+</pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: dyn-menu</H3>
+
+<H3>Tag dyn-menu trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>getBlock</b><br>(<lambda>)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getCheckedNodesData</b><br>(__trigger_getCheckedNodesData)</TD><TD>fieldnames, reduceChildren = False, style = NotImplemented</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getChildIds</b><br>(iterChildIds)</TD><TD>nodeId</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getChildNodesData</b><br>(__trigger_getChildNodesData)</TD><TD>fieldnames, id = None, includeSelf = False</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getParentId</b><br>(__trigger_getParentId)</TD><TD>id</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getRootId</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getValue</b><br>(__trigger_getValue)</TD><TD>id, fieldName</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>setChildNodesData</b><br>(__trigger_setChildNodesData)</TD><TD>data, id = None, includeSelf = False</TD><TD><pre>@param data: { fieldname : valkue, }<br>
+@param id: parent id, focused node if None<br>
+@param includeSelf: set parent node data</pre>
+</TD></TR>
+<TR>
+<TD><b>setValue</b><br>(__trigger_setValue)</TD><TD>id, fieldName, value</TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: block</H3>
+
+Trigger global: <b>True</b><br>
+<H3>Tag block trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>activate_record</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>append_record</b></TD><TD></TD><TD><pre>Append a new record to the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>call</b></TD><TD>name, parameters</TD><TD><pre>Call a server side function.<br>
+<br>
+Currently, the only backend to support server side function calls is<br>
+gnue-appserver.<br>
+<br>
+@param name: Function name.<br>
+@param parameters: Function parameter dictionary.</pre>
+</TD></TR>
+<TR>
+<TD><b>clear</b></TD><TD></TD><TD><pre>Discard changes in this block and populate it with a single empty<br>
+record.</pre>
+</TD></TR>
+<TR>
+<TD><b>deleteRecord</b><br>(delete_record)</TD><TD>delete = True</TD><TD><pre>Mark the current record for deletion. The acutal deletion will be done<br>
+on the next commit, call or update.</pre>
+</TD></TR>
+<TR>
+<TD><b>delete_record</b></TD><TD>delete = True</TD><TD><pre>Mark the current record for deletion. The acutal deletion will be done<br>
+on the next commit, call or update.</pre>
+</TD></TR>
+<TR>
+<TD><b>discard</b></TD><TD></TD><TD><pre>discards master block and all slave blocks data</pre>
+</TD></TR>
+<TR>
+<TD><b>duplicateRecord</b><br>(duplicate_record)</TD><TD>exclude = (), include = ()</TD><TD><pre>Create a new record and initialize it with field values from the<br>
+current record.<br>
+<br>
+@param exclude: list of fields not to copy.<br>
+@param include: list of fields to copy. An empty list means to copy all<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fields except primary key fields and rowid fields, which are never<br>
+&nbsp;&nbsp;&nbsp;&nbsp;copied anyway.</pre>
+</TD></TR>
+<TR>
+<TD><b>duplicate_record</b></TD><TD>exclude = (), include = ()</TD><TD><pre>Create a new record and initialize it with field values from the<br>
+current record.<br>
+<br>
+@param exclude: list of fields not to copy.<br>
+@param include: list of fields to copy. An empty list means to copy all<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fields except primary key fields and rowid fields, which are never<br>
+&nbsp;&nbsp;&nbsp;&nbsp;copied anyway.</pre>
+</TD></TR>
+<TR>
+<TD><b>find_record</b></TD><TD>params, lookup = False</TD><TD><pre>Search for (and jump to) the first record matching a set of field<br>
+values.<br>
+<br>
+Without lookup.<br>
+<br>
+@param params: search conditions in the notation C{fieldname=value}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;where the fieldname is the name of a GFField.<br>
+@param lookup: to perform reverse lookup of values<br>
+@returns: True if a record was found, False otherwise.</pre>
+</TD></TR>
+<TR>
+<TD><b>firstRecord</b><br>(first_record)</TD><TD></TD><TD><pre>Move the record pointer to the first record of the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>first_record</b></TD><TD></TD><TD><pre>Move the record pointer to the first record of the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>getDataSource</b><br>(__trigger_getDataSource)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getField</b><br>(<lambda>)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getResultSet</b><br>(get_resultset)</TD><TD></TD><TD><pre>Return the current ResultSet of the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>get_data</b></TD><TD>fieldnames = None</TD><TD><pre>Build a list of dictionaries of the current resultset using the fields<br>
+defined by fieldnames.<br>
+<br>
+@param fieldnames: list of fieldnames to export per record<br>
+@returns: list of dictionaries (one per record)</pre>
+</TD></TR>
+<TR>
+<TD><b>get_possible_operations</b></TD><TD></TD><TD><pre>Return a list of possible operations for this block.<br>
+<br>
+The form can use this function to enable or disable commanders (menu<br>
+items or toolbar buttons) that are bound to the respective action.<br>
+<br>
+The return value is basically a list of method names that can be called<br>
+for this block in the current state.</pre>
+</TD></TR>
+<TR>
+<TD><b>get_record_count</b></TD><TD></TD><TD><pre>Return the number of records in this block.</pre>
+</TD></TR>
+<TR>
+<TD><b>get_record_status</b></TD><TD>offset = 0</TD><TD><pre>Find out about the status of the record.<br>
+<br>
+The status can be one of 'empty', 'inserted', 'void', 'clean',<br>
+'modified', or 'deleted', or C{None} if there is no current record.</pre>
+</TD></TR>
+<TR>
+<TD><b>gotoRecord</b><br>(goto_record)</TD><TD>record_number</TD><TD><pre>Move the record pointer to a specific record number in the block.<br>
+<br>
+@param record_number: Record number to jump to. If this is a negative<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value, move relative to the last record.</pre>
+</TD></TR>
+<TR>
+<TD><b>goto_record</b></TD><TD>record_number</TD><TD><pre>Move the record pointer to a specific record number in the block.<br>
+<br>
+@param record_number: Record number to jump to. If this is a negative<br>
+&nbsp;&nbsp;&nbsp;&nbsp;value, move relative to the last record.</pre>
+</TD></TR>
+<TR>
+<TD><b>isEmpty</b><br>(is_empty)</TD><TD></TD><TD><pre>Return True if the current record is empty.<br>
+<br>
+Empty means that it has been newly inserted, but neither has any field<br>
+been changed nor has a detail for this record been inserted with a<br>
+status other than empty.</pre>
+</TD></TR>
+<TR>
+<TD><b>isPending</b><br>(is_pending)</TD><TD></TD><TD><pre>Return True if the block is pending any uncommited changes.</pre>
+</TD></TR>
+<TR>
+<TD><b>isSaved</b><br>(is_saved)</TD><TD></TD><TD><pre>Return True if the block is not pending any uncommited changes.<br>
+<br>
+This method is depreciated. Please use block.is_pending() instead !</pre>
+</TD></TR>
+<TR>
+<TD><b>is_pending</b></TD><TD></TD><TD><pre>Return True if the block is pending any uncommited changes.</pre>
+</TD></TR>
+<TR>
+<TD><b>jumpRecords</b><br>(jump_records)</TD><TD>count</TD><TD><pre>Move the record pointer by a given adjustment relative to the current<br>
+record.<br>
+<br>
+@param count: the number of records to move from the current record.</pre>
+</TD></TR>
+<TR>
+<TD><b>jump_records</b></TD><TD>count</TD><TD><pre>Move the record pointer by a given adjustment relative to the current<br>
+record.<br>
+<br>
+@param count: the number of records to move from the current record.</pre>
+</TD></TR>
+<TR>
+<TD><b>lastRecord</b><br>(last_record)</TD><TD></TD><TD><pre>Move the record pointer to the last record of the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>last_record</b></TD><TD></TD><TD><pre>Move the record pointer to the last record of the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>newRecord</b><br>(new_record)</TD><TD></TD><TD><pre>Add a new record to the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>new_record</b></TD><TD></TD><TD><pre>Add a new record to the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>nextRecord</b><br>(next_record)</TD><TD></TD><TD><pre>Move the record pointer to the next record in the block.<br>
+<br>
+If the record is already the last one, a new record will be created if<br>
+the &quot;autoCreate&quot; attribute of the block is set.<br>
+<br>
+@returns: True if the record pointer was moved, False if it was already<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the last record and no new record was inserted.</pre>
+</TD></TR>
+<TR>
+<TD><b>next_record</b></TD><TD></TD><TD><pre>Move the record pointer to the next record in the block.<br>
+<br>
+If the record is already the last one, a new record will be created if<br>
+the &quot;autoCreate&quot; attribute of the block is set.<br>
+<br>
+@returns: True if the record pointer was moved, False if it was already<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the last record and no new record was inserted.</pre>
+</TD></TR>
+<TR>
+<TD><b>prevRecord</b><br>(prev_record)</TD><TD></TD><TD><pre>Move the record pointer to the previous record in the block.<br>
+<br>
+@returns: True if the record pointer was moved, False if it was already<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the first record.</pre>
+</TD></TR>
+<TR>
+<TD><b>prev_record</b></TD><TD></TD><TD><pre>Move the record pointer to the previous record in the block.<br>
+<br>
+@returns: True if the record pointer was moved, False if it was already<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the first record.</pre>
+</TD></TR>
+<TR>
+<TD><b>query</b><br>(set_filter)</TD><TD>*args, **params</TD><TD><pre>Set new filter criteria for this block.<br>
+<br>
+@param args: zero, one or more condition trees, can be in dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;format, in prefix notation, or GCondition object trees. Field names<br>
+&nbsp;&nbsp;&nbsp;&nbsp;in these conditions are passed directly to the backend, i.e. they<br>
+&nbsp;&nbsp;&nbsp;&nbsp;are database column names. This is useful to create queries of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;arbitary complexity.<br>
+@param params: simple filter values in the notation C{fieldname=value}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;where the fieldname is the name of a GFField. This is useful to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;create straightforward simple filters where the database columns<br>
+&nbsp;&nbsp;&nbsp;&nbsp;included in the condition have their GFField assigned. This also<br>
+&nbsp;&nbsp;&nbsp;&nbsp;works for lookup fields.<br>
+@returns: True if the filter was applied, False if the user aborted<br>
+&nbsp;&nbsp;&nbsp;&nbsp;when being asked whether or not to save changes.</pre>
+</TD></TR>
+<TR>
+<TD><b>refresh</b></TD><TD>canCancel = True, message = None</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>save</b></TD><TD>canCancel = True, message = None</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>search_record</b></TD><TD>**params</TD><TD><pre>Search for (and jump to) the first record matching a set of field<br>
+values.<br>
+<br>
+@param params: search conditions in the notation C{fieldname=value}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;where the fieldname is the name of a GFField.<br>
+@returns: True if a record was found, False otherwise.</pre>
+</TD></TR>
+<TR>
+<TD><b>set_filter</b></TD><TD>*args, **params</TD><TD><pre>Set new filter criteria for this block.<br>
+<br>
+@param args: zero, one or more condition trees, can be in dictionary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;format, in prefix notation, or GCondition object trees. Field names<br>
+&nbsp;&nbsp;&nbsp;&nbsp;in these conditions are passed directly to the backend, i.e. they<br>
+&nbsp;&nbsp;&nbsp;&nbsp;are database column names. This is useful to create queries of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;arbitary complexity.<br>
+@param params: simple filter values in the notation C{fieldname=value}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;where the fieldname is the name of a GFField. This is useful to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;create straightforward simple filters where the database columns<br>
+&nbsp;&nbsp;&nbsp;&nbsp;included in the condition have their GFField assigned. This also<br>
+&nbsp;&nbsp;&nbsp;&nbsp;works for lookup fields.<br>
+@returns: True if the filter was applied, False if the user aborted<br>
+&nbsp;&nbsp;&nbsp;&nbsp;when being asked whether or not to save changes.</pre>
+</TD></TR>
+<TR>
+<TD><b>undeleteRecord</b><br>(undelete_record)</TD><TD></TD><TD><pre>Remove the deletion mark from the current record.</pre>
+</TD></TR>
+<TR>
+<TD><b>undelete_record</b></TD><TD></TD><TD><pre>Remove the deletion mark from the current record.</pre>
+</TD></TR>
+<TR>
+<TD><b>unmodify_record</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>update</b></TD><TD></TD><TD><pre>Update the backend with changes to this block without finally<br>
+commmitting them.<br>
+<br>
+This can be useful to make the backend react to changes entered by the<br>
+user, for example to make gnue-appserver recalculate calculated fields.</pre>
+</TD></TR>
+</TABLE>
+<H3>Tag block trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>editable</b></TD><TD><pre>Calls &lt;lambda&gt;<br>
+<br>
+</pre>
+</TD><TD><pre>Calls __trigger_set_editable<br>
+<br>
+</pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: datasource</H3>
+
+Trigger global: <b>True</b><br>
+<H3>Tag datasource trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>addSortOrder</b></TD><TD>name, descending = False, ignorecase = False</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>call</b><br>(__trigger_call)</TD><TD>name, params</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>count</b><br>(__trigger_get_recordCount)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>createResultSet</b><br>(__trigger_createResultSet)</TD><TD>conditions = {}, access = 15, query = False</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>delete</b><br>(__trigger_delete)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getCondition</b></TD><TD></TD><TD><pre>Returns the static condition for this datasource, as set in setCondition or<br>
+as defined in XML.</pre>
+</TD></TR>
+<TR>
+<TD><b>getParameter</b></TD><TD>name, default = NotImplemented</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>removeAllSortOrders</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>removeSortOrder</b></TD><TD>name</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>setCondition</b></TD><TD>mycondition</TD><TD><pre>Set the static condition for this datasource. This condition is used in any<br>
+query, additionally to the condition given in L{createResultSet}.<br>
+<br>
+@param mycondition: condition in prefix notation, dictionary notation or as<br>
+  a L{GConditions} object tree.</pre>
+</TD></TR>
+<TR>
+<TD><b>setParameter</b></TD><TD>name, value</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>simpleQuery</b><br>(__trigger_simpleQuery)</TD><TD>maskDict</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>update</b><br>(__trigger_update)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H3>Tag datasource trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD>direct <b>extensions</b></TD><TD><pre>Calls __trigger_get_extensions<br>
+<br>
+</pre>
+</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD>direct <b>order_by</b></TD><TD><pre>Calls __trigger_get_order_by<br>
+<br>
+</pre>
+</TD><TD><pre>Calls __trigger_set_order_by<br>
+<br>
+</pre>
+</TD></TR>
+<TR>
+<TD>direct <b>recordCount</b></TD><TD><pre>Calls __trigger_get_recordCount<br>
+<br>
+</pre>
+</TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: layout</H3>
+
+Trigger global: <b>True</b><br>
+<H3>Tag layout trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>find_child</b><br>(__trigger_find_child)</TD><TD>name, childType = None, recursive = True</TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: button</H3>
+
+<H3>Tag button trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>enabled</b></TD><TD><pre>Calls &lt;lambda&gt;<br>
+<br>
+</pre>
+</TD><TD><pre>Calls setEnabled<br>
+<br>
+</pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: mdi-notebook</H3>
+
+<H3>Tag mdi-notebook trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>getCurrentForm</b><br>(__trigger_getCurrentForm)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>run_form</b></TD><TD>url, parameters = None</TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: field</H3>
+
+<H3>Tag field trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>* str(object)</b><br>(__get_value)</TD><TD>offset = 0</TD><TD><pre>Return the current value of the field, depending on the state of the<br>
+form and the block.<br>
+<br>
+@param offset: offset from the current record (to get values of records<br>
+&nbsp;&nbsp;&nbsp;&nbsp;other than the current record).</pre>
+</TD></TR>
+<TR>
+<TD><b>** parent.object assignment</b><br>(__set_value)</TD><TD>value</TD><TD><pre>Set the current value of the field, depending on the state of the form<br>
+and the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>addLookupPair</b></TD><TD>key, descr</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>allowedValues</b></TD><TD></TD><TD><pre>Return a tuple with allowed values dictionary (mapping keys to values)<br>
+and a sequence of the fk-descriptions.</pre>
+</TD></TR>
+<TR>
+<TD><b>autofillBySequence</b><br>(triggerAutofillBySequence)</TD><TD>sequenceName</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>clear</b><br>(resetToDefault)</TD><TD></TD><TD><pre>Reset the current field to the default value.</pre>
+</TD></TR>
+<TR>
+<TD><b>fkFirstRecord</b><br>(__trigger_fkFirstRecord)</TD><TD></TD><TD><pre>sets fk to first record</pre>
+</TD></TR>
+<TR>
+<TD><b>get</b><br>(__get_value)</TD><TD>offset = 0</TD><TD><pre>Return the current value of the field, depending on the state of the<br>
+form and the block.<br>
+<br>
+@param offset: offset from the current record (to get values of records<br>
+&nbsp;&nbsp;&nbsp;&nbsp;other than the current record).</pre>
+</TD></TR>
+<TR>
+<TD><b>getBlock</b><br>(<lambda>)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getFKDescription</b><br>(get_value)</TD><TD>offset = 0</TD><TD><pre>Return the current user value of the field. For lookup fields, this is<br>
+the foreign key description.</pre>
+</TD></TR>
+<TR>
+<TD><b>getFkRecordCount</b><br>(__trigger_getFkRecordCount)</TD><TD></TD><TD><pre>fk record count</pre>
+</TD></TR>
+<TR>
+<TD><b>isEmpty</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>isValueValid</b></TD><TD>offset = 0</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>resetForeignKey</b></TD><TD>once = False</TD><TD><pre>Reload the allowed values of the field. If a ResultSet is provided the<br>
+values will be retrieved from it, otherwise a new ResultSet will be<br>
+created (using the fk_source).</pre>
+</TD></TR>
+<TR>
+<TD><b>set</b><br>(__set_value)</TD><TD>value</TD><TD><pre>Set the current value of the field, depending on the state of the form<br>
+and the block.</pre>
+</TD></TR>
+<TR>
+<TD><b>setFKDescription</b><br>(set_value)</TD><TD>value</TD><TD><pre>Set the current user value of the field. For lookup fields, this is the<br>
+foreign key description.</pre>
+</TD></TR>
+</TABLE>
+<H3>Tag field trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>editable</b></TD><TD><pre>Calls &lt;lambda&gt;<br>
+<br>
+</pre>
+</TD><TD><pre>Calls __trigger_set_editable<br>
+<br>
+</pre>
+</TD></TR>
+<TR>
+<TD><b>field</b></TD><TD><pre>Calls &lt;lambda&gt;<br>
+<br>
+</pre>
+</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>name</b></TD><TD><pre>Calls &lt;lambda&gt;<br>
+<br>
+</pre>
+</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>value</b></TD><TD><pre>Calls get_value<br>
+<br>
+Return the current user value of the field. For lookup fields, this is<br>
+the foreign key description.</pre>
+</TD><TD><pre>Calls set_value<br>
+<br>
+Set the current user value of the field. For lookup fields, this is the<br>
+foreign key description.</pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: notebook</H3>
+
+<H3>Tag notebook trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>getSelectedPage</b><br>(__trigger_getSelectedPage)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: notepage</H3>
+
+<H3>Tag notepage trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>name</b></TD><TD><pre>Calls &lt;lambda&gt;<br>
+<br>
+</pre>
+</TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: parameter</H3>
+
+Trigger global: <b>True</b><br>
+<H3>Tag parameter trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>value</b></TD><TD><pre>Calls __get_value<br>
+<br>
+</pre>
+</TD><TD><pre>Calls __set_value<br>
+<br>
+</pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: popupwindow</H3>
+
+<H3>Tag popupwindow trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>popdown</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>popup</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H3>Tag popupwindow trigger properties</H3>
+<TABLE border=1>
+<TR>
+<TH><b>Property name</b>
+</TH>
+<TH><b>Get description</b>
+</TH>
+<TH><b>Set description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>form</b></TD><TD><pre>Calls __trigger_getForm<br>
+<br>
+</pre>
+</TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: table</H3>
+
+<H3>Tag table trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>cancelFilters</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>copy</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>cut</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>deleteRecords</b></TD><TD>delete = True</TD><TD><pre>delete selected records</pre>
+</TD></TR>
+<TR>
+<TD><b>filterExcludeCell</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>filterIncludeCell</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>find</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getBlock</b><br>(<lambda>)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getSelectedField</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getSelectedRowsData</b></TD><TD>fieldnames</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>paste</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>stopEditing</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: timer</H3>
+
+<H3>Tag timer trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>run</b></TD><TD>*args, **params</TD><TD><pre>Run the code.</pre>
+</TD></TR>
+<TR>
+<TD><b>start</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>stop</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: tree</H3>
+
+<H3>Tag tree trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>copyNode</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>cutNode</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>deleteNode</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>expand</b><br>(__trigger_expand)</TD><TD>expand = True</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getBlock</b><br>(<lambda>)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getCheckedNodesData</b><br>(__trigger_getCheckedNodesData)</TD><TD>fieldnames, reduceChildren = False, style = NotImplemented</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getChildIds</b><br>(iterChildIds)</TD><TD>nodeId</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getChildNodesData</b><br>(__trigger_getChildNodesData)</TD><TD>fieldnames, id = None, includeSelf = False</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getCopiedNodeId</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getCuttedNodeId</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getNewNodeParentId</b><br>(__trigger_getNewNodeParentId)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getParentId</b><br>(__trigger_getParentId)</TD><TD>id</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getPossibleOperations</b><br>(__trigger_getPossibleOperations)</TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getRootId</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>getValue</b><br>(__trigger_getValue)</TD><TD>id, fieldName</TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>newNode</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>pasteNode</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>renameNode</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+<TR>
+<TD><b>setChildNodesData</b><br>(__trigger_setChildNodesData)</TD><TD>data, id = None, includeSelf = False</TD><TD><pre>@param data: { fieldname : valkue, }<br>
+@param id: parent id, focused node if None<br>
+@param includeSelf: set parent node data</pre>
+</TD></TR>
+<TR>
+<TD><b>setValue</b><br>(__trigger_setValue)</TD><TD>id, fieldName, value</TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+<H2>Tag: url-resource</H3>
+
+<H3>Tag url-resource trigger functions</H3>
+
+<TABLE border=1>
+<TR>
+<TH><b>Function name</b>
+</TH>
+<TH><b>Parameters</b>
+</TH>
+<TH><b>Description</b>
+</TH>
+</TR>
+<TR>
+<TD><b>getData</b></TD><TD></TD><TD><pre></pre>
+</TD></TR>
+</TABLE>
+</BODY>
+</HTML>
+

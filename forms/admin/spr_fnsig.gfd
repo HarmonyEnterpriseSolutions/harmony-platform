@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<!--  GFD generator  -->
+
+<form name="spr_fnsig" title="Сигнатуры функций">
+	
+	<parameter name="p_accessobject_id" />
+
+	<datasource name='ds__spr_fnsig' connection='admin'
+		table = '_spr_fnsig'
+		rowid = 'fnsig_id'
+	/>
+
+	<datasource name='ds__spr_fnsig_table' connection='admin'
+		table = '_spr_fnsig_table'
+		rowid = 'fnsig_table_id'
+
+		master="ds__spr_fnsig"
+		masterlink="fnsig_id"
+		detaillink="fnsig_id"
+	/>
+
+	<datasource name='dsref__spr_table' connection='admin'
+		table = '_spr_table'
+		rowid = 'table_id'
+	/>
+
+<logic>
+
+	<block name='b__spr_fnsig' datasource='ds__spr_fnsig' autoNextRecord='Y' startup='full'>
+		<field name = 'fnsig_id'           field = 'fnsig_id'          />
+		<field name = 'fnsig_name'         field = 'fnsig_name'        />
+		<field name = 'fnsig_descr'        field = 'fnsig_descr'       />
+		<field name = 'table_count'        field = 'table_count' datatype='number' scale='0' editable='N'/>
+	</block>
+
+	<block name='b__spr_fnsig_table' datasource='ds__spr_fnsig_table' autoNextRecord='Y' startup='full'>
+		<field name = 'fnsig_table_id'     field = 'fnsig_table_id'    />
+		<field name = 'fnsig_id'           field = 'fnsig_id'          />
+		<field name = 'table_id'           field = 'table_id'          fk_source='dsref__spr_table' fk_key='table_id' fk_description='table_name' required='Y'/>
+	</block>
+</logic>
+<import-toolbar library='../common/toolbar.gfd' name='__main_toolbar__'/>
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox>
+		<table block='b__spr_fnsig'>
+			<import-menu library='../common/menues.gfd' name='table-default'/>
+			<entry field = 'fnsig_name'         label = 'Сигнатура'/>
+			<entry field = 'fnsig_descr'        label = 'Пользовательское наименование'/>
+			<entry field = 'table_count'        label = 'Кол-во таблиц'/>
+		</table>
+		
+		<table block='b__spr_fnsig_table'>
+			<import-menu library='../common/menues.gfd' name='table-default'/>
+			
+			<entry field = 'table_id'           label = 'Таблица'/>
+		</table>
+		
+	</vbox>
+</layout>
+</form>

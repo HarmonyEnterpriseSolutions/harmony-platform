@@ -1,0 +1,19 @@
+*** AppServer.config.default	Fri Sep 28 17:29:29 2007
+--- AppServer.config	Thu Oct 11 16:18:45 2007
+***************
+*** 12,18 ****
+  EnableAdapter = True # enable WebKit adapter
+  AdapterPort = 8086
+  
+! EnableHTTP = True # enable built-in Webserver
+  HTTPPort = 8080
+  
+  # The initial, minimum and maxium number of worker threads:
+--- 12,18 ----
+  EnableAdapter = True # enable WebKit adapter
+  AdapterPort = 8086
+  
+! EnableHTTP = False # enable built-in Webserver
+  HTTPPort = 8080
+  
+  # The initial, minimum and maxium number of worker threads:

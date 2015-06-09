@@ -1,0 +1,5 @@
+To create the grayscale icons, use ImageMagick's convert command:
+
+24x24 PNGs:
+for f in *-24x24.png; do base=`echo $f|awk -F- '{print $1}'`; convert $f -colorspace gray -modulate 120,90 $base-24x24-gray.png; done
+

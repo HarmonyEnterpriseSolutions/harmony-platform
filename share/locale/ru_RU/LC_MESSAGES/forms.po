@@ -1,0 +1,4579 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: Mon Oct 13 21:24:42 2008\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=Cp1251\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.4\n"
+
+#: .\..\forms\.text.py:5
+msgid "C&ut"
+msgstr "Вырезать"
+
+#: .\..\forms\.text.py:6
+msgid "Cut the selected text"
+msgstr "Вырезать выделенный текст"
+
+#: .\..\forms\.text.py:7
+msgid "&Copy"
+msgstr "Копировать"
+
+#: .\..\forms\.text.py:8
+msgid "Copy the selected text to the clipboard"
+msgstr "Скопировать выделенный текст в клипборд"
+
+#: .\..\forms\.text.py:9
+msgid "&Paste"
+msgstr "Вставить"
+
+#: .\..\forms\.text.py:10
+msgid "Paste the content of the clipboard to the current position"
+msgstr "Вставить содержимое клипборда в текущей позиции"
+
+#: .\..\forms\.text.py:11
+msgid "Select &All"
+msgstr "Выделить все"
+
+#: .\..\forms\.text.py:12
+msgid "Select the whole field"
+msgstr "Выделить весь текст поля"
+
+#: .\..\forms\.text.py:13
+msgid "Next &Block"
+msgstr "Следующий блок"
+
+#: .\..\forms\.text.py:14
+msgid "Jump to the next block"
+msgstr "Перейти на следующий блок"
+
+#: .\..\forms\.text.py:15
+msgid "Previous Bl&ock"
+msgstr "Предыдущий блок"
+
+#: .\..\forms\.text.py:16
+msgid "Jump to the previous block"
+msgstr "Перейти на предыдущий блок"
+
+#: .\..\forms\.text.py:17
+msgid "&First Record"
+msgstr "Первая запись"
+
+#: .\..\forms\.text.py:18
+msgid "Navigate the current block to the first record"
+msgstr "Перейти в текущем блоке на первую запись"
+
+#: .\..\forms\.text.py:19
+msgid "Previous R&ecord"
+msgstr "Предыдущая запись"
+
+#: .\..\forms\.text.py:20
+msgid "Navigate the current block to the previous record"
+msgstr "Перейти в текущем блоке на предыдущую запись"
+
+#: .\..\forms\.text.py:21
+msgid "Next &Record"
+msgstr "Следующая запись"
+
+#: .\..\forms\.text.py:22
+msgid "Navigate the current block to the next record"
+msgstr "Перейти в текущем блоке на следующую запись"
+
+#: .\..\forms\.text.py:23
+msgid "&Last Record"
+msgstr "Последняя запись"
+
+#: .\..\forms\.text.py:24
+msgid "Navigate the current block to the last record"
+msgstr "Перейти в текущем блоке на последнюю запись"
+
+#: .\..\forms\.text.py:25
+msgid "&Jump to Record"
+msgstr "Перейти на запись"
+
+#: .\..\forms\.text.py:26
+msgid "Ask for a record number and then navigate to that record"
+msgstr "Спросить номер записи и затем перейти на него"
+
+#: .\..\forms\.text.py:27
+msgid "&New Record"
+msgstr "Новая запись"
+
+#: .\..\forms\.text.py:28
+msgid "Insert a new record in the current block"
+msgstr "Вставить новую запись в текущем блоке"
+
+#: .\..\forms\.text.py:29
+msgid "&Delete Record"
+msgstr "Удалить запись"
+
+#: .\..\forms\.text.py:30
+msgid "Mark the current record for deletion"
+msgstr "Пометить текущую запись к удалению"
+
+#: .\..\forms\.text.py:31
+msgid "&Undelete Record"
+msgstr "Восстановить запись"
+
+#: .\..\forms\.text.py:32
+msgid "Unmark the current record for deletion"
+msgstr "Снять пометку текущей записи к удалению"
+
+#: .\..\forms\.text.py:33
+msgid "Define Filter"
+msgstr "Определить фильтр"
+
+#: .\..\forms\.text.py:34
+msgid "Define new filter criteria"
+msgstr "Определить критерий фильтрации"
+
+#: .\..\forms\.text.py:35
+msgid "Change Filter"
+msgstr "Изменить фильтр"
+
+#: .\..\forms\.text.py:36
+msgid "Change filter criteria"
+msgstr "Изменить критерий фильтра"
+
+#: .\..\forms\.text.py:37
+msgid "Discard Filter Changes"
+msgstr "Отменить изменения фильтров"
+
+#: .\..\forms\.text.py:38
+msgid "Discard changes to filter criteria and restore previous filter state"
+msgstr "Отменить изменения критерия фильтра и восстановить первичное состояние фильтра"
+
+#: .\..\forms\.text.py:39
+msgid "Apply Filter"
+msgstr "Применить фильтр"
+
+#: .\..\forms\.text.py:40
+msgid "Apply the filter"
+msgstr "Применить фильтр"
+
+#: .\..\forms\.text.py:41
+msgid "&Save changes"
+msgstr "Сохранить изменения"
+
+#: .\..\forms\.text.py:42
+msgid "Save all changes to the database"
+msgstr "Сохранить изменения в базу данных"
+
+#: .\..\forms\.text.py:43
+msgid "Disca&rd changes"
+msgstr "Отменить изменения"
+
+#: .\..\forms\.text.py:44
+msgid "Discard all changes and reset the form"
+msgstr "Отменить все изменения"
+
+#: .\..\forms\.text.py:45
+msgid "Disca&rd record changes"
+msgstr "Отменить изменения записи"
+
+#: .\..\forms\.text.py:46
+msgid "Discard record changes"
+msgstr "Отменить изменения записи"
+
+#: .\..\forms\.text.py:47
+msgid "About"
+msgstr "О программе"
+
+#: .\..\forms\.text.py:48
+msgid "Show info about this form"
+msgstr "Показать информацию о форме"
+
+#: .\..\forms\.text.py:49
+msgid "Test"
+msgstr "Тест"
+
+#: .\..\forms\.text.py:50
+msgid "&Print"
+msgstr "Печать"
+
+#: .\..\forms\.text.py:51
+msgid "Print the contents of this form"
+msgstr "Печать содержимого формы"
+
+#: .\..\forms\.text.py:52
+msgid "&Export..."
+msgstr "Экспорт..."
+
+#: .\..\forms\.text.py:53
+msgid "Export the contents of this form"
+msgstr "Экспорт содержимого формы"
+
+#: .\..\forms\.text.py:54
+msgid "&Email"
+msgstr "Почта"
+
+#: .\..\forms\.text.py:55
+msgid "Email the contents of this form"
+msgstr "Выслать содержимое формы по Email"
+
+#: .\..\forms\.text.py:56
+msgid "Open document"
+msgstr "Открыть документ"
+
+#: .\..\forms\.text.py:57
+msgid "Open document with barcode"
+msgstr "Открыть документ по штрихкоду"
+
+#: .\..\forms\.text.py:58
+msgid "&Close window"
+msgstr "Закрыть окно"
+
+#: .\..\forms\.text.py:59
+msgid "Close this window"
+msgstr "Закрыть это онко"
+
+#: .\..\forms\.text.py:60
+msgid "Close all windows"
+msgstr "Закрыть все окна"
+
+#: .\..\forms\.text.py:61
+msgid "E&xit app"
+msgstr "Выход"
+
+#: .\..\forms\.text.py:62
+msgid "Exit"
+msgstr "Выйти из приложения"
+
+#: .\..\forms\.text.py:63
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: .\..\forms\.text.py:64
+msgid "&File"
+msgstr "Файл"
+
+#: .\..\forms\.text.py:65
+msgid "&Help"
+msgstr "Помощь"
+
+#: .\..\forms\.text.py:66
+msgid "Обновить"
+msgstr ""
+
+#: .\..\forms\.text.py:67
+msgid "Фильтр по значеню ячейки - включить"
+msgstr ""
+
+#: .\..\forms\.text.py:68
+msgid "Фильтр по значеню ячейки - исключить"
+msgstr ""
+
+#: .\..\forms\.text.py:69
+msgid "Отменить все фильтры"
+msgstr ""
+
+#: .\..\forms\.text.py:70
+msgid "Поиск..."
+msgstr ""
+
+#: .\..\forms\.text.py:71
+msgid "Сортировка по возрастанию"
+msgstr ""
+
+#: .\..\forms\.text.py:72
+msgid "Сортировка по убыванию"
+msgstr ""
+
+#: .\..\forms\.text.py:73
+msgid "Отменить сортировку"
+msgstr ""
+
+#: .\..\forms\.text.py:74
+msgid "Отменить все сортировки"
+msgstr ""
+
+#: .\..\forms\.text.py:75
+msgid "Вырезать"
+msgstr ""
+
+#: .\..\forms\.text.py:76
+msgid "Копировать"
+msgstr ""
+
+#: .\..\forms\.text.py:77
+msgid "Вставить"
+msgstr ""
+
+#: .\..\forms\.text.py:78
+msgid "&Delete Records"
+msgstr "Удалить записи"
+
+#: .\..\forms\.text.py:79
+msgid "Mark selected records for deletion"
+msgstr "Пометить к удалению выделенные записи"
+
+#: .\..\forms\.text.py:80
+msgid "&Undelete Records"
+msgstr "Отменить удаление записей"
+
+#: .\..\forms\.text.py:81
+msgid "Unmark selected records for deletion"
+msgstr "Убрать пометки к удалению у выделенных записей"
+
+#: .\..\forms\.text.py:82
+msgid "История изменений"
+msgstr ""
+
+#: .\..\forms\.text.py:83
+msgid "Переименовать..."
+msgstr ""
+
+#: .\..\forms\.text.py:84
+msgid "Создать..."
+msgstr ""
+
+#: .\..\forms\.text.py:85
+msgid "Удалить"
+msgstr ""
+
+#: .\..\forms\.text.py:86
+msgid "Развернуть все"
+msgstr ""
+
+#: .\..\forms\.text.py:87
+msgid "Свернуть все"
+msgstr ""
+
+#: .\..\forms\.text.py:88
+msgid "applications datasource for login.gfd"
+msgstr ""
+
+#: .\..\forms\.text.py:89
+msgid "Вход"
+msgstr ""
+
+#: .\..\forms\.text.py:90
+msgid "Приложение:"
+msgstr ""
+
+#: .\..\forms\.text.py:91
+msgid "Имя:"
+msgstr ""
+
+#: .\..\forms\.text.py:92
+msgid "Пароль:"
+msgstr ""
+
+#: .\..\forms\.text.py:93
+msgid "Ок"
+msgstr ""
+
+#: .\..\forms\.text.py:94
+msgid "Отмена"
+msgstr ""
+
+#: .\..\forms\.text.py:95
+msgid "Кому"
+msgstr ""
+
+#: .\..\forms\.text.py:96
+msgid "Отправить"
+msgstr ""
+
+#: .\..\forms\.text.py:97
+msgid "Тема"
+msgstr ""
+
+#: .\..\forms\.text.py:98
+msgid "Текст"
+msgstr ""
+
+#: .\..\forms\.text.py:99
+msgid "Поиск"
+msgstr ""
+
+#: .\..\forms\.text.py:100
+msgid "Искать"
+msgstr ""
+
+#: .\..\forms\.text.py:101
+msgid "Найти"
+msgstr ""
+
+#: .\..\forms\.text.py:102
+msgid "Ячейка целиком"
+msgstr ""
+
+#: .\..\forms\.text.py:103
+msgid "Икать в выделенном"
+msgstr ""
+
+#: .\..\forms\.text.py:104
+msgid "Искать снизу вверх"
+msgstr ""
+
+#: .\..\forms\.text.py:105
+msgid "Report"
+msgstr "Отчет"
+
+#: .\..\forms\.text.py:106
+msgid "У Вас нет прав для просмотра данной формы"
+msgstr ""
+
+#: .\..\forms\.text.py:107
+msgid "Экспорт отчета"
+msgstr ""
+
+#: .\..\forms\.text.py:108
+msgid "Формат"
+msgstr ""
+
+#: .\..\forms\.text.py:109
+msgid "Параметры отчета: Накладная"
+msgstr ""
+
+#: .\..\forms\.text.py:110
+msgid "Идентификатор"
+msgstr ""
+
+#: .\..\forms\.text.py:111
+msgid "OK"
+msgstr "ОК"
+
+#: .\..\forms\.text.py:112
+msgid "Заказ на завод"
+msgstr ""
+
+#: .\..\forms\.text.py:113
+msgid "Очистить"
+msgstr ""
+
+#: .\..\forms\.text.py:114
+msgid "Импорт"
+msgstr ""
+
+#: .\..\forms\.text.py:115
+msgid "Период"
+msgstr ""
+
+#: .\..\forms\.text.py:116
+msgid "Интервал"
+msgstr ""
+
+#: .\..\forms\.text.py:117
+msgid "Генерировать"
+msgstr ""
+
+#: .\..\forms\.text.py:118
+msgid "Артикул"
+msgstr ""
+
+#: .\..\forms\.text.py:119
+msgid "Дата"
+msgstr ""
+
+#: .\..\forms\.text.py:120
+msgid "Количество"
+msgstr ""
+
+#: .\..\forms\.text.py:121
+msgid "Импорт плана продаж"
+msgstr ""
+
+#: .\..\forms\.text.py:122
+msgid "Удалить все записи на дату"
+msgstr ""
+
+#: .\..\forms\.text.py:123
+msgid "Дата (месяц)"
+msgstr ""
+
+#: .\..\forms\.text.py:124
+msgid "Рабочих дней"
+msgstr ""
+
+#: .\..\forms\.text.py:125
+msgid "Наименование"
+msgstr ""
+
+#: .\..\forms\.text.py:126
+msgid "Склад"
+msgstr ""
+
+#: .\..\forms\.text.py:127
+msgid "Продажа"
+msgstr ""
+
+#: .\..\forms\.text.py:128
+msgid "Приход"
+msgstr ""
+
+#: .\..\forms\.text.py:129
+msgid "Заказ"
+msgstr ""
+
+#: .\..\forms\.text.py:130
+msgid "История"
+msgstr ""
+
+#: .\..\forms\.text.py:131
+msgid "Организация"
+msgstr ""
+
+#: .\..\forms\.text.py:132
+msgid "Группа"
+msgstr ""
+
+#: .\..\forms\.text.py:133
+msgid "Товар"
+msgstr ""
+
+#: .\..\forms\.text.py:134
+msgid "Тренд"
+msgstr ""
+
+#: .\..\forms\.text.py:135
+msgid "Показывать"
+msgstr ""
+
+#: .\..\forms\.text.py:136
+msgid "Степень"
+msgstr ""
+
+#: .\..\forms\.text.py:137
+msgid "Прогноз, дней"
+msgstr ""
+
+#: .\..\forms\.text.py:138
+msgid "формула"
+msgstr ""
+
+#: .\..\forms\.text.py:139
+msgid "Чарт"
+msgstr ""
+
+#: .\..\forms\.text.py:140
+msgid "Легенда"
+msgstr ""
+
+#: .\..\forms\.text.py:141
+msgid "Размер шрифта"
+msgstr ""
+
+#: .\..\forms\.text.py:142
+msgid "Столбики"
+msgstr ""
+
+#: .\..\forms\.text.py:143
+msgid "Показывать значения"
+msgstr ""
+
+#: .\..\forms\.text.py:144
+msgid "Размер шрифта значений"
+msgstr ""
+
+#: .\..\forms\.text.py:145
+msgid "Ось категорий или времени"
+msgstr ""
+
+#: .\..\forms\.text.py:146
+msgid "Размер шрифта делений"
+msgstr ""
+
+#: .\..\forms\.text.py:147
+msgid "Ось значений"
+msgstr ""
+
+#: .\..\forms\.text.py:148
+msgid "Минимум"
+msgstr ""
+
+#: .\..\forms\.text.py:149
+msgid "Максимум"
+msgstr ""
+
+#: .\..\forms\.text.py:150
+msgid "Цена ст. деления"
+msgstr ""
+
+#: .\..\forms\.text.py:151
+msgid "Кол-во мл. делений"
+msgstr ""
+
+#: .\..\forms\.text.py:152
+msgid "Вторая ось значений"
+msgstr ""
+
+#: .\..\forms\.text.py:153
+msgid "Запросы MDX"
+msgstr ""
+
+#: .\..\forms\.text.py:154
+msgid "Системное имя"
+msgstr ""
+
+#: .\..\forms\.text.py:155
+msgid "Отчет OLAP"
+msgstr ""
+
+#: .\..\forms\.text.py:156
+msgid "Показать"
+msgstr ""
+
+#: .\..\forms\.text.py:157
+msgid "Задолженности"
+msgstr ""
+
+#: .\..\forms\.text.py:158
+msgid "С"
+msgstr ""
+
+#: .\..\forms\.text.py:159
+msgid "по"
+msgstr ""
+
+#: .\..\forms\.text.py:160
+msgid "Текущая"
+msgstr ""
+
+#: .\..\forms\.text.py:161
+msgid "Группы"
+msgstr ""
+
+#: .\..\forms\.text.py:162
+msgid "Ф1"
+msgstr ""
+
+#: .\..\forms\.text.py:163
+msgid "Ф2"
+msgstr ""
+
+#: .\..\forms\.text.py:164
+msgid "Скрывать предоплату"
+msgstr ""
+
+#: .\..\forms\.text.py:165
+msgid "Фильтры"
+msgstr ""
+
+#: .\..\forms\.text.py:166
+msgid "Отчет сводный"
+msgstr ""
+
+#: .\..\forms\.text.py:167
+msgid "Отчет с суммами"
+msgstr ""
+
+#: .\..\forms\.text.py:168
+msgid "Данные"
+msgstr ""
+
+#: .\..\forms\.text.py:169
+msgid "Куратор"
+msgstr ""
+
+#: .\..\forms\.text.py:170
+msgid "Старший группы"
+msgstr ""
+
+#: .\..\forms\.text.py:171
+msgid "Контрагент"
+msgstr ""
+
+#: .\..\forms\.text.py:172
+msgid "Не проср."
+msgstr ""
+
+#: .\..\forms\.text.py:173
+msgid "%"
+msgstr ""
+
+#: .\..\forms\.text.py:174
+msgid "Проср."
+msgstr ""
+
+#: .\..\forms\.text.py:175
+msgid "Задолж."
+msgstr ""
+
+#: .\..\forms\.text.py:176
+msgid "Просроченная задолженность за период"
+msgstr ""
+
+#: .\..\forms\.text.py:177
+msgid "Сравнивать"
+msgstr ""
+
+#: .\..\forms\.text.py:178
+msgid "текущая"
+msgstr ""
+
+#: .\..\forms\.text.py:179
+msgid "просроченная"
+msgstr ""
+
+#: .\..\forms\.text.py:180
+msgid "отношение"
+msgstr ""
+
+#: .\..\forms\.text.py:181
+msgid "Категории"
+msgstr ""
+
+#: .\..\forms\.text.py:182
+msgid "Продажи"
+msgstr ""
+
+#: .\..\forms\.text.py:183
+msgid "Диаграмма"
+msgstr ""
+
+#: .\..\forms\.text.py:184
+msgid "Категория"
+msgstr ""
+
+#: .\..\forms\.text.py:185
+msgid "Значение"
+msgstr ""
+
+#: .\..\forms\.text.py:186
+msgid "Платежный календарь"
+msgstr ""
+
+#: .\..\forms\.text.py:187
+msgid "Отчет"
+msgstr ""
+
+#: .\..\forms\.text.py:188
+msgid "Тек.зад."
+msgstr ""
+
+#: .\..\forms\.text.py:189
+msgid "Проср.зад."
+msgstr ""
+
+#: .\..\forms\.text.py:190
+msgid "Платеж"
+msgstr ""
+
+#: .\..\forms\.text.py:191
+msgid "Платеж после"
+msgstr ""
+
+#: .\..\forms\.text.py:192
+msgid "Товары за период"
+msgstr ""
+
+#: .\..\forms\.text.py:193
+msgid "Остаток"
+msgstr ""
+
+#: .\..\forms\.text.py:194
+msgid "Расход"
+msgstr ""
+
+#: .\..\forms\.text.py:195
+msgid "Период оборачиваемости"
+msgstr ""
+
+#: .\..\forms\.text.py:196
+msgid "Деньги"
+msgstr ""
+
+#: .\..\forms\.text.py:197
+msgid "Продажи за период"
+msgstr ""
+
+#: .\..\forms\.text.py:198
+msgid "маржа"
+msgstr ""
+
+#: .\..\forms\.text.py:199
+msgid "рентабельность"
+msgstr ""
+
+#: .\..\forms\.text.py:200
+msgid "сумма продаж"
+msgstr ""
+
+#: .\..\forms\.text.py:201
+msgid "Сумма"
+msgstr ""
+
+#: .\..\forms\.text.py:202
+msgid "Продажи столбиковые"
+msgstr ""
+
+#: .\..\forms\.text.py:203
+msgid "Сумма прочего"
+msgstr ""
+
+#: .\..\forms\.text.py:204
+msgid "Экстраполировать текущий период"
+msgstr ""
+
+#: .\..\forms\.text.py:205
+msgid "Tables bi_spr_doc_type"
+msgstr ""
+
+#: .\..\forms\.text.py:206
+msgid "doc_type_id"
+msgstr ""
+
+#: .\..\forms\.text.py:207
+msgid "doc_type_name"
+msgstr ""
+
+#: .\..\forms\.text.py:208
+msgid "doc_type_mtp"
+msgstr ""
+
+#: .\..\forms\.text.py:209
+msgid "Tables bi_spr_manager"
+msgstr ""
+
+#: .\..\forms\.text.py:210
+msgid "manager_id"
+msgstr ""
+
+#: .\..\forms\.text.py:211
+msgid "manager_name"
+msgstr ""
+
+#: .\..\forms\.text.py:212
+msgid "Tables bi_spr_org"
+msgstr ""
+
+#: .\..\forms\.text.py:213
+msgid "org_id"
+msgstr ""
+
+#: .\..\forms\.text.py:214
+msgid "org_name"
+msgstr ""
+
+#: .\..\forms\.text.py:215
+msgid "Tables bi_spr_prod_ctg"
+msgstr ""
+
+#: .\..\forms\.text.py:216
+msgid "prod_ctg_id"
+msgstr ""
+
+#: .\..\forms\.text.py:217
+msgid "prod_ctg_name"
+msgstr ""
+
+#: .\..\forms\.text.py:218
+msgid "Tables bi_spr_region"
+msgstr ""
+
+#: .\..\forms\.text.py:219
+msgid "region_id"
+msgstr ""
+
+#: .\..\forms\.text.py:220
+msgid "region_name"
+msgstr ""
+
+#: .\..\forms\.text.py:221
+msgid "Курс валют"
+msgstr ""
+
+#: .\..\forms\.text.py:222
+msgid "Валюта"
+msgstr ""
+
+#: .\..\forms\.text.py:223
+msgid "Курс"
+msgstr ""
+
+#: .\..\forms\.text.py:224
+msgid "Назначаем задачу"
+msgstr ""
+
+#: .\..\forms\.text.py:225
+msgid "Сотрудник"
+msgstr ""
+
+#: .\..\forms\.text.py:226
+msgid "Штрихкод задачи"
+msgstr ""
+
+#: .\..\forms\.text.py:227
+msgid "группа"
+msgstr ""
+
+#: .\..\forms\.text.py:228
+msgid "Номер"
+msgstr ""
+
+#: .\..\forms\.text.py:229
+msgid "Автор документа"
+msgstr ""
+
+#: .\..\forms\.text.py:230
+msgid "Плательщик"
+msgstr ""
+
+#: .\..\forms\.text.py:231
+msgid "НДС"
+msgstr ""
+
+#: .\..\forms\.text.py:232
+msgid "Новый документ"
+msgstr ""
+
+#: .\..\forms\.text.py:233
+msgid "Новый документ доставки"
+msgstr ""
+
+#: .\..\forms\.text.py:234
+msgid "Получатель"
+msgstr ""
+
+#: .\..\forms\.text.py:235
+msgid "Место доставки"
+msgstr ""
+
+#: .\..\forms\.text.py:236
+msgid "Перевозчик"
+msgstr ""
+
+#: .\..\forms\.text.py:237
+msgid "Дата и время доставки"
+msgstr ""
+
+#: .\..\forms\.text.py:238
+msgid "До дверей"
+msgstr ""
+
+#: .\..\forms\.text.py:239
+msgid "Приходный контроль"
+msgstr ""
+
+#: .\..\forms\.text.py:240
+msgid "Печать"
+msgstr ""
+
+#: .\..\forms\.text.py:241
+msgid "Приходный складской ордер №"
+msgstr ""
+
+#: .\..\forms\.text.py:242
+msgid "Штрикод"
+msgstr ""
+
+#: .\..\forms\.text.py:243
+msgid "ЕИ"
+msgstr ""
+
+#: .\..\forms\.text.py:244
+msgid "Кол."
+msgstr ""
+
+#: .\..\forms\.text.py:245
+msgid "Кол. факт"
+msgstr ""
+
+#: .\..\forms\.text.py:246
+msgid "Ведомость контролера"
+msgstr ""
+
+#: .\..\forms\.text.py:247
+msgid "Штрихкод"
+msgstr ""
+
+#: .\..\forms\.text.py:248
+msgid "Сформировать ведомость раскладки"
+msgstr ""
+
+#: .\..\forms\.text.py:249
+msgid "Предв. просмотр печати"
+msgstr ""
+
+#: .\..\forms\.text.py:250
+msgid "Закрыть"
+msgstr ""
+
+#: .\..\forms\.text.py:251
+msgid "№"
+msgstr ""
+
+#: .\..\forms\.text.py:252
+msgid "начата"
+msgstr ""
+
+#: .\..\forms\.text.py:253
+msgid "Объем"
+msgstr ""
+
+#: .\..\forms\.text.py:254
+msgid "Задачи на раскладку"
+msgstr ""
+
+#: .\..\forms\.text.py:255
+msgid "Исполнитель"
+msgstr ""
+
+#: .\..\forms\.text.py:256
+msgid "Начало"
+msgstr ""
+
+#: .\..\forms\.text.py:257
+msgid "Время"
+msgstr ""
+
+#: .\..\forms\.text.py:258
+msgid "Заверш."
+msgstr ""
+
+#: .\..\forms\.text.py:259
+msgid "Откуда"
+msgstr ""
+
+#: .\..\forms\.text.py:260
+msgid "Подбор адреса"
+msgstr ""
+
+#: .\..\forms\.text.py:261
+msgid "Куда"
+msgstr ""
+
+#: .\..\forms\.text.py:262
+msgid "Справочник товаров"
+msgstr ""
+
+#: .\..\forms\.text.py:263
+msgid "Краткое наименование"
+msgstr ""
+
+#: .\..\forms\.text.py:264
+msgid "Производитель"
+msgstr ""
+
+#: .\..\forms\.text.py:265
+msgid "Упаковка и габариты"
+msgstr ""
+
+#: .\..\forms\.text.py:266
+msgid "Упаковка"
+msgstr ""
+
+#: .\..\forms\.text.py:267
+msgid "Кол-во"
+msgstr ""
+
+#: .\..\forms\.text.py:268
+msgid "Глубина"
+msgstr ""
+
+#: .\..\forms\.text.py:269
+msgid "Высота"
+msgstr ""
+
+#: .\..\forms\.text.py:270
+msgid "Ширина"
+msgstr ""
+
+#: .\..\forms\.text.py:271
+msgid "Вес БРУТТО"
+msgstr ""
+
+#: .\..\forms\.text.py:272
+msgid "Вес НЕТТО"
+msgstr ""
+
+#: .\..\forms\.text.py:273
+msgid "WMS"
+msgstr ""
+
+#: .\..\forms\.text.py:274
+msgid "Ограниченный доступ"
+msgstr ""
+
+#: .\..\forms\.text.py:275
+msgid "Категория оборачиваемости"
+msgstr ""
+
+#: .\..\forms\.text.py:276
+msgid "Категория оборачиваемости (буква)"
+msgstr ""
+
+#: .\..\forms\.text.py:277
+msgid "Объем в ячейке хранения"
+msgstr ""
+
+#: .\..\forms\.text.py:278
+msgid "Тип места хранения"
+msgstr ""
+
+#: .\..\forms\.text.py:279
+msgid "Адрес"
+msgstr ""
+
+#: .\..\forms\.text.py:280
+msgid "Суммарное количество"
+msgstr ""
+
+#: .\..\forms\.text.py:281
+msgid "Расходный контроль и упаковка"
+msgstr ""
+
+#: .\..\forms\.text.py:282
+msgid "Печать ведомости упаковки"
+msgstr ""
+
+#: .\..\forms\.text.py:283
+msgid "Ведомость на отбор №"
+msgstr ""
+
+#: .\..\forms\.text.py:284
+msgid "Ведомость контролера на расход"
+msgstr ""
+
+#: .\..\forms\.text.py:285
+msgid ">0<"
+msgstr ""
+
+#: .\..\forms\.text.py:286
+msgid "NET"
+msgstr ""
+
+#: .\..\forms\.text.py:287
+msgid "Взвешено"
+msgstr ""
+
+#: .\..\forms\.text.py:288
+msgid "Вес"
+msgstr ""
+
+#: .\..\forms\.text.py:289
+msgid "Состояние весов"
+msgstr ""
+
+#: .\..\forms\.text.py:290
+msgid "Запаковать"
+msgstr ""
+
+#: .\..\forms\.text.py:291
+msgid "Ведомости упаковок"
+msgstr ""
+
+#: .\..\forms\.text.py:292
+msgid "Вес, кг"
+msgstr ""
+
+#: .\..\forms\.text.py:293
+msgid "Открываем документ"
+msgstr ""
+
+#: .\..\forms\.text.py:294
+msgid "Штрихкод документа"
+msgstr ""
+
+#: .\..\forms\.text.py:295
+msgid "Открыть документ"
+msgstr ""
+
+#: .\..\forms\.text.py:296
+msgid "Количество копий"
+msgstr ""
+
+#: .\..\forms\.text.py:297
+msgid "Выбор формы печати"
+msgstr ""
+
+#: .\..\forms\.text.py:298
+msgid "Добавление товара"
+msgstr ""
+
+#: .\..\forms\.text.py:299
+msgid "Строка поиска"
+msgstr ""
+
+#: .\..\forms\.text.py:300
+msgid "ОЕМ код"
+msgstr ""
+
+#: .\..\forms\.text.py:301
+msgid "Новый"
+msgstr ""
+
+#: .\..\forms\.text.py:302
+msgid "До двери"
+msgstr ""
+
+#: .\..\forms\.text.py:303
+msgid "Печать штрихкода с идентификационным номером"
+msgstr ""
+
+#: .\..\forms\.text.py:304
+msgid "Копировать жалобы и пожелания"
+msgstr ""
+
+#: .\..\forms\.text.py:305
+msgid "Фирма"
+msgstr ""
+
+#: .\..\forms\.text.py:306
+msgid "Р/С"
+msgstr ""
+
+#: .\..\forms\.text.py:307
+msgid "Утверждаю"
+msgstr ""
+
+#: .\..\forms\.text.py:308
+msgid "На основании"
+msgstr ""
+
+#: .\..\forms\.text.py:309
+msgid "Договор"
+msgstr ""
+
+#: .\..\forms\.text.py:310
+msgid "Р/C"
+msgstr ""
+
+#: .\..\forms\.text.py:311
+msgid "Доверенность №"
+msgstr ""
+
+#: .\..\forms\.text.py:312
+msgid "от"
+msgstr ""
+
+#: .\..\forms\.text.py:313
+msgid "на"
+msgstr ""
+
+#: .\..\forms\.text.py:314
+msgid "должность"
+msgstr ""
+
+#: .\..\forms\.text.py:315
+msgid "Вес упаковки"
+msgstr ""
+
+#: .\..\forms\.text.py:316
+msgid "Обьем упаковки"
+msgstr ""
+
+#: .\..\forms\.text.py:317
+msgid "Количество мест"
+msgstr ""
+
+#: .\..\forms\.text.py:318
+msgid "Вес документа"
+msgstr ""
+
+#: .\..\forms\.text.py:319
+msgid "Объем документа"
+msgstr ""
+
+#: .\..\forms\.text.py:320
+msgid "Мы платим"
+msgstr ""
+
+#: .\..\forms\.text.py:321
+msgid "Показания одометра"
+msgstr ""
+
+#: .\..\forms\.text.py:322
+msgid "Задание"
+msgstr ""
+
+#: .\..\forms\.text.py:323
+msgid "Кат. задания"
+msgstr ""
+
+#: .\..\forms\.text.py:324
+msgid "сроки, с"
+msgstr ""
+
+#: .\..\forms\.text.py:325
+msgid "выполнить до"
+msgstr ""
+
+#: .\..\forms\.text.py:326
+msgid "Примечание"
+msgstr ""
+
+#: .\..\forms\.text.py:327
+msgid "Cтатья дв.ср-в"
+msgstr ""
+
+#: .\..\forms\.text.py:328
+msgid "Cтатья доходов"
+msgstr ""
+
+#: .\..\forms\.text.py:329
+msgid "Операция"
+msgstr ""
+
+#: .\..\forms\.text.py:330
+msgid "Ключ"
+msgstr ""
+
+#: .\..\forms\.text.py:331
+msgid "Позиции"
+msgstr ""
+
+#: .\..\forms\.text.py:332
+msgid "Цена"
+msgstr ""
+
+#: .\..\forms\.text.py:333
+msgid "Цена с НДС"
+msgstr ""
+
+#: .\..\forms\.text.py:334
+msgid "Стоимость"
+msgstr ""
+
+#: .\..\forms\.text.py:335
+msgid "Стоим. с НДС"
+msgstr ""
+
+#: .\..\forms\.text.py:336
+msgid "Цена (валюта)"
+msgstr ""
+
+#: .\..\forms\.text.py:337
+msgid "Цена с НДС (валюта)"
+msgstr ""
+
+#: .\..\forms\.text.py:338
+msgid "Стоимость (валюта)"
+msgstr ""
+
+#: .\..\forms\.text.py:339
+msgid "Стоим. с НДС (валюта)"
+msgstr ""
+
+#: .\..\forms\.text.py:340
+msgid "Идентификационный номер"
+msgstr ""
+
+#: .\..\forms\.text.py:341
+msgid "Гарантия"
+msgstr ""
+
+#: .\..\forms\.text.py:342
+msgid "Идентификация СЦ"
+msgstr ""
+
+#: .\..\forms\.text.py:343
+msgid "Примечание СЦ"
+msgstr ""
+
+#: .\..\forms\.text.py:344
+msgid "Ячейка, откуда"
+msgstr ""
+
+#: .\..\forms\.text.py:345
+msgid "Ячейка, куда"
+msgstr ""
+
+#: .\..\forms\.text.py:346
+msgid "Количество:"
+msgstr ""
+
+#: .\..\forms\.text.py:347
+msgid "Сумма без налога:"
+msgstr ""
+
+#: .\..\forms\.text.py:348
+msgid "Налог ("
+msgstr ""
+
+#: .\..\forms\.text.py:349
+msgid "%):"
+msgstr ""
+
+#: .\..\forms\.text.py:350
+msgid "Сумма с налогом:"
+msgstr ""
+
+#: .\..\forms\.text.py:351
+msgid "Сумма без налога, валюта:"
+msgstr ""
+
+#: .\..\forms\.text.py:352
+msgid "Налог, валюта:"
+msgstr ""
+
+#: .\..\forms\.text.py:353
+msgid "Сумма с налогом, валюта"
+msgstr ""
+
+#: .\..\forms\.text.py:354
+msgid "Объем (SUM box_volume)"
+msgstr ""
+
+#: .\..\forms\.text.py:355
+msgid "Обьем (SUM box_volume_q):"
+msgstr ""
+
+#: .\..\forms\.text.py:356
+msgid "Масса:"
+msgstr ""
+
+#: .\..\forms\.text.py:357
+msgid "Жалоба"
+msgstr ""
+
+#: .\..\forms\.text.py:358
+msgid "Пожелание"
+msgstr ""
+
+#: .\..\forms\.text.py:359
+msgid "Комплектность"
+msgstr ""
+
+#: .\..\forms\.text.py:360
+msgid "Диагноз"
+msgstr ""
+
+#: .\..\forms\.text.py:361
+msgid "Услуга"
+msgstr ""
+
+#: .\..\forms\.text.py:362
+msgid "Срок, в днях"
+msgstr ""
+
+#: .\..\forms\.text.py:363
+msgid "Создать платежи..."
+msgstr ""
+
+#: .\..\forms\.text.py:364
+msgid "Платежи"
+msgstr ""
+
+#: .\..\forms\.text.py:365
+msgid "Разница"
+msgstr ""
+
+#: .\..\forms\.text.py:366
+msgid "Неплаченные документы"
+msgstr ""
+
+#: .\..\forms\.text.py:367
+msgid "Сосзание оплат"
+msgstr ""
+
+#: .\..\forms\.text.py:368
+msgid "Документы"
+msgstr ""
+
+#: .\..\forms\.text.py:369
+msgid "Движение средств по р/c c"
+msgstr ""
+
+#: .\..\forms\.text.py:370
+msgid "Заказчик"
+msgstr ""
+
+#: .\..\forms\.text.py:371
+msgid "Со склада"
+msgstr ""
+
+#: .\..\forms\.text.py:372
+msgid "На склад"
+msgstr ""
+
+#: .\..\forms\.text.py:373
+msgid "Описание"
+msgstr ""
+
+#: .\..\forms\.text.py:374
+msgid "Дата начала"
+msgstr ""
+
+#: .\..\forms\.text.py:375
+msgid "Дата завершения"
+msgstr ""
+
+#: .\..\forms\.text.py:376
+msgid "Закрыть/назначить задачу"
+msgstr ""
+
+#: .\..\forms\.text.py:377
+msgid "Штрихкод задачи/сотрудника"
+msgstr ""
+
+#: .\..\forms\.text.py:378
+msgid "Автор докуиента"
+msgstr ""
+
+#: .\..\forms\.text.py:379
+msgid "Дата окончания "
+msgstr ""
+
+#: .\..\forms\.text.py:380
+msgid "Вложения"
+msgstr ""
+
+#: .\..\forms\.text.py:381
+msgid "Время вложения"
+msgstr ""
+
+#: .\..\forms\.text.py:382
+msgid "Автор"
+msgstr ""
+
+#: .\..\forms\.text.py:383
+msgid "Вложение"
+msgstr ""
+
+#: .\..\forms\.text.py:384
+msgid "..."
+msgstr ""
+
+#: .\..\forms\.text.py:385
+msgid ">"
+msgstr ""
+
+#: .\..\forms\.text.py:386
+msgid "Примечания"
+msgstr ""
+
+#: .\..\forms\.text.py:387
+msgid "Тип примечания"
+msgstr ""
+
+#: .\..\forms\.text.py:388
+msgid "Виды налога"
+msgstr ""
+
+#: .\..\forms\.text.py:389
+msgid "Вид налога"
+msgstr ""
+
+#: .\..\forms\.text.py:390
+msgid "Величина налога"
+msgstr ""
+
+#: .\..\forms\.text.py:391
+msgid "Контакты"
+msgstr ""
+
+#: .\..\forms\.text.py:392
+msgid "Контакты нашей фирмы"
+msgstr ""
+
+#: .\..\forms\.text.py:393
+msgid "Контакт"
+msgstr ""
+
+#: .\..\forms\.text.py:394
+msgid "Подпись"
+msgstr ""
+
+#: .\..\forms\.text.py:395
+msgid "Телефон"
+msgstr ""
+
+#: .\..\forms\.text.py:396
+msgid "E-Mail"
+msgstr ""
+
+#: .\..\forms\.text.py:397
+msgid "Дата рождения"
+msgstr ""
+
+#: .\..\forms\.text.py:398
+msgid "Обмен сообщениями"
+msgstr ""
+
+#: .\..\forms\.text.py:399
+msgid "Паспорт"
+msgstr ""
+
+#: .\..\forms\.text.py:400
+msgid "Контакты контрагента"
+msgstr ""
+
+#: .\..\forms\.text.py:401
+msgid "Отдел"
+msgstr ""
+
+#: .\..\forms\.text.py:402
+msgid "Создать V"
+msgstr ""
+
+#: .\..\forms\.text.py:403
+msgid "Создать дочерний документ"
+msgstr ""
+
+#: .\..\forms\.text.py:404
+msgid "Tables doc_pos_task"
+msgstr ""
+
+#: .\..\forms\.text.py:405
+msgid "Задания"
+msgstr ""
+
+#: .\..\forms\.text.py:406
+msgid "Календарь"
+msgstr ""
+
+#: .\..\forms\.text.py:407
+msgid "Детальное описание"
+msgstr ""
+
+#: .\..\forms\.text.py:408
+msgid "Место"
+msgstr ""
+
+#: .\..\forms\.text.py:409
+msgid "Приоритет"
+msgstr ""
+
+#: .\..\forms\.text.py:410
+msgid "Время начала"
+msgstr ""
+
+#: .\..\forms\.text.py:411
+msgid "Время завершения"
+msgstr ""
+
+#: .\..\forms\.text.py:412
+msgid "Актуально до"
+msgstr ""
+
+#: .\..\forms\.text.py:413
+msgid "Статус"
+msgstr ""
+
+#: .\..\forms\.text.py:414
+msgid "Отвязать..."
+msgstr ""
+
+#: .\..\forms\.text.py:415
+msgid "Печать выбраных"
+msgstr ""
+
+#: .\..\forms\.text.py:416
+msgid "Дерево документов"
+msgstr ""
+
+#: .\..\forms\.text.py:417
+msgid "Потомки документа"
+msgstr ""
+
+#: .\..\forms\.text.py:418
+msgid "Предки документа"
+msgstr ""
+
+#: .\..\forms\.text.py:419
+msgid "Атрибуты"
+msgstr ""
+
+#: .\..\forms\.text.py:420
+msgid "Атрибут"
+msgstr ""
+
+#: .\..\forms\.text.py:421
+msgid "Не"
+msgstr ""
+
+#: .\..\forms\.text.py:422
+msgid "Доступ"
+msgstr ""
+
+#: .\..\forms\.text.py:423
+msgid "Подразделение"
+msgstr ""
+
+#: .\..\forms\.text.py:424
+msgid "Владелец"
+msgstr ""
+
+#: .\..\forms\.text.py:425
+msgid "Изменение"
+msgstr ""
+
+#: .\..\forms\.text.py:426
+msgid "Удаление"
+msgstr ""
+
+#: .\..\forms\.text.py:427
+msgid "Язык"
+msgstr ""
+
+#: .\..\forms\.text.py:428
+msgid "Перевод"
+msgstr ""
+
+#: .\..\forms\.text.py:429
+msgid "Рассылки"
+msgstr ""
+
+#: .\..\forms\.text.py:430
+msgid "Активна"
+msgstr ""
+
+#: .\..\forms\.text.py:431
+msgid "Соединение"
+msgstr ""
+
+#: .\..\forms\.text.py:432
+msgid "Таймаут, часов"
+msgstr ""
+
+#: .\..\forms\.text.py:433
+msgid "Шаблон"
+msgstr ""
+
+#: .\..\forms\.text.py:434
+msgid "Процессы"
+msgstr ""
+
+#: .\..\forms\.text.py:435
+msgid "Применить"
+msgstr ""
+
+#: .\..\forms\.text.py:436
+msgid "Запланирована"
+msgstr ""
+
+#: .\..\forms\.text.py:437
+msgid "Начало первой попытки"
+msgstr ""
+
+#: .\..\forms\.text.py:438
+msgid "Завершение последней попытки"
+msgstr ""
+
+#: .\..\forms\.text.py:439
+msgid "Подписчик"
+msgstr ""
+
+#: .\..\forms\.text.py:440
+msgid "Выслано"
+msgstr ""
+
+#: .\..\forms\.text.py:441
+msgid "Контакт ID"
+msgstr ""
+
+#: .\..\forms\.text.py:442
+msgid "Почта"
+msgstr ""
+
+#: .\..\forms\.text.py:443
+msgid "Рассылки в процессе"
+msgstr ""
+
+#: .\..\forms\.text.py:444
+msgid "mail_dispatch_process_id"
+msgstr ""
+
+#: .\..\forms\.text.py:445
+msgid "Рассылка"
+msgstr ""
+
+#: .\..\forms\.text.py:446
+msgid "mail_subscription_process_id"
+msgstr ""
+
+#: .\..\forms\.text.py:447
+msgid "Подписка"
+msgstr ""
+
+#: .\..\forms\.text.py:448
+msgid "Ошибки рассылок"
+msgstr ""
+
+#: .\..\forms\.text.py:449
+msgid "time"
+msgstr ""
+
+#: .\..\forms\.text.py:450
+msgid "message"
+msgstr ""
+
+#: .\..\forms\.text.py:451
+msgid "traceback"
+msgstr ""
+
+#: .\..\forms\.text.py:452
+msgid "WWM ERP"
+msgstr ""
+
+#: .\..\forms\.text.py:453
+msgid "Отчеты"
+msgstr ""
+
+#: .\..\forms\.text.py:454
+msgid "Справочники"
+msgstr ""
+
+#: .\..\forms\.text.py:455
+msgid "Администрирование"
+msgstr ""
+
+#: .\..\forms\.text.py:456
+msgid "На какой должности будем работать?"
+msgstr ""
+
+#: .\..\forms\.text.py:457
+msgid "Имя"
+msgstr ""
+
+#: .\..\forms\.text.py:458
+msgid "Должность"
+msgstr ""
+
+#: .\..\forms\.text.py:459
+msgid "Упаковка на весах"
+msgstr ""
+
+#: .\..\forms\.text.py:460
+msgid "№ документа"
+msgstr ""
+
+#: .\..\forms\.text.py:461
+msgid "Состояние"
+msgstr ""
+
+#: .\..\forms\.text.py:462
+msgid "Ноль"
+msgstr ""
+
+#: .\..\forms\.text.py:463
+msgid "Тара"
+msgstr ""
+
+#: .\..\forms\.text.py:464
+msgid "Предварительный просмотр штрихкода"
+msgstr ""
+
+#: .\..\forms\.text.py:465
+msgid "Печать штрихкода"
+msgstr ""
+
+#: .\..\forms\.text.py:466
+msgid "План счетов"
+msgstr ""
+
+#: .\..\forms\.text.py:467
+msgid "Статьи"
+msgstr ""
+
+#: .\..\forms\.text.py:468
+msgid "Допустимые значения атрибута"
+msgstr ""
+
+#: .\..\forms\.text.py:469
+msgid "Выбрать все отмеченные"
+msgstr ""
+
+#: .\..\forms\.text.py:470
+msgid "Календари"
+msgstr ""
+
+#: .\..\forms\.text.py:471
+msgid "Договоры"
+msgstr ""
+
+#: .\..\forms\.text.py:472
+msgid "Объект доступа"
+msgstr ""
+
+#: .\..\forms\.text.py:473
+msgid "Выбрать все выделенные"
+msgstr ""
+
+#: .\..\forms\.text.py:474
+msgid "Доверенность"
+msgstr ""
+
+#: .\..\forms\.text.py:475
+msgid "Дата начала действия доверенности"
+msgstr ""
+
+#: .\..\forms\.text.py:476
+msgid "Дата окончания"
+msgstr ""
+
+#: .\..\forms\.text.py:477
+msgid "Категории организаций"
+msgstr ""
+
+#: .\..\forms\.text.py:478
+msgid "ЕДРПОУ"
+msgstr ""
+
+#: .\..\forms\.text.py:479
+msgid "Название"
+msgstr ""
+
+#: .\..\forms\.text.py:480
+msgid "Подбор контакта"
+msgstr ""
+
+#: .\..\forms\.text.py:481
+msgid "Подбор подразделения организации"
+msgstr ""
+
+#: .\..\forms\.text.py:482
+msgid "ЕДРПОУ организации"
+msgstr ""
+
+#: .\..\forms\.text.py:483
+msgid "Добавить"
+msgstr ""
+
+#: .\..\forms\.text.py:484
+msgid "Подразделение организации"
+msgstr ""
+
+#: .\..\forms\.text.py:485
+msgid "Город"
+msgstr ""
+
+#: .\..\forms\.text.py:486
+msgid "Категория товара"
+msgstr ""
+
+#: .\..\forms\.text.py:487
+msgid "price_currency_base"
+msgstr ""
+
+#: .\..\forms\.text.py:488
+msgid "price_currency_doc"
+msgstr ""
+
+#: .\..\forms\.text.py:489
+msgid "prod_q_avail"
+msgstr ""
+
+#: .\..\forms\.text.py:490
+msgid "prod_q_avail_b"
+msgstr ""
+
+#: .\..\forms\.text.py:491
+msgid "prod_q_fact"
+msgstr ""
+
+#: .\..\forms\.text.py:492
+msgid "prod_q_await"
+msgstr ""
+
+#: .\..\forms\.text.py:493
+msgid "prod_date_await"
+msgstr ""
+
+#: .\..\forms\.text.py:494
+msgid "prod_state_avail"
+msgstr ""
+
+#: .\..\forms\.text.py:495
+msgid "prod_state_await"
+msgstr ""
+
+#: .\..\forms\.text.py:496
+msgid "prod_q_sale"
+msgstr ""
+
+#: .\..\forms\.text.py:497
+msgid "prod_q_purchase"
+msgstr ""
+
+#: .\..\forms\.text.py:498
+msgid "Стоп-цена"
+msgstr ""
+
+#: .\..\forms\.text.py:499
+msgid "К продаже"
+msgstr ""
+
+#: .\..\forms\.text.py:500
+msgid "Ожидается"
+msgstr ""
+
+#: .\..\forms\.text.py:501
+msgid "Наименование товара"
+msgstr ""
+
+#: .\..\forms\.text.py:502
+msgid "Доставка"
+msgstr ""
+
+#: .\..\forms\.text.py:503
+msgid "Виды налогов"
+msgstr ""
+
+#: .\..\forms\.text.py:504
+msgid "Свободный объем"
+msgstr ""
+
+#: .\..\forms\.text.py:505
+msgid "Тип"
+msgstr ""
+
+#: .\..\forms\.text.py:506
+msgid "Объем, куб.м"
+msgstr ""
+
+#: .\..\forms\.text.py:507
+msgid "Свободный объем, куб.м"
+msgstr ""
+
+#: .\..\forms\.text.py:508
+msgid "Ширина, см"
+msgstr ""
+
+#: .\..\forms\.text.py:509
+msgid "Высота, см"
+msgstr ""
+
+#: .\..\forms\.text.py:510
+msgid "Глубина, см"
+msgstr ""
+
+#: .\..\forms\.text.py:511
+msgid "Индекс ячейки"
+msgstr ""
+
+#: .\..\forms\.text.py:512
+msgid "Признак"
+msgstr ""
+
+#: .\..\forms\.text.py:513
+msgid "wms_zone_abbr"
+msgstr ""
+
+#: .\..\forms\.text.py:514
+msgid "Протокол доставки"
+msgstr ""
+
+#: .\..\forms\.text.py:515
+msgid "№ замовлення"
+msgstr ""
+
+#: .\..\forms\.text.py:516
+msgid "Дата замовлення"
+msgstr ""
+
+#: .\..\forms\.text.py:517
+msgid "Перелiк документiв"
+msgstr ""
+
+#: .\..\forms\.text.py:518
+msgid "Замовник/постачальник"
+msgstr ""
+
+#: .\..\forms\.text.py:519
+msgid "склад"
+msgstr ""
+
+#: .\..\forms\.text.py:520
+msgid "Дата початку"
+msgstr ""
+
+#: .\..\forms\.text.py:521
+msgid "Час"
+msgstr ""
+
+#: .\..\forms\.text.py:522
+msgid "Дата завершення"
+msgstr ""
+
+#: .\..\forms\.text.py:523
+msgid "Посильний"
+msgstr ""
+
+#: .\..\forms\.text.py:524
+msgid "Списание материалов"
+msgstr ""
+
+#: .\..\forms\.text.py:525
+msgid "Тип ремонта"
+msgstr ""
+
+#: .\..\forms\.text.py:526
+msgid "№ заказа"
+msgstr ""
+
+#: .\..\forms\.text.py:527
+msgid "Гарантийный (нет)"
+msgstr ""
+
+#: .\..\forms\.text.py:528
+msgid "История прайса поставщика"
+msgstr ""
+
+#: .\..\forms\.text.py:529
+msgid "Артикул поставщика"
+msgstr ""
+
+#: .\..\forms\.text.py:530
+msgid "В упаковке"
+msgstr ""
+
+#: .\..\forms\.text.py:531
+msgid "Доступность"
+msgstr ""
+
+#: .\..\forms\.text.py:532
+msgid "Готовность (дни)"
+msgstr ""
+
+#: .\..\forms\.text.py:533
+msgid "Пред. цена"
+msgstr ""
+
+#: .\..\forms\.text.py:534
+msgid "Задолженность контрагентов"
+msgstr ""
+
+#: .\..\forms\.text.py:535
+msgid "Упр."
+msgstr ""
+
+#: .\..\forms\.text.py:536
+msgid "Бух."
+msgstr ""
+
+#: .\..\forms\.text.py:537
+msgid "Входящее сальдо"
+msgstr ""
+
+#: .\..\forms\.text.py:538
+msgid "Дебет"
+msgstr ""
+
+#: .\..\forms\.text.py:539
+msgid "Кредит"
+msgstr ""
+
+#: .\..\forms\.text.py:540
+msgid "Исходящее сальдо"
+msgstr ""
+
+#: .\..\forms\.text.py:541
+msgid "Состояние устройств"
+msgstr ""
+
+#: .\..\forms\.text.py:542
+msgid "Стадия"
+msgstr ""
+
+#: .\..\forms\.text.py:543
+msgid "Сервисный центр"
+msgstr ""
+
+#: .\..\forms\.text.py:544
+msgid "Создать документ"
+msgstr ""
+
+#: .\..\forms\.text.py:545
+msgid "Устройство"
+msgstr ""
+
+#: .\..\forms\.text.py:546
+msgid "Жалобы"
+msgstr ""
+
+#: .\..\forms\.text.py:547
+msgid "Пожелания"
+msgstr ""
+
+#: .\..\forms\.text.py:548
+msgid "Адрес хранения"
+msgstr ""
+
+#: .\..\forms\.text.py:549
+msgid "Создание документа"
+msgstr ""
+
+#: .\..\forms\.text.py:550
+msgid "Тип документа"
+msgstr ""
+
+#: .\..\forms\.text.py:551
+msgid "Создать"
+msgstr ""
+
+#: .\..\forms\.text.py:552
+msgid "Статистика продаж"
+msgstr ""
+
+#: .\..\forms\.text.py:553
+msgid "На"
+msgstr ""
+
+#: .\..\forms\.text.py:554
+msgid "Дельта"
+msgstr ""
+
+#: .\..\forms\.text.py:555
+msgid "Статистика продаж по менеджерам"
+msgstr ""
+
+#: .\..\forms\.text.py:556
+msgid "Менеджер"
+msgstr ""
+
+#: .\..\forms\.text.py:557
+msgid "Состояние складов"
+msgstr ""
+
+#: .\..\forms\.text.py:558
+msgid "Не показывать отстутствующие позиции"
+msgstr ""
+
+#: .\..\forms\.text.py:559
+msgid "позиций"
+msgstr ""
+
+#: .\..\forms\.text.py:560
+msgid "единиц"
+msgstr ""
+
+#: .\..\forms\.text.py:561
+msgid "Код"
+msgstr ""
+
+#: .\..\forms\.text.py:562
+msgid "Всего"
+msgstr ""
+
+#: .\..\forms\.text.py:563
+msgid "Доступно"
+msgstr ""
+
+#: .\..\forms\.text.py:564
+msgid "Розница"
+msgstr ""
+
+#: .\..\forms\.text.py:565
+msgid "Состояние заказов"
+msgstr ""
+
+#: .\..\forms\.text.py:566
+msgid "с"
+msgstr ""
+
+#: .\..\forms\.text.py:567
+msgid "Состояние заказа"
+msgstr ""
+
+#: .\..\forms\.text.py:568
+msgid "Движение товара по складу"
+msgstr ""
+
+#: .\..\forms\.text.py:569
+msgid "группировка"
+msgstr ""
+
+#: .\..\forms\.text.py:570
+msgid "remains_s_q"
+msgstr ""
+
+#: .\..\forms\.text.py:571
+msgid "prx_q"
+msgstr ""
+
+#: .\..\forms\.text.py:572
+msgid "rcx_q"
+msgstr ""
+
+#: .\..\forms\.text.py:573
+msgid "remains_e_q"
+msgstr ""
+
+#: .\..\forms\.text.py:574
+msgid "Статистика работы склада"
+msgstr ""
+
+#: .\..\forms\.text.py:575
+msgid "Дата, с"
+msgstr ""
+
+#: .\..\forms\.text.py:576
+msgid "время, с"
+msgstr ""
+
+#: .\..\forms\.text.py:577
+msgid "до"
+msgstr ""
+
+#: .\..\forms\.text.py:578
+msgid "Документов"
+msgstr ""
+
+#: .\..\forms\.text.py:579
+msgid "Позиций"
+msgstr ""
+
+#: .\..\forms\.text.py:580
+msgid "Единиц товара"
+msgstr ""
+
+#: .\..\forms\.text.py:581
+msgid "E-Mail (sales)"
+msgstr ""
+
+#: .\..\forms\.text.py:582
+msgid "sp_W_SprOrgList"
+msgstr ""
+
+#: .\..\forms\.text.py:583
+msgid "sp_W_SprProdFltrList"
+msgstr ""
+
+#: .\..\forms\.text.py:584
+msgid "Продажи в минус"
+msgstr ""
+
+#: .\..\forms\.text.py:585
+msgid "Отчет по минусам"
+msgstr ""
+
+#: .\..\forms\.text.py:586
+msgid "Дата с"
+msgstr ""
+
+#: .\..\forms\.text.py:587
+msgid "Клиент"
+msgstr ""
+
+#: .\..\forms\.text.py:588
+msgid "Прибыль"
+msgstr ""
+
+#: .\..\forms\.text.py:589
+msgid "Сумма0"
+msgstr ""
+
+#: .\..\forms\.text.py:590
+msgid "№ док."
+msgstr ""
+
+#: .\..\forms\.text.py:591
+msgid "Дата док."
+msgstr ""
+
+#: .\..\forms\.text.py:592
+msgid "Цена0"
+msgstr ""
+
+#: .\..\forms\.text.py:593
+msgid "Предварительные заказы"
+msgstr ""
+
+#: .\..\forms\.text.py:594
+msgid "Перечитать список заказов"
+msgstr ""
+
+#: .\..\forms\.text.py:595
+msgid "Отклонить"
+msgstr ""
+
+#: .\..\forms\.text.py:596
+msgid "Создать новый счет"
+msgstr ""
+
+#: .\..\forms\.text.py:597
+msgid "Добавить в существующий счет..."
+msgstr ""
+
+#: .\..\forms\.text.py:598
+msgid "Фильтр по статусу заказа"
+msgstr ""
+
+#: .\..\forms\.text.py:599
+msgid "Номер заказа"
+msgstr ""
+
+#: .\..\forms\.text.py:600
+msgid "Дата создания заказа"
+msgstr ""
+
+#: .\..\forms\.text.py:601
+msgid "Наименование организации"
+msgstr ""
+
+#: .\..\forms\.text.py:602
+msgid "Автор заказа"
+msgstr ""
+
+#: .\..\forms\.text.py:603
+msgid "Статус заказа"
+msgstr ""
+
+#: .\..\forms\.text.py:604
+msgid "Сумма заказа (уе)"
+msgstr ""
+
+#: .\..\forms\.text.py:605
+msgid "Вес заказанного товара"
+msgstr ""
+
+#: .\..\forms\.text.py:606
+msgid "Объем заказанного товара"
+msgstr ""
+
+#: .\..\forms\.text.py:607
+msgid "Примечание к заказу"
+msgstr ""
+
+#: .\..\forms\.text.py:608
+msgid "Код товара"
+msgstr ""
+
+#: .\..\forms\.text.py:609
+msgid "OEM"
+msgstr ""
+
+#: .\..\forms\.text.py:610
+msgid "OEM-код товара"
+msgstr ""
+
+#: .\..\forms\.text.py:611
+msgid "Заказанное количество"
+msgstr ""
+
+#: .\..\forms\.text.py:612
+msgid "Количество на складе"
+msgstr ""
+
+#: .\..\forms\.text.py:613
+msgid "Своб."
+msgstr ""
+
+#: .\..\forms\.text.py:614
+msgid "Количество доступно"
+msgstr ""
+
+#: .\..\forms\.text.py:615
+msgid "Дефиц."
+msgstr ""
+
+#: .\..\forms\.text.py:616
+msgid "Не хватает"
+msgstr ""
+
+#: .\..\forms\.text.py:617
+msgid "Цена в заказе (уе)"
+msgstr ""
+
+#: .\..\forms\.text.py:618
+msgid "Прайс"
+msgstr ""
+
+#: .\..\forms\.text.py:619
+msgid "Цена в прайсе (уе)"
+msgstr ""
+
+#: .\..\forms\.text.py:620
+msgid "Примечание к товару"
+msgstr ""
+
+#: .\..\forms\.text.py:621
+msgid "Выбрать счет"
+msgstr ""
+
+#: .\..\forms\.text.py:622
+msgid "№№"
+msgstr ""
+
+#: .\..\forms\.text.py:623
+msgid "Номер счета"
+msgstr ""
+
+#: .\..\forms\.text.py:624
+msgid "Выписан"
+msgstr ""
+
+#: .\..\forms\.text.py:625
+msgid "Дата выписки счета"
+msgstr ""
+
+#: .\..\forms\.text.py:626
+msgid "Сумма счета"
+msgstr ""
+
+#: .\..\forms\.text.py:627
+msgid "Сумма УЕ"
+msgstr ""
+
+#: .\..\forms\.text.py:628
+msgid "Сумма счета (уе)"
+msgstr ""
+
+#: .\..\forms\.text.py:629
+msgid "Отгружен"
+msgstr ""
+
+#: .\..\forms\.text.py:630
+msgid "Дата отгрузки"
+msgstr ""
+
+#: .\..\forms\.text.py:631
+msgid "Запрет"
+msgstr ""
+
+#: .\..\forms\.text.py:632
+msgid "Признак запрета отгрузки"
+msgstr ""
+
+#: .\..\forms\.text.py:633
+msgid "Курс грн к уе"
+msgstr ""
+
+#: .\..\forms\.text.py:634
+msgid "Отсрочка"
+msgstr ""
+
+#: .\..\forms\.text.py:635
+msgid "Отсрочка платежа"
+msgstr ""
+
+#: .\..\forms\.text.py:636
+msgid "Статус отгрузки"
+msgstr ""
+
+#: .\..\forms\.text.py:637
+msgid "ОЕМ"
+msgstr ""
+
+#: .\..\forms\.text.py:638
+msgid "Цена товара (грн)"
+msgstr ""
+
+#: .\..\forms\.text.py:639
+msgid "Сумма заказанного товара (грн)"
+msgstr ""
+
+#: .\..\forms\.text.py:640
+msgid "Итого"
+msgstr ""
+
+#: .\..\forms\.text.py:641
+msgid "Итого НДС"
+msgstr ""
+
+#: .\..\forms\.text.py:642
+msgid "Итого с НДС"
+msgstr ""
+
+#: .\..\forms\.text.py:643
+msgid "Скидки и отсрочки"
+msgstr ""
+
+#: .\..\forms\.text.py:644
+msgid "Документ"
+msgstr ""
+
+#: .\..\forms\.text.py:645
+msgid "Сумма G"
+msgstr ""
+
+#: .\..\forms\.text.py:646
+msgid "Сумма G0"
+msgstr ""
+
+#: .\..\forms\.text.py:647
+msgid "Скидка G"
+msgstr ""
+
+#: .\..\forms\.text.py:648
+msgid "Сумма P"
+msgstr ""
+
+#: .\..\forms\.text.py:649
+msgid "Сумма P0"
+msgstr ""
+
+#: .\..\forms\.text.py:650
+msgid "Скидка P"
+msgstr ""
+
+#: .\..\forms\.text.py:651
+msgid "Объем продаж"
+msgstr ""
+
+#: .\..\forms\.text.py:652
+msgid "Список заказов"
+msgstr ""
+
+#: .\..\forms\.text.py:653
+msgid "Документ №"
+msgstr ""
+
+#: .\..\forms\.text.py:654
+msgid "Налоговая №"
+msgstr ""
+
+#: .\..\forms\.text.py:655
+msgid "Счет фактура №"
+msgstr ""
+
+#: .\..\forms\.text.py:656
+msgid "Движение прочего"
+msgstr ""
+
+#: .\..\forms\.text.py:657
+msgid "Остаток."
+msgstr ""
+
+#: .\..\forms\.text.py:658
+msgid "Закупка"
+msgstr ""
+
+#: .\..\forms\.text.py:659
+msgid "Возврат"
+msgstr ""
+
+#: .\..\forms\.text.py:660
+msgid "Нужды"
+msgstr ""
+
+#: .\..\forms\.text.py:661
+msgid "Экспорт"
+msgstr ""
+
+#: .\..\forms\.text.py:662
+msgid "Зак.нужды"
+msgstr ""
+
+#: .\..\forms\.text.py:663
+msgid "Факт"
+msgstr ""
+
+#: .\..\forms\.text.py:664
+msgid "Создать документ расхода"
+msgstr ""
+
+#: .\..\forms\.text.py:665
+msgid "Сервис"
+msgstr ""
+
+#: .\..\forms\.text.py:666
+msgid "Фильтр"
+msgstr ""
+
+#: .\..\forms\.text.py:667
+msgid "Печать: "
+msgstr ""
+
+#: .\..\forms\.text.py:668
+msgid "Счет"
+msgstr ""
+
+#: .\..\forms\.text.py:669
+msgid "Счет УЕ"
+msgstr ""
+
+#: .\..\forms\.text.py:670
+msgid "Расходная"
+msgstr ""
+
+#: .\..\forms\.text.py:671
+msgid "Налоговая"
+msgstr ""
+
+#: .\..\forms\.text.py:672
+msgid "Заявка"
+msgstr ""
+
+#: .\..\forms\.text.py:673
+msgid "Акт приема"
+msgstr ""
+
+#: .\..\forms\.text.py:674
+msgid "Акт вып. работ"
+msgstr ""
+
+#: .\..\forms\.text.py:675
+msgid "Счет №"
+msgstr ""
+
+#: .\..\forms\.text.py:676
+msgid "Расх."
+msgstr ""
+
+#: .\..\forms\.text.py:677
+msgid "Налог."
+msgstr ""
+
+#: .\..\forms\.text.py:678
+msgid "Снят"
+msgstr ""
+
+#: .\..\forms\.text.py:679
+msgid "Опл."
+msgstr ""
+
+#: .\..\forms\.text.py:680
+msgid "ЧО"
+msgstr ""
+
+#: .\..\forms\.text.py:681
+msgid "Скл."
+msgstr ""
+
+#: .\..\forms\.text.py:682
+msgid "Запр"
+msgstr ""
+
+#: .\..\forms\.text.py:683
+msgid "ЗапрКлнт"
+msgstr ""
+
+#: .\..\forms\.text.py:684
+msgid "Примечание (клнт)"
+msgstr ""
+
+#: .\..\forms\.text.py:685
+msgid "Курс1"
+msgstr ""
+
+#: .\..\forms\.text.py:686
+msgid "Создание документов расхода"
+msgstr ""
+
+#: .\..\forms\.text.py:687
+msgid "Дата расходной накладной"
+msgstr ""
+
+#: .\..\forms\.text.py:688
+msgid "На кого доверенность"
+msgstr ""
+
+#: .\..\forms\.text.py:689
+msgid "Номер доверенности"
+msgstr ""
+
+#: .\..\forms\.text.py:690
+msgid "Дата доверенности"
+msgstr ""
+
+#: .\..\forms\.text.py:691
+msgid "Автор документа (сотрудник)"
+msgstr ""
+
+#: .\..\forms\.text.py:692
+msgid "Напечатать"
+msgstr ""
+
+#: .\..\forms\.text.py:693
+msgid "Движение средств клиента"
+msgstr ""
+
+#: .\..\forms\.text.py:694
+msgid "Скрыть примечания в отчете"
+msgstr ""
+
+#: .\..\forms\.text.py:695
+msgid "Нач.сальдо"
+msgstr ""
+
+#: .\..\forms\.text.py:696
+msgid "Номер документа"
+msgstr ""
+
+#: .\..\forms\.text.py:697
+msgid "Оплачен"
+msgstr ""
+
+#: .\..\forms\.text.py:698
+msgid "Частично оплачен"
+msgstr ""
+
+#: .\..\forms\.text.py:699
+msgid "Кон.сальдо"
+msgstr ""
+
+#: .\..\forms\.text.py:700
+msgid "Неликвиды"
+msgstr ""
+
+#: .\..\forms\.text.py:701
+msgid "Вх. ост."
+msgstr ""
+
+#: .\..\forms\.text.py:702
+msgid "Посл. обращение"
+msgstr ""
+
+#: .\..\forms\.text.py:703
+msgid "Тек. ост."
+msgstr ""
+
+#: .\..\forms\.text.py:704
+msgid "Цена Д"
+msgstr ""
+
+#: .\..\forms\.text.py:705
+msgid "Итого, сумма"
+msgstr ""
+
+#: .\..\forms\.text.py:706
+msgid "ОСВ по товару"
+msgstr ""
+
+#: .\..\forms\.text.py:707
+msgid "Тип докуента"
+msgstr ""
+
+#: .\..\forms\.text.py:708
+msgid "Остаток по количеству"
+msgstr ""
+
+#: .\..\forms\.text.py:709
+msgid "Остаток по сумме"
+msgstr ""
+
+#: .\..\forms\.text.py:710
+msgid "ОСВ по клиентам"
+msgstr ""
+
+#: .\..\forms\.text.py:711
+msgid "Регион"
+msgstr ""
+
+#: .\..\forms\.text.py:712
+msgid "Кон.сальдо (USD)"
+msgstr ""
+
+#: .\..\forms\.text.py:713
+msgid "Курс.разница"
+msgstr ""
+
+#: .\..\forms\.text.py:714
+msgid "Сальдо проср."
+msgstr ""
+
+#: .\..\forms\.text.py:715
+msgid "ОСВ по клиентам по организациям"
+msgstr ""
+
+#: .\..\forms\.text.py:716
+msgid "Tables session_func"
+msgstr ""
+
+#: .\..\forms\.text.py:717
+msgid "Функция"
+msgstr ""
+
+#: .\..\forms\.text.py:718
+msgid "Добавление"
+msgstr ""
+
+#: .\..\forms\.text.py:719
+msgid "Измениение"
+msgstr ""
+
+#: .\..\forms\.text.py:720
+msgid "Акт."
+msgstr ""
+
+#: .\..\forms\.text.py:721
+msgid "А"
+msgstr ""
+
+#: .\..\forms\.text.py:722
+msgid "П"
+msgstr ""
+
+#: .\..\forms\.text.py:723
+msgid "Субконто"
+msgstr ""
+
+#: .\..\forms\.text.py:724
+msgid "Все субконто"
+msgstr ""
+
+#: .\..\forms\.text.py:725
+msgid "Новый счет"
+msgstr ""
+
+#: .\..\forms\.text.py:726
+msgid "id"
+msgstr ""
+
+#: .\..\forms\.text.py:727
+msgid "Типы рассчетных счетов"
+msgstr ""
+
+#: .\..\forms\.text.py:728
+msgid "Системное наименование"
+msgstr ""
+
+#: .\..\forms\.text.py:729
+msgid "Диаграмма Ганта"
+msgstr ""
+
+#: .\..\forms\.text.py:730
+msgid "Строка"
+msgstr ""
+
+#: .\..\forms\.text.py:731
+msgid "Продолжительность"
+msgstr ""
+
+#: .\..\forms\.text.py:732
+msgid "Не ранее"
+msgstr ""
+
+#: .\..\forms\.text.py:733
+msgid "Активность"
+msgstr ""
+
+#: .\..\forms\.text.py:734
+msgid "Зависит от"
+msgstr ""
+
+#: .\..\forms\.text.py:735
+msgid "Задержка"
+msgstr ""
+
+#: .\..\forms\.text.py:736
+msgid "Типы договоров"
+msgstr ""
+
+#: .\..\forms\.text.py:737
+msgid "Параметры отчета"
+msgstr ""
+
+#: .\..\forms\.text.py:738
+msgid "Статья"
+msgstr ""
+
+#: .\..\forms\.text.py:739
+msgid "Перевод наименования атрибута"
+msgstr ""
+
+#: .\..\forms\.text.py:740
+msgid "Словарь"
+msgstr ""
+
+#: .\..\forms\.text.py:741
+msgid "Уникальный"
+msgstr ""
+
+#: .\..\forms\.text.py:742
+msgid "Редактор"
+msgstr ""
+
+#: .\..\forms\.text.py:743
+msgid "Перевод значения"
+msgstr ""
+
+#: .\..\forms\.text.py:744
+msgid "Банки"
+msgstr ""
+
+#: .\..\forms\.text.py:745
+msgid "Swift code"
+msgstr ""
+
+#: .\..\forms\.text.py:746
+msgid "Параметры"
+msgstr ""
+
+#: .\..\forms\.text.py:747
+msgid "Шаблон импорта выписки"
+msgstr ""
+
+#: .\..\forms\.text.py:748
+msgid "Внутреннее имя колонки"
+msgstr ""
+
+#: .\..\forms\.text.py:749
+msgid "Внешнее имя колонки"
+msgstr ""
+
+#: .\..\forms\.text.py:750
+msgid "Структура товаров"
+msgstr ""
+
+#: .\..\forms\.text.py:751
+msgid "BOM"
+msgstr ""
+
+#: .\..\forms\.text.py:752
+msgid "Новый элемент"
+msgstr ""
+
+#: .\..\forms\.text.py:753
+msgid "Бренды"
+msgstr ""
+
+#: .\..\forms\.text.py:754
+msgid "Календари рабочего времени"
+msgstr ""
+
+#: .\..\forms\.text.py:755
+msgid "Описание календаря"
+msgstr ""
+
+#: .\..\forms\.text.py:756
+msgid "Рабочие дни"
+msgstr ""
+
+#: .\..\forms\.text.py:757
+msgid "#"
+msgstr ""
+
+#: .\..\forms\.text.py:758
+msgid "Тип дня"
+msgstr ""
+
+#: .\..\forms\.text.py:759
+msgid "Дата начальная"
+msgstr ""
+
+#: .\..\forms\.text.py:760
+msgid "Дата конечная"
+msgstr ""
+
+#: .\..\forms\.text.py:761
+msgid "Причина"
+msgstr ""
+
+#: .\..\forms\.text.py:762
+msgid "Интервал повторения"
+msgstr ""
+
+#: .\..\forms\.text.py:763
+msgid "Частота повторения"
+msgstr ""
+
+#: .\..\forms\.text.py:764
+msgid "Число повторений"
+msgstr ""
+
+#: .\..\forms\.text.py:765
+msgid "Повторять до даты"
+msgstr ""
+
+#: .\..\forms\.text.py:766
+msgid "Рабочее время"
+msgstr ""
+
+#: .\..\forms\.text.py:767
+msgid "Данные календаря (отладка)"
+msgstr ""
+
+#: .\..\forms\.text.py:768
+msgid "Правило"
+msgstr ""
+
+#: .\..\forms\.text.py:769
+msgid "Событие"
+msgstr ""
+
+#: .\..\forms\.text.py:770
+msgid "Типы дней"
+msgstr ""
+
+#: .\..\forms\.text.py:771
+msgid "Параметры отображения"
+msgstr ""
+
+#: .\..\forms\.text.py:772
+msgid "Причины типов дней"
+msgstr ""
+
+#: .\..\forms\.text.py:773
+msgid "Категории событий"
+msgstr ""
+
+#: .\..\forms\.text.py:774
+msgid "ID"
+msgstr ""
+
+#: .\..\forms\.text.py:775
+msgid "События"
+msgstr ""
+
+#: .\..\forms\.text.py:776
+msgid "Время последнего изменения статуса"
+msgstr ""
+
+#: .\..\forms\.text.py:777
+msgid "Типы дней календаря"
+msgstr ""
+
+#: .\..\forms\.text.py:778
+msgid "Статус события"
+msgstr ""
+
+#: .\..\forms\.text.py:779
+msgid "Причины правил календаря"
+msgstr ""
+
+#: .\..\forms\.text.py:780
+msgid "Страны и города"
+msgstr ""
+
+#: .\..\forms\.text.py:781
+msgid "Страна"
+msgstr ""
+
+#: .\..\forms\.text.py:782
+msgid "Валюты"
+msgstr ""
+
+#: .\..\forms\.text.py:783
+msgid "Зоны доставки"
+msgstr ""
+
+#: .\..\forms\.text.py:784
+msgid "Типы документов"
+msgstr ""
+
+#: .\..\forms\.text.py:785
+msgid "Первичный ключ"
+msgstr ""
+
+#: .\..\forms\.text.py:786
+msgid "Используется в заголовках форм"
+msgstr ""
+
+#: .\..\forms\.text.py:787
+msgid "Подсистема, в которой используется этот документ (FIN, ACC, CTRL, LOG, DOVEREN, TASK). ABS - базовый документ. REL - может быть создан только на базе существующего"
+msgstr ""
+
+#: .\..\forms\.text.py:788
+msgid "Файл формы документа"
+msgstr ""
+
+#: .\..\forms\.text.py:789
+msgid "Параметры отображения отчета, формы"
+msgstr ""
+
+#: .\..\forms\.text.py:790
+msgid "Приход/Расход"
+msgstr ""
+
+#: .\..\forms\.text.py:791
+msgid "Подсистема"
+msgstr ""
+
+#: .\..\forms\.text.py:792
+msgid "Форма"
+msgstr ""
+
+#: .\..\forms\.text.py:793
+msgid "is_pos"
+msgstr ""
+
+#: .\..\forms\.text.py:794
+msgid "Модули"
+msgstr ""
+
+#: .\..\forms\.text.py:795
+msgid "Наш курс валют"
+msgstr ""
+
+#: .\..\forms\.text.py:796
+msgid "Файл отчета по умолчанию"
+msgstr ""
+
+#: .\..\forms\.text.py:797
+msgid "Количество отчетов"
+msgstr ""
+
+#: .\..\forms\.text.py:798
+msgid "Дочерние типы документов"
+msgstr ""
+
+#: .\..\forms\.text.py:799
+msgid "Дочерний документ"
+msgstr ""
+
+#: .\..\forms\.text.py:800
+msgid "Диалог создания документа"
+msgstr ""
+
+#: .\..\forms\.text.py:801
+msgid "Операции"
+msgstr ""
+
+#: .\..\forms\.text.py:802
+msgid "По умолчанию"
+msgstr ""
+
+#: .\..\forms\.text.py:803
+msgid "Счета"
+msgstr ""
+
+#: .\..\forms\.text.py:804
+msgid "Номер счета дебет"
+msgstr ""
+
+#: .\..\forms\.text.py:805
+msgid "Счет дебет"
+msgstr ""
+
+#: .\..\forms\.text.py:806
+msgid "Номер счета кредит"
+msgstr ""
+
+#: .\..\forms\.text.py:807
+msgid "Счет кредит"
+msgstr ""
+
+#: .\..\forms\.text.py:808
+msgid "Множитель"
+msgstr ""
+
+#: .\..\forms\.text.py:809
+msgid "Подсистемы"
+msgstr ""
+
+#: .\..\forms\.text.py:810
+msgid "Флажки"
+msgstr ""
+
+#: .\..\forms\.text.py:811
+msgid "Наш налог"
+msgstr ""
+
+#: .\..\forms\.text.py:812
+msgid "Порядок"
+msgstr ""
+
+#: .\..\forms\.text.py:813
+msgid "Тип договора"
+msgstr ""
+
+#: .\..\forms\.text.py:814
+msgid "Порядок сортировки"
+msgstr ""
+
+#: .\..\forms\.text.py:815
+msgid "Наша фирма"
+msgstr ""
+
+#: .\..\forms\.text.py:816
+msgid "Единицы измерения"
+msgstr ""
+
+#: .\..\forms\.text.py:817
+msgid "Базовая"
+msgstr ""
+
+#: .\..\forms\.text.py:818
+msgid "Коэффициент"
+msgstr ""
+
+#: .\..\forms\.text.py:819
+msgid "Формы"
+msgstr ""
+
+#: .\..\forms\.text.py:820
+msgid "Тип формы"
+msgstr ""
+
+#: .\..\forms\.text.py:821
+msgid "Файл GFD"
+msgstr ""
+
+#: .\..\forms\.text.py:822
+msgid "Модальная"
+msgstr ""
+
+#: .\..\forms\.text.py:823
+msgid "Типы форм"
+msgstr ""
+
+#: .\..\forms\.text.py:824
+msgid "Функции"
+msgstr ""
+
+#: .\..\forms\.text.py:825
+msgid "Языки"
+msgstr ""
+
+#: .\..\forms\.text.py:826
+msgid "Производители"
+msgstr ""
+
+#: .\..\forms\.text.py:827
+msgid "Объекты доступа"
+msgstr ""
+
+#: .\..\forms\.text.py:828
+msgid "Ресурс"
+msgstr ""
+
+#: .\..\forms\.text.py:829
+msgid "group_id"
+msgstr ""
+
+#: .\..\forms\.text.py:830
+msgid "is_view"
+msgstr ""
+
+#: .\..\forms\.text.py:831
+msgid "is_edit"
+msgstr ""
+
+#: .\..\forms\.text.py:832
+msgid "is_ins"
+msgstr ""
+
+#: .\..\forms\.text.py:833
+msgid "is_del"
+msgstr ""
+
+#: .\..\forms\.text.py:834
+msgid "is_print"
+msgstr ""
+
+#: .\..\forms\.text.py:835
+msgid "Действия"
+msgstr ""
+
+#: .\..\forms\.text.py:836
+msgid "Справочник организаций"
+msgstr ""
+
+#: .\..\forms\.text.py:837
+msgid "Печать договора"
+msgstr ""
+
+#: .\..\forms\.text.py:838
+msgid "Расширенный поиск"
+msgstr ""
+
+#: .\..\forms\.text.py:839
+msgid "Только куратора"
+msgstr ""
+
+#: .\..\forms\.text.py:840
+msgid "Полное наименование"
+msgstr ""
+
+#: .\..\forms\.text.py:841
+msgid "Имя контакта"
+msgstr ""
+
+#: .\..\forms\.text.py:842
+msgid "Емейл"
+msgstr ""
+
+#: .\..\forms\.text.py:843
+msgid "Поиск по атрибутам"
+msgstr ""
+
+#: .\..\forms\.text.py:844
+msgid "Детали"
+msgstr ""
+
+#: .\..\forms\.text.py:845
+msgid "Родитель"
+msgstr ""
+
+#: .\..\forms\.text.py:846
+msgid "ФИО контакта"
+msgstr ""
+
+#: .\..\forms\.text.py:847
+msgid "F2"
+msgstr ""
+
+#: .\..\forms\.text.py:848
+msgid "Пользователь"
+msgstr ""
+
+#: .\..\forms\.text.py:849
+msgid "Реквизиты"
+msgstr ""
+
+#: .\..\forms\.text.py:850
+msgid "Адрес юридический"
+msgstr ""
+
+#: .\..\forms\.text.py:851
+msgid "Адрес фактический"
+msgstr ""
+
+#: .\..\forms\.text.py:852
+msgid "Факс"
+msgstr ""
+
+#: .\..\forms\.text.py:853
+msgid "№ свид."
+msgstr ""
+
+#: .\..\forms\.text.py:854
+msgid "ИНН"
+msgstr ""
+
+#: .\..\forms\.text.py:855
+msgid "Дата актуализации"
+msgstr ""
+
+#: .\..\forms\.text.py:856
+msgid "Рассчетные счета"
+msgstr ""
+
+#: .\..\forms\.text.py:857
+msgid "Банк"
+msgstr ""
+
+#: .\..\forms\.text.py:858
+msgid "Дата открытия"
+msgstr ""
+
+#: .\..\forms\.text.py:859
+msgid "Дата закрытия"
+msgstr ""
+
+#: .\..\forms\.text.py:860
+msgid "Вид счета"
+msgstr ""
+
+#: .\..\forms\.text.py:861
+msgid "История изменения курса"
+msgstr ""
+
+#: .\..\forms\.text.py:862
+msgid "Условия работы"
+msgstr ""
+
+#: .\..\forms\.text.py:863
+msgid "Дата ввода"
+msgstr ""
+
+#: .\..\forms\.text.py:864
+msgid "Действует с"
+msgstr ""
+
+#: .\..\forms\.text.py:865
+msgid "Действует по"
+msgstr ""
+
+#: .\..\forms\.text.py:866
+msgid "Пеня"
+msgstr ""
+
+#: .\..\forms\.text.py:867
+msgid "Дивиденды"
+msgstr ""
+
+#: .\..\forms\.text.py:868
+msgid "Просрочка"
+msgstr ""
+
+#: .\..\forms\.text.py:869
+msgid "Макс.кредит"
+msgstr ""
+
+#: .\..\forms\.text.py:870
+msgid "Валюта по умолчанию"
+msgstr ""
+
+#: .\..\forms\.text.py:871
+msgid "Фраза (\"є платником...\")"
+msgstr ""
+
+#: .\..\forms\.text.py:872
+msgid "Типы прайсов"
+msgstr ""
+
+#: .\..\forms\.text.py:873
+msgid "Тип прайса"
+msgstr ""
+
+#: .\..\forms\.text.py:874
+msgid "Основание"
+msgstr ""
+
+#: .\..\forms\.text.py:875
+msgid "Персональные цены"
+msgstr ""
+
+#: .\..\forms\.text.py:876
+msgid "Персональные бонусы"
+msgstr ""
+
+#: .\..\forms\.text.py:877
+msgid "(%)"
+msgstr ""
+
+#: .\..\forms\.text.py:878
+msgid "Организации, для кот. действует соглашение"
+msgstr ""
+
+#: .\..\forms\.text.py:879
+msgid "Разрешенные планы счетов"
+msgstr ""
+
+#: .\..\forms\.text.py:880
+msgid "План продаж"
+msgstr ""
+
+#: .\..\forms\.text.py:881
+msgid "Только оплаченный товар"
+msgstr ""
+
+#: .\..\forms\.text.py:882
+msgid "Диапазон с"
+msgstr ""
+
+#: .\..\forms\.text.py:883
+msgid "Диапазон по"
+msgstr ""
+
+#: .\..\forms\.text.py:884
+msgid "План закупок"
+msgstr ""
+
+#: .\..\forms\.text.py:885
+msgid "Структура"
+msgstr ""
+
+#: .\..\forms\.text.py:886
+msgid "Сортировка"
+msgstr ""
+
+#: .\..\forms\.text.py:887
+msgid "Зона доставки"
+msgstr ""
+
+#: .\..\forms\.text.py:888
+msgid "Доверенности, выданные должности"
+msgstr ""
+
+#: .\..\forms\.text.py:889
+msgid "Тип доверенности"
+msgstr ""
+
+#: .\..\forms\.text.py:890
+msgid "Дата по"
+msgstr ""
+
+#: .\..\forms\.text.py:891
+msgid "Тег"
+msgstr ""
+
+#: .\..\forms\.text.py:892
+msgid "Органазация"
+msgstr ""
+
+#: .\..\forms\.text.py:893
+msgid "Новый элемент штатной структуры"
+msgstr ""
+
+#: .\..\forms\.text.py:894
+msgid "Запрет отгрузки"
+msgstr ""
+
+#: .\..\forms\.text.py:895
+msgid "Расчет пени"
+msgstr ""
+
+#: .\..\forms\.text.py:896
+msgid "Адреса"
+msgstr ""
+
+#: .\..\forms\.text.py:897
+msgid "Ответственный"
+msgstr ""
+
+#: .\..\forms\.text.py:898
+msgid "Скидки"
+msgstr ""
+
+#: .\..\forms\.text.py:899
+msgid "Категория товаров"
+msgstr ""
+
+#: .\..\forms\.text.py:900
+msgid "Скидка"
+msgstr ""
+
+#: .\..\forms\.text.py:901
+msgid "Сальдо"
+msgstr ""
+
+#: .\..\forms\.text.py:902
+msgid "Знания"
+msgstr ""
+
+#: .\..\forms\.text.py:903
+msgid "Знание"
+msgstr ""
+
+#: .\..\forms\.text.py:904
+msgid "Наши фирмы"
+msgstr ""
+
+#: .\..\forms\.text.py:905
+msgid "Сотрудники"
+msgstr ""
+
+#: .\..\forms\.text.py:906
+msgid "Логин"
+msgstr ""
+
+#: .\..\forms\.text.py:907
+msgid "Роль"
+msgstr ""
+
+#: .\..\forms\.text.py:908
+msgid "Параметры контакта"
+msgstr ""
+
+#: .\..\forms\.text.py:909
+msgid "Финансовая политика"
+msgstr ""
+
+#: .\..\forms\.text.py:910
+msgid "Отсрочки"
+msgstr ""
+
+#: .\..\forms\.text.py:911
+msgid "Бонусы за объем"
+msgstr ""
+
+#: .\..\forms\.text.py:912
+msgid "Предостережение"
+msgstr ""
+
+#: .\..\forms\.text.py:913
+msgid "Текущие скидки"
+msgstr ""
+
+#: .\..\forms\.text.py:914
+msgid "Видимость для всех, кроме"
+msgstr ""
+
+#: .\..\forms\.text.py:915
+msgid "Видимость ни для кого, кроме"
+msgstr ""
+
+#: .\..\forms\.text.py:916
+msgid "Организация - исключение"
+msgstr ""
+
+#: .\..\forms\.text.py:917
+msgid "Пени"
+msgstr ""
+
+#: .\..\forms\.text.py:918
+msgid "Фин.бонусы"
+msgstr ""
+
+#: .\..\forms\.text.py:919
+msgid "Условия доставки"
+msgstr ""
+
+#: .\..\forms\.text.py:920
+msgid "За наш счет"
+msgstr ""
+
+#: .\..\forms\.text.py:921
+msgid "Выбор перевозчика"
+msgstr ""
+
+#: .\..\forms\.text.py:922
+msgid "Под двери"
+msgstr ""
+
+#: .\..\forms\.text.py:923
+msgid "Права доступа"
+msgstr ""
+
+#: .\..\forms\.text.py:924
+msgid "Права"
+msgstr ""
+
+#: .\..\forms\.text.py:925
+msgid "Таблица"
+msgstr ""
+
+#: .\..\forms\.text.py:926
+msgid "Тип документа (для doc_main)"
+msgstr ""
+
+#: .\..\forms\.text.py:927
+msgid "Видимость документов"
+msgstr ""
+
+#: .\..\forms\.text.py:928
+msgid "Чтение"
+msgstr ""
+
+#: .\..\forms\.text.py:929
+msgid "Склады"
+msgstr ""
+
+#: .\..\forms\.text.py:930
+msgid "Должности"
+msgstr ""
+
+#: .\..\forms\.text.py:931
+msgid "Роли"
+msgstr ""
+
+#: .\..\forms\.text.py:932
+msgid "Прайсы"
+msgstr ""
+
+#: .\..\forms\.text.py:933
+msgid "Ценообразование"
+msgstr ""
+
+#: .\..\forms\.text.py:934
+msgid "Диапазон"
+msgstr ""
+
+#: .\..\forms\.text.py:935
+msgid "Округлять"
+msgstr ""
+
+#: .\..\forms\.text.py:936
+msgid "От розницы"
+msgstr ""
+
+#: .\..\forms\.text.py:937
+msgid "От"
+msgstr ""
+
+#: .\..\forms\.text.py:938
+msgid "До"
+msgstr ""
+
+#: .\..\forms\.text.py:939
+msgid "Стоп"
+msgstr ""
+
+#: .\..\forms\.text.py:940
+msgid "Процент"
+msgstr ""
+
+#: .\..\forms\.text.py:941
+msgid "Импорт прайса, шаг 1"
+msgstr ""
+
+#: .\..\forms\.text.py:942
+msgid "Поставщик"
+msgstr ""
+
+#: .\..\forms\.text.py:943
+msgid "Далее"
+msgstr ""
+
+#: .\..\forms\.text.py:944
+msgid "Импорт прайса, шаг 2"
+msgstr ""
+
+#: .\..\forms\.text.py:945
+msgid "Наименование товара у поставщика"
+msgstr ""
+
+#: .\..\forms\.text.py:946
+msgid "Доступность товара в прайсах поставщиков"
+msgstr ""
+
+#: .\..\forms\.text.py:947
+msgid "Нотация поставщика"
+msgstr ""
+
+#: .\..\forms\.text.py:948
+msgid "Регулярное выражение"
+msgstr ""
+
+#: .\..\forms\.text.py:949
+msgid "Роли и знания"
+msgstr ""
+
+#: .\..\forms\.text.py:950
+msgid "Блог"
+msgstr ""
+
+#: .\..\forms\.text.py:951
+msgid "Время создания"
+msgstr ""
+
+#: .\..\forms\.text.py:952
+msgid "Время последнего изменения"
+msgstr ""
+
+#: .\..\forms\.text.py:953
+msgid "Сообщение"
+msgstr ""
+
+#: .\..\forms\.text.py:954
+msgid "Новое сообщение"
+msgstr ""
+
+#: .\..\forms\.text.py:955
+msgid "Типы узлов штатной структуры"
+msgstr ""
+
+#: .\..\forms\.text.py:956
+msgid "Тип структуры"
+msgstr ""
+
+#: .\..\forms\.text.py:957
+msgid "Добавить товары"
+msgstr ""
+
+#: .\..\forms\.text.py:958
+msgid "По категориям"
+msgstr ""
+
+#: .\..\forms\.text.py:959
+msgid "По атрибутам"
+msgstr ""
+
+#: .\..\forms\.text.py:960
+msgid "Новый товар"
+msgstr ""
+
+#: .\..\forms\.text.py:961
+msgid "Активен"
+msgstr ""
+
+#: .\..\forms\.text.py:962
+msgid "Выписка в минус"
+msgstr ""
+
+#: .\..\forms\.text.py:963
+msgid "Наименование полн."
+msgstr ""
+
+#: .\..\forms\.text.py:964
+msgid "Контроль остатков"
+msgstr ""
+
+#: .\..\forms\.text.py:965
+msgid "Перевод полного наименования товара"
+msgstr ""
+
+#: .\..\forms\.text.py:966
+msgid "Базовая цена"
+msgstr ""
+
+#: .\..\forms\.text.py:967
+msgid "Расчетная цена"
+msgstr ""
+
+#: .\..\forms\.text.py:968
+msgid "Тип цен"
+msgstr ""
+
+#: .\..\forms\.text.py:969
+msgid "Текущий прайс"
+msgstr ""
+
+#: .\..\forms\.text.py:970
+msgid "История изменения прайса"
+msgstr ""
+
+#: .\..\forms\.text.py:971
+msgid "Упаковка и штрихкоды"
+msgstr ""
+
+#: .\..\forms\.text.py:972
+msgid "Артикулы и цены поставщиков"
+msgstr ""
+
+#: .\..\forms\.text.py:973
+msgid "Основной"
+msgstr ""
+
+#: .\..\forms\.text.py:974
+msgid "Движение по ячейке"
+msgstr ""
+
+#: .\..\forms\.text.py:975
+msgid "Начало задачи"
+msgstr ""
+
+#: .\..\forms\.text.py:976
+msgid "Окончание задачи"
+msgstr ""
+
+#: .\..\forms\.text.py:977
+msgid "Забрали"
+msgstr ""
+
+#: .\..\forms\.text.py:978
+msgid "Положили"
+msgstr ""
+
+#: .\..\forms\.text.py:979
+msgid "Прибыло"
+msgstr ""
+
+#: .\..\forms\.text.py:980
+msgid "Всего забрали"
+msgstr ""
+
+#: .\..\forms\.text.py:981
+msgid "Всего положили"
+msgstr ""
+
+#: .\..\forms\.text.py:982
+msgid "Всего прибыло"
+msgstr ""
+
+#: .\..\forms\.text.py:983
+msgid "Движение по складу"
+msgstr ""
+
+#: .\..\forms\.text.py:984
+msgid "Входящий остаток"
+msgstr ""
+
+#: .\..\forms\.text.py:985
+msgid "Адрес откуда"
+msgstr ""
+
+#: .\..\forms\.text.py:986
+msgid "Адрес куда"
+msgstr ""
+
+#: .\..\forms\.text.py:987
+msgid "Стиль"
+msgstr ""
+
+#: .\..\forms\.text.py:988
+msgid "Исходящий остаток"
+msgstr ""
+
+#: .\..\forms\.text.py:989
+msgid "Коэф.ЕИ"
+msgstr ""
+
+#: .\..\forms\.text.py:990
+msgid "Осн."
+msgstr ""
+
+#: .\..\forms\.text.py:991
+msgid "В составе..."
+msgstr ""
+
+#: .\..\forms\.text.py:992
+msgid "Входит в..."
+msgstr ""
+
+#: .\..\forms\.text.py:993
+msgid "Показать список"
+msgstr ""
+
+#: .\..\forms\.text.py:994
+msgid "Сервисные центры"
+msgstr ""
+
+#: .\..\forms\.text.py:995
+msgid "Перевод значения атрибута"
+msgstr ""
+
+#: .\..\forms\.text.py:996
+msgid "Видимость"
+msgstr ""
+
+#: .\..\forms\.text.py:997
+msgid "Структура производства"
+msgstr ""
+
+#: .\..\forms\.text.py:998
+msgid "Оборудование"
+msgstr ""
+
+#: .\..\forms\.text.py:999
+msgid "Параметр"
+msgstr ""
+
+#: .\..\forms\.text.py:1000
+msgid "Изделия"
+msgstr ""
+
+#: .\..\forms\.text.py:1001
+msgid "Типы параметров производственных единиц"
+msgstr ""
+
+#: .\..\forms\.text.py:1002
+msgid "Типы производственных единиц"
+msgstr ""
+
+#: .\..\forms\.text.py:1003
+msgid "Это ресурс"
+msgstr ""
+
+#: .\..\forms\.text.py:1004
+msgid "Доступность товара"
+msgstr ""
+
+#: .\..\forms\.text.py:1005
+msgid "Поля"
+msgstr ""
+
+#: .\..\forms\.text.py:1006
+msgid "Код ОЕМ"
+msgstr ""
+
+#: .\..\forms\.text.py:1007
+msgid "Единица измерения"
+msgstr ""
+
+#: .\..\forms\.text.py:1008
+msgid "Шаблон имени товара"
+msgstr ""
+
+#: .\..\forms\.text.py:1009
+msgid "Поле имени товара"
+msgstr ""
+
+#: .\..\forms\.text.py:1010
+msgid "Префикс"
+msgstr ""
+
+#: .\..\forms\.text.py:1011
+msgid "Атрибут/поле"
+msgstr ""
+
+#: .\..\forms\.text.py:1012
+msgid "Суффикс"
+msgstr ""
+
+#: .\..\forms\.text.py:1013
+msgid "Категории товаров"
+msgstr ""
+
+#: .\..\forms\.text.py:1014
+msgid "Шаблоны наименований товара"
+msgstr ""
+
+#: .\..\forms\.text.py:1015
+msgid "Поле товара"
+msgstr ""
+
+#: .\..\forms\.text.py:1016
+msgid "Язык перевода"
+msgstr ""
+
+#: .\..\forms\.text.py:1017
+msgid "Порядок при сортировке"
+msgstr ""
+
+#: .\..\forms\.text.py:1018
+msgid "По убыванию"
+msgstr ""
+
+#: .\..\forms\.text.py:1019
+msgid "Переводы наименования категории"
+msgstr ""
+
+#: .\..\forms\.text.py:1020
+msgid "Мин. запас"
+msgstr ""
+
+#: .\..\forms\.text.py:1021
+msgid "Стоимость работ"
+msgstr ""
+
+#: .\..\forms\.text.py:1022
+msgid "price_id"
+msgstr ""
+
+#: .\..\forms\.text.py:1023
+msgid "price"
+msgstr ""
+
+#: .\..\forms\.text.py:1024
+msgid "Штрихкоды"
+msgstr ""
+
+#: .\..\forms\.text.py:1025
+msgid "Движение"
+msgstr ""
+
+#: .\..\forms\.text.py:1026
+msgid "Шаблоны отчетов"
+msgstr ""
+
+#: .\..\forms\.text.py:1027
+msgid "Тип отчета"
+msgstr ""
+
+#: .\..\forms\.text.py:1028
+msgid "Файл"
+msgstr ""
+
+#: .\..\forms\.text.py:1029
+msgid "Типы шаблонов отчетов"
+msgstr ""
+
+#: .\..\forms\.text.py:1030
+msgid "Жалобы, пожелания, комплектности, диагнозы"
+msgstr ""
+
+#: .\..\forms\.text.py:1031
+msgid "Вкладка"
+msgstr ""
+
+#: .\..\forms\.text.py:1032
+msgid "Услуги"
+msgstr ""
+
+#: .\..\forms\.text.py:1033
+msgid "Действие"
+msgstr ""
+
+#: .\..\forms\.text.py:1034
+msgid "TODO"
+msgstr ""
+
+#: .\..\forms\.text.py:1035
+msgid "Типы доверенностей"
+msgstr ""
+
+#: .\..\forms\.text.py:1036
+msgid "Топология склада"
+msgstr ""
+
+#: .\..\forms\.text.py:1037
+msgid "Вставить ветку"
+msgstr ""
+
+#: .\..\forms\.text.py:1038
+msgid "Создать ведомость на инвентаризацию..."
+msgstr ""
+
+#: .\..\forms\.text.py:1039
+msgid "Создать ведомость на перемещение..."
+msgstr ""
+
+#: .\..\forms\.text.py:1040
+msgid "Отчет по пустым ячейкам"
+msgstr ""
+
+#: .\..\forms\.text.py:1041
+msgid "Элемент склада"
+msgstr ""
+
+#: .\..\forms\.text.py:1042
+msgid "Применить вниз..."
+msgstr ""
+
+#: .\..\forms\.text.py:1043
+msgid "Style"
+msgstr ""
+
+#: .\..\forms\.text.py:1044
+msgid "Персонал склада"
+msgstr ""
+
+#: .\..\forms\.text.py:1045
+msgid "Использование тех. средств в зонах склада"
+msgstr ""
+
+#: .\..\forms\.text.py:1046
+msgid "Типы элементов склада"
+msgstr ""
+
+#: .\..\forms\.text.py:1047
+msgid "Признак системы хранения"
+msgstr ""
+
+#: .\..\forms\.text.py:1048
+msgid "Логические зоны склада"
+msgstr ""
+
+#: .\..\forms\.text.py:1049
+msgid "unlock"
+msgstr ""
+
+#: .\..\forms\.text.py:1050
+msgid "lock"
+msgstr ""
+
+#: .\..\forms\.text.py:1051
+msgid "Закрытие и назначение задачи"
+msgstr ""
+
+#: .\..\forms\.text.py:1052
+msgid "Штрихкод сотрудника"
+msgstr ""
+
+#: .\..\forms\.text.py:1053
+msgid "Киевстар биллинг"
+msgstr ""
+
+#: .\..\forms\.text.py:1054
+msgid "Тип звонка"
+msgstr ""
+
+#: .\..\forms\.text.py:1055
+msgid "Итого, грн"
+msgstr ""
+
+#: .\..\forms\.text.py:1056
+msgid "Итого, $"
+msgstr ""
+
+#: .\..\forms\.text.py:1057
+msgid "Итого лимит, $"
+msgstr ""
+
+#: .\..\forms\.text.py:1058
+msgid "К оплате, $"
+msgstr ""
+
+#: .\..\forms\.text.py:1059
+msgid "Киевстар Биллинг"
+msgstr ""
+
+#: .\..\forms\.text.py:1232
+msgid "No block focused"
+msgstr ""
+
+#: .\..\forms\.text.py:1236
+msgid "Block has no datasource"
+msgstr ""
+
+#: .\..\forms\.text.py:1239
+msgid "Datasource is static"
+msgstr ""
+
+#: .\..\forms\.text.py:1242
+msgid "Datasource has no rowid"
+msgstr ""
+
+#: .\..\forms\.text.py:1246
+msgid "No primary field"
+msgstr ""
+
+#: .\..\forms\.text.py:1292
+msgid "User name or password is incorrect"
+msgstr "Неверное имя пользователя или пароль"
+
+#: .\..\forms\.text.py:1297 .\..\forms\.text.py:1343
+msgid "Ошибка соединения с сервером: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:1373
+msgid "E-Mail: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:1386 .\..\forms\.text.py:1440
+msgid ""
+"Сервер отчетов не отвечает\n"
+"%s"
+msgstr ""
+
+#: .\..\forms\.text.py:1414 .\..\forms\.text.py:1469
+msgid "Письмо отправлено"
+msgstr ""
+
+#: .\..\forms\.text.py:1425 .\..\forms\.text.py:1446
+msgid "Отчет по почте: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:1447
+msgid "Пожалуйста, см. приложение: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:1486
+msgid ""
+"Could not find the string:\n"
+"\"%s\""
+msgstr ""
+"Строка не найдена:\n"
+"\"%s\""
+
+#: .\..\forms\.text.py:1497
+msgid ""
+"Сервер не отвечает\n"
+"%s"
+msgstr ""
+
+#: .\..\forms\.text.py:1652 .\..\forms\.text.py:9077
+msgid "Выберите файл чтобы сохранить отчет..."
+msgstr ""
+
+#: .\..\forms\.text.py:1655
+msgid "Файл %s"
+msgstr ""
+
+#: .\..\forms\.text.py:1660 .\..\forms\.text.py:9085
+#: .\..\forms\.text.py:1751
+msgid "Удалить все позиции на %s"
+msgstr ""
+
+#: .\..\forms\.text.py:1838 .\..\forms\.text.py:2861 .\..\forms\.text.py:4687
+#: .\..\forms\.text.py:4708 .\..\forms\.text.py:7087 .\..\forms\.text.py:7245
+#: .\..\forms\.text.py:7474 .\..\forms\.text.py:7933
+msgid "Печать: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:1865
+msgid "Для сравнения нужно отметить товары"
+msgstr ""
+
+#: .\..\forms\.text.py:1868
+msgid "Для сравнения нужно отметить категории товаров"
+msgstr ""
+
+#: .\..\forms\.text.py:1871
+msgid "Для сравнения нужно отметить типы документов"
+msgstr ""
+
+#: .\..\forms\.text.py:1874
+msgid "Для сравнения нужно отметить организации"
+msgstr ""
+
+#: .\..\forms\.text.py:1877
+msgid "Для сравнения нужно отметить регионы"
+msgstr ""
+
+#: .\..\forms\.text.py:1880
+msgid "Для сравнения нужно отметить менеджеров"
+msgstr ""
+
+#: .\..\forms\.text.py:2301 .\..\forms\.text.py:9004
+msgid "Выберите хотя бы одну категорию"
+msgstr ""
+
+#: .\..\forms\.text.py:3041 .\..\forms\.text.py:3094 .\..\forms\.text.py:3140
+msgid "Связать документы: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:3080 .\..\forms\.text.py:3128 .\..\forms\.text.py:3174
+msgid "Выделите строки документов которые нужно связать"
+msgstr ""
+
+#: .\..\forms\.text.py:3186 .\..\forms\.text.py:3209 .\..\forms\.text.py:3277
+#: .\..\forms\.text.py:3299 .\..\forms\.text.py:3325 .\..\forms\.text.py:3345
+#: .\..\forms\.text.py:3366 .\..\forms\.text.py:3836
+msgid "Новый документ: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:3304
+msgid "Склад не выбран"
+msgstr ""
+
+#: .\..\forms\.text.py:3456 .\..\forms\.text.py:3681
+msgid "Количество меньше 1"
+msgstr ""
+
+#: .\..\forms\.text.py:3495 .\..\forms\.text.py:3714
+msgid "Префикс штрихкода не поддерживается: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:3541 .\..\forms\.text.py:3575
+msgid "Печать: Ведомость на раскладку"
+msgstr ""
+
+#: .\..\forms\.text.py:3577 .\..\forms\.text.py:3811 .\..\forms\.text.py:4061
+#: .\..\forms\.text.py:7230 .\..\forms\.text.py:9112
+msgid "Нечего печатать"
+msgstr ""
+
+#: .\..\forms\.text.py:3764 .\..\forms\.text.py:3809
+msgid "Печать: Ведомость упаковки"
+msgstr ""
+
+#: .\..\forms\.text.py:3826
+#: .\..\forms\.text.py:3852
+msgid "Создать родительский документ: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:3857
+msgid "Выделите строки дочерних документов"
+msgstr ""
+
+#: .\..\forms\.text.py:3860
+msgid "Отдел автора не выбран (нет прав?)"
+msgstr ""
+
+#: .\..\forms\.text.py:4067
+msgid "Скопировать жалобы и пожелания во все позиции документа?"
+msgstr ""
+
+#: .\..\forms\.text.py:4074
+msgid "Позиции не сохранены, жалобы и пожелания не скопированы"
+msgstr ""
+
+#: .\..\forms\.text.py:4287
+msgid "Показывать количество в отчете?"
+msgstr ""
+
+#: .\..\forms\.text.py:4318
+msgid "Закрыть задачy?"
+msgstr ""
+
+#: .\..\forms\.text.py:4398
+msgid "Документ: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:4482
+msgid "Список: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:4616
+msgid "Вы уверены?"
+msgstr ""
+
+#: .\..\forms\.text.py:4655
+msgid "У Вас нет прав на просмотр этого документа"
+msgstr ""
+
+#: .\..\forms\.text.py:4781
+msgid "Пользователю не сопоставлен контакт или должность. Обратитесь к администратору"
+msgstr ""
+
+#: .\..\forms\.text.py:4956
+msgid "Выбраны разные планы счетов"
+msgstr ""
+
+#: .\..\forms\.text.py:5533
+msgid "Выберите сначала организацию"
+msgstr ""
+
+#: .\..\forms\.text.py:6330
+msgid "Печать: Задолженность контрагентов"
+msgstr ""
+
+#: .\..\forms\.text.py:6498 .\..\forms\.text.py:6555
+msgid "Печать: Статистика продаж по менеджерам"
+msgstr ""
+
+#: .\..\forms\.text.py:6624
+msgid "Печать: Состояние складов"
+msgstr ""
+
+#: .\..\forms\.text.py:6732
+msgid "Печать: Движение товара по складу"
+msgstr ""
+
+#: .\..\forms\.text.py:6944
+msgid "Отклонить предварительный заказ № %s от %s?"
+msgstr ""
+
+#: .\..\forms\.text.py:6958
+msgid "Заказ № %s от %s. Создать новый счет?"
+msgstr ""
+
+#: .\..\forms\.text.py:7007
+msgid "Добавить заказ в существуюший счет № %s от %s?"
+msgstr ""
+
+#: .\..\forms\.text.py:7081 .\..\forms\.text.py:7239 .\..\forms\.text.py:7285
+#: .\..\forms\.text.py:7464
+msgid "Выбраны разные контрагенты"
+msgstr ""
+
+#: .\..\forms\.text.py:7083 .\..\forms\.text.py:7241 .\..\forms\.text.py:7466
+msgid "Выберите хотя бы одну запись из списка"
+msgstr ""
+
+#: .\..\forms\.text.py:7275
+msgid "Все документы уже созданы"
+msgstr ""
+
+#: .\..\forms\.text.py:7279
+msgid "Не заполнены налоговые реквизиты, счет № %s"
+msgstr ""
+
+#: .\..\forms\.text.py:7282
+msgid "Запрет отгрузки, счет № %s"
+msgstr ""
+
+#: .\..\forms\.text.py:7386
+msgid "Отсрочка должна быть от 0 до 90 включительно"
+msgstr ""
+
+#: .\..\forms\.text.py:7742
+msgid "Выберите запись ВОМ (слева)"
+msgstr ""
+
+#: .\..\forms\.text.py:7937
+msgid "Не задан шаблон отчета в типах договоров"
+msgstr ""
+
+#: .\..\forms\.text.py:8114
+msgid "Введите хотя бы одно значение атрибута"
+msgstr ""
+
+#: .\..\forms\.text.py:8182
+msgid "Введите наименование организации во вкладке `Детали`"
+msgstr ""
+
+#: .\..\forms\.text.py:8187
+msgid "Введите хотя бы одну категорию организации"
+msgstr ""
+
+#: .\..\forms\.text.py:8359
+msgid "Организация не выбрана"
+msgstr ""
+
+#: .\..\forms\.text.py:8368 .\..\forms\.text.py:8572 .\..\forms\.text.py:8577
+msgid "Движение средств"
+msgstr ""
+
+#: .\..\forms\.text.py:8382
+msgid "Бэйджики сотрудников"
+msgstr ""
+
+#: .\..\forms\.text.py:8397
+msgid "Отправка отчета по почте сопоставлена только вкладке `Сальдо`"
+msgstr ""
+
+#: .\..\forms\.text.py:8517
+msgid "Организация: %s"
+msgstr ""
+
+#: .\..\forms\.text.py:9017
+msgid "Укажите значение хотя бы одного атрибута"
+msgstr ""
+
+#: .\..\forms\.text.py:9080
+msgid "%s Files"
+msgstr "Файлы %s"
+
+#: .\..\forms\.text.py:9313
+msgid "Приступить к созданию нового товара?"
+msgstr ""
+
+#: .\..\forms\.text.py:9506
+msgid "Сохранить товар без ОЕМ кода?"
+msgstr ""
+
+#: .\..\forms\.text.py:9759
+msgid "Печать: Топология склада"
+msgstr ""
+
+#: .\..\forms\.text.py:9905
+msgid ""
+"Установить %s выбранных признаков вниз по иерархии?\n"
+"Остальные признаки вниз по иерархии будут удалены!"
+msgstr ""
+
+#: .\..\forms\.text.py:9906
+msgid "Данная операция требует сохранения изменений"
+msgstr ""
+
+#: .\..\forms\.text.py:9911
+msgid "Выделите строки признаков которые надо установить вниз по иерархии"
+msgstr ""
+
+#: .\..\forms\.text.py:9913
+msgid "Выберите элемент склада"
+msgstr ""
+
+#: .\..\forms\.text.py:10072
+msgid "Киевстар биллинг - отчет"
+msgstr ""
+

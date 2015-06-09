@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Button example">
+	<action name='a_one' label='Раз'>print 'one'</action>
+	<action name='a_two' label='Два'>print 'two'</action>
+	<action name='a_three' label='Три'>print 'three'</action>
+	<logic />
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox>
+			<button label="Button with menu">
+				<menu>
+					<menuitem action='a_one' />
+					<menuitem action='a_two' />
+					<menuitem />
+					<menuitem action='a_three' />
+				</menu>
+			</button>
+		</vbox>
+	</layout>
+</form>

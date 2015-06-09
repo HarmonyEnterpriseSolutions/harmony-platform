@@ -1,0 +1,43 @@
+<?xml version="1.0"  encoding='windows-1251'?>
+
+<!--  GFD generator  -->
+
+<form title="Report" windowStyle='maximize'>
+
+<parameter name='p_title'      default="Untitled report"/>
+<parameter name='p_name'       default="inv_print"/>
+<parameter name='p_parameters' default=''/>
+<parameter name='p_connection' default=''/>
+<parameter name='p_accessobject_id' />
+<parameter name='p_locale' />
+
+<trigger type='ON-ACTIVATION'>
+	from wmlib import report
+	from urllib2 import HTTPError
+	from gnue.common.apps.errors import UserError
+
+	form.title = p_title.value
+	b.url = report.getReportUrl(form,
+		p_name.value,
+		parameters = p_parameters.value or None,
+		format     = 'pdf',
+		connection = p_connection.value or None,
+		accessobject_id = p_accessobject_id.value,
+		locale = p_locale.value,
+	)
+</trigger>
+
+
+<logic>
+	<block name='b' editable='N' queryable='N' deletable='N'>
+		<field name = 'url'/>
+	</block>
+</logic>
+
+<import-toolbar library='toolbar.gfd' name='__main_toolbar__'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<url-resource block='b' field='url' content_type='application/pdf'/>
+</layout>
+
+</form>

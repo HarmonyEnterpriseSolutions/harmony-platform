@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Select files">
+	<logic>
+		<!--
+		@param title: Message to show on the dialog
+		@param defaultDir: the default directory, or the empty string
+		@param defaultFile: the default filename, or the empty string
+		@param wildcard: a list of tuples describing the filters used by the
+		        dialog.  Such a tuple constists of a description and a fileter.
+		        Example: [('PNG Files', '*.png'), ('JPEG Files', '*.jpg')]
+		        If no wildcard is given, all files will match (*.*)
+		@param mode: Is this dialog an open- or a save-dialog.  If mode is
+		        'save' it is a save dialog, everything else would be an
+		        open-dialog.
+		@param multiple: for open-dialog only: if True, allows selecting
+		        multiple files
+		@param overwritePrompt: for save-dialog only: if True, prompt for a
+		        confirmation if a file will be overwritten
+		@param fileMustExist: if True, the user may only select files that
+		        actually exist
+
+		@returns: a sequence of filenames or None if the dialog has been
+		        cancelled.
+		-->
+		<block name="b">
+			<field name="title"                              default='Let us open a file...'/>
+			<field name="defaultDir"                         default='C:\'/>
+			<field name="defaultFile"                        default='autoexec.bat'/>
+			<field name="mode"                               default='open'/>
+			<field name="multiple"        datatype='boolean' default='N'/>
+			<field name="overwritePrompt" datatype='boolean' default='N'/>
+			<field name="fileMustExist"   datatype='boolean' default='Y'/>
+			<field name="readData"        datatype='boolean' default='N'/>
+			<field name="result" editable='N'/>
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block='b'>
+			<entry field="title"           label='title'/>
+			<entry field="defaultDir"      label='defaultDir'/>
+			<entry field="defaultFile"     label='defaultFile'/>
+			<entry field="mode"            label='mode'/>
+			<entry field="multiple"        label='multiple'/>
+			<entry field="overwritePrompt" label='overwritePrompt'/>
+			<entry field="fileMustExist"   label='fileMustExist'/>
+			<entry field="readData"        label='readData'/>
+			<button label='Select files'>
+				<trigger type='ON-ACTION'>
+					def resultConsumer(result):
+						b.result.set(repr(result))
+
+					form.selectFiles(
+						title           = b.title.get(),
+						defaultDir      = b.defaultDir.get() or "",
+						defaultFile     = b.defaultFile.get() or "",
+						mode            = b.mode.get(),
+						wildcard        = [('BAT Files', '*.bat'), ('DBF Files', '*.dbf')],
+						multiple        = b.multiple.get(),
+						overwritePrompt = b.overwritePrompt.get(),
+						fileMustExist   = b.fileMustExist.get(),
+						readData        = b.readData.get(),
+						resultConsumer  = resultConsumer,
+					)
+				</trigger>
+			</button>
+			<entry field="result"          label='result' style='multiline'/>
+		</vbox>
+	</layout>
+</form>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<!--  GFD generator  -->
+
+<form name="log_row" title="История изменения записи">
+
+	<parameter name="p_accessobject_id" />
+	<parameter name="p_fnsig_name" />
+	<parameter name="p_row_id" />
+
+	<datasource name='ds__spr_fnsig' connection='admin'
+		table = '_spr_fnsig'
+		rowid = 'fnsig_id'
+	/>
+
+	<datasource name='ds__log_row' connection='admin'
+		table = '_log_row'
+		rowid = 'log_row_id'
+
+		master="ds__spr_fnsig"
+		masterlink="fnsig_name"
+		detaillink="fnsig_name"
+	/>
+
+	<datasource name='ds__log_field' connection='admin'
+		table = '_log_field'
+		rowid = 'log_field_id'
+
+		master="ds__log_row"
+		masterlink="log_row_id"
+		detaillink="log_row_id"
+	/>
+
+	<trigger type='ON-STARTUP'>
+		ds__spr_fnsig.setParameter('logged_only', True)
+	</trigger>
+
+	<trigger type="On-Activation">
+		import datetime
+
+		s_time = get_global('b__log_row_filters_s_time', None)
+		e_time = get_global('b__log_row_filters_e_time', None)
+
+		b__log_row_filters.s_time = s_time
+		b__log_row_filters.e_time = e_time
+
+		b__log_row_filters.all_fnsig_name = p_fnsig_name.value is None
+		b__log_row_filters.all_row_id = p_row_id.value is None
+
+		b__log_row_filters.all_fnsig_name.editable = p_fnsig_name.value is not None
+		b__log_row_filters.all_row_id.editable = p_row_id.value is not None
+
+		form.apply_filters()
+	</trigger>
+
+	<trigger name="apply_filters" type='NAMED'>
+		ds__spr_fnsig.setParameter('fnsig_name', p_fnsig_name.value if not b__log_row_filters.all_fnsig_name.get() else None)
+		ds__log_row.setParameter('s_time', b__log_row_filters.s_time.get())
+		ds__log_row.setParameter('e_time', b__log_row_filters.e_time.get())
+		ds__log_row.setParameter('row_id', p_row_id.value if not b__log_row_filters.all_row_id.get() else None)
+
+		b__spr_fnsig.refresh()
+		b__log_row.refresh()
+	</trigger>
+
+<logic>
+
+	<block name='b__log_row_filters'>
+		<field name='s_time' datatype='datetime'>
+			<trigger type='Post-FocusOut'>
+				set_global('b__log_row_filters_s_time', self.get())
+			</trigger>
+		</field>
+		<field name='e_time' datatype='datetime'>
+			<trigger type='Post-FocusOut'>
+				set_global('b__log_row_filters_e_time', self.get())
+			</trigger>
+		</field>
+		<field name='all_fnsig_name' datatype='boolean' default='N'/>
+		<field name='fnsig_name' editable='N'/>
+		<field name='all_row_id' datatype='boolean' default='N'/>
+		<field name='row_id' editable='N'/>
+	</block>
+
+	<block name='b__spr_fnsig' datasource='ds__spr_fnsig' autoNextRecord='Y' startup='empty' editable='N' deletable='N'>
+		<field name = 'fnsig_id'           field = 'fnsig_id'          />
+		<field name = 'fnsig_name'         field = 'fnsig_name'        />
+		<field name = 'fnsig_descr'        field = 'fnsig_descr'       />
+	</block>
+
+	<block name='b__log_row' datasource='ds__log_row' autoNextRecord='Y' startup='empty' editable='N' deletable='N'>
+		<field name = 'log_row_id'         field = 'log_row_id'        />
+		<field name = 'event_time'         field = 'event_time'        datatype='datetime'/>
+		<field name = 'dbuser_id'          field = 'dbuser_id'         />
+		<field name = 'user_id'            field = 'user_id'           />
+		<field name = 'operation'          field = 'operation'         />
+		<field name = 'table_id'           field = 'table_id'          />
+		<field name = 'row_id'             field = 'row_id'            />
+		<field name = 'dbuser_name'        field = 'dbuser_name'       />
+		<field name = 'user_name'          field = 'user_name'         />
+		<field name = 'table_descr'        field = 'table_descr'       />
+		<field name = 'fnsig_id'           field = 'fnsig_id'          />
+		<field name = 'fnsig_name'         field = 'fnsig_name'        />
+		<field name = 'fnsig_descr'        field = 'fnsig_descr'       />
+		<field name = 'row_name'           field = 'row_name'          />
+	</block>
+
+	<block name='b__log_field' datasource='ds__log_field' autoNextRecord='Y' startup='empty' editable='N' deletable='N'>
+		<field name = 'log_field_id'       field = 'log_field_id'      />
+		<field name = 'log_row_id'         field = 'log_row_id'        />
+		<field name = 'field_id'           field = 'field_id'          />
+		<field name = 'val'                field = 'val'               />
+		<field name = 'field_descr'        field = 'field_descr'       />
+		<field name = 'val_resolved'       field = 'val_resolved'      />
+	</block>
+</logic>
+<import-toolbar library='../common/toolbar.gfd' name='__main_toolbar__'/>
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox>
+		<vbox block='b__log_row_filters'>
+			<hbox  						s:stretch='0' > 
+				<entry field='all_row_id'	    label='Все записи'     s:stretch='0' />
+				<entry field='all_fnsig_name'	label='Все сигнатуры'  s:stretch='0' />
+
+				<label text='С' 		s:stretch='0' /> 
+				<entry field='s_time'	s:stretch='0' s:def_width='20'/>
+				<label text='по'		s:stretch='0' /> 
+				<entry field='e_time'	s:stretch='0' s:def_width='20'/>
+				<button label='Поиск'	s:stretch='0' >
+					<trigger type='ON-ACTION' src='apply_filters'/>
+				</button>
+			</hbox>
+		</vbox>
+
+		<splitter align='h'>
+
+			<table block='b__spr_fnsig'>
+				<import-menu library='../common/menues.gfd' name='table-default'/>
+				<entry field = 'fnsig_descr'        label = 'Сигнатура'/>
+			</table>
+
+			<splitter align='h'>
+				<table block='b__log_row'>
+					<import-menu library='../common/menues.gfd' name='table-default'/>
+			
+					<entry field = 'event_time'         label = 'Время'/>
+					<entry field = 'operation'          label = 'Операция'/>
+					<entry field = 'dbuser_name'        label = 'Пользователь БД'/>
+					<entry field = 'user_name'          label = 'Пользователь'/>
+					<entry field = 'table_descr'        label = 'Таблица'/>
+					<entry field = 'fnsig_descr'        label = 'Сигнатура'/>
+					<entry field = 'row_id'             label = 'Ключ'/>
+					<entry field = 'row_name'           label = 'Имя записи'/>
+				</table>
+		
+				<table block='b__log_field'>
+					<import-menu library='../common/menues.gfd' name='table-default'/>
+			
+					<entry field = 'field_descr'         label = 'Поле'/>
+					<entry field = 'val'                 label = 'Значение'/>
+					<entry field = 'val_resolved'        label = 'Значение (resolved)'/>
+				</table>
+			</splitter>
+		</splitter>
+		
+	</vbox>
+</layout>
+</form>

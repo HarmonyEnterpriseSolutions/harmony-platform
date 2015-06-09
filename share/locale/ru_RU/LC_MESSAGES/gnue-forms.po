@@ -1,0 +1,1538 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Rata\n"
+"POT-Creation-Date: Wed Apr 02 18:03:12 2003\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Oleg Noga <noga@abrisola.com.ua>\n"
+"Language-Team: RUSSIAN <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=Cp1251\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.4\n"
+
+#: .\..\src\gnue\forms\GFClient.py:62
+msgid "GNUe Forms is the primary user interface to the GNU Enterprise system."
+msgstr "GNUe Forms основной пользовательский интерфейс системы GNU Enterprise."
+
+#: .\..\src\gnue\forms\GFClient.py:76
+msgid "The name of the user interface to use to display your form. For a list of interfaces, use the --help-ui options."
+msgstr "Имя интерфейсного драйвера для отображения формы. Для просмотра списка поддерживаемых драйверов, используйте опцию --help-ui."
+
+#: .\..\src\gnue\forms\GFClient.py:80
+msgid "Prints a list of user interfaces that forms supports."
+msgstr "Печатает список интерфейсных драйверов поддерживаемых GNUe-Forms"
+
+#: .\..\src\gnue\forms\GFClient.py:83
+msgid "Disables the splash screen"
+msgstr "Запрет вывода заставки"
+
+#: .\..\src\gnue\forms\GFClient.py:135
+msgid "Unknown UI driver specified: %s"
+msgstr "Указан неизвестный UI драйвер: %s"
+
+#: .\..\src\gnue\forms\GFClient.py:142
+msgid "Unable to load UI driver: %s"
+msgstr "Не могу загрузить UI драйвер: %s"
+
+#: .\..\src\gnue\forms\GFClient.py:194
+msgid "No Forms Definition File Specified."
+msgstr "Файл описания формы (.gfd) не указан"
+
+#: .\..\src\gnue\forms\GFClient.py:217
+msgid ""
+"The following interfaces are supported by GNUe Forms. You can select an\n"
+"interface via the --interface option."
+msgstr ""
+"Следующие интерфейсные драйверы поддерживаются GNUe Forms. Вы может указать\n"
+"требуемый драйвер с помощью опции --interface."
+
+#: .\..\src\gnue\forms\GFClient.py:220
+msgid "To view general help, run this command with the --help option."
+msgstr "Для просмотра подсказки, запустите данную команду с опцией --help"
+
+#: .\..\src\gnue\forms\GFClient.py:222
+msgid "User interface command line options:"
+msgstr "Опции командной строки:"
+
+#: .\..\src\gnue\forms\GFExceptionDecorator.py:6
+msgid "Access demied: %s"
+msgstr "Нет доступа: %s"
+
+#: .\..\src\gnue\forms\GFExceptionDecorator.py:9
+msgid "Process can't access file because file used by another process: %s"
+msgstr "Процесс не может получить доступ к файлу потому что файл занят другим процессом: %s"
+
+#: .\..\src\gnue\forms\GFForm.py:66
+#: .\..\src\gnue\forms\GFObjects\GFParameter.py:201
+msgid "Parameter '%(name)s' not defined in the form"
+msgstr "Параметр '%(name)s' в форме не задан"
+
+#: .\..\src\gnue\forms\GFForm.py:764
+msgid "File saved: %s"
+msgstr "Файл сохранен: %s"
+
+#: .\..\src\gnue\forms\GFForm.py:766 .\..\src\gnue\forms\GFForm.py:799
+msgid "Empty response from server"
+msgstr "Пустой ответ от сервера"
+
+#: .\..\src\gnue\forms\GFForm.py:769 .\..\src\gnue\forms\GFForm.py:802
+msgid ""
+"No response from server\n"
+"%s"
+msgstr ""
+"Нет ответа от сервера\n"
+"%s"
+
+#: .\..\src\gnue\forms\GFForm.py:1282 .\..\src\gnue\forms\GFForm.py:1299
+msgid "Recordnumber"
+msgstr "Номер записи"
+
+#: .\..\src\gnue\forms\GFForm.py:1286
+msgid "Jump to record"
+msgstr "Переход на Запись.."
+
+#: .\..\src\gnue\forms\GFForm.py:1297
+msgid "Invalid numeric value entered."
+msgstr "Введено неверное числовое значение"
+
+#: .\..\src\gnue\forms\GFForm.py:1382 .\..\src\gnue\forms\GFForm.py:1409
+msgid "Enter your filter criteria."
+msgstr "Введите параметры запроса"
+
+#: .\..\src\gnue\forms\GFForm.py:1428
+msgid "Query canceled."
+msgstr "Запрос отменен"
+
+#: .\..\src\gnue\forms\GFForm.py:1480
+msgid "Query returned no results."
+msgstr "Запрос вернул пустой результат"
+
+#: .\..\src\gnue\forms\GFForm.py:1482
+msgid "Query successful."
+msgstr "Запрос выполнен успешно"
+
+#: .\..\src\gnue\forms\GFForm.py:1865
+msgid ""
+"Trigger fails: %s\n"
+"This may cause unproper cleanup or data loss"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFForm.py:2105
+#: .\..\src\gnue\forms\GFObjects\GFBlock.py:390
+msgid "Save changes?"
+msgstr "Сохранить изменения?"
+
+#: .\..\src\gnue\forms\GFInstance.py:294
+msgid "Your login session has expired, please, restart application"
+msgstr "Ваша сессия устарела, пожалуйста, перезапустите приложение"
+
+#: .\..\src\gnue\forms\GFInstance.py:298
+msgid "Unable to open file: %s"
+msgstr "Не могу открыть файл: %s"
+
+#: .\..\src\gnue\forms\GFInstance.py:431
+msgid "Global variable \"%s\" is not defined"
+msgstr "Глобальная переменная \"%s\" не определена"
+
+#: .\..\src\gnue\forms\GFObjects\GFBlock.py:390
+msgid "Save changes and continue?"
+msgstr "Сохранить изменения и продолжить?"
+
+#: .\..\src\gnue\forms\GFObjects\GFBlock.py:586
+#: .\..\src\gnue\forms\GFObjects\GFField.py:354
+msgid "(! unresolved: %s)"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFObjects\GFBlock.py:1488
+#: .\..\src\gnue\forms\GFObjects\GFTree.py:845
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:516
+msgid "Are you sure want to delete %s record(s)?"
+msgstr "Вы действительно хотите удалить %s запись(ей)?"
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:380
+#: .\..\src\gnue\forms\GFObjects\GFField.py:434
+#: .\..\src\gnue\forms\GFObjects\GFField.py:769
+msgid "(all)"
+msgstr "(все)"
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:382
+#: .\..\src\gnue\forms\GFObjects\GFField.py:432
+#: .\..\src\gnue\forms\GFObjects\GFField.py:769
+msgid "(empty)"
+msgstr "(пусто)"
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:873
+msgid ""
+"Sort order will be wrong because this field is client side resolved.\n"
+"Please, make a request to developers if Your really need this feature"
+msgstr ""
+"Сортировка не будет верной, потому что значение поля есть ключ.\n"
+"Если корректность сортировки по данному полю для Вас важна - обратитесь к разработчикам"
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:883
+msgid ""
+"Can't apply sort order because this field is client side calculated.\n"
+"Please, make a request to developers if Your really need this feature"
+msgstr ""
+"По данному полю сортировка не предусмотрена\n"
+"Если возможность сортировки по данному полю для Вас важна - обратитесь к разработчикам"
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:932
+msgid "Field '%(name)s' has a fk_source specified, but no fk_key"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:942
+msgid "'%(name)s' attribute not allowed for field '%(field)s'"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:960
+msgid "Invalid database value '%(value)s' for field '%(field)s'"
+msgstr "Недопустимое значение в базе данных '%(value)s' для поля '%(field)s'"
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:970
+msgid "Value '%(value)s' for field '%(field)s' does not reach minimum length of %(min_length)s"
+msgstr "Значение '%(value)s' поля '%(field)s' должно быть длины не менее %(min_length)s"
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:985
+msgid "Invalid value '%(value)s' for field '%(field)s'"
+msgstr "Недопустимое значение '%(value)s' для поля '%(field)s'"
+
+#: .\..\src\gnue\forms\GFObjects\GFField.py:1000
+msgid "Invalid default value '%(value)s' for field '%(name)s'"
+msgstr "Недопустимое значение по умолчанию '%(value)s' для поля '%(name)s'"
+
+#: .\..\src\gnue\forms\GFObjects\GFObj.py:230
+msgid "Expected attribute '%(attr)s' not found in %(source_type)s '%(source)s' and parents"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFObjects\GFObj.py:258
+msgid "%(source_type)s '%(source)s': %(subject)s '%(name)s' in %(referer_type)s '%(referer)s' not found"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFObjects\GFObj.py:263
+msgid "%(source_type)s '%(source)s': %(subject)s '%(name)s' not found"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFObjects\GFParameter.py:189
+msgid "Value %(value)r is not valid for parameter '%(name)s'"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFObjects\GFTable.py:48
+msgid "Modified"
+msgstr "Модифицировано"
+
+#: .\..\src\gnue\forms\GFObjects\GFTable.py:49
+msgid "Marked to remove"
+msgstr "Помечено к удалению"
+
+#: .\..\src\gnue\forms\GFObjects\GFTable.py:598
+msgid "Can't filter by calculated field"
+msgstr "Нельзя фильтровать по вычисляемому полю"
+
+#: .\..\src\gnue\forms\GFObjects\GFTable.py:619
+msgid "You can't select rows marked for deletion"
+msgstr "Нельзя выделять помеченные к удаленнию записи"
+
+#: .\..\src\gnue\forms\GFObjects\GFTree.py:670
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:312
+msgid "Node copied"
+msgstr "Узел скопирован"
+
+#: .\..\src\gnue\forms\GFObjects\GFTree.py:689
+msgid "New node created"
+msgstr "Новый узел создан"
+
+#: .\..\src\gnue\forms\GFObjects\GFTree.py:794
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:465
+msgid "Can't cut root"
+msgstr "Нельзя вырезать корень"
+
+#: .\..\src\gnue\forms\GFObjects\GFTree.py:796
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:467
+msgid "Nothing to cut"
+msgstr "Нечего вырезать"
+
+#: .\..\src\gnue\forms\GFObjects\GFTree.py:803
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:474
+msgid "Can't copy root"
+msgstr "Нельзя скопировать корень"
+
+#: .\..\src\gnue\forms\GFObjects\GFTree.py:805
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:476
+msgid "Nothing to copy"
+msgstr "Нечего копировать"
+
+#: .\..\src\gnue\forms\GFObjects\GFTree.py:839
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:510
+msgid "Can't remove root node"
+msgstr "Нельзя удалить корень дерева"
+
+#: .\..\src\gnue\forms\GFObjects\GFTree.py:854
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:525
+msgid "Nothing to delete"
+msgstr "Нечего удалять"
+
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:392
+#: .\..\src\gnue\forms\GFParser.py:377 .\..\src\gnue\forms\GFParser.py:636
+#: .\..\src\gnue\forms\GFParser.py:657
+msgid "Yes"
+msgstr "Да"
+
+#: .\..\src\gnue\forms\GFObjects\GFTreeList.py:392
+#: .\..\src\gnue\forms\GFParser.py:378 .\..\src\gnue\forms\GFParser.py:637
+#: .\..\src\gnue\forms\GFParser.py:658
+msgid "No"
+msgstr "Нет"
+
+#: .\..\src\gnue\forms\GFParser.py:86
+msgid "Form"
+msgstr "Форма"
+
+#: .\..\src\gnue\forms\GFParser.py:91
+msgid "Title"
+msgstr "Заголовок"
+
+#: .\..\src\gnue\forms\GFParser.py:92
+msgid "The title of the form."
+msgstr "Заголовок формы."
+
+#: .\..\src\gnue\forms\GFParser.py:96 .\..\src\gnue\forms\GFParser.py:148
+#: .\..\src\gnue\forms\GFParser.py:168 .\..\src\gnue\forms\GFParser.py:228
+#: .\..\src\gnue\forms\GFParser.py:240 .\..\src\gnue\forms\GFParser.py:307
+#: .\..\src\gnue\forms\GFParser.py:1132 .\..\src\gnue\forms\GFParser.py:1449
+#: .\..\src\gnue\forms\GFParser.py:1524 .\..\src\gnue\forms\GFParser.py:1860
+#: .\..\src\gnue\forms\GFParser.py:1938
+msgid "Name"
+msgstr "Название"
+
+#: .\..\src\gnue\forms\GFParser.py:97
+msgid "A unique name or ID for the form."
+msgstr "Уникальное имя или ID формы"
+
+#: .\..\src\gnue\forms\GFParser.py:101 .\..\src\gnue\forms\GFParser.py:1178
+msgid "Style"
+msgstr "Стиль"
+
+#: .\..\src\gnue\forms\GFParser.py:103
+msgid "Normal"
+msgstr "Нормальный"
+
+#: .\..\src\gnue\forms\GFParser.py:104 .\..\src\gnue\forms\GFParser.py:2010
+msgid "Dialog"
+msgstr "Диалог"
+
+#: .\..\src\gnue\forms\GFParser.py:106
+msgid "Display as normal or dialog-style window."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:110
+msgid "Window style"
+msgstr "Стиль окна"
+
+#: .\..\src\gnue\forms\GFParser.py:112
+msgid ""
+"Window style. String is combination of comma delimited\n"
+"    MINIMIZE_BOX\n"
+"    MAXIMIZE_BOX\n"
+"    CLOSE_BOX\n"
+"    RESIZEABLE\n"
+"    CAPTION\n"
+"    MAXIMIZE\n"
+"\n"
+"Default for style \"normal\":\n"
+"    \"CAPTION, MINIMIZE_BOX, MAXIMIZE_BOX, CLOSE_BOX, RESIZE\"\n"
+"Default for style \"dialog\":\n"
+"    CAPTION, CLOSE_BOX, RESIZE\n"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:133
+msgid "Top-level element that encloses all the logic and visuals that the user interface will show to the user."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:141
+msgid "A menu or submenu containing menu items and/or submenus"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:145
+msgid "Menu"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:149 .\..\src\gnue\forms\GFParser.py:169
+#: .\..\src\gnue\forms\GFParser.py:229 .\..\src\gnue\forms\GFParser.py:241
+msgid "Name of this element"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:154 .\..\src\gnue\forms\GFParser.py:179
+#: .\..\src\gnue\forms\GFParser.py:249 .\..\src\gnue\forms\GFParser.py:438
+#: .\..\src\gnue\forms\GFParser.py:1563
+msgid "Label"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:155 .\..\src\gnue\forms\GFParser.py:1564
+msgid "Text to use if this is a submenu"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:161
+msgid "A menu item that fires a trigger when selected"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:164
+msgid "Menu Item"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:174 .\..\src\gnue\forms\GFParser.py:245
+#: .\..\src\gnue\forms\GFParser.py:1455
+msgid "Icon"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:175
+msgid "Icon to display besides this menu item"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:180
+msgid "Text to use for this menu item"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:184 .\..\src\gnue\forms\GFParser.py:253
+#: .\..\src\gnue\forms\GFParser.py:1024 .\..\src\gnue\forms\GFParser.py:1767
+#: .\..\src\gnue\forms\GFParser.py:1896 .\..\src\gnue\forms\GFParser.py:1984
+msgid "Description"
+msgstr "Описание"
+
+#: .\..\src\gnue\forms\GFParser.py:185
+msgid "Text to display in the status bar for this menu item"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:189 .\..\src\gnue\forms\GFParser.py:258
+msgid "Action"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:190
+msgid "Name of the trigger to run whenever this menu item is selected"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:196 .\..\src\gnue\forms\GFParser.py:265
+msgid "Action Off"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:197
+msgid "Name of the trigger to run whenever this menu item is switched to off"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:203
+msgid "Hotkey"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:204
+msgid "Hotkey to assign to this menu item"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:207 .\..\src\gnue\forms\GFParser.py:272
+msgid "State"
+msgstr "Сохранить"
+
+#: .\..\src\gnue\forms\GFParser.py:208
+msgid "Determines whether this menu item will be switched on by default"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:214 .\..\src\gnue\forms\GFParser.py:279
+#: .\..\src\gnue\forms\GFParser.py:1001 .\..\src\gnue\forms\GFParser.py:1054
+msgid "Enabled"
+msgstr "Таблицы"
+
+#: .\..\src\gnue\forms\GFParser.py:215
+msgid "Determines whether this menu item will be enabled by default"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:222
+msgid "A toolbar containing tool buttons"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:225
+msgid "Toolbar"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:234
+msgid "A button on a toolbar"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:237
+msgid "Toolbar Button"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:246
+msgid "Icon to display on the button"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:250
+msgid "Text to display on the button"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:254 .\..\src\gnue\forms\GFParser.py:1025
+msgid "Text to display in a tooltip window"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:259
+msgid "Name of the trigger to run whenever this button is clicked"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:266
+msgid "Name of the trigger to run whenever this button is switched to off"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:273
+msgid "Determines whether this button will be switched on by default"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:280
+msgid "Determines whether this button will be enabled by default"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:291
+msgid "Logic"
+msgstr "Вход"
+
+#: .\..\src\gnue\forms\GFParser.py:300
+msgid "Layout"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:325
+msgid "Startup state"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:326
+msgid "State in which the block will be on form startup. 'Empty' means the block is filled with a single empty record, 'full' means the block is populated with the result of a full query."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:333
+msgid "Empty"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:334
+msgid "Full"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:338
+msgid "Transparent Nav"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:348
+msgid "Auto Create Record"
+msgstr "Создать Запись"
+
+#: .\..\src\gnue\forms\GFParser.py:354
+msgid "Auto Next Record"
+msgstr "Следующая Запись"
+
+#: .\..\src\gnue\forms\GFParser.py:362
+msgid "Auto Commit"
+msgstr "Автосохранение"
+
+#: .\..\src\gnue\forms\GFParser.py:369
+msgid "Auto Clear on Commit"
+msgstr "Очистка при сохранении"
+
+#: .\..\src\gnue\forms\GFParser.py:375 .\..\src\gnue\forms\GFParser.py:634
+msgid "Allow Editing"
+msgstr "Разрешено редактирование"
+
+#: .\..\src\gnue\forms\GFParser.py:379 .\..\src\gnue\forms\GFParser.py:639
+msgid "Update Only"
+msgstr "Только обновления"
+
+#: .\..\src\gnue\forms\GFParser.py:380 .\..\src\gnue\forms\GFParser.py:640
+msgid "New Records Only"
+msgstr "Только новые записи"
+
+#: .\..\src\gnue\forms\GFParser.py:385
+msgid "Allow Querying"
+msgstr "Разрешены запросы"
+
+#: .\..\src\gnue\forms\GFParser.py:390
+msgid "Allow Deletes"
+msgstr "Разрешены удаления"
+
+#: .\..\src\gnue\forms\GFParser.py:395 .\..\src\gnue\forms\GFParser.py:996
+msgid "Navigable"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:405
+msgid "Block"
+msgstr "Следующий блок"
+
+#: .\..\src\gnue\forms\GFParser.py:415
+msgid "The unique ID of the label."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:419
+msgid "The text to be displayed."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:423
+msgid "If this label is for a specific object, name it here."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:428
+msgid "Left"
+msgstr "Слева"
+
+#: .\..\src\gnue\forms\GFParser.py:429
+msgid "Right"
+msgstr "Справа"
+
+#: .\..\src\gnue\forms\GFParser.py:430
+msgid "Centered"
+msgstr "По центру"
+
+#: .\..\src\gnue\forms\GFParser.py:457
+msgid "Field (Database)"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:461 .\..\src\gnue\forms\GFParser.py:475
+#: .\..\src\gnue\forms\GFParser.py:1944
+msgid "Datatype"
+msgstr "Тип данных"
+
+#: .\..\src\gnue\forms\GFParser.py:462 .\..\src\gnue\forms\GFParser.py:476
+msgid "The type of data stored in this field."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:465 .\..\src\gnue\forms\GFParser.py:479
+#: .\..\src\gnue\forms\GFParser.py:1948
+msgid "Text"
+msgstr "Текст"
+
+#: .\..\src\gnue\forms\GFParser.py:466 .\..\src\gnue\forms\GFParser.py:480
+#: .\..\src\gnue\forms\GFParser.py:1949
+msgid "Number"
+msgstr "Числовой"
+
+#: .\..\src\gnue\forms\GFParser.py:467 .\..\src\gnue\forms\GFParser.py:481
+#: .\..\src\gnue\forms\GFParser.py:1950
+msgid "Date"
+msgstr "Тип данных"
+
+#: .\..\src\gnue\forms\GFParser.py:468 .\..\src\gnue\forms\GFParser.py:482
+#: .\..\src\gnue\forms\GFParser.py:1951
+msgid "Time"
+msgstr "Заголовок"
+
+#: .\..\src\gnue\forms\GFParser.py:469 .\..\src\gnue\forms\GFParser.py:483
+#: .\..\src\gnue\forms\GFParser.py:1952
+msgid "Date and time"
+msgstr "Дата/Время"
+
+#: .\..\src\gnue\forms\GFParser.py:470 .\..\src\gnue\forms\GFParser.py:484
+#: .\..\src\gnue\forms\GFParser.py:1953
+msgid "Boolean"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:471
+msgid "Array"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:472 .\..\src\gnue\forms\GFParser.py:485
+#: .\..\src\gnue\forms\GFParser.py:1954
+msgid "Raw data"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:488 .\..\src\gnue\forms\GFParser.py:1957
+msgid "Length"
+msgstr "Слева"
+
+#: .\..\src\gnue\forms\GFParser.py:489
+msgid "Maximum length of data stored in this field. Applies only to fields with a datatype of 'string' or 'number'. For numbers, this is the total number of digits, including the fractional digits."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:497 .\..\src\gnue\forms\GFParser.py:1965
+msgid "Scale"
+msgstr "Сохранить"
+
+#: .\..\src\gnue\forms\GFParser.py:498
+msgid "Number of fractional digits. Applies only to fields with a datatype of 'number'."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:504
+msgid "Group digits"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:505
+msgid "If 'N', digits will not be grouped."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:510
+msgid "Case"
+msgstr "Выход"
+
+#: .\..\src\gnue\forms\GFParser.py:511
+msgid "Convert the value to uppercase/lowercase or leave it as it is. Applies only to fields with a datatype of 'string'."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:517
+msgid "Mixed case"
+msgstr "Нижний регистр"
+
+#: .\..\src\gnue\forms\GFParser.py:518
+msgid "Upper case"
+msgstr "Верхний регистр"
+
+#: .\..\src\gnue\forms\GFParser.py:519
+msgid "Lower case"
+msgstr "Нижний регистр"
+
+#: .\..\src\gnue\forms\GFParser.py:522 .\..\src\gnue\forms\GFParser.py:1209
+msgid "Minimum"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:523
+msgid "Minimum value, value must be >= min"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:527 .\..\src\gnue\forms\GFParser.py:1210
+msgid "Maximum"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:528
+msgid "Maximum value, value must be <= max"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:532 .\..\src\gnue\forms\GFParser.py:1971
+msgid "Required"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:533
+msgid "If set, empty values can not be stored in this field."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:542
+msgid "Min Text Length"
+msgstr "Минимальная длина текста"
+
+#: .\..\src\gnue\forms\GFParser.py:566
+msgid "F/K Datasource"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:570
+msgid "F/K Bound Field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:576
+msgid "F/K Description Field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:586
+msgid "F/K Resolved Description Field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:591
+msgid "F/K Refresh Method"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:593 .\..\src\gnue\forms\GFParser.py:594
+msgid "On form startup"
+msgstr "При запуске формы"
+
+#: .\..\src\gnue\forms\GFParser.py:595
+msgid "On datasource activate"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:604
+msgid "Default (New Records)"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:611
+msgid "Default to last entry"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:619
+msgid "Default (Querying)"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:626
+msgid "Perform queries case-sensitive"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:645
+msgid "Allow Query"
+msgstr "Разрешены запросы"
+
+#: .\..\src\gnue\forms\GFParser.py:655
+msgid "Automatic Query"
+msgstr "Разрешены запросы"
+
+#: .\..\src\gnue\forms\GFParser.py:659
+msgid "Empty forms only"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:663
+msgid "Trim left spaces"
+msgstr "Удалять пробелы слева"
+
+#: .\..\src\gnue\forms\GFParser.py:669
+msgid "Trim right spaces"
+msgstr "Удалять пробелы справа"
+
+#: .\..\src\gnue\forms\GFParser.py:676
+msgid "Disable auto completion"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:681 .\..\src\gnue\forms\GFParser.py:779
+msgid "Input Mask"
+msgstr "Маска ввода"
+
+#: .\..\src\gnue\forms\GFParser.py:685
+msgid "Field"
+msgstr "&Файл"
+
+#: .\..\src\gnue\forms\GFParser.py:713
+msgid "Focus Order"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:729
+msgid "Automatic"
+msgstr "Автосохранение"
+
+#: .\..\src\gnue\forms\GFParser.py:730 .\..\src\gnue\forms\GFParser.py:1006
+msgid "Default"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:731
+msgid "Text Field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:732
+msgid "Multiline-Edit"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:733
+msgid "Password/Hidden"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:734
+msgid "Dropdown/Combo box"
+msgstr "Выпадающий список"
+
+#: .\..\src\gnue\forms\GFParser.py:735
+msgid "Listbox"
+msgstr "Список"
+
+#: .\..\src\gnue\forms\GFParser.py:736
+msgid "Radio box"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:737
+msgid "Radio button"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:738
+msgid "Checkbox"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:739
+msgid "Checkbox bound to bit field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:740
+msgid "Date picker"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:741
+msgid "User defined picker"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:742
+msgid "User defined picker with custom editor buton"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:743
+msgid "Text field with buttons"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:744
+msgid "Label (non-editable)"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:758
+msgid "Max item count"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:764
+msgid "Value this entry sets when activated"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:770
+msgid "Number of characters to popup picker"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:775
+msgid "Format Mask"
+msgstr "Маска форматирования"
+
+#: .\..\src\gnue\forms\GFParser.py:783
+msgid "Display Mask"
+msgstr "Маска отображения"
+
+#: .\..\src\gnue\forms\GFParser.py:789
+msgid "Entry"
+msgstr "&Следующее поле"
+
+#: .\..\src\gnue\forms\GFParser.py:821
+msgid "Generic popup window"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:842
+msgid "Box (Vertical)"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:863
+msgid "Box (Horizontal)"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:887
+msgid "Field contains the URL of the image"
+msgstr "Поле включает адрес изображения"
+
+#: .\..\src\gnue\forms\GFParser.py:888
+msgid "Field contains a PIL encoding of the image"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:896
+msgid "Full-size image (no scaling)"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:897
+msgid "Scale to width"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:898
+msgid "Scale to height"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:899
+msgid "Scale width and height (may distort image)"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:900
+msgid "Use a best-fit algorithm"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:915
+msgid "Image"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:942
+msgid "Field contains the URL of the component"
+msgstr "Поле содержит адрес помпонента"
+
+#: .\..\src\gnue\forms\GFParser.py:943
+msgid "Field contains the data of the component in Base64 encoding"
+msgstr "Поле содержит данные компонента в кодировке Base64"
+
+#: .\..\src\gnue\forms\GFParser.py:953
+msgid "Embedded Component"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1038 .\..\src\gnue\forms\GFParser.py:1460
+msgid "Button"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1071
+msgid "Entry button"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1092 .\..\src\gnue\forms\GFParser.py:1094
+msgid "Field with style list"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1099
+msgid "Select cells"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1100
+msgid "Select rows"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1101
+msgid "Select columns"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1112 .\..\src\gnue\forms\GFParser.py:1187
+msgid "Table"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1113 .\..\src\gnue\forms\GFParser.py:1188
+msgid "The table component with cell renderers, entries used for data editing"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1122 .\..\src\gnue\forms\GFParser.py:1135
+#: .\..\src\gnue\forms\GFParser.py:1439 .\..\src\gnue\forms\GFParser.py:1452
+#: .\..\src\gnue\forms\GFParser.py:1527 .\..\src\gnue\forms\GFParser.py:1602
+#: .\..\src\gnue\forms\GFParser.py:1679
+msgid "Unique name of the object"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1126
+msgid "Table row styles"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1148 .\..\src\gnue\forms\GFParser.py:1490
+msgid "Text color"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1152 .\..\src\gnue\forms\GFParser.py:1494
+msgid "Background color"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1172
+msgid "Item name pattern"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1180
+msgid "Button list"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1181
+msgid "Tabbed"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1183
+msgid "List gui implementation"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1194
+msgid "Updates parent field with total value of the source column"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1208
+msgid "Sum"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1211
+msgid "Count"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1216 .\..\src\gnue\forms\GFParser.py:1240
+#: .\..\src\gnue\forms\GFParser.py:1264
+msgid "Language"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1217 .\..\src\gnue\forms\GFParser.py:1241
+#: .\..\src\gnue\forms\GFParser.py:1265
+msgid "Programming language the code is written in"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1230
+msgid "Automatically updates parent field value with calculated one. Listens for all source fields changes"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1254
+msgid "Runs user code on timer"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1310 .\..\src\gnue\forms\GFParser.py:1392
+#: .\..\src\gnue\forms\GFParser.py:1571
+msgid "Own ID field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1315 .\..\src\gnue\forms\GFParser.py:1397
+#: .\..\src\gnue\forms\GFParser.py:1576
+msgid "Parent ID field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1320 .\..\src\gnue\forms\GFParser.py:1402
+msgid "Style name"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1324 .\..\src\gnue\forms\GFParser.py:1406
+msgid "Tree node name pattern"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1329 .\..\src\gnue\forms\GFParser.py:1411
+#: .\..\src\gnue\forms\GFParser.py:1586
+msgid "Root id"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1334 .\..\src\gnue\forms\GFParser.py:1416
+msgid "Root name"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1366 .\..\src\gnue\forms\GFParser.py:1430
+msgid "Tree-View of a block"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1443
+msgid "Tree node style"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1457
+msgid "Tree node icon name"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1462
+msgid "Tree node kind"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1464
+msgid "Node with checkbox"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1465
+msgid "Node with radiobox"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1467
+msgid "Kind of button with this node"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1470
+msgid "Checked"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1472
+msgid "Is tree node initially checked"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1475
+msgid "Bold"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1477
+msgid "Is tree node text bold"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1480
+msgid "Italic"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1482
+msgid "Is tree node text italic"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1485
+msgid "Expanded"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1487
+msgid "Is tree node expanded"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1498
+msgid "Columns flags"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1530
+msgid "Column width"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1536
+msgid "Column true icon name"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1540
+msgid "Column false icon name"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1544
+msgid "Column true icon description"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1548
+msgid "Column false icon description"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1553
+msgid "Tree column"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1581
+msgid "Menu node name pattern"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1607 .\..\src\gnue\forms\GFParser.py:1685
+msgid "The name of the block the gant ties activity to"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1609
+msgid "Activity id field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1612
+msgid "Activity index field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1614 .\..\src\gnue\forms\GFParser.py:1617
+msgid "Activity row field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1619 .\..\src\gnue\forms\GFParser.py:1622
+msgid "Activity name field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1624 .\..\src\gnue\forms\GFParser.py:1627
+msgid "Activity duration field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1629 .\..\src\gnue\forms\GFParser.py:1632
+msgid "Activity minimal start time field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1634 .\..\src\gnue\forms\GFParser.py:1653
+msgid "Activity start time field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1637
+msgid "Activity start time field, calculated by gant diagram model"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1643
+msgid "The name of the block the gant ties precedende to"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1645 .\..\src\gnue\forms\GFParser.py:1648
+msgid "Precedence activity id"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1650
+msgid "Subsequent activity id"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1655 .\..\src\gnue\forms\GFParser.py:1658
+msgid "Link lag"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1669
+msgid "Gantt diagram"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1687
+msgid "Date field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1690
+msgid "Date field name"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1692
+msgid "Day type field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1695
+msgid "Day type field name"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1697
+msgid "Day type description field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1700
+msgid "Day type description field name"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1702
+msgid "Day type params field"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1705
+msgid "Day type params field name"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1716
+msgid "Calendar diagram"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1768
+msgid "Text to display in a tooltip"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1790 .\..\src\gnue\forms\GFParser.py:1791
+msgid "Vertical align"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1792 .\..\src\gnue\forms\GFParser.py:1793
+msgid "Horizontal align"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1808
+msgid "Options"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1823
+msgid "Option"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1842
+msgid "Form Title"
+msgstr "Заголовок"
+
+#: .\..\src\gnue\forms\GFParser.py:1878
+msgid "Form Author"
+msgstr "Автор:"
+
+#: .\..\src\gnue\forms\GFParser.py:1914
+msgid "Version"
+msgstr "Версия:"
+
+#: .\..\src\gnue\forms\GFParser.py:1932
+msgid "Tip"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1939
+msgid "Unique name of the parameter."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1945
+msgid "The type of data for this parameter."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1958
+msgid "Maximum length of data stored in this parameter. Applies only to parameters with a datatype of 'string' or 'number'. For numbers, this is the total number of digits, including the fractional digits."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1966
+msgid "Number of fractional digits. Applies only to parameters with a datatype of 'number'."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1972
+msgid "If set, it is obligatory to provide this parameter to run the form."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1978
+msgid "Default value"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1979
+msgid "Default value for the parameter, if the user does not provide a value for it."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1985
+msgid "Description of the parameter for the help text."
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:1992
+msgid "Parameter"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:2031
+msgid "M/D Min Child Rows"
+msgstr ""
+
+#: .\..\src\gnue\forms\GFParser.py:2042
+msgid "M/D Max Child Rows"
+msgstr ""
+
+#: .\..\src\gnue\forms\input\GFKeyMapper.py:136
+msgid "Invalid keystroke id '%(key)s' in keymap for '%(event)s'"
+msgstr ""
+
+#: .\..\src\gnue\forms\input\GFKeyMapper.py:141
+msgid "Invalid keystroke combination '%(comb)s' in keymap for '%(event)s'"
+msgstr ""
+
+#: .\..\src\gnue\forms\input\displayHandlers\Cursor.py:320
+msgid "This field can not be changed"
+msgstr "Нельзя изменить это поле"
+
+#: .\..\src\gnue\forms\input\displayHandlers\Cursor.py:333
+msgid "This field allows numeric input only"
+msgstr "Это поле позволяет вводить только цифры"
+
+#: .\..\src\gnue\forms\input\displayHandlers\Cursor.py:343
+msgid "Maximum input length reached"
+msgstr "Достигнуто ограничение по длине"
+
+#: .\..\src\gnue\forms\input\displayHandlers\Image.py:40
+msgid "Form contains a <image> but python image support not installed"
+msgstr ""
+
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:42
+msgid "'%(value)s' is not a valid date-literal"
+msgstr "Ошибка в дате: '%(value)s'"
+
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:47
+msgid "'%(value)s' is not a valid time-literal"
+msgstr "Ошибка во времени: '%(value)s'"
+
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:132
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:133
+msgid "H"
+msgstr "Ч"
+
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:134
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:137
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:138
+msgid "M"
+msgstr "М"
+
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:135
+msgid "S"
+msgstr "С"
+
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:136
+msgid "D"
+msgstr "Д"
+
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:139
+#: .\..\src\gnue\forms\input\displayHandlers\datehandler.py:140
+msgid "Y"
+msgstr "Г"
+
+#: .\..\src\gnue\forms\uidrivers\_base\UIdriver.py:43
+msgid "The UI-Driver %(name)s has no implementation of %(method)s"
+msgstr "Интерфейсный драйвер %(name) не имеет реализации метода %(method)s"
+
+#: .\..\src\gnue\forms\uidrivers\_base\widgets\_base.py:45
+msgid "Widget %(cur_type)s '%(cur_name)s' overlaps %(cmp_type)s '%(cmp_name)s'"
+msgstr ""
+
+#: .\..\src\gnue\forms\uidrivers\_base\widgets\_base.py:57
+msgid "Widget %(type)s '%(name)s' has an invalid width or height"
+msgstr ""
+
+#: .\..\src\gnue\forms\uidrivers\java\UIdriver.py:106
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:453
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\form.py:61
+msgid "Error"
+msgstr "Ошибка"
+
+#: .\..\src\gnue\forms\uidrivers\java\widgets\form.py:405
+#: .\..\src\gnue\forms\uidrivers\wx26\UISplashScreen.py:54
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:83
+msgid "Version: %s"
+msgstr "Версия: %s"
+
+#: .\..\src\gnue\forms\uidrivers\java\widgets\form.py:410
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:56
+msgid "About %s"
+msgstr "О %s"
+
+#: .\..\src\gnue\forms\uidrivers\java\widgets\table.py:151
+msgid "Nothing to paste"
+msgstr "Нечего вставлять"
+
+#: .\..\src\gnue\forms\uidrivers\java\widgets\table.py:154
+msgid "Row not selected"
+msgstr "Запись не выбрана"
+
+#: .\..\src\gnue\forms\uidrivers\java\widgets\table.py:157
+msgid "Column not selected"
+msgstr "Столбец не выбран"
+
+#: .\..\src\gnue\forms\uidrivers\java\widgets\table.py:163
+msgid "Can't paste flags"
+msgstr "Нельзя вставить флажки"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:433
+msgid "GNUe Internal System Error"
+msgstr "GNUe Внутренняя ошибка системы"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:434
+msgid "GNUe Unexpected Error"
+msgstr "GNUe Неожиданная ошибка"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:435
+msgid "GNUe Application Error"
+msgstr "GNUe Ошибка приложения"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:438
+msgid ""
+"An unexpected internal error has occured:\n"
+"%s.\n"
+"This means you have found a bug in GNU Enterprise. Please report it to gnue-dev@gnu.org"
+msgstr ""
+"Произошла неожидаемая внутренняя ошибка:\n"
+"%s.\n"
+"Это означает что Вы нашли ошибку в GNUe.\n"
+"Пожалуйста, нажмите кнопку '>> Детали' и вышлите содержимое редактора ниже куратору"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:441
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:443
+msgid ""
+"An unexpected error has occured:\n"
+"%s.\n"
+"Please contact your system administrator."
+msgstr ""
+"Произошла неожиданная ошибка:\n"
+"%s.\n"
+"Это означает что Вы нашли ошибку в приложении.\n"
+"Пожалуйста, нажмите кнопку '>> Детали' и вышлите содержимое редактора ниже куратору"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:505
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:542
+msgid "<< Details"
+msgstr "<< Детали"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\dialogs.py:545
+msgid ">> Details"
+msgstr ">> Детали"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\_aui_mdi_notebook.py:162
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\_flat_mdi_notebook.py:160
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\mdi_notebook.py:183
+msgid "Exit cancelled, changes not saved"
+msgstr "Выход отменен, изменения не сохранены"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\entry.py:752
+msgid "Value %s exceeds the integer width of the control"
+msgstr "Целая часть значения %s превышает разрядность редактора"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\form.py:46
+msgid "Information"
+msgstr "Информация"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\form.py:51
+msgid "Warning"
+msgstr "Предупреждение"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\form.py:56
+msgid "Question"
+msgstr "Вопрос"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\form.py:559
+msgid "All files"
+msgstr "Разрешены удаления"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\form.py:815
+msgid "Login: "
+msgstr "Вход"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\image.py:42
+msgid "Image '%(name)s' is missing one of Sizer:width or Sizer:height"
+msgstr ""
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\table.py:430
+msgid "QRY"
+msgstr "ЗПР"
+
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\table.py:707
+msgid "Grid cursor expected"
+msgstr ""
+
+#:
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\url_resource\PdfCheckerMixIn.py:13
+msgid "PDF expected from server, got unrecognized text"
+msgstr "С сервера ожидался PDF, а пришел непонятный текст"
+
+#:
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\url_resource\PdfCheckerMixIn.py:19
+msgid "Got error on pdf server"
+msgstr "Ошибка на сервере отчетов"
+
+#:
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\url_resource\TempFileMixIn.py:111
+msgid ""
+"No response from server:\n"
+"%s"
+msgstr ""
+"Нет ответа с сервера:\n"
+"%s"
+
+#:
+#: .\..\src\gnue\forms\uidrivers\wx26\widgets\url_resource\TempFileMixIn.py:113
+msgid "Access denied"
+msgstr "Нет доступа"
+

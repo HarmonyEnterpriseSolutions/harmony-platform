@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form>
+	<logic>
+		<block name="b">
+			<field name="f">
+				<trigger type='POST-CHANGE'>
+					print "Post change"
+					from gnue.forms.GFObjects.GFField import InvalidFieldValueError
+					popup = form.layout.find_child('popup_org_id')
+
+					try:
+						text = self.get()
+					except InvalidFieldValueError, e:
+						text = e.value
+
+					if popup:
+						if text and len(text) > 2:
+							popup.popup()
+						else:
+							popup.popdown()
+				</trigger>
+			</field>
+			<field name="f2"/>
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<notebook>
+			<notepage caption='One'>
+				<vbox>
+					<entry block="b" field='f'  style='picker'>
+						<popupwindow name='popup_org_id' form='ticket_0008_popup.gfd' />
+					</entry>
+					<entry block="b" field='f2' />
+				</vbox>
+			</notepage>
+			<notepage caption='Another'>
+				<vbox>
+				</vbox>
+			</notepage>
+		</notebook>
+	</layout>
+</form>

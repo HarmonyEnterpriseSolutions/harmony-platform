@@ -1,0 +1,6 @@
+0.9
+
+following files are required only for viewer
+Flag.java
+PageChangeListener.java
+ThumbPanel.java

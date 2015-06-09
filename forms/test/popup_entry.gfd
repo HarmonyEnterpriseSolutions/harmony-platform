@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<form name="popup_entry" title="Подбор" >
+	<parameter name="p_parentform"/>
+	<parameter name="p_popupwindow"/>
+
+	<import-datasource name='ds' as='ds1' library='popup.gfd'/>
+	<import-datasource name='ds' as='ds2' library='popup.gfd'/>
+
+	<trigger type="On-Startup">
+		if not get_global('__form_server_url__', None):
+			set_global('__form_server_url__', 'http://localhost:82/wm/wk.cgi/wm/forms/test')
+	</trigger>
+
+	<trigger type="On-Activation">
+	</trigger>
+
+<logic>
+	
+	<block name='b' >
+		<field name='id1'  fk_source='ds1' fk_key='id' fk_description='name'/>
+		<field name='id2'  fk_source='ds2' fk_key='id' fk_description='name'/>
+	</block>
+
+</logic>
+
+<import-toolbar library='../common/toolbar.gfd' name='__main_toolbar__'/>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox block='b'>
+		<entry field='id1' label='Поле 1' style='picker' >
+			<popupwindow form='popup.gfd' title='Попап 1'/>
+		</entry>
+		<entry field='id2' label='Поле 2' style='picker' >
+			<popupwindow form='popup.gfd' title='Попап 2'/>
+		</entry>
+	</vbox>
+</layout>
+</form>

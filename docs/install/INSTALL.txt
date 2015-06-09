@@ -1,0 +1,196 @@
+﻿Установка wm
+
+1. Установка питона и библиотек
+-------------------------------
+
+под виндой
+	ставим cvsnt и опционально wincvs 
+
+Под ubuntu
+	sudo apt-get install cvs
+
+cvs -d :pserver:oleg@212.109.59.18:/cvs login
+
+cvs -d :pserver:oleg@212.109.59.18:/cvs checkout packages
+
+cvs -d :pserver:oleg@212.109.59.18:/cvs checkout apps 
+(очень большой)
+
+под виндой
+	ставим
+		packages/python/python-2.5.4.msi
+
+	на клиент ставим
+		packages/python/client/*
+		packages/python/both/*
+
+	на сервер ставим
+		packages/python/server/*
+		packages/python/both/*
+
+Под ubuntu
+	apt-get install python2.5
+	добиваемся чтобы по python запускался python2.5
+	(я сносил python2.6 и создавал символический линк)
+
+	собираем пакеты
+
+		apt-get install ptyhon2.5-dev
+
+		в папке исходников simplejson
+			python setup.py build
+			python setup.py install
+
+		в папке исходников psycopg2
+			apt-get install libpq-dev 
+			python setup.py build
+			python setup.py install
+
+		в папке исходников pymssql
+			apt-get install freetds-dev 
+			python setup.py build
+			python setup.py install
+			
+2. Установка клиента
+--------------------
+
+cvs -d :pserver:oleg@212.109.59.18:/cvs checkout wm
+удаляем все кроме
+wm
+	bin
+	forms
+	scripts
+	share
+	src
+
+cd src
+cvs checkout toolib
+
+редактируем в wm/bin/config.py
+server_url = 'http://serverhost:82/wm/wk.cgi/wm'
+все
+
+3. Установка сервера
+--------------------
+
+cvs -d :pserver:oleg@212.109.59.18:/cvs checkout wm
+cd src
+cvs checkout toolib
+
+В папке Python25/Lib/site-packages cоздать файл wm.pth
+	cодержащий абсолютный путь к папке src
+
+3.1 WebKit
+
+Установить и настроить Apache 2:
+	Папка wm/www должна быть доступна как http://server/wm/
+	Скрипты wm/www/*.cgi должны быть доступны на выполнение, остальное на чтение
+
+Добавить в httpd.conf
+-----------------------
+Alias /wm/ "c:/projects/wm/www/"
+
+<Directory "c:/projects/wm/www">
+    Options ExecCGI Indexes MultiViews FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+    AddHandler cgi-script .cgi
+</Directory>
+-----------------------
+
+Распаковать packages/webkit/Webware*.tar.gz на серверную машину
+Переименовываем в Webware
+Webware/install.py
+
+Сконфигурировать webkit
+	см. ./webkit/Application.config.diff 
+	см. ./webkit/AppServer.config.diff 
+
+Под виндой 
+	пробный запуск
+		Webware\WebKit\AppServer.bat 
+	запускаем как сервис
+		cd Webware\WebKit
+		AppServerService.py install
+		net start webkit
+под ubuntu
+	запускаем при загрузке
+		cd Webware/WebKit/
+		cp StartScripts/Debian webkit
+		#!!! очень важный шаг - под данным юзером, группой будет стартовать вебкит
+		chown root:root AppServer
+		chmod 755 webkit
+		cd /etc/init.d
+		ln -s /root/Webware/WebKit/webkit webkit
+		update-rc.d webkit defaults
+		/etc/init.d/webkit start
+
+Несколько вебкитов на одной машине:
+	Изменение порта webkit appserver - в двух местах
+		Webware\WebKit\Configs\AppServer.config
+			AdapterPort = 8086
+		wm\www\webkit.cfg
+			Port = 8086
+	чтоб установить 2 сервиса
+		делаем копию Webware\WebKit\AppServerService.py 
+		редактируем в копии
+			serviceName = 'WebKit2'
+			serviceDisplayName = 'WebKit Application Server at another port'
+
+Проверка: 
+	http://localhost/wm/wk.cgi/ должен давать страницу вебкита
+	http://localhost/wm/wk.cgi/wm/info/ должен давать страницу
+
+3.2 Postgresql
+	Язык сообщений об ошибках должен быть английским, иначе декоратор ошибок работать не будет
+	Открыть на фаерволе порт БД
+
+3.3 деплой базы
+	
+сконфигурировать wm/sql/config.py
+Запустить wm/sql/имя приложения/redeploy.py для создания базы.
+wm/etc/имя приложения/connections.conf
+	настраиваем для всех подключений
+		host = 
+		port = 
+		dbname   = 
+		username = 
+		password = 
+
+
+3.4. JASPER REPORTS INSTALL
+------------
+
+Установить jre 1.6.0
+Установить Apache Tomcat 6
+
+Скопировать wm.xml в папку "С:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\Catalina\localhost\"
+
+Отредактировать "С:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\server.xml" 
+   	В тег <Connector port="8000" > добавить атрибут	useBodyEncodingForURI="true"
+
+Запустить Tomcat
+	под виндой
+		standalone
+			"C:\Program Files\Apache Software Foundation\Tomcat 6.0\bin\tomcat6.exe" 
+		service
+			net start tomcat6
+	under ubuntu
+		/etc/init.d/tomcat6 start
+
+В wm/etc/имя приложения/servers.conf указать путь к томкетовскому приложению wm
+	report_server=http://localhost:8000/wm
+
+Перезапустить вебкит
+
+
+10. КОМПИЛЯЦИЯ JAVA кода (вообще не требуется)
+-----------------------
+	
+ставим jdk 1.5.0		
+ставим ant
+в папках
+	wm/java/
+	wm/reports/WEB-INF/
+	запускаем ant

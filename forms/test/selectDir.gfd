@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Select dir">
+	<logic>
+		<!--
+		Bring up a dialog for selecting a directory path.
+
+		@param title: Message to show on the dialog
+		@param defaultDir: the default directory, or the empty string
+		@param newDir: If true, add "Create new directory" button and allow
+		        directory names to be editable. On Windows the new directory button
+		        is only available with recent versions of the common dialogs.
+
+		@returns: a path or None if the dialog has been cancelled.
+		-->
+		<block name="b">
+			<field name="title"                              default='Let us select dir...'/>
+			<field name="defaultDir"                         default='C:\'/>
+			<field name="newDir"          datatype='boolean' default='Y'/>
+			<field name="result" editable='N'/>
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block='b'>
+			<entry field="title"           label='title'/>
+			<entry field="defaultDir"      label='defaultDir'/>
+			<entry field="newDir"          label='newDir'/>
+			<button label='Select files'>
+				<trigger type='ON-ACTION'>
+					def resultConsumer(result):
+						b.result.set(result)
+					form.selectDir(
+						title           = b.title.get(),
+						defaultDir      = b.defaultDir.get(),
+						newDir          = b.newDir.get(),
+						resultConsumer  = resultConsumer,
+					)
+				</trigger>
+			</button>
+			<entry field="result"          label='result' />
+		</vbox>
+	</layout>
+</form>

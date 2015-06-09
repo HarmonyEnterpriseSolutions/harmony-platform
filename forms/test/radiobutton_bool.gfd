@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="RadioBox example">
+	<logic>
+		<block name="store_document">
+			<field name="f" datatype='boolean' default='N' />
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block="store_document">
+			<entry field="f" label="Boolean" />
+			<entry field="f" label="True" style="radiobutton" activate_value="Y" />
+			<entry field="f" label="False" style="radiobutton" activate_value="N" />
+		</vbox>
+	</layout>
+</form>

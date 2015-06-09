@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding='windows-1251'?>
+
+<form name='login' title="Вход" windowStyle='-MINIMIZE_BOX,-MAXIMIZE_BOX'>
+
+<parameter name='p_application'/>
+<parameter name='p_server_url'/>
+<parameter name='p_form' default='main.gfd'/>
+
+<parameter name='is_activation'/>
+
+<trigger type="On-Startup">
+	form.setFeature('GUI:MENUBAR:SUPPRESS',1)
+	form.setFeature('GUI:TOOLBAR:SUPPRESS',1)
+	form.setFeature('GUI:STATUSBAR:SUPPRESS',1)
+</trigger>
+
+
+<trigger type='ON-ACTIVATION'>
+	is_activation.value = True
+
+	b.user_login.set(get_clientproperty('login'))
+
+	remember_password = get_clientproperty('remember_password')
+	
+	b.remember_password.set(remember_password)
+	
+	if remember_password:
+		b.user_password.set(get_clientproperty('password'))
+
+	is_activation.value = False
+</trigger>
+
+<action name='ok'>
+	import urllib2
+	from wmlib.login import login
+
+	application = p_application.value
+	server_url  = p_server_url.value
+
+	user_login  = (b.user_login.get() or '').lower()
+	try:
+		user_id, sessionKey, sid = login(server_url, application, user_login, b.user_password.get() or '')
+	except urllib2.HTTPError, e:
+		form.show_message(_("User name or password is incorrect") if e.code == 401 else str(e))
+	except IOError, e:
+		form.show_message(_("Ошибка соединения с сервером: %s") % e)
+	else:
+
+		set_clientproperty('login',             b.user_login.get())
+		set_clientproperty('password',          b.user_password.get() if b.remember_password.get() else None)
+		set_clientproperty('remember_password', b.remember_password.get())
+
+		set_global('server_url',  server_url)
+		set_global('application', application)
+		set_global('sid',         sid)
+		set_global('user_id',     user_id)
+
+		# key used by driver to access database
+		#set_global('__session_key__', sessionKey)
+
+		# let's start main form with sid
+		set_global('__form_server_url__',           server_url + '/forms')
+		set_global('__form_server_query_string__',  '_SID_=' + sid)
+
+		from gnue.common.datasources.GConnections import GConnections
+		form._object._instance.connections = GConnections('%s/connections?%s' % (server_url, get_global('__form_server_query_string__')))
+		form._object._instance.connections.setSessionKey(sessionKey)
+			
+		form.run_form(p_form.value)
+		form.close()
+</action>
+
+<action name='cancel'>
+	form.close()
+</action>
+
+<logic>
+	<block name='b'>
+		<field name='user_login'/>
+		<field name='user_password'/>
+		<field name='remember_password' datatype='boolean' default='N'>
+			<trigger type='POST-CHANGE'>
+				if not is_activation.value and self.get():
+					def on_sure(result):
+						if not result:
+							form.endEditing()
+							try:
+								self.set(False)
+							finally:
+								form.beginEditing()
+					form.show_message(_("Примите к сведению, что к Вашим учетным данным могут получить доступ другие пользователи данного компьютера\nУверены что необходимо запоминать пароль?"), kind='question', resultConsumer=on_sure)
+			</trigger>
+		</field>
+	</block>
+</logic>
+
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<vbox block='b' >
+		<entry field='user_login'    label='Имя:'                           />
+		<entry field='user_password' label='Пароль:'     style='password'   />
+		<entry field='remember_password' label='Запоминать пароль'   />
+		<hbox>
+			<button label='Ок'     action='ok'     default='true' name='ok' />
+			<button label='Отмена' action='cancel'                          />
+		</hbox>
+	</vbox>
+</layout>
+</form>

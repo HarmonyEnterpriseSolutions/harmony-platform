@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="applications datasource for login.gfd">
+  <datasource name="ds_applications" type="static" prequery="Y" rowid='id'>
+	 <staticset fields="id, name, server_url">
+		<staticsetrow>
+		  <staticsetfield name="id"         value="test" />
+		  <staticsetfield name="name"       value="Test widgets" />
+		  <staticsetfield name="server_url" value="http://127.0.0.1:8080/wm"/>
+		</staticsetrow>
+	 </staticset>
+  </datasource>
+</form>

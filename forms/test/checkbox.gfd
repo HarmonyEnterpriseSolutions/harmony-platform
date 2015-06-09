@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Entry example">
+	<logic>
+		<block name="b">
+			<field name="c" datatype='boolean' default='N'/>
+			<field name="value" editable='N'>
+				<calc>
+					return "%s [%s]" % (self.c.get(), type(self.c.get()))
+				</calc>
+			</field>
+		</block>
+	</logic>
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox block='b'>
+			<entry field='c' label='Чекбокс' />
+			<entry field='value' label='Значение' />
+		</vbox>
+	</layout>
+</form>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding='windows-1251'?>
+
+<!--  GFD generator  -->
+
+<form name='spr_org' title="Организации" >
+
+	<datasource name='ds_spr_org' connection='sales' prequery='Y'
+		table = 'spr_org'
+	/>
+
+	<import-datasource name='dsref_org_type' library='../../ds/dsref_org_type.gfd'/>
+
+	<datasource name='dsref_spr_agent' connection='sales' prequery='Y'
+		table = 'spr_agent'
+	/>
+
+	<import-datasource name='dsref_spr_cust' library='../../ds/dsref_spr_cust.gfd'/>
+
+	<datasource name='dsref_spr_region' connection='sales' prequery='Y'
+		table = 'spr_region'
+	/>
+
+	<datasource name='dsref_spr_price' connection='sales' prequery='Y'
+		table = 'spr_price'
+	/>
+
+	<datasource name='dsref_spr_firm_account' connection='sales' prequery='Y'
+		table = 'spr_firm_account'
+	/>
+
+
+<trigger type="On-Activation">
+</trigger>
+
+<trigger name="applyFilters" type='NAMED'>
+	org = b_spr_org_filters.filt_org.get()
+	if org is not None:
+		org = "%%%s%%" % org
+	ds_spr_org.setParameter('text', org)
+	b_spr_org.refresh()
+
+	#f_org_sld_applyFilters.run(self)
+</trigger>
+
+<import-toolbar name='__main_toolbar__' library='../../common/toolbar.gfd'/>
+
+<logic>
+
+	<block name='b_spr_org_filters'>
+		<field name = 'filt_org'/>
+	</block>
+
+	<block name='b_spr_org'  datasource='ds_spr_org' autoNextRecord='Y' rows='5'>
+		<field name = 'org_okpo'          	field = 'org_okpo'         />
+		<field name = 'org_name_short'    	field = 'org_name_short'   />
+		<field name = 'org_type'          	field = 'org_type'         fk_source='dsref_org_type'   fk_description="org_type_name" fk_key="org_type_id" />
+		<field name = 'agent_id'          	field = 'agent_id'         fk_source='dsref_spr_agent'  fk_description="agent_name"    fk_key="agent_id"    />
+		<field name = 'cust_id'           	field = 'cust_id'          fk_source='dsref_spr_cust'   fk_description="cust_name"     fk_key="cust_id"     />
+		<field name = 'price_id'          	field = 'price_id'         fk_source='dsref_spr_price'  fk_description="price_name"    fk_key="price_id"    />
+		<field name = 'region_id'         	field = 'region_id'        fk_source='dsref_spr_region' fk_description="region_name"   fk_key="region_id"   />
+		<field name = 'parent_org_id'     	field = 'parent_org_id'    default='0'/>
+		<field name = 'firm_account_id'   	field = 'firm_account_id'  fk_source='dsref_spr_firm_account' fk_description="firm_account_name" fk_key="firm_account_id"/>
+		<field name = 'is_locked'         	field = 'is_locked'        datatype='boolean' />
+		<field name = 'is_penya'          	field = 'is_penya'         datatype='boolean' />
+		<field name = 'is_report'         	field = 'is_report'        datatype='boolean' />
+		<field name = 'org_note'          	field = 'org_note'         />
+		<field name = 'org_id'            	field = 'org_id'           />
+	</block>
+
+
+
+</logic>
+<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox>
+			<vbox label='Поиск'>
+				<hbox>
+					<entry block = 'b_spr_org_filters' field = 'filt_org'/>
+					<button label = 'Поиск' default='true'>
+						<trigger type='ON-ACTION' src='applyFilters'/>
+					</button>
+				</hbox>
+			</vbox>
+			<hbox block='b_spr_org'>	
+				<vbox><entry field = 'org_okpo'           /></vbox>
+				<vbox><entry field = 'org_name_short'     /></vbox>
+			</hbox>
+		</vbox>
+
+</layout>
+</form>

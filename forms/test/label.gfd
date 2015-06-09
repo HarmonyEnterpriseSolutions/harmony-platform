@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<form title="Button example">
+	<logic />
+	<layout xmlns:s="GNUe:Layout:Sizer">
+		<vbox>
+			<hbox>
+				<label name='mylabel' text='What is the time is' s:stretch='0'/>
+				<label name='mylabel' text='The rest' />
+			</hbox>
+			<button label="Change label text" s:stretch='0'>
+				<trigger type='ON-ACTION'>
+					form.layout.find_child('mylabel').text = "who knows..." * 5
+				</trigger>
+			</button>
+		</vbox>
+	</layout>
+</form>

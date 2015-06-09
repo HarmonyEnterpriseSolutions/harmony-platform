@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding='windows-1251'?>
+
+<!--  GFD generator  -->
+
+<form name='_spr_group' title="Группы">
+
+	<parameter name="p_accessobject_id" />
+
+	<datasource name='ds_spr_group' connection='admin' 
+		table = '_spr_group'
+		rowid = 'group_id'
+	/>
+
+	<datasource name='ds_spr_user' connection='admin' 
+		table = '_spr_user'
+		rowid = 'user_id'
+	/>
+
+<import-toolbar name='__main_toolbar__' library='../common/toolbar.gfd'/>
+
+<logic>
+
+	<block name='b_spr_group' datasource='ds_spr_group' autoNextRecord='Y' startup='full'>
+		<!--field name = 'picture'>
+			<calc>
+				return 'Z:/projects/wm/share/gnue/images/letters/' + (b_spr_group.name.get() or "_")[0] + ".png"
+			</calc>
+		</field-->
+		<trigger type='POST-ROWCHANGE'>
+			if ds_spr_user.setParameter('group_id', self.group_id.get()):
+				b_spr_user.discard()
+		</trigger>
+		<field name = 'group_id'           	field = 'group_id'           editable='N'/>
+		<field name = 'group_name'         	field = 'group_name'         />
+		<field name = 'group_sysname'			field = 'group_sysname'      />
+	</block>
+
+	<block name='b_spr_user' datasource='ds_spr_user' autoNextRecord='Y' startup='empty' editable='N' deletable='N'>
+		<field name = 'user_id'        field = 'user_id'           />
+		<field name = 'user_name'      field = 'user_name'         />
+		<field name = 'user_login'     field = 'user_login'        />
+		<field name = 'user_sign'      field = 'user_sign'         />
+	</block>
+
+</logic>
+<layout xmlns:s="GNUe:Layout:Sizer">
+	<splitter>
+
+		<table block='b_spr_group'>
+			<import-menu library='../common/menues.gfd' name='table-default'/>
+
+			<!--image field = 'picture' s:width='16' s:height='16'/-->
+
+			<entry field = 'group_name'        label = 'Группа'    />
+			<entry field = 'group_sysname'     label = 'Сист. имя' />
+			<entry field = 'group_id'          label = 'Ключ'      />
+		</table>
+
+		<table block='b_spr_user'>
+			<import-menu library='../common/menues.gfd' name='table-default'/>
+
+			<entry field = 'user_id'            label = 'id'      />
+			<entry field = 'user_name'          label = 'Имя'     />
+			<entry field = 'user_login'         label = 'Логин'   />
+			<entry field = 'user_sign'          label = 'Подпись' />
+		</table>
+		
+		<!--image block='b_spr_group' field = 'picture' s:width='30' s:height='30'/-->
+	</splitter>
+</layout>
+</form>

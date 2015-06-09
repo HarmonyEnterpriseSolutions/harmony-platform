@@ -1,0 +1,41 @@
+Существующие конверторы
+
+date{[<format>]}
+	форматирует дату в соответствии с форматом strftime*
+	<format> - формат strftime*
+
+	Пример:
+		"Сегодня %(key:date)s"
+		"А год сейчас %(key:date{'%Y'})s"
+
+time{[<format>]}
+	форматирует время в соответствии с форматом strftime*
+	<format> - формат strftime*
+
+datetime{[<format>]}
+	форматирует дату-время в соответствии с форматом strftime*
+	<format> - формат strftime*
+
+decimal{[<scale>[,<grouping>]]}
+	фороматирует число с запятой
+	<scale> - целое, число знаков после запятой, по умолчанию 2
+	<grouping> - True/False, 1/0, группировать по 3 разряда/нет, по умолчанию True
+
+	Пример:
+		"Вес равен %(prod_weight:decimal{3,False})s"
+		"Вес равен %(prod_weight:decimal{3,0})s"
+
+today{}
+	игнорирует значение, возвращает сегодняшнюю дату
+
+	Пример:
+		"Дата документа %(doc_date:date)s"
+		"Год документа %(doc_date:date{'%Y'})s"
+
+now{}
+	игнорирует значение, возвращает сегодняшнюю дату-время
+
+
+* Формат strftime описан здесь
+http://www.python.org/doc/2.5.4/lib/strftime-behavior.html#strftime-behavior
+
