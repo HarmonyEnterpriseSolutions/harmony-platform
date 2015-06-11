@@ -11,7 +11,7 @@ reload(sys)
 sys.setdefaultencoding('UTF8')
 
 
-# Django settings for harmserv project.
+# Django settings for harmonyserv project.
 GNUE_SERVER_URL = "http://localhost:82/harmony/wk.cgi/harmony"
 
 # manually handled in javaui.views.process
