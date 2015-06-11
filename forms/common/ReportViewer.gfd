@@ -12,7 +12,7 @@
 <parameter name='p_locale' />
 
 <trigger type='ON-ACTIVATION'>
-	from harmlib import report
+	from harmonylib import report
 	from urllib2 import HTTPError
 	from gnue.common.apps.errors import UserError
 

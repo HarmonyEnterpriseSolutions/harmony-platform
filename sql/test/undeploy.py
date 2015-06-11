@@ -1,4 +1,4 @@
-from harmlib.scripts.deploy import undeploy
+from harmonylib.scripts.deploy import undeploy
 from sql.test import config
 
 if __name__ ==  '__main__':

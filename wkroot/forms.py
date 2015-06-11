@@ -1,8 +1,8 @@
 import os
 import re
-from harmlib.webkit.BaseServlet  import BaseServlet
-from harmlib.webkit.FormDom      import FormDom
-from harmlib.webkit.AccessObject import AccessObject
+from harmonylib.webkit.BaseServlet  import BaseServlet
+from harmonylib.webkit.FormDom      import FormDom
+from harmonylib.webkit.AccessObject import AccessObject
 from toolib import debug
 
 REC_LIBRARY  = re.compile(r"library\s*\=\s*'([^']*)'")

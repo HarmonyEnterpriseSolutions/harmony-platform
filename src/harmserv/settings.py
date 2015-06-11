@@ -12,7 +12,7 @@ sys.setdefaultencoding('UTF8')
 
 
 # Django settings for harmserv project.
-GNUE_SERVER_URL = "http://localhost:82/harm/wk.cgi/harm"
+GNUE_SERVER_URL = "http://localhost:82/harmony/wk.cgi/harmony"
 
 # manually handled in javaui.views.process
 SESSION_EXPIRY = 30 * 60 	# 30 minutes
@@ -126,7 +126,7 @@ MIDDLEWARE_CLASSES = (
 	'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'harmserv.urls'
+ROOT_URLCONF = 'harmonyserv.urls'
 
 TEMPLATE_DIRS = (
 	# Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -145,10 +145,10 @@ INSTALLED_APPS = (
 	# 'django.contrib.admin',
 	# Uncomment the next line to enable admin documentation:
 	# 'django.contrib.admindocs',
-	'harmserv',
-	'harmserv.javaui',
-	'harmserv.clientproperty',
-	'harmserv.dbi',
+	'harmonyserv',
+	'harmonyserv.javaui',
+	'harmonyserv.clientproperty',
+	'harmonyserv.dbi',
 )
 
 # in django >= 1.6 json serializer used by default, this not works with UserSession

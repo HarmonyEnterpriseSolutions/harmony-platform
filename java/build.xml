@@ -37,25 +37,25 @@
 	<target name="jar_gnue_forms" depends="javac">
 		<jar destfile="${lib}/gnue-forms.jar" basedir="${build}/classes" excludes="com/sun/pdfview/**">
 			<manifest>
-				<attribute name="Codebase" value="*.harm.com.ua" />
+				<attribute name="Codebase" value="*.harmony.com.ua" />
 				<attribute name="Permissions" value="all-permissions" />
 				<attribute name="Application-Name" value="GNUe forms java client" />
 				<attribute name="Trusted-Library" value="true" />
 			</manifest>		
 		</jar>
-		<signjar jar="${lib}/gnue-forms.jar" keystore='harm.jks' alias="b2b" storepass="storepass" keypass='***'/>
+		<signjar jar="${lib}/gnue-forms.jar" keystore='harmony.jks' alias="b2b" storepass="storepass" keypass='***'/>
 	</target>
 
 	<target name="jar_pdfview" depends="javac">
 		<jar destfile="${lib}/pdfview.jar" basedir="${build}/classes" includes="com/sun/pdfview/**">
 			<manifest>
-				<attribute name="Codebase" value="*.harm.com.ua" />
+				<attribute name="Codebase" value="*.harmony.com.ua" />
 				<attribute name="Permissions" value="all-permissions" />
 				<attribute name="Application-Name" value="PDF View" />
 				<attribute name="Trusted-Library" value="true" />
 			</manifest>	
 		</jar>
-		<signjar jar="${lib}/pdfview.jar" keystore='harm.jks' alias="b2b" storepass="storepass" keypass='***'/>
+		<signjar jar="${lib}/pdfview.jar" keystore='harmony.jks' alias="b2b" storepass="storepass" keypass='***'/>
 	</target>
 
 	<target name="clean" description="Deletes all the generated files.">

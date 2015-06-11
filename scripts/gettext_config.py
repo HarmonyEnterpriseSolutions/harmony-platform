@@ -6,8 +6,8 @@ DOMAINS = {
 	'gnue-common' : ['..\\src\\gnue\\common'],
 	'gnue-forms'  : ['..\\src\\gnue\\forms'],
 	'toolib'      : ['..\\src\\toolib'],
-	'harmlib'       : ['..\\src\\harmlib'],
-	'harm'          : ['..\\wkroot'],
+	'harmonylib'       : ['..\\src\\harmonylib'],
+	'harmony'          : ['..\\wkroot'],
 	'forms'       : ['..\\forms'],
 }
 
@@ -25,7 +25,7 @@ FORMS = [
 	"..\\share\\gnue\\forms\\defaults\\default.gfd",
 	"..\\forms\\*.gfd",
 	"..\\forms\\common\\**\\*.gfd",
-	"..\\forms\\harm\\**\\*.gfd",
+	"..\\forms\\harmony\\**\\*.gfd",
 	"..\\forms\\ksbilling\\**\\*.gfd",
 ]
 

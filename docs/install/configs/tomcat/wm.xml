@@ -2,13 +2,13 @@
 
     Context configuration file for the Tomcat Manager Web App
 
-    $Id: harm.xml,v 1.1 2009/11/25 14:32:51 oleg Exp $
+    $Id: harmony.xml,v 1.1 2009/11/25 14:32:51 oleg Exp $
 
 -->
 
 <Context 
-	path="/harm"
-	docBase="c:/projects/harm/reports"
+	path="/harmony"
+	docBase="c:/projects/harmony/reports"
 	debug="0" 
 	privileged="true"
 />

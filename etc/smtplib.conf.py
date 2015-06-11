@@ -5,4 +5,4 @@
 # If specified, `local_hostname` is used as the FQDN of the local host.
 # By default, the local hostname is found using socket.getfqdn().
 
-host='mail.local.harm.com.ua'
+host='mail.local.harmony.com.ua'

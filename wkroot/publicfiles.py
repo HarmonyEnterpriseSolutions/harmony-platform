@@ -1,4 +1,4 @@
-from harmlib.webkit.HttpProxyServlet import HttpProxyServlet
+from harmonylib.webkit.HttpProxyServlet import HttpProxyServlet
 
 DEBUG = 1
 

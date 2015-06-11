@@ -15,7 +15,7 @@
   Contexts['MKBrowser'] = WebwarePath + '/MiddleKit/WebBrowser'
   Contexts['Testing'] = WebKitPath + '/Testing'
   Contexts['default'] = Contexts['Examples']
-+ Contexts['harm'] = 'z:\\projects\\harm\\wkroot'
++ Contexts['harmony'] = 'z:\\projects\\harmony\\wkroot'
   
   # Sessions:
 ! SessionStore = 'Memory' # can be File or Dynamic or Memory

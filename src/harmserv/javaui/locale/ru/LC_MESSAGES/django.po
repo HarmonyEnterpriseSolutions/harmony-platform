@@ -72,8 +72,8 @@ msgid "Which Java download should I choose?"
 msgstr "Какую версию java выбрать?"
 
 #: .\templates\javaui\index.html.py:4
-msgid "HARM diler portal"
-msgstr "Дилерский портал HARM"
+msgid "HARMONY diler portal"
+msgstr "Дилерский портал HARMONY"
 
 #: .\templates\javaui\index.html.py:6
 msgid "There is two possibilities to start application"

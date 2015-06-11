@@ -410,7 +410,7 @@ if __name__ == '__main__':
 
 			#self.xml.Bind(wx.EVT_TEXT, lambda event: self.rtc.set_xml(self.xml.GetValue()))
 
-			#self.rtc.set_html(open("test_harm_html.html", 'rt').read().decode('cp1251'))
+			#self.rtc.set_html(open("test_harmony_html.html", 'rt').read().decode('cp1251'))
 
 			#self.rtc.BeginNumberedBullet(1, 100, 60)
 			self.rtc.WriteText("a")

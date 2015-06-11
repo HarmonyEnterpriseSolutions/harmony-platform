@@ -3,7 +3,7 @@ import xml.dom
 
 from toolib.util.paths import iterFilePaths
 from toolib.util.reprs import repr
-from harmlib.webkit.FormDom import Dom
+from harmonylib.webkit.FormDom import Dom
 from scripts.gettext_config import FORMS, FORMS_OUTPUT, FORMS_ATTRS
 from toolib.util import strings
 

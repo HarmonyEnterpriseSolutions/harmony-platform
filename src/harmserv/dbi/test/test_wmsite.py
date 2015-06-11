@@ -67,7 +67,7 @@ class TestClient(object):
 			return result['result']
 
 
-	def login(self, application='harmsite', username='admin', password='111', connection='db'):
+	def login(self, application='harmonysite', username='admin', password='111', connection='db'):
 		user_id = self.execute('login', application, username, encodePassword(password))['user_id']
 
 		positions = self.execute('extjs_call', application, connection, 'get_user_position', {'user_id' : user_id})
@@ -87,14 +87,14 @@ def test(url):
 	urllib2.install_opener(urllib2.build_opener(
 		urllib2.HTTPCookieProcessor(CookieJar()),
 		urllib2.ProxyHandler({
-			"http" : "http://gleb.mironov:123@proxy.local.harm.com.ua:3128",
+			"http" : "http://gleb.mironov:123@proxy.local.harmony.com.ua:3128",
 		}),
 	))
 
 	client = TestClient(url)
 	client.login()
 
-	print client.execute('call', 'harmsite', 'db', 'ishop_get_contact_price', { 'domain' : 'shop.harm.ua' })
+	print client.execute('call', 'harmonysite', 'db', 'ishop_get_contact_price', { 'domain' : 'shop.harmony.ua' })
 
 
 

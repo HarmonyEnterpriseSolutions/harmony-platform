@@ -1,4 +1,4 @@
-﻿Установка harm
+﻿Установка harmony
 
 1. Установка питона и библиотек
 -------------------------------
@@ -54,9 +54,9 @@ cvs -d :pserver:oleg@212.109.59.18:/cvs checkout apps
 2. Установка клиента
 --------------------
 
-cvs -d :pserver:oleg@212.109.59.18:/cvs checkout harm
+cvs -d :pserver:oleg@212.109.59.18:/cvs checkout harmony
 удаляем все кроме
-harm
+harmony
 	bin
 	forms
 	scripts
@@ -66,31 +66,31 @@ harm
 cd src
 cvs checkout toolib
 
-редактируем в harm/bin/config.py
-server_url = 'http://serverhost:82/harm/wk.cgi/harm'
+редактируем в harmony/bin/config.py
+server_url = 'http://serverhost:82/harmony/wk.cgi/harmony'
 все
 
 3. Установка сервера
 --------------------
 
-cvs -d :pserver:oleg@212.109.59.18:/cvs checkout harm
+cvs -d :pserver:oleg@212.109.59.18:/cvs checkout harmony
 cd src
 cvs checkout toolib
 
-В папке Python25/Lib/site-packages cоздать файл harm.pth
+В папке Python25/Lib/site-packages cоздать файл harmony.pth
 	cодержащий абсолютный путь к папке src
 
 3.1 WebKit
 
 Установить и настроить Apache 2:
-	Папка harm/www должна быть доступна как http://server/harm/
-	Скрипты harm/www/*.cgi должны быть доступны на выполнение, остальное на чтение
+	Папка harmony/www должна быть доступна как http://server/harmony/
+	Скрипты harmony/www/*.cgi должны быть доступны на выполнение, остальное на чтение
 
 Добавить в httpd.conf
 -----------------------
-Alias /harm/ "c:/projects/harm/www/"
+Alias /harmony/ "c:/projects/harmony/www/"
 
-<Directory "c:/projects/harm/www">
+<Directory "c:/projects/harmony/www">
     Options ExecCGI Indexes MultiViews FollowSymLinks
     AllowOverride None
     Order allow,deny
@@ -130,7 +130,7 @@ Webware/install.py
 	Изменение порта webkit appserver - в двух местах
 		Webware\WebKit\Configs\AppServer.config
 			AdapterPort = 8086
-		harm\www\webkit.cfg
+		harmony\www\webkit.cfg
 			Port = 8086
 	чтоб установить 2 сервиса
 		делаем копию Webware\WebKit\AppServerService.py 
@@ -139,8 +139,8 @@ Webware/install.py
 			serviceDisplayName = 'WebKit Application Server at another port'
 
 Проверка: 
-	http://localhost/harm/wk.cgi/ должен давать страницу вебкита
-	http://localhost/harm/wk.cgi/harm/info/ должен давать страницу
+	http://localhost/harmony/wk.cgi/ должен давать страницу вебкита
+	http://localhost/harmony/wk.cgi/harmony/info/ должен давать страницу
 
 3.2 Postgresql
 	Язык сообщений об ошибках должен быть английским, иначе декоратор ошибок работать не будет
@@ -148,9 +148,9 @@ Webware/install.py
 
 3.3 деплой базы
 	
-сконфигурировать harm/sql/config.py
-Запустить harm/sql/имя приложения/redeploy.py для создания базы.
-harm/etc/имя приложения/connections.conf
+сконфигурировать harmony/sql/config.py
+Запустить harmony/sql/имя приложения/redeploy.py для создания базы.
+harmony/etc/имя приложения/connections.conf
 	настраиваем для всех подключений
 		host = 
 		port = 
@@ -165,7 +165,7 @@ harm/etc/имя приложения/connections.conf
 Установить jre 1.6.0
 Установить Apache Tomcat 6
 
-Скопировать harm.xml в папку "С:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\Catalina\localhost\"
+Скопировать harmony.xml в папку "С:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\Catalina\localhost\"
 
 Отредактировать "С:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\server.xml" 
    	В тег <Connector port="8000" > добавить атрибут	useBodyEncodingForURI="true"
@@ -179,8 +179,8 @@ harm/etc/имя приложения/connections.conf
 	under ubuntu
 		/etc/init.d/tomcat6 start
 
-В harm/etc/имя приложения/servers.conf указать путь к томкетовскому приложению harm
-	report_server=http://localhost:8000/harm
+В harmony/etc/имя приложения/servers.conf указать путь к томкетовскому приложению harmony
+	report_server=http://localhost:8000/harmony
 
 Перезапустить вебкит
 
@@ -191,6 +191,6 @@ harm/etc/имя приложения/connections.conf
 ставим jdk 1.5.0		
 ставим ant
 в папках
-	harm/java/
-	harm/reports/WEB-INF/
+	harmony/java/
+	harmony/reports/WEB-INF/
 	запускаем ant

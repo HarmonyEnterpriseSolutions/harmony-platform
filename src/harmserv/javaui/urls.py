@@ -4,7 +4,7 @@ except ImportError:
 	# django 1.3 support
 	from django.conf.urls.defaults import patterns, include, url
 
-urlpatterns = patterns('harmserv.javaui.views',
+urlpatterns = patterns('harmonyserv.javaui.views',
 	url(r'^$', 'applet'),
 	url(r'^staticres/(.*)$', 'staticres'),
 	url(r'^dynamicres/$', 'dynamicres'),

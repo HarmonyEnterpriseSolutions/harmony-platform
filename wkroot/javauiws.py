@@ -1,5 +1,5 @@
 # -*- coding: Cp1251 -*-
-from harmlib.webkit.BaseServlet  import BaseServlet
+from harmonylib.webkit.BaseServlet  import BaseServlet
 
 class javauiws(BaseServlet):
 

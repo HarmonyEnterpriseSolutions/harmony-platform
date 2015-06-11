@@ -1,4 +1,4 @@
-from src.harmlib.webkit import BaseServlet
+from src.harmonylib.webkit import BaseServlet
 
 
 class Resource(BaseServlet):

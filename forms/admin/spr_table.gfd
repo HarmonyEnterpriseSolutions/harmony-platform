@@ -37,7 +37,7 @@
 		<field name = 'table_id'           field = 'table_id'          editable='N'/>
 		<field name = 'table_name'         field = 'table_name'        editable='NEW'>
 			<trigger type='POST-CHANGE'>
-				from harmlib.const import table_id
+				from harmonylib.const import table_id
 				b__spr_table.table_id.set(table_id(self.get()) if self.get() else None)
 			</trigger>
 		</field>

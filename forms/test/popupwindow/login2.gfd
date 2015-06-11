@@ -8,7 +8,7 @@
 	form.setFeature('GUI:STATUSBAR:SUPPRESS',1)
 </trigger>
 
-<!--parameter name='server_url'  default='http://localhost/harm/wk.cgi/harm'/-->
+<!--parameter name='server_url'  default='http://localhost/harmony/wk.cgi/harmony'/-->
 
 <trigger type='ON-ACTIVATION'>
 	form.endEditing()
@@ -24,7 +24,7 @@
 
 <action name='ok'>
 	import urllib2
-	from harmlib.login import login
+	from harmonylib.login import login
 
 	application = b_login.application.get()
 	server_url  = b_applications.server_url.get()
@@ -82,7 +82,7 @@
 <layout xmlns:s="GNUe:Layout:Sizer">
 	<vbox block='b_login' >
 		<entry field='application'   label='Приложение:' style='picker' picker_text_minlength='2'    >
-			<popupwindow form='http://localhost/harm/wk.cgi/harm/forms/testPopupWindow.gfd'/>
+			<popupwindow form='http://localhost/harmony/wk.cgi/harmony/forms/testPopupWindow.gfd'/>
 		</entry>
 		<entry field='user_login'    label='Имя:'                       />
 		<entry field='user_password' label='Пароль:'     style='password'     />

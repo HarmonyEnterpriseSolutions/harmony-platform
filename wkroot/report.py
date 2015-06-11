@@ -2,7 +2,7 @@ import simplejson
 import base64
 import zlib
 
-from harmlib.webkit.HttpProxyServlet import HttpProxyServlet
+from harmonylib.webkit.HttpProxyServlet import HttpProxyServlet
 
 DEBUG = 0
 

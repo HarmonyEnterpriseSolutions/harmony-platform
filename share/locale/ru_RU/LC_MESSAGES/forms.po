@@ -1804,7 +1804,7 @@ msgid "traceback"
 msgstr ""
 
 #: .\..\forms\.text.py:452
-msgid "HARM ERP"
+msgid "HARMONY ERP"
 msgstr ""
 
 #: .\..\forms\.text.py:453

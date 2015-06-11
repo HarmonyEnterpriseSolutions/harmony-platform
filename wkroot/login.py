@@ -1,4 +1,4 @@
-from harmlib.webkit.BaseServlet import BaseServlet
+from harmonylib.webkit.BaseServlet import BaseServlet
 from WebKit.HTTPServlet	import HTTPServlet
 from toolib._ import *
 

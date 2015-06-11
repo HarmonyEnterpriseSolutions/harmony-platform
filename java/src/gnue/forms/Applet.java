@@ -101,7 +101,7 @@ public class Applet extends JApplet implements ClientContext, Runnable {
 		
 		try {
 			//ystem.out.println(getCodeBase());
-			// http://localhost/harm/wk.cgi/harm/
+			// http://localhost/harmony/wk.cgi/harmony/
 			boolean debug = getParameter("debug") != null && !getParameter("debug").equals("0");
 			
 			URL jsonServiceUrl = getCodeBase();

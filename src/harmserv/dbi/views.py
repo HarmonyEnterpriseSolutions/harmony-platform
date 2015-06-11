@@ -15,7 +15,7 @@ from toolib.web.djangoutils.jsonrpc import JSONRPCService, jsonremote, RPCServic
 from toolib.text.json.json_coerce import json_coerce
 import config
 from UserSession import UserSession
-from src.harmserv.dbi import fetch_metadata
+from src.harmonyserv.dbi import fetch_metadata
 
 
 jsonservice = JSONRPCService()
@@ -77,9 +77,9 @@ def execute(request):
 	"""
 	POST DATA is json
 	{
-		'application' : 'harm',
+		'application' : 'harmony',
 		'connection' : 'db',
-		'function' : 'harmsite_attribute',
+		'function' : 'harmonysite_attribute',
 		'parameters' : {
 		}
 	}

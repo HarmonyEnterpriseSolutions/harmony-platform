@@ -105,5 +105,5 @@ class ScalesDev(object):
 
 
 if __name__ == '__main__':
-	from harmlib.test.testScalesDev_MASSA_K import test
+	from harmonylib.test.testScalesDev_MASSA_K import test
 	test()

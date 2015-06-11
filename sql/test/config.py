@@ -1,8 +1,8 @@
 execfile('../config.py')
 
 host     = "192.168.2.21"
-database = "harmtest"
-database_prefix = "harmtest"
+database = "harmonytest"
+database_prefix = "harmonytest"
 
 
 exclude_tables = [

@@ -35,9 +35,9 @@ from  gnue.forms import GFClient
 if __name__ == '__main__':
 	
 	if sys.platform == 'win32' and os.path.split(sys.executable)[1].lower() == 'pythonw.exe':
-		# write harm.log under pythonw if have debug level
+		# write harmony.log under pythonw if have debug level
 		if ' --debug-level=' in ' '.join(sys.argv[1:]):
-			sys.stdout = sys.stderr = open(os.path.join(os.environ['USERPROFILE'], 'harm.log'), 'at', 0)
+			sys.stdout = sys.stderr = open(os.path.join(os.environ['USERPROFILE'], 'harmony.log'), 'at', 0)
 		else:
 			# running in pythonw.exe
 			# default streams are invalid and fail after 4097 bytes written (Bad File Descriptor)

@@ -15,63 +15,63 @@ msgstr ""
 "Content-Transfer-Encoding: ENCODING\n"
 "Generated-By: pygettext.py 1.4\n"
 
-#: .\..\src\harmlib\barcode.py:22
+#: .\..\src\harmonylib\barcode.py:22
 msgid "�������� ������"
 msgstr ""
 
-#: .\..\src\harmlib\barcode.py:29
+#: .\..\src\harmonylib\barcode.py:29
 msgid "��������� ������� %s, ����� %s"
 msgstr ""
 
-#: .\..\src\harmlib\files.py:66
+#: .\..\src\harmonylib\files.py:66
 msgid "�������� ���� ��� ��������..."
 msgstr ""
 
-#: .\..\src\harmlib\files.py:94
+#: .\..\src\harmonylib\files.py:94
 msgid "���� %s"
 msgstr ""
 
-#: .\..\src\harmlib\files.py:95
+#: .\..\src\harmonylib\files.py:95
 msgid "��������� ���� �..."
 msgstr ""
 
-#: .\..\src\harmlib\report.py:107
+#: .\..\src\harmonylib\report.py:107
 msgid ""
 "����� ����, ������������ ����� ������� � ������� ������� ��������� � %.1f ���\n"
 "�������� ������� ���������� �����"
 msgstr ""
 
-#: .\..\src\harmlib\report.py:118
+#: .\..\src\harmonylib\report.py:118
 msgid ""
 "������ ������� �� ��������\n"
 "%s"
 msgstr ""
 
-#: .\..\src\harmlib\report.py:167
+#: .\..\src\harmonylib\report.py:167
 msgid "PDF expected from server, got unrecognized text"
 msgstr "� ������� ��������� PDF, � ������� ���������� �����"
 
-#: .\..\src\harmlib\report.py:173
+#: .\..\src\harmonylib\report.py:173
 msgid "Got error on pdf server"
 msgstr "������ �� ������� �������"
 
-#: .\..\src\harmlib\report.py:179 .\..\src\harmlib\report.py:210
+#: .\..\src\harmonylib\report.py:179 .\..\src\harmonylib\report.py:210
 msgid "����� ������� ��������� �� ������"
 msgstr ""
 
-#: .\..\src\harmlib\report.py:204 .\..\src\harmlib\report.py:208
+#: .\..\src\harmonylib\report.py:204 .\..\src\harmonylib\report.py:208
 msgid "������ ��� ������ ������"
 msgstr ""
 
-#: .\..\src\harmlib\report.py:238
+#: .\..\src\harmonylib\report.py:238
 msgid "%s Files"
 msgstr "����� %s"
 
-#: .\..\src\harmlib\report.py:281
+#: .\..\src\harmonylib\report.py:281
 msgid "�������� ���� ����� ��������� �����..."
 msgstr ""
 
-#: .\..\src\harmlib\report.py:289
+#: .\..\src\harmonylib\report.py:289
 msgid "������"
 msgstr ""
 

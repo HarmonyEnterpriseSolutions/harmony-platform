@@ -23,4 +23,4 @@ def getValue(text, section, option, default=NotImplemented):
 
 
 if __name__ == '__main__':
-	print getValue(open('z:\\projects\\harm\\etc\\harm\\servers.conf', 'rt').read(), 'reports', 'report_server', 'xxxxxxxxx')
+	print getValue(open('z:\\projects\\harmony\\etc\\harmony\\servers.conf', 'rt').read(), 'reports', 'report_server', 'xxxxxxxxx')

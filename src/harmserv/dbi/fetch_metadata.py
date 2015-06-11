@@ -1,10 +1,10 @@
 import os
 
 from gnue.common.datasources.drivers.sql.postgresql_fn.FnSignatureFactory import FnSignatureFactory
-from harmlib.scripts.utils.harmApplication import harmApplication
-from harmlib.webkit.FormDom import FormDom
+from harmonylib.scripts.utils.harmonyApplication import harmonyApplication
+from harmonylib.webkit.FormDom import FormDom
 from toolib.db.simpleconn import NoRecordError
-from src.harmserv.dbi import config
+from src.harmonyserv.dbi import config
 
 
 """
@@ -362,10 +362,10 @@ class Form(FormDom):
 
 
 
-class Fetcher(harmApplication):
+class Fetcher(harmonyApplication):
 
 	def __init__(self, app_name):
-		harmApplication.__init__(self, app_name)
+		harmonyApplication.__init__(self, app_name)
 		self._signature_factory = FnSignatureFactory.getInstance(self.getConfigPath('fn_signatures.conf.py'))
 
 

@@ -2,7 +2,7 @@ import os
 import datetime
 from ConfigParser import ConfigParser
 
-from src.harmserv.dbi.driver import DbiDriver
+from src.harmonyserv.dbi.driver import DbiDriver
 import config
 
 
@@ -194,7 +194,7 @@ class UserSession(object):
 
 			
 	#####################################################################
-	# harm configs
+	# harmony configs
 	#
 		
 	def filePath(self, path, file, exact=False):

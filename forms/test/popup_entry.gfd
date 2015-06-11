@@ -9,7 +9,7 @@
 
 	<trigger type="On-Startup">
 		if not get_global('__form_server_url__', None):
-			set_global('__form_server_url__', 'http://localhost:82/harm/wk.cgi/harm/forms/test')
+			set_global('__form_server_url__', 'http://localhost:82/harmony/wk.cgi/harmony/forms/test')
 	</trigger>
 
 	<trigger type="On-Activation">

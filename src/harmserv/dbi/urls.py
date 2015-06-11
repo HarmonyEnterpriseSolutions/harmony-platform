@@ -4,7 +4,7 @@ except ImportError:
 	# django 1.3 support
 	from django.conf.urls.defaults import patterns, include, url
 
-urlpatterns = patterns('harmserv.dbi.views',
+urlpatterns = patterns('harmonyserv.dbi.views',
 	url(r'^$', 'service', name='service'),
 	url(r'^(?P<method>\w+)/(?P<application>\w+)/(?P<connection>\w+)/(?P<function>\w+)/$', 'raw_service'),
 	url(r'^report/$', 'report', name='report'),

@@ -5,7 +5,7 @@ from cookielib import CookieJar
 
 import simplejson as json
 
-from src.harmserv.dbi.test.test import TestClient
+from src.harmonyserv.dbi.test.test import TestClient
 
 
 URL = 'http://192.168.1.2:8000/dbi/'
@@ -48,7 +48,7 @@ if __name__ == '__main__':
 	urllib2.install_opener(urllib2.build_opener(
 		urllib2.HTTPCookieProcessor(CookieJar()),
 		urllib2.ProxyHandler({
-			"http" : "http://gleb.mironov:123@proxy.local.harm.com.ua:3128",
+			"http" : "http://gleb.mironov:123@proxy.local.harmony.com.ua:3128",
 		}),
 	))
 

@@ -5,9 +5,9 @@ import thread
 
 
 if __name__ == '__main__':
-	URL = 'http://localhost:82/harm/wk.cgi/harm/execute'
+	URL = 'http://localhost:82/harmony/wk.cgi/harmony/execute'
 	FIELDS = {
-		'command' : 'harmsite3_sync_price',
+		'command' : 'harmonysite3_sync_price',
 	}
 
 	response = urllib2.urlopen(URL, urllib.urlencode(FIELDS))
@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
 
 from toolib._ import *
-from harmlib.webkit.BaseServlet import BaseServlet
+from harmonylib.webkit.BaseServlet import BaseServlet
 
 
 class execute(BaseServlet):

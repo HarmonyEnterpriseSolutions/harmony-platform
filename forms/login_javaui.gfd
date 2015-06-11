@@ -32,7 +32,7 @@
 
 <action name='ok'>
 	import urllib2
-	from harmlib.login import login
+	from harmonylib.login import login
 
 	application = p_application.value
 	server_url  = p_server_url.value
